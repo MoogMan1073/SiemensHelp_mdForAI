@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Conversion working dirs / output
+output/
+/tmp_pack/
+*.zip
+
+# OS
+.DS_Store

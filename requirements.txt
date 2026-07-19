@@ -1,0 +1,6 @@
+# HTML/XHTML parsing (lenient — the topic files are Windows-authored XHTML)
+beautifulsoup4>=4.12
+lxml>=5.0
+
+# HTML -> Markdown rendering
+markdownify>=0.13
