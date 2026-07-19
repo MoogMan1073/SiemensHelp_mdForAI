@@ -10,7 +10,8 @@ plain text.
 from __future__ import annotations
 
 import re
-from typing import Callable, Dict, Optional
+from typing import Callable, Dict, Optional, Tuple
+from urllib.parse import quote
 
 _PUNCT = re.compile(r"[^\w\s-]", re.UNICODE)
 _SPACES = re.compile(r"\s+")
@@ -61,3 +62,44 @@ def make_resolver(file_to_anchor: Dict[str, str]) -> Callable[[Optional[str]], O
         return f"#{anchor}" if anchor else None
 
     return resolve
+
+
+def _href_to_itemid(href: str) -> str:
+    """``../../Pack/folder/topic.htm`` -> ``Pack/folder/topic.htm``."""
+    path = href.split("#", 1)[0].split("?", 1)[0]
+    return "/".join(p for p in path.split("/") if p not in ("..", ".", ""))
+
+
+def make_corpus_resolver(
+    file_to_anchor: Dict[str, str],
+    id_to_target: Dict[str, Tuple[str, str]],
+) -> Callable[[Optional[str]], Optional[str]]:
+    """Resolver for whole-corpus conversion.
+
+    Same-pack links become ``#anchor``; cross-pack links (``../…``) are looked up
+    in the global ``id_to_target`` (itemid -> (section_file, anchor)) and become
+    ``Section%20File.md#anchor``. Unknown targets return ``None`` (render as text).
+    Section-file names are percent-encoded so spaces/parentheses don't break the
+    Markdown link.
+    """
+
+    def resolve(href: Optional[str]) -> Optional[str]:
+        if not href:
+            return None
+        h = href.strip()
+        if not h:
+            return None
+        if h.startswith(("#", "http://", "https://", "mailto:")):
+            return h
+        if "../" not in h:
+            base = h.split("#", 1)[0].split("?", 1)[0].rsplit("/", 1)[-1]
+            anchor = file_to_anchor.get(base)
+            return f"#{anchor}" if anchor else None
+        target = id_to_target.get(_href_to_itemid(h))
+        if not target:
+            return None
+        section_file, anchor = target
+        return f"{quote(section_file)}.md#{anchor}"
+
+    return resolve
+

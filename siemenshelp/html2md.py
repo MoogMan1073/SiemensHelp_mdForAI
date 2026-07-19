@@ -122,10 +122,16 @@ def _normalize_tables(soup: BeautifulSoup, container) -> None:
         if not (thead and thead.find(["th", "td"])):
             if thead:
                 thead.decompose()
+            # Header-less tables are almost always symbol/description legends;
+            # give the common two-column case a readable generic header.
+            labels = ["Symbol", "Meaning"] if cols == 2 else [""] * cols
             new_thead = soup.new_tag("thead")
             header_row = soup.new_tag("tr")
-            for _ in range(cols):
-                header_row.append(soup.new_tag("th"))
+            for label in labels:
+                th = soup.new_tag("th")
+                if label:
+                    th.string = label
+                header_row.append(th)
             new_thead.append(header_row)
             table.insert(0, new_thead)
 

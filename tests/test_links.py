@@ -1,5 +1,11 @@
 """Tests for anchor slugs and cross-reference resolution (no third-party deps)."""
-from siemenshelp.links import github_slug, make_resolver, uniq_slugger
+from siemenshelp.links import (
+    _href_to_itemid,
+    github_slug,
+    make_corpus_resolver,
+    make_resolver,
+    uniq_slugger,
+)
 
 
 def test_github_slug_basic():
@@ -31,3 +37,22 @@ def test_resolver_cross_pack_and_external():
     assert resolve("#existing") == "#existing"
     assert resolve("") is None
     assert resolve(None) is None
+
+
+def test_href_to_itemid():
+    assert _href_to_itemid("../../P/9/x.htm") == "P/9/x.htm"
+    assert _href_to_itemid("../../P/9/x.htm#frag") == "P/9/x.htm"
+    assert _href_to_itemid("x.htm?culture=en-US") == "x.htm"
+
+
+def test_corpus_resolver_same_and_cross_pack():
+    file_to_anchor = {"a.htm": "topic-a"}
+    id_to_target = {"OtherPack/9/x.htm": ("Other Section", "some-heading")}
+    resolve = make_corpus_resolver(file_to_anchor, id_to_target)
+    # same-pack -> local anchor
+    assert resolve("a.htm") == "#topic-a"
+    # cross-pack in corpus -> percent-encoded file + anchor
+    assert resolve("../../OtherPack/9/x.htm") == "Other%20Section.md#some-heading"
+    # cross-pack not in corpus -> None (render as text)
+    assert resolve("../../Unknown/1/2.htm") is None
+    assert resolve("https://siemens.com") == "https://siemens.com"

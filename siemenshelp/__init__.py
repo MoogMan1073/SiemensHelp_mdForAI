@@ -18,6 +18,7 @@ Entry points:
 from __future__ import annotations
 
 from .convert import convert_pack
+from .corpus import convert_corpus
 
-__all__ = ["convert_pack"]
-__version__ = "0.1.0"
+__all__ = ["convert_pack", "convert_corpus"]
+__version__ = "0.2.0"

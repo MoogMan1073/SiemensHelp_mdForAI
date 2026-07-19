@@ -12,7 +12,7 @@ source: Siemens TIA Portal Information System (offline help, en-US)
 This section contains information on the following topics:
 
 - [Principles for control](#principles-for-control)
-- Configuring a software controller
+- [Configuring a software controller](Configuring%20a%20software%20controller.md#configuring-a-software-controller)
 - PID control (S7-1200, S7-1500)
 - PID control (S7-300, S7-400, S7-1500)
 - PID control (S7-300, S7-400)
@@ -170,7 +170,7 @@ A controlled system with dead time and recovery reacts as follows to a jump of t
 
 ![Influence of the dead time on the controllability of a controlled system](images/165948129163_DV_resource.Stream@PNG-de-DE.png)
 
-|  |  |
+| Symbol | Meaning |
 | --- | --- |
 | T<sub>t</sub> | Dead time |
 | T<sub>u</sub> | Delay time |
@@ -229,7 +229,7 @@ The following diagram shows the characteristic of a two-step controller
 
 ![Two-step controllers without feedback](images/165948134667_DV_resource.Stream@PNG-de-DE.png)
 
-|  |  |
+| Symbol | Meaning |
 | --- | --- |
 | ① | ON |
 | ② | OFF |
@@ -240,7 +240,7 @@ The following diagram shows the control function of a two-step controller
 
 ![Two-step controllers without feedback](images/165948140171_DV_resource.Stream@PNG-de-DE.png)
 
-|  |  |
+| Symbol | Meaning |
 | --- | --- |
 | ① | Response characteristic without controller |
 | ② | Response characteristic with two-step controller |
@@ -268,7 +268,7 @@ The following diagram shows the characteristic of a three-step controller
 
 ![Three-step controllers](images/165948145675_DV_resource.Stream@PNG-de-DE.png)
 
-|  |  |
+| Symbol | Meaning |
 | --- | --- |
 | y | Output value, e.g.   y11 = 100% heating y12 = 0% heating y21 = 0% cooling y22 = 100% cooling |
 | x | Physical quantity of the process value, e.g., temperature in° C |
@@ -283,7 +283,7 @@ The process value should follow a setpoint change as quickly as possible. The re
 
 ![Response to setpoint changes](images/165948151179_DV_resource.Stream@PNG-de-DE.png)
 
-|  |  |
+| Symbol | Meaning |
 | --- | --- |
 | x | Process value |
 | w | Setpoint |
@@ -294,7 +294,7 @@ The setpoint is influenced by disturbance variables. The controller has to elimi
 
 ![Response to disturbances](images/165948182283_DV_resource.Stream@PNG-de-DE.png)
 
-|  |  |
+| Symbol | Meaning |
 | --- | --- |
 | x | Process value |
 | w | Setpoint |
@@ -318,7 +318,7 @@ If step functions are to be triggered by control deviations, the step responses 
 
 ![Step response of a proportional action controller](images/165948187787_DV_resource.Stream@PNG-de-DE.png)
 
-|  |  |
+| Symbol | Meaning |
 | --- | --- |
 | ① | Control deviation |
 | ② | Output value of a continuous controller |
@@ -336,7 +336,7 @@ y = GAIN × x
 
 ![Step response of a PD-action controller](images/165948193291_DV_resource.Stream@PNG-de-DE.png)
 
-|  |  |
+| Symbol | Meaning |
 | --- | --- |
 | ① | Control deviation |
 | ② | Output value of a continuous controller |
@@ -361,7 +361,7 @@ A controller with derivative action is not appropriate if a controlled system ha
 
 ![Step response of a PI-action controller](images/165948198795_DV_resource.Stream@PNG-de-DE.png)
 
-|  |  |
+| Symbol | Meaning |
 | --- | --- |
 | ① | Control deviation |
 | ② | Output value of a continuous controller |
@@ -383,7 +383,7 @@ t = time interval since the step of the control deviation
 
 ![Step response of a PID controller](images/165948209803_DV_resource.Stream@PNG-de-DE.png)
 
-|  |  |
+| Symbol | Meaning |
 | --- | --- |
 | ① | Control deviation |
 | ② | Output value of a continuous controller |
@@ -405,7 +405,7 @@ Most of the controller systems occurring in process engineering can be controlle
 
 ![Response of a controlled system with different controller structures](images/165948239115_DV_resource.Stream@PNG-de-DE.png)
 
-|  |  |
+| Symbol | Meaning |
 | --- | --- |
 | ① | No controller |
 | ② | PID controller |

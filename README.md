@@ -50,9 +50,11 @@ global tree — which a later pass uses to build a cross-linked index.
 - **Front-matter** records the package, title, topic count and applicable devices.
 - Chrome (the `nsbanner` title bar, stylesheet/script links) is discarded.
 
-> Cross-**pack** links (`../../OtherPack/…`) can't be resolved from a single
-> pack, so for now they render as plain text; the global index + cross-pack link
-> rewriting is the next phase.
+In **corpus mode** (converting a whole folder of packs at once), cross-**pack**
+links (`../../OtherPack/…`) are rewritten to the target section file and heading
+(`Other Section.md#anchor`), and an `INDEX.md` is generated from the help's own
+table-of-contents tree. Converting a single pack on its own leaves cross-pack
+links as plain text (there is nothing to point them at).
 
 ## Install
 
@@ -66,40 +68,46 @@ pip install -r requirements.txt
 
 ## Use
 
-Convert one pack (a `.zip` or an already-extracted folder):
+**Whole offline help** (recommended) — point it at the unzipped `en-US/` folder
+(a folder of pack `.zip`s and/or extracted pack folders):
+
+```bash
+python -m siemenshelp path/to/en-US/ -o markdown_out/
+```
+
+This converts every pack, rewrites cross-pack links between them, collects all
+diagrams under `markdown_out/images/`, and writes a top-level `markdown_out/INDEX.md`
+that mirrors the help's table-of-contents tree.
+
+**One pack** (a `.zip` or an already-extracted folder):
 
 ```bash
 python -m siemenshelp path/to/TFPIDMainenUS.zip -o output/
 # -> output/PID control.md  (+ output/images/)
 ```
 
-Convert the whole offline help — point it at every pack. On macOS/Linux:
-
-```bash
-mkdir -p markdown_out
-for z in path/to/en-US/*.zip; do
-    python -m siemenshelp "$z" -o markdown_out/
-done
-```
-
-Each pack becomes `markdown_out/<Section title>.md`, with all diagrams collected
-under `markdown_out/images/`.
-
 ### From Python
 
 ```python
-from siemenshelp import convert_pack
+from siemenshelp import convert_pack, convert_corpus
 
+# one pack
 result = convert_pack("TFPIDMainenUS.zip", "output/")
-print(result["md_path"], result["topics"], "topics", result["images"], "images")
+
+# a whole folder of packs (cross-pack links + INDEX.md)
+summary = convert_corpus("path/to/en-US/", "markdown_out/")
+print(summary["packs"], "packs ->", summary["index"])
 ```
 
 ## Examples
 
-`examples/` holds validated output from two different product families:
+`examples/` is a corpus run over three interlinked packs — note `INDEX.md` and
+the resolved cross-pack link from PID into *Configuring a software controller*:
 
-- `examples/PID control.md` — from `TFPIDMainenUS` (19 topics, technology function)
-- `examples/SINAMICS S-G infeed units.md` — from `Stdr010000UIenUS` (27 topics, drive UI)
+- `examples/INDEX.md` — generated table-of-contents tree
+- `examples/PID control.md` — `TFPIDMainenUS` (19 topics, technology function)
+- `examples/Configuring a software controller.md` — `TFTOPIDSWenUS` (37 topics)
+- `examples/SINAMICS S-G infeed units.md` — `Stdr010000UIenUS` (27 topics, drive UI)
 
 ## Project layout
 
@@ -110,13 +118,15 @@ siemenshelp/
 ├── html2md.py    Siemens-aware HTML -> Markdown (tables, notes, images, sub/sup)
 ├── toc.py        parse Toc/Default.xml into an ordered topic tree
 ├── links.py      GitHub-style anchor slugs + cross-reference resolution
-├── assemble.py   concatenate a pack's topics into one section .md
-└── convert.py    convert a pack (zip or folder) + CLI
+├── assemble.py   scan a pack + render its topics into one section .md
+├── corpus.py     whole-folder conversion: cross-pack links + INDEX.md
+└── convert.py    convert a pack or a folder of packs + CLI
 ```
 
 ## Status / roadmap
 
 - **Phase 1 (done)** — per-pack converter, validated on PID and SINAMICS packs.
-- **Phase 2** — cross-pack link rewriting + a global `INDEX.md` from the ~800-pack tree.
-- **Phase 3** — resume-capable batch runner over the whole `en-US/` folder.
+- **Phase 2 (done)** — cross-pack link rewriting + a global `INDEX.md` built from
+  the help's ~800-pack table-of-contents tree (see `corpus.py`).
+- **Phase 3** — resume-capable batch runner (checkpointing) for very large runs.
 - **Phase 4** — QA sweep (broken links, empty topics), packaging.

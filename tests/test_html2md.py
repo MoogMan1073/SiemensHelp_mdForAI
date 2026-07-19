@@ -50,6 +50,19 @@ def test_data_table_is_valid_gfm_with_colspan_padded():
     assert "| wide |  |" in md  # colspan expanded into an empty filler cell
 
 
+def test_legend_table_gets_generic_header():
+    html = (
+        '<table class="table_legend"><tbody>'
+        "<tr><td>①</td><td>ON</td></tr>"
+        "<tr><td>②</td><td>OFF</td></tr></tbody></table>"
+    )
+    md = _md(html)
+    assert "| Symbol | Meaning |" in md
+    assert "| ① | ON |" in md
+    # single clean table (no blank line splitting header from body)
+    assert "\n\n|" not in md.split("| Symbol", 1)[1]
+
+
 def test_image_rewritten_and_collected():
     used = set()
     html = '<p class="imageclass_left"><img src="../images/pic.png?culture=en-US" alt="" /></p>'

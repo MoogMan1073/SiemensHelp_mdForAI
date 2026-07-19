@@ -240,7 +240,7 @@ Data set definitions
 
 ![Example: Screen form for command data sets](images/147854087819_DV_resource.Stream@PNG-en-US.png)
 
-|  |  |
+| Symbol | Meaning |
 | --- | --- |
 | ① | Icons for editing/activating DDS drive data sets in online mode. Not relevant for CDS. |
 | ② | Two buttons in the active data set screen form enable the insertion and deletion of individual data sets of the list. |
@@ -384,7 +384,7 @@ You can switch between different data sets in the configuration screen forms. Th
 
 ![Data set switchover](images/147854165003_DV_resource.Stream@PNG-en-US.png)
 
-|  |  |
+| Symbol | Meaning |
 | --- | --- |
 | ① | Shows the active command data set (CDS). Enables switchover to a different data set. |
 
@@ -630,7 +630,7 @@ The status parameters with the associated numeric values are displayed in the fu
 | --- | --- |
 | Number | Number of the parameter. |
 | Parameter text | Entire parameter text in long form. |
-| Value | Numeric value of the parameter. This numeric value can be changed as follows:   |  |  | | --- | --- | | 1. Click the table cell. 2. Enter the numeric value of the parameter and press the Enter key. Values outside the value range are not accepted and the original value is entered automatically. |  | |
+| Value | Numeric value of the parameter. This numeric value can be changed as follows:   | Symbol | Meaning | | --- | --- | | 1. Click the table cell. 2. Enter the numeric value of the parameter and press the Enter key. Values outside the value range are not accepted and the original value is entered automatically. |  | |
 | Unit | Unit of the parameter. |
 
 ### Control/status words
@@ -749,7 +749,7 @@ If you select the Free telegram configuration, you can freely define the interco
 
 Only those telegrams available for the drive object are offered. The interconnections of the control words or receive words have already been created.
 
-|  |  |
+| Symbol | Meaning |
 | --- | --- |
 | ![Description](images/147853827083_DV_resource.Stream@PNG-en-US.png) | Click the button next to "Interconnections" to interconnect the signal for the connector output. |
 | ![Description](images/147854346251_DV_resource.Stream@PNG-en-US.png) | Click the button to display and interconnect the signal bit by bit. |
@@ -793,7 +793,7 @@ The interconnections for the process data in the send direction are created auto
 
 If you select the Free telegram configuration, you can freely define the interconnections for the process data in the send direction.
 
-|  |  |
+| Symbol | Meaning |
 | --- | --- |
 | ![Description](images/147853860363_DV_resource.Stream@PNG-en-US.png) | Click the button next to "Interconnections" on the left to interconnect the signal for the connector input. |
 
