@@ -167,11 +167,19 @@ def copy_images(names: Set[str], images_dir: Optional[str], out_dir: str) -> int
     return copied
 
 
-def assemble_pack(pack_dir: str, out_dir: str, *, section_name: Optional[str] = None) -> dict:
+def assemble_pack(
+    pack_dir: str,
+    out_dir: str,
+    *,
+    section_name: Optional[str] = None,
+    keep_images: bool = True,
+) -> dict:
     """Convert a single extracted pack folder to ``<section>.md`` in ``out_dir``.
 
     Same-pack cross-links become ``#anchor`` fragments; cross-pack links render
-    as plain text (use the corpus builder to resolve those)."""
+    as plain text (use the corpus builder to resolve those). With
+    ``keep_images=False`` the diagrams are not copied (the Markdown still links
+    to ``images/``; the alt text carries the meaning)."""
     scan = scan_pack(pack_dir)
     resolve = make_resolver(scan.file_to_anchor)
     markdown, images_used, missing = render_section(scan, resolve)
@@ -182,7 +190,9 @@ def assemble_pack(pack_dir: str, out_dir: str, *, section_name: Optional[str] = 
     with open(md_path, "w", encoding="utf-8") as fh:
         fh.write(markdown)
 
-    copied = copy_images(images_used, _extract.find_layout(pack_dir).images_dir, out_dir)
+    copied = 0
+    if keep_images:
+        copied = copy_images(images_used, _extract.find_layout(pack_dir).images_dir, out_dir)
     return {
         "pack": scan.pack,
         "title": scan.root_title,

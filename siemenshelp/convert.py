@@ -15,13 +15,15 @@ def _is_pack_dir(path: str) -> bool:
     return os.path.isdir(path) and os.path.exists(os.path.join(path, "Toc", "Default.xml"))
 
 
-def convert_pack(source: str, out_dir: str, *, section_name: Optional[str] = None) -> dict:
+def convert_pack(
+    source: str, out_dir: str, *, section_name: Optional[str] = None, keep_images: bool = True
+) -> dict:
     """Convert one content pack. ``source`` may be a ``.zip`` or a folder."""
     if _is_pack_dir(source):
-        return assemble_pack(source, out_dir, section_name=section_name)
+        return assemble_pack(source, out_dir, section_name=section_name, keep_images=keep_images)
     with tempfile.TemporaryDirectory(prefix="siemens_pack_") as tmp:
         _extract.extract_pack(source, tmp)
-        return assemble_pack(tmp, out_dir, section_name=section_name)
+        return assemble_pack(tmp, out_dir, section_name=section_name, keep_images=keep_images)
 
 
 def main(argv=None) -> int:
@@ -36,18 +38,24 @@ def main(argv=None) -> int:
     )
     ap.add_argument("-o", "--out", default="output", help="output directory (default: output/)")
     ap.add_argument("--name", default=None, help="override the section file name (single pack only)")
+    ap.add_argument(
+        "--no-images",
+        action="store_true",
+        help="don't copy diagrams (Markdown still links to images/; alt text is kept)",
+    )
     args = ap.parse_args(argv)
+    keep_images = not args.no_images
 
     # A directory that is not itself a pack -> corpus mode.
     if os.path.isdir(args.source) and not _is_pack_dir(args.source):
         def _progress(i, total, name):
             print(f"[{i}/{total}] {name}")
 
-        res = convert_corpus(args.source, args.out, progress=_progress)
+        res = convert_corpus(args.source, args.out, progress=_progress, keep_images=keep_images)
         print(f"[ok] {res['packs']} packs -> {args.out}  (index: {res['index']})")
         return 0
 
-    res = convert_pack(args.source, args.out, section_name=args.name)
+    res = convert_pack(args.source, args.out, section_name=args.name, keep_images=keep_images)
     extra = f"  ({res['missing']} topics missing)" if res["missing"] else ""
     print(
         f"[ok] {res['pack']}: {res['topics']} topics, {res['images']} images "

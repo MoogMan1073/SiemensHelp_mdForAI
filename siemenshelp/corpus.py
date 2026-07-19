@@ -100,8 +100,11 @@ def _write_index(out_dir: str, scans: List[Tuple[PackScan, str]], id_to_pack: Di
     return path
 
 
-def convert_corpus(root: str, out_dir: str, *, progress=None) -> dict:
-    """Convert every pack under ``root`` into ``out_dir`` with cross-pack links + INDEX.md."""
+def convert_corpus(root: str, out_dir: str, *, progress=None, keep_images: bool = True) -> dict:
+    """Convert every pack under ``root`` into ``out_dir`` with cross-pack links + INDEX.md.
+
+    With ``keep_images=False`` the diagrams are not copied (handy when the
+    Markdown is committed to git but the images are not)."""
     sources = discover_packs(root)
     if not sources:
         raise ValueError(f"no content packs (.zip or extracted folders) found in {root}")
@@ -137,7 +140,8 @@ def convert_corpus(root: str, out_dir: str, *, progress=None) -> dict:
             md_path = os.path.join(out_dir, f"{name}.md")
             with open(md_path, "w", encoding="utf-8") as fh:
                 fh.write(markdown)
-            copy_images(images_used, _extract.find_layout(scan.pack_dir).images_dir, out_dir)
+            if keep_images:
+                copy_images(images_used, _extract.find_layout(scan.pack_dir).images_dir, out_dir)
             results.append({"pack": scan.pack, "name": name, "topics": len(scan.order), "missing": missing})
             if progress:
                 progress(i, len(scans), name)
