@@ -99,6 +99,26 @@ summary = convert_corpus("path/to/en-US/", "markdown_out/")
 print(summary["packs"], "packs ->", summary["index"])
 ```
 
+## Publishing the generated corpus
+
+The generated Markdown is meant to live in this repo (under `help/`) as a
+reference Claude Code can grep. The **image folder is deliberately not committed**
+— it is large and Claude reads the `alt` text, not the PNG — so `.gitignore`
+excludes `help/images/`.
+
+Run the full conversion into `help/` and commit just the Markdown:
+
+```bash
+python -m siemenshelp path/to/en-US/ -o help/ --no-images
+git add help/                    # .gitignore keeps help/images/ out
+git commit -m "Add generated Markdown corpus"
+git push
+```
+
+`--no-images` skips copying the diagrams entirely (fastest, smallest). Drop the
+flag if you also want the images on disk for local browsing — they still won't be
+committed, because `help/images/` is git-ignored.
+
 ## Examples
 
 `examples/` is a corpus run over three interlinked packs — note `INDEX.md` and

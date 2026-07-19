@@ -5,10 +5,15 @@ __pycache__/
 venv/
 *.egg-info/
 
-# Conversion working dirs / output
+# Scratch / working output dirs
 output/
+markdown_out/
 /tmp_pack/
 *.zip
+
+# Generated corpus lives in help/ — commit the Markdown, NOT the (large) image
+# folder. The .md files still link to images/; the alt text carries the meaning.
+/help/images/
 
 # OS
 .DS_Store
