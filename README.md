@@ -77,7 +77,21 @@ python -m siemenshelp path/to/en-US/ -o markdown_out/
 
 This converts every pack, rewrites cross-pack links between them, collects all
 diagrams under `markdown_out/images/`, and writes a top-level `markdown_out/INDEX.md`
-that mirrors the help's table-of-contents tree.
+that mirrors the help's table-of-contents tree. A failing pack is isolated (logged
+and skipped) rather than aborting the run. Add `--resume` to continue an
+interrupted run — packs already written are reused (tracked in a
+`.siemens_checkpoint.json` in the output folder).
+
+### Checking the output
+
+`siemenshelp.qa` lints a converted corpus for broken links, leftover HTML/chrome,
+malformed tables and INDEX coverage:
+
+```bash
+python -m siemenshelp.qa markdown_out/
+```
+
+It prints a report and exits non-zero if anything is wrong.
 
 **One pack** (a `.zip` or an already-extracted folder):
 
@@ -139,7 +153,8 @@ siemenshelp/
 ├── toc.py        parse Toc/Default.xml into an ordered topic tree
 ├── links.py      GitHub-style anchor slugs + cross-reference resolution
 ├── assemble.py   scan a pack + render its topics into one section .md
-├── corpus.py     whole-folder conversion: cross-pack links + INDEX.md
+├── corpus.py     whole-folder conversion: cross-pack links + INDEX.md + resume
+├── qa.py         lint a converted corpus (broken links, leftover HTML, ...)
 └── convert.py    convert a pack or a folder of packs + CLI
 ```
 
@@ -148,5 +163,10 @@ siemenshelp/
 - **Phase 1 (done)** — per-pack converter, validated on PID and SINAMICS packs.
 - **Phase 2 (done)** — cross-pack link rewriting + a global `INDEX.md` built from
   the help's ~800-pack table-of-contents tree (see `corpus.py`).
-- **Phase 3** — resume-capable batch runner (checkpointing) for very large runs.
-- **Phase 4** — QA sweep (broken links, empty topics), packaging.
+- **Phase 3 (done)** — resume-capable, fault-isolating batch runner (`--resume`)
+  plus a `qa.py` corpus linter. Angle-bracket placeholders (`<Project ID>`) are
+  now entity-escaped so they survive Markdown rendering, and section filenames are
+  de-duplicated case-insensitively (no silent overwrites on Windows/macOS).
+
+> Re-run the conversion after upgrading — a corpus generated before Phase 3 has
+> unescaped `<…>` placeholders and may have dropped case-colliding sections.

@@ -160,9 +160,9 @@ The controllability of the controlled system can be estimated based on the ratio
 
 | Process type | T<sub>u</sub> / T<sub>g</sub> | Suitability of the controlled system for controlling |
 | --- | --- | --- |
-| I | < 0.1 | can be controlled well |
+| I | &lt; 0.1 | can be controlled well |
 | II | 0.1 to 0.3 | can still be controlled |
-| III | > 0.3 | difficult to control |
+| III | &gt; 0.3 | difficult to control |
 
 #### Influence of the dead time on the controllability of a controlled system
 
@@ -186,9 +186,9 @@ T<sub>t</sub>/T<sub>g</sub> ≤ 1
 
 Controlled systems can be judged on the basis of the following values:
 
-T<sub>u</sub> < 0.5 min, T<sub>g</sub> < 5 min = fast controlled system
+T<sub>u</sub> &lt; 0.5 min, T<sub>g</sub> &lt; 5 min = fast controlled system
 
-T<sub>u</sub> > 0.5 min, T<sub>g</sub> > 5 min = slow controlled system
+T<sub>u</sub> &gt; 0.5 min, T<sub>g</sub> &gt; 5 min = slow controlled system
 
 #### Parameters of certain controlled systems
 
@@ -438,7 +438,7 @@ The table below provides an overview of suitable combinations of a controller st
 | --- | --- | --- | --- | --- |
 | P | PD | PI | PID |  |
 | Sustained control deviation |  | No sustained control deviation |  |  |
-| Temperature | For low performance requirements and proportional action controlled systems with T<sub>u</sub>/Tg < 0,1 | Well suited | The most suitable controller structures for high performance requirements (except for specially adapted special controllers) |  |
+| Temperature | For low performance requirements and proportional action controlled systems with T<sub>u</sub>/Tg &lt; 0,1 | Well suited | The most suitable controller structures for high performance requirements (except for specially adapted special controllers) |  |
 | Pressure | Suitable, if the delay time is inconsiderable | Unsuitable | The most suitable controller structures for high performance requirements (except for specially adapted special controllers) |  |
 | Flow rate | Unsuitable, because required GAIN range is usually too large | Unsuitable | Suitable, but integral action controller alone often better | Hardly required |
 
@@ -464,7 +464,7 @@ Non-observance of the differential-action time TD is uncritical at PD controller
 
 In the case of PI and PID controllers, control oscillations occur if the integral action time TI has been select by more than half too small.
 
-An integral action time that is too large slows down the settling times of disturbances. One cannot expect that the control loops operate "optimally" after the first parameter settings. Experience shows that adjusting is always necessary, when a system exists that is "difficult to control" with T<sub>u</sub> / T<sub>g</sub> > 0.3.
+An integral action time that is too large slows down the settling times of disturbances. One cannot expect that the control loops operate "optimally" after the first parameter settings. Experience shows that adjusting is always necessary, when a system exists that is "difficult to control" with T<sub>u</sub> / T<sub>g</sub> &gt; 0.3.
 
 ## Auxiliary functions (S7-1200, S7-1500)
 

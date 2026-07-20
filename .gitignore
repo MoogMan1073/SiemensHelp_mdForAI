@@ -15,5 +15,8 @@ markdown_out/
 # folder. The .md files still link to images/; the alt text carries the meaning.
 /help/images/
 
+# Resume checkpoint written during corpus conversion
+.siemens_checkpoint.json
+
 # OS
 .DS_Store
