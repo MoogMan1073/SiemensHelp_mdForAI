@@ -1,0 +1,36345 @@
+---
+title: "SINAMICS Parameter SINAMICS MV"
+package: sdrpa102enUS
+topics: 846
+source: Siemens TIA Portal Information System (offline help, en-US)
+---
+
+
+# SINAMICS Parameter SINAMICS MV
+
+This section contains the parameter descriptions for the devices listed below. The parameter descriptions for the various devices can differ. If this is the case, then in the topic under "Object", the Control Unit is listed for which the description applies. In the table of contents, you will then see a separate entry for each parameter number. The following Control Units are taken into account in the online help:
+
+- SINAMICS G120
+
+## SINAMICS Parameter SINAMICS MV 00002 - 00971
+
+SINAMICS Parameter SINAMICS MV 00002 - 00971
+
+### r0002 Control Unit operating display
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 117 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Operating display for the Control Unit (CU).
+
+**Value:**
+  
+0:
+Operation  
+10:
+Ready  
+20:
+Wait for run-up  
+25:
+Wait for automatic FW update of DRIVE-CLiQ components  
+31:
+Commissioning tool download active  
+33:
+Remove/acknowledge topology error  
+34:
+Exit commissioning mode  
+35:
+Carry out first commissioning  
+70:
+Initialization  
+80:
+Reset active  
+99:
+Internal software error  
+101:
+Specify topology  
+111:
+Insert drive object  
+112:
+Delete drive object  
+113:
+Change drive object number  
+114:
+Change component number  
+115:
+Run parameter download  
+117:
+Delete component
+
+**Notice:**
+  
+For several missing enable signals, the corresponding value with the highest number
+is displayed.
+
+### p0003 BOP access level
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( ) UT | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**All groups | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 1 | 4 | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the access level for reading and writing parameters via the Basic Operator Panel
+(BOP).
+
+**Value:**
+  
+1:
+Standard  
+2:
+Extended  
+3:
+Expert  
+4:
+Service
+
+**Note:**
+  
+A higher set access level also includes the lower one.  
+Access level 1 (standard):  
+Parameters for simplest possible operations.  
+Access level 2 (extended):  
+Parameters to operate the basic functions of the drive unit.  
+Access level 3 (experts):  
+Expert know-how is required for these parameters (e.g. BICO parameterization).  
+Access level 4 (service):  
+For these parameters, it is necessary that authorized service personnel enter the
+appropriate password (p3950).
+
+### p0004 BOP display filter
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C2( 1) UT | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**All groups | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 99 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the display filter for parameters with the Basic Operator Panel (BOP).
+
+**Value:**
+  
+0:
+All parameters  
+1:
+Displays, signals  
+2:
+Power unit  
+3:
+Motor  
+4:
+Encoder/pos enc  
+5:
+Technology/units  
+7:
+Digital inputs/outputs, commands, sequence control  
+8:
+Analog inputs/outputs  
+10:
+Setpoint channel/ramp-fct generator  
+12:
+Functions  
+13:
+U/f control  
+14:
+Control  
+15:
+Data sets  
+17:
+Basic positioner  
+18:
+Gating unit  
+19:
+Motor identification  
+20:
+Communication  
+21:
+Faults, alarms, monitoring functions  
+25:
+Closed-loop position control  
+28:
+Free function blocks  
+47:
+Trace and function generator  
+50:
+Technology Extensions  
+90:
+Topology  
+95:
+Safety Integrated  
+98:
+Command Data Sets (CDS)  
+99:
+Drive Data Sets (DDS)
+
+**Dependency:**
+  
+  
+Refer to:
+p0003
+
+**Notice:**
+  
+The display filter via p0004 provides precise filtering and displays the corresponding
+parameters only when p0009 and p0010 = 0.
+
+**Note:**
+  
+The set access level via p0003 is also relevant for the display filter via p0004.  
+Examples (assumption: p0009 = p0010 = 0):  
+p0003 = 1, p0004 = 3  
+--> Only the parameters for the motor with access level 1 are displayed.  
+p0003 = 2, p0004 = 3  
+--> Only the parameters for the motor with access levels 1 and 2 are displayed.
+
+### p0005[0...1] BOP operating display selection
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTOR3P, VECTORSL, VECTORM2C, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, ENC, HUB | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ 0 ] 2   [ 1 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the parameter number and parameter index for display for p0006 = 2, 4 for the
+Basic Operator Panel (BOP).  
+Examples for the SERVO drive object:  
+p0005[0] = 21, p0005[1] = 0: Actual speed smoothed (r0021)  
+p0005[0] = 25, p0005[1] = 0: Output voltage smoothed (r0025)
+
+**Index:**
+  
+[
+0]:
+Parameter number  
+[
+1]:
+Parameter index
+
+**Dependency:**
+  
+  
+Refer to:
+p0006
+
+**Note:**
+  
+Procedure:  
+1.  
+The parameter number to be displayed should be set in index 0. Only the monitoring
+parameters (read-only parameters) can be set that actually exist for the actual drive
+object.  
+If the set parameter number is not indexed, or if there is an index in index 1 that
+lies outside the valid range of the set parameter, then index 1 is automatically set
+to 0.  
+2.  
+The index that belongs to the parameter set in index 0 should be set in index 1. The
+permissible changes in index 1 always depend on the parameter number set in index
+0.
+
+### p0006 BOP operating display mode
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORM2C, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, ENC, HUB | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 4 | 4 | [ 0 ] 4 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the mode of the operating display for the Basic Operator Panel (BOP) in the operating
+states "ready for operation" and "operation".
+
+**Value:**
+  
+4:
+p0005
+
+**Dependency:**
+  
+  
+Refer to:
+p0005
+
+**Note:**
+  
+Mode 0 ... 3 can only be selected if also r0020, r0021 are available on the drive
+object.  
+Mode 4 is available for all drive objects.
+
+### p0007 BOP background lighting
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 [s] | 2000 [s] | [ 0 ] 0 [s] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the delay time until the background lighting of the Basic Operator Panel (BOP)
+is switched off.  
+If no keys are actuated, then the background lighting automatically switches itself
+off after this time has expired.
+
+**Note:**
+  
+p0007 = 0: Background lighting is always switched on (factory setting).
+
+### p0008 BOP drive object after booting
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 1 | 65535 | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the required drive object that is active at the Basic Operator Panel (BOP) after
+booting.
+
+**Note:**
+  
+The value from p0008 initializes the display on the Basic Operator Panel (BOP) at
+the top left after booting.  
+The drive object Control Unit is selected using the value 1.
+
+### p0009 Device commissioning parameter filter
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( ) T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**All groups | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 10000 | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the device and basic drive commissioning.  
+By appropriately setting this parameter, those parameters are filtered that can be
+written into in the various commissioning steps.
+
+**Value:**
+  
+0:
+Ready  
+1:
+Device configuration  
+2:
+Defining the drive type/function module  
+3:
+Drive base configuration  
+4:
+Data set base configuration  
+29:
+Device download  
+30:
+Parameter reset  
+50:
+Configure Technology Extension  
+55:
+Install Technology Extension  
+101:
+Topology input  
+111:
+Insert drive object  
+112:
+Delete drive object  
+113:
+Change drive object number  
+114:
+Change component number  
+115:
+Parameter download  
+117:
+Delete component  
+10000:
+Ready (asynchron)
+
+**Notice:**
+  
+For p0009 = 0:  
+The check and the calculation can take a longer period of time, so that in the worst
+case scenario, communication with the commissioning tool is interrupted. As a consequence,
+alternatively p0009 = 10000 can be used.  
+For p0009 = 10000:  
+After the value has been modified, no further parameter modifications can be made
+and the status is shown in r3996. Modifications can be made again when r3996 = 0.
+
+**Note:**
+  
+The drives can only be switched on outside the device commissioning (the inverter
+enabled). In this case, p0009 must be 0 (Ready) and the individual drive objects must
+have already gone into operation (p0010).  
+p0009 = 0: ready  
+When changing into this state, the device configuration is checked and commissioning
+completed (a new start can be initiated).  
+p0009 = 1: Device configuration  
+At the first commissioning of the device, after booting, the device is in the "device
+configuration" state. To start the internal automatic first commissioning of the drive
+unit, p0009 should be set to 0 (Ready) after the ID for the actual topology (r0098)
+was transferred into the ID for the target topology (p0099). To do this, it is sufficient
+to set a single index value of p0099[x] the same as r0098[x]. Before the device has
+been completely commissioned, no other parameter can be changed. After the first commissioning
+was carried out, in this state, when required, other basic device configuration parameters
+can be adapted (e.g. the basic sampling time in p0110).  
+p0009 = 2: Defines the drive type / function module  
+In this state, the drive object types and/or the function modules can be changed or
+selected for the individual drive objects. To do this, the drive object type can be
+set using p0107[0...15] and the function can be set using p0108[0...15] (refer to
+p0101[0...15]).  
+p0009 = 3: Drive basic configuration  
+In this state, after the device has been commissioned for the first time, basic changes
+can be made for the individual drive objects (e.g. sampling times in p0111, p0112,
+p0115 and the number of data sets in p0120, p0130, p0140, p0170, p0180).  
+p0009 = 4: Data set basic configuration  
+In this state, after the device has been commissioned for the first time, for the
+individual drive objects changes can be made regarding the assignment of the components
+(p0121, p0131, p0141, p0151, p0161) to the individual data sets and the assignment
+of the power unit, motor and encoder to the drive data sets (p0185, ...).  
+p0009 = 29: Device download  
+In the case of a download via the commissioning tool, the device is automatically
+brought into this state. After the download has been completed, p0009 is automatically
+set to 0 (ready). It is not possible to manually set p0009 to this value.  
+p0009 = 30: Parameter reset  
+In order to bring the complete unit into the "first commissioning" state or to load
+the parameters saved using p0977, to start, p0009 must be set to this value. p0976
+can then be changed to the required value.  
+p0009 = 50: configure Technology Extension  
+After the device has been commissioned for the first time, in this state, Technology
+Extensions can be activated/deactivated for the individual drive objects (p4956).  
+p0009 = 55: install Technology Extension  
+Technology Extensions can be installed/uninstalled in this state.  
+p0009 = 101: Topology input  
+In this state, the DRIVE-CLiQ target topology can be entered using p9902 and p9903.  
+p0009 = 111: Insert drive object  
+This state allows a new drive object to be inserted using p9911.  
+p0009 = 112: Delete drive object  
+This state allows existing drive objects to be deleted using p9912 after the device
+has been commissioned for the first time.  
+p0009 = 113: Change drive object number  
+This state allows the drive object number of existing drive objects to be changed
+using p9913 after the device has been commissioned for the first time.  
+p0009 = 114: Change component number  
+This state allows the component number of existing components to be changed using
+p9914 after the device has been commissioned for the first time.  
+p0009 = 115: Parameter download  
+This state allows the complete device and drive commissioning using the parameter
+services.  
+p0009 = 117: Delete component  
+This state allows components to be deleted using p9917 after the device has been commissioned
+for the first time.  
+p0009 = 10000: ready (asynchronous)  
+When changing into this state, internally p0009 is set = 0. Additional calculations
+and checks are carried out in the background (asynchronously).
+
+### p0011 BOP password entry (p0013)
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Functions | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the password for the Basic Operator Panel (BOP).
+
+**Dependency:**
+  
+  
+Refer to:
+p0012, p0013
+
+### p0012 BOP password acknowledgment (p0013)
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Functions | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Acknowledges the password for the Basic Operator Panel (BOP).
+
+**Dependency:**
+  
+  
+Refer to:
+p0011, p0013
+
+### p0013[0...49] BOP user-defined list
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTOR3P, VECTORSL, VECTORM2C, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, ENC, HUB | **P-Group:**Functions | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the required parameters to read and write via the Basic Operator Panel (BOP).  
+Activation:  
+1. p0003 = 3 (expert).  
+2. p0013[0...49] = requested parameter number.  
+3. If required, enter p0011 = password in order to prevent non-authorized deactivation.  
+4. p0016 = 1 --> activates the selected user-defined list.  
+Deactivation/change:  
+1. p0003 = 3 (expert).  
+2. If required, p0012 = p0011, in order to be authorized to change or deactivate the
+list.  
+3. If required p0013[0...49] = required parameter number.  
+4. p0016 = 1 --> activates the modified user-defined list.  
+5. p0003 = 0 --> deactivates the user-defined list.
+
+**Dependency:**
+  
+  
+Refer to:
+p0009, p0011, p0012, p0976
+
+**Note:**
+  
+The following parameters can be read and written on the Control Unit drive object:  
+- p0003 (access stage)  
+- p0009 (device commissioning, parameter filter)  
+- p0012 (BOP password acknowledgment (p0013))  
+The following applies for the user-defined list:  
+- password protection is only available on the drive object Control Unit and is valid
+for all of the drive objects.  
+- p0013 cannot be included in the user-defined list for all drive objects.  
+- p0003, p0009, p0011, p0012, p0976 cannot, for the drive object Control Unit, be
+included in the user-defined list.  
+- the user-defined list can be cleared and deactivated "restore factory setting".  
+A value of 0 means: Entry is empty.
+
+### p0015 Macro drive unit
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( ) | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 999999 | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Runs the corresponding macro files.  
+The selected macro file must be available on the memory card/device memory.  
+Example:  
+p0015 = 6 --> the macro file PM000006.ACX is run.
+
+**Dependency:**
+  
+  
+Refer to:
+p0700, p1000, p1500
+
+**Notice:**
+  
+After the value has been modified, no further parameter modifications can be made
+and the status is shown in r3996. Modifications can be made again when r3996 = 0.  
+When executing a specific macro, the corresponding programmed settings are made and
+become active.
+
+**Note:**
+  
+The macros in the specified directory are displayed in r8570. r8570 is not in the
+expert list of the commissioning tool.  
+Macros available as standard are described in the technical documentation of the particular
+product.
+
+### p0016 Activate BOP user-defined list
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( ) UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**All groups | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Setting for activating/deactivating the user-defined list for the Basic Operator Panel
+(BOP).  
+If p0016 = 1, then it is only possible to access parameters in the parameter list
+(p0013).
+
+**Value:**
+  
+0:
+BOP user-defined list deactivated  
+1:
+BOP user-defined list activated
+
+**Dependency:**
+  
+  
+Refer to:
+p0011, p0012, p0013
+
+**Note:**
+  
+The user-defined list can only be deactivated with p0011 = p0012
+
+### r0018 Control Unit firmware version
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 4294967295 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the firmware version of the Control Unit.
+
+**Dependency:**
+  
+  
+Refer to:
+r0128, r0148, r0158, r0197, r0198
+
+**Note:**
+  
+Example:  
+The value 1010100 should be interpreted as V01.01.01.00.
+
+### r0019.0...14 CO/BO: Control word BOP
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 9912 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Displays, signals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the control word for the Basic Operator Panel (BOP).
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | ON / OFF (OFF1) | OFF (OFF1) | ON | - |
+| 01 | No coast-down / coast-down (OFF2) | Coast down (OFF2) | No coast down | - |
+| 02 | No Quick Stop / Quick Stop (OFF3) | Quick Stop (OFF3) | No Quick Stop | - |
+| 07 | Acknowledge fault (0 -> 1) | No | Yes | - |
+| 13 | Motorized potentiometer raise | No | Yes | - |
+| 14 | Motorized potentiometer lower | No | Yes | - |
+
+### r0037[0...1] Control Unit temperature
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Displays, signals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**p2006 | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [°C] | - [°C] | [ ] - [°C] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the measured Control Unit temperature.  
+An appropriate message is output when the permitted operating temperature is exceeded.
+
+**Index:**
+  
+[
+0]:
+Actual measured value  
+[
+1]:
+Maximum measured value
+
+**Dependency:**
+  
+  
+Refer to:
+A01009
+
+**Notice:**
+  
+Only for internal Siemens troubleshooting.
+
+**Note:**
+  
+The value of -200 indicates that there is no measuring signal.
+
+### p0092 Clock synchronous operation pre-assignment/check
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 1) | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Setting to pre-assign/check the sampling times for the internal controller clock cycles
+for clock-synchronous PROFIdrive operation.  
+For p0092 = 0:  
+The controller clock cycles are set without any restrictions by the clock-cycle PROFIdrive
+operation (same as for up to V2.3).  
+When calculating the drive unit utilization (r9976), when using the fixed DCC runtime
+groups "Receive AFTER IF1 PROFIdrive PZD", "Send BEFORE IF1 PROFIdrive PZD", "Receive
+AFTER IF2 PZD" (from V4.4) and "Send BEFORE IF2 PZD" (from V4.4), then its maximum
+computing time load has already been calculated during ramp-up for isochronous operation
+and taken into account in r9976 (from V4.3).  
+For p0092 = 1:  
+The controller clock cycles are set so that isochronous PROFIdrive operation is possible.
+If it is not possible to change the controller clock cycles of the clock-cycle synchronous
+PROFIdrive operation, then an appropriate message is output.  
+The pre-setting of the controller clock cycles can result in a derating of the Motor
+Module (e.g. p0115[0] = 400 µs --> 375 µs).  
+When calculating the drive unit utilization (r9976), when using the fixed DCC runtime
+groups "Receive AFTER IF1 PROFIdrive PZD", "Send BEFORE IF1 PROFIdrive PZD", "Receive
+AFTER IF2 PZD" (from V4.4) and "Send BEFORE IF2 PZD" (from V4.4), then its maximum
+computing time load has already been calculated during ramp-up for isochronous operation
+and taken into account in r9976 (from V4.3).
+
+**Value:**
+  
+0:
+No isochronous PROFIBUS  
+1:
+Isochronous PROFIBUS
+
+**Dependency:**
+  
+  
+Refer to:
+r0110, p0115  
+Refer to:
+A01223, A01224
+
+**Caution:**
+  
+Only current controller sampling times (p0115[0]) which are integers of 125 µs are
+permitted for isochronous mode.  
+For SERVO the following current controller sampling times are also possible:  
+187.5, 150, 100, 93.75, 75, 62.5, 50, 37.5, 31.25 µs  
+For VECTOR the following current controller sampling times are also possible:  
+312.5, 218.75, 200, 187.5, 175, 156.25, 150, 137.5 µs  
+The additional current controller sampling times must be taken into account when parameterizing
+the bus for Ti, To and Tdp.
+
+**Notice:**
+  
+p0092 only affects the automatic default for the sampling times (p0115) in the drive.  
+If the sampling times are modified subsequently in expert mode (p0112 = 0), p0092
+= 0 should be set so that the new values are not overwritten again by the automatic
+default when the parameters are downloaded.  
+The conditions for current controller sampling time for isosynchronous operation must
+still be carefully ensured (refer under Caution!).
+
+### p0097 Select drive object type
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 1) | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Topology | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 24 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Executes an automatic device configuration.  
+In so doing, p0099, p0107 and p0108 are appropriately set.
+
+**Value:**
+  
+0:
+No selection  
+1:
+Drive object type SERVO  
+2:
+Drive object type VECTOR  
+3:
+SINAMICS GM (DFEMV & VECTOR3P)  
+4:
+SINAMICS SM (AFEMV & VECTOR3P)  
+5:
+SINAMICS GL (VECTORGL)  
+6:
+SINAMICS SL (VECTORSL)  
+12:
+Drive object type VECTOR parallel circuit  
+13:
+Drive object type VECTOR3P - GM parallel connection  
+14:
+Drive object type VECTOR3P - SM parallel connection  
+15:
+Drive object type DC_CTRL  
+16:
+Drive object type SERVO HMI  
+17:
+Drive object type VECTOR HMI  
+24:
+Drive object type VECTORMV - SM parallel circuit
+
+**Dependency:**
+  
+  
+Refer to:
+r0098, p0099  
+Refer to:
+A01330
+
+**Note:**
+  
+For p0097 = 0, p0099 is automatically set to the factory setting.  
+The possible settings are dependent upon the device type.  
+Using parameter p9940.2, for SERVO (value = 1) and VECTOR (value = 2) drive objects,
+the infeed units can be connected in parallel.
+
+### r0098[0...5] Actual device topology
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Topology | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the automatically detected actual device topology in coded form.
+
+**Index:**
+  
+[
+0]:
+DRIVE-CLiQ socket X100  
+[
+1]:
+DRIVE-CLiQ socket X101  
+[
+2]:
+DRIVE-CLiQ socket X102  
+[
+3]:
+DRIVE-CLiQ socket X103  
+[
+4]:
+DRIVE-CLiQ socket X104  
+[
+5]:
+DRIVE-CLiQ socket X105
+
+**Dependency:**
+  
+  
+Refer to:
+p0097, p0099
+
+**Note:**
+  
+Topology coding: abcd efgh hex  
+a = number of Active Line Modules  
+b = number of Motor Modules  
+c = number of motors  
+d = number of encoders (or the line supply voltage sensing for Active Line Modules)  
+e = number of additional encoders (or the line supply voltage sensing for Active Line
+Modules)  
+f = number of Terminal Modules  
+g = number of Terminal Boards  
+h = reserved  
+if the value 0 is displayed in all indices, then components are not detected via DRIVE-CLiQ.  
+If a value F hex occurs at a position of the coding (abcd efgh hex), then an overflow
+has occurred.
+
+### p0099[0...5] Device target topology
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 1) | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Topology | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0000 hex | FFFF FFFF hex | [ 0 ] 0000 hex |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the device target topology in coded form (refer to r0098). The setting is made
+during commissioning.  
+Deactivated or non-available components are also counted
+
+**Index:**
+  
+[
+0]:
+DRIVE-CLiQ socket X100  
+[
+1]:
+DRIVE-CLiQ socket X101  
+[
+2]:
+DRIVE-CLiQ socket X102  
+[
+3]:
+DRIVE-CLiQ socket X103  
+[
+4]:
+DRIVE-CLiQ socket X104  
+[
+5]:
+DRIVE-CLiQ socket X105
+
+**Dependency:**
+  
+The parameter can only be written into for p0097 = 0.  
+To perform an automatic device configuration run, an index of the device target topology
+must be set to the value of the device actual topology in r0098 for acknowledgment.
+An index of the device actual topology with a value other than 0 must be selected.  
+  
+Refer to:
+p0097, r0098  
+Refer to:
+A01330
+
+**Note:**
+  
+The parameter can only be set to the values 0, the value of the actual device topology,
+the value of the actual device target topology and FFFFFFFF hex.  
+If the value 0 is displayed in all of the indices, then the system has still not been
+commissioned.  
+The value FFFFFFFF hex indicates that the topology was not generated by the automatic
+device configuration, but was commissioned using the commissioning tool (e.g. using
+parameter download).
+
+### p0101[0...n] Drive object numbers
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 1) | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Topology | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 62 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+The parameter contains the object number via which every drive object can be addressed.  
+The number of an existing drive object is entered into each index.  
+Value = 0: No drive object is defined.
+
+**Note:**
+  
+The numbers are automatically allocated.  
+For the commissioning tool, this object number cannot be entered using the expert
+list, but is automatically assigned when inserting an object.
+
+### r0102[0...1] Number of drive objects
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Topology | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the number of existing or existing and prepared drive objects.
+
+**Index:**
+  
+[
+0]:
+Existing drive objects  
+[
+1]:
+Existing and prepared drive objects
+
+**Dependency:**
+  
+  
+Refer to:
+p0101
+
+**Note:**
+  
+The numbers of the drive objects are in p0101.  
+For index [0]:  
+Displays the number of drive objects that have already been set up.  
+For index [1]:  
+Displays the number of drive objects that have already been set up and, in addition,
+the drive objects that still have to be set up.
+
+### p0103[0...n] Application-specific view
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 2) | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 999 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+The application-specific view of an existing drive object is entered into each index.  
+The parameter cannot be changed.
+
+**Dependency:**
+  
+  
+Refer to:
+p0107
+
+**Note:**
+  
+In the non-volatile memory, the application-specific views are defined in files with
+the following structure:  
+PDxxxyyy.ACX  
+xxx: Application-specific view (p0103)  
+yyy: Type of drive object (p0107)  
+Example:  
+PD052011.ACX  
+--> "011" stands for the drive object, type SERVO  
+--> "052" is the number of the view for this drive object
+
+### p0105 Activate/deactivate drive object
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**2 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Closed-loop control | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1 | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Setting to activate/deactivate a drive object.
+
+**Value:**
+  
+0:
+Deactivate drive object  
+1:
+Activate drive object
+
+**Dependency:**
+  
+  
+Refer to:
+r0106
+
+**Notice:**
+  
+The following applies when activating:  
+If components are inserted for the first time and the appropriate drive object is
+activated, then the drive system is automatically booted. To do this, the pulses of
+all of the drive objects must be cancelled.
+
+### r0106 Drive object active/inactive
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**Closed-loop control | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the "active/inactive" state of a drive object.
+
+**Value:**
+  
+0:
+Drive object inactive  
+1:
+Drive object active
+
+**Dependency:**
+  
+  
+Refer to:
+p0105
+
+### p0107[0...n] Drive object type
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 2) | **Calculated:**- | **Access level:**2 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 300 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+The type of an existing drive object is entered into each index.
+
+**Value:**
+  
+0:
+-  
+13:
+VECTORMV  
+14:
+VECTORGL  
+15:
+VECTOR3P  
+16:
+VECTORSL  
+18:
+VECTORM2C  
+19:
+VECTORDM  
+22:
+TECBASE  
+35:
+BRAKE MODULE M2C  
+40:
+ACTIVE INFEED CONTROLMV  
+41:
+BASIC INFEED CONTROLMV  
+42:
+ACTIVE INFEED CONTROLM2C  
+100:
+TB30 (Terminal Board)  
+102:
+SINAMICS MV  
+150:
+DRIVE-CLiQ Hub Module  
+200:
+TM31 (Terminal Module)  
+204:
+TM15 (Terminal Module for SINAMICS)  
+208:
+TM150 (Terminal Module)  
+300:
+ENCODER
+
+**Dependency:**
+  
+  
+Refer to:
+p0103
+
+**Caution:**
+  
+If you change this parameter and exit the device commissioning mode, then the complete
+software will be set up again and all of the previous drive parameter settings are
+deleted.
+
+**Note:**
+  
+The number (p0101) and the associated drive object type are in the same index.  
+For SINAMICS S a drive object type can only be changed between SERVO and VECTOR. If
+you change the parameter and exit drive start-up (p0009 from 2 to 0) the drive parameters
+are set up again.
+
+### p0108[0...n] Drive objects function module
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 2) | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0000 0000 0000 0000 0000 0000 0000 0000 bin |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+The function module of an existing drive object is entered into each index (see p0101,
+p0107).  
+The following bits are available for the Control Unit (Index 0):  
+Bit 18: Free function blocks  
+Bit 29: CAN  
+Bit 30: COMM BOARD  
+Bit 31: PROFINET  
+For all other drive objects (Index > 0), the significance of the bits should be taken
+from the display parameters r0108 of the drive object.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Bit 0 | OFF | ON | - |
+| 01 | Bit 1 | OFF | ON | - |
+| 02 | Bit 2 | OFF | ON | - |
+| 03 | Bit 3 | OFF | ON | - |
+| 04 | Bit 4 | OFF | ON | - |
+| 05 | Bit 5 | OFF | ON | - |
+| 06 | Bit 6 | OFF | ON | - |
+| 07 | Bit 7 | OFF | ON | - |
+| 08 | Bit 8 | OFF | ON | - |
+| 09 | Bit 9 | OFF | ON | - |
+| 10 | Bit 10 | OFF | ON | - |
+| 11 | Bit 11 | OFF | ON | - |
+| 12 | Bit 12 | OFF | ON | - |
+| 13 | Bit 13 | OFF | ON | - |
+| 14 | Bit 14 | OFF | ON | - |
+| 15 | Bit 15 | OFF | ON | - |
+| 16 | Bit 16 | OFF | ON | - |
+| 17 | Bit 17 | OFF | ON | - |
+| 18 | Bit 18 | OFF | ON | - |
+| 19 | Bit 19 | OFF | ON | - |
+| 20 | Bit 20 | OFF | ON | - |
+| 21 | Bit 21 | OFF | ON | - |
+| 22 | Bit 22 | OFF | ON | - |
+| 23 | Bit 23 | OFF | ON | - |
+| 24 | Bit 24 | OFF | ON | - |
+| 25 | Bit 25 | OFF | ON | - |
+| 26 | Bit 26 | OFF | ON | - |
+| 27 | Bit 27 | OFF | ON | - |
+| 28 | Bit 28 | OFF | ON | - |
+| 29 | Bit 29 | OFF | ON | - |
+| 30 | Bit 30 | OFF | ON | - |
+| 31 | Bit 31 | OFF | ON | - |
+
+**Dependency:**
+  
+Active messages can prevent or influence activating a function module.  
+  
+Refer to:
+p0171, p0172, p0173  
+Refer to:
+A07089, F13010
+
+**Note:**
+  
+A "function module" is a functional expansion of a drive object that can be activated
+when commissioning.  
+DO: Drive Object
+
+### r0110[0...2] Basic sampling times
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Closed-loop control | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [µs] | - [µs] | [ ] - [µs] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the basic sampling times.  
+The sampling times are set using p0112 and p0115. The values for the basic sampling
+times are determined as a result of these settings.
+
+**Index:**
+  
+[
+0]:
+Basic sampling time 0  
+[
+1]:
+Basic sampling time 1  
+[
+2]:
+Basic sampling time 2
+
+### r0111 Basic sampling time selection
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, BMM2C | **P-Group:**Closed-loop control | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the selected basic sampling time for this drive object.
+
+**Dependency:**
+  
+  
+Refer to:
+r0110
+
+### p0115[0] Sampling time for supplementary functions
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 3) | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Closed-loop control | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0.00 [µs] | 16000.00 [µs] | [ 0 ] 4000.00 [µs] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the basic sampling time for supplementary functions (DCC, free function blocks)
+on this object.  
+Only setting values that are an integer multiple of 125 µs are permissible.
+
+**Index:**
+  
+[
+0]:
+Basic sampling time
+
+### r0116[0...1] Drive object clock cycle recommended
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TM31, TM15DI_DO, TB30, BMM2C | **P-Group:**Closed-loop control | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [µs] | - [µs] | [ ] - [µs] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the recommended sampling time for the drive objects.  
+r00116[0] = recommended sampling time:  
+Recommended value which would then make the complete system operational.  
+r00116[1] = recommended sampling time:  
+Recommended value, which after changing other clock cycles on the DRIVE-CLiQ line,
+would result in an operational system.
+
+**Index:**
+  
+[
+0]:
+Change only for the actual drive object  
+[
+1]:
+Changing all objects on the DRIVE-CLiQ line
+
+**Dependency:**
+  
+  
+Refer to:
+p0115
+
+### p0117 Current controller computing dead time mode
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Closed-loop control | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 6 | [ 0 ] 6 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the mode for the computing dead time of the current controller.  
+0: Offset (shifted) clocking, minimum computing dead time of each drive, automatic
+setting  
+1: Clocking at the same time, the dead time aligns itself to the dead time of the
+latest drive, automatic setting  
+2: Manual setting of the computing dead time, early transfer  
+3: Manual setting of the computing dead time, late transfer  
+4-6: As for 0-2, however, no early transfers are set for vectors
+
+**Dependency:**
+  
+  
+Refer to:
+p0118  
+Refer to:
+A02100
+
+**Note:**
+  
+The mode change is not effective until the drive unit is switched on again.  
+For p0117 = 0:  
+The times when the setpoints become effective for the individual controls is automatically
+and individually determined. Another computing dead time is set for each control (closed-loop)
+(p0118). Current is impressed for the individual controls without any offset with
+respect to time (improved EMC compatibility).  
+For p0117 = 1:  
+The latest closed-loop control determines when the setpoints for each of the individual
+controls become active. The same computing dead time is set for each control (p0118).
+Current is impressed (flows) for the individual controls without any offset with respect
+to time.  
+For p0117 = 2:  
+The computing dead time is manually set. The user must optimize the value in p0118.  
+For p0117 = 3:  
+The computing dead time is manually set. The user must optimize the value in p0118.  
+For p0117 = 4 ... 6:  
+Behavior as for p0117 = 0 ... 2, however for vectors, the earliest times are not determined.
+
+### p0124[0...n] Main component detection using LED
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Converter | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Detection of the main components of the drive object selected via the index.
+
+### p0171[0...n] Drive objects function module 1
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 2) | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0000 0000 0000 0000 0000 0000 0000 0000 bin |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.8
+
+**Description:**
+  
+The function module of an existing drive object is entered into each index (see p0101,
+p0107).  
+The following bits are available in p0171 for the Control Unit (Index 0):  
+Bit 00: PZD extension  
+For all other drive objects (Index > 0), the significance of the bits should be taken
+from the display parameters r0171 of the drive object.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Bit 0 | OFF | ON | - |
+| 01 | Bit 1 | OFF | ON | - |
+| 02 | Bit 2 | OFF | ON | - |
+| 03 | Bit 3 | OFF | ON | - |
+| 04 | Bit 4 | OFF | ON | - |
+| 05 | Bit 5 | OFF | ON | - |
+| 06 | Bit 6 | OFF | ON | - |
+| 07 | Bit 7 | OFF | ON | - |
+| 08 | Bit 8 | OFF | ON | - |
+| 09 | Bit 9 | OFF | ON | - |
+| 10 | Bit 10 | OFF | ON | - |
+| 11 | Bit 11 | OFF | ON | - |
+| 12 | Bit 12 | OFF | ON | - |
+| 13 | Bit 13 | OFF | ON | - |
+| 14 | Bit 14 | OFF | ON | - |
+| 15 | Bit 15 | OFF | ON | - |
+| 16 | Bit 16 | OFF | ON | - |
+| 17 | Bit 17 | OFF | ON | - |
+| 18 | Bit 18 | OFF | ON | - |
+| 19 | Bit 19 | OFF | ON | - |
+| 20 | Bit 20 | OFF | ON | - |
+| 21 | Bit 21 | OFF | ON | - |
+| 22 | Bit 22 | OFF | ON | - |
+| 23 | Bit 23 | OFF | ON | - |
+| 24 | Bit 24 | OFF | ON | - |
+| 25 | Bit 25 | OFF | ON | - |
+| 26 | Bit 26 | OFF | ON | - |
+| 27 | Bit 27 | OFF | ON | - |
+| 28 | Bit 28 | OFF | ON | - |
+| 29 | Bit 29 | OFF | ON | - |
+| 30 | Bit 30 | OFF | ON | - |
+| 31 | Bit 31 | OFF | ON | - |
+
+**Dependency:**
+  
+Active messages can prevent or influence activating a function module.  
+  
+Refer to:
+p0108, p0172, p0173  
+Refer to:
+A07089, F13010
+
+**Note:**
+  
+A "function module" is a functional expansion of a drive object that can be activated
+when commissioning.
+
+### p0172[0...n] Drive objects function module 2
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 2) | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0000 0000 0000 0000 0000 0000 0000 0000 bin |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.8
+
+**Description:**
+  
+The function module of an existing drive object is entered into each index (see p0101,
+p0107).  
+The following bits are available in p0172 for the Control Unit (Index 0):  
+- still none  
+For all other drive objects (Index > 0), the significance of the bits should be taken
+from the display parameters r0172 of the drive object.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Bit 0 | OFF | ON | - |
+| 01 | Bit 1 | OFF | ON | - |
+| 02 | Bit 2 | OFF | ON | - |
+| 03 | Bit 3 | OFF | ON | - |
+| 04 | Bit 4 | OFF | ON | - |
+| 05 | Bit 5 | OFF | ON | - |
+| 06 | Bit 6 | OFF | ON | - |
+| 07 | Bit 7 | OFF | ON | - |
+| 08 | Bit 8 | OFF | ON | - |
+| 09 | Bit 9 | OFF | ON | - |
+| 10 | Bit 10 | OFF | ON | - |
+| 11 | Bit 11 | OFF | ON | - |
+| 12 | Bit 12 | OFF | ON | - |
+| 13 | Bit 13 | OFF | ON | - |
+| 14 | Bit 14 | OFF | ON | - |
+| 15 | Bit 15 | OFF | ON | - |
+| 16 | Bit 16 | OFF | ON | - |
+| 17 | Bit 17 | OFF | ON | - |
+| 18 | Bit 18 | OFF | ON | - |
+| 19 | Bit 19 | OFF | ON | - |
+| 20 | Bit 20 | OFF | ON | - |
+| 21 | Bit 21 | OFF | ON | - |
+| 22 | Bit 22 | OFF | ON | - |
+| 23 | Bit 23 | OFF | ON | - |
+| 24 | Bit 24 | OFF | ON | - |
+| 25 | Bit 25 | OFF | ON | - |
+| 26 | Bit 26 | OFF | ON | - |
+| 27 | Bit 27 | OFF | ON | - |
+| 28 | Bit 28 | OFF | ON | - |
+| 29 | Bit 29 | OFF | ON | - |
+| 30 | Bit 30 | OFF | ON | - |
+| 31 | Bit 31 | OFF | ON | - |
+
+**Dependency:**
+  
+Active messages can prevent or influence activating a function module.  
+  
+Refer to:
+p0108, p0171, p0173  
+Refer to:
+A07089, F13010
+
+**Note:**
+  
+A "function module" is a functional expansion of a drive object that can be activated
+when commissioning.
+
+### p0173[0...n] Drive objects function module 3
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 2) | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0000 0000 0000 0000 0000 0000 0000 0000 bin |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.8
+
+**Description:**
+  
+The function module of an existing drive object is entered into each index (see p0101,
+p0107).  
+The following bits are available in p0173 for the Control Unit (Index 0):  
+- still none  
+For all other drive objects (Index > 0), the significance of the bits should be taken
+from the display parameters r0173 of the drive object.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Bit 0 | OFF | ON | - |
+| 01 | Bit 1 | OFF | ON | - |
+| 02 | Bit 2 | OFF | ON | - |
+| 03 | Bit 3 | OFF | ON | - |
+| 04 | Bit 4 | OFF | ON | - |
+| 05 | Bit 5 | OFF | ON | - |
+| 06 | Bit 6 | OFF | ON | - |
+| 07 | Bit 7 | OFF | ON | - |
+| 08 | Bit 8 | OFF | ON | - |
+| 09 | Bit 9 | OFF | ON | - |
+| 10 | Bit 10 | OFF | ON | - |
+| 11 | Bit 11 | OFF | ON | - |
+| 12 | Bit 12 | OFF | ON | - |
+| 13 | Bit 13 | OFF | ON | - |
+| 14 | Bit 14 | OFF | ON | - |
+| 15 | Bit 15 | OFF | ON | - |
+| 16 | Bit 16 | OFF | ON | - |
+| 17 | Bit 17 | OFF | ON | - |
+| 18 | Bit 18 | OFF | ON | - |
+| 19 | Bit 19 | OFF | ON | - |
+| 20 | Bit 20 | OFF | ON | - |
+| 21 | Bit 21 | OFF | ON | - |
+| 22 | Bit 22 | OFF | ON | - |
+| 23 | Bit 23 | OFF | ON | - |
+| 24 | Bit 24 | OFF | ON | - |
+| 25 | Bit 25 | OFF | ON | - |
+| 26 | Bit 26 | OFF | ON | - |
+| 27 | Bit 27 | OFF | ON | - |
+| 28 | Bit 28 | OFF | ON | - |
+| 29 | Bit 29 | OFF | ON | - |
+| 30 | Bit 30 | OFF | ON | - |
+| 31 | Bit 31 | OFF | ON | - |
+
+**Dependency:**
+  
+Active messages can prevent or influence activating a function module.  
+  
+Refer to:
+p0108, p0171, p0172  
+Refer to:
+A07089, F13010
+
+**Note:**
+  
+A "function module" is a functional expansion of a drive object that can be activated
+when commissioning.
+
+### r0196[0...255] Topology component status
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the status of the components.  
+r0196[0]: group status of all components  
+r0196[1]: Status of component with component number 1  
+...  
+r0196[255]: Status of component with component number 255
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Component status bit 0 | Low | High | - |
+| 01 | Component status bit 1 | Low | High | - |
+| 02 | Component status bit 2 | Low | High | - |
+| 03 | Component status bit 3 | Low | High | - |
+| 04 | Component state | Inactive/parking | Active | - |
+| 06 | Topology problem active | No | Yes | - |
+| 07 | Part of the target topology | No only act topo | Yes | - |
+| 08 | Alarm present | No | Yes | - |
+| 09 | Safety message present | No | Yes | - |
+| 10 | Fault present | No | Yes | - |
+| 11 | Alarm class bit 0 | Low | High | - |
+| 12 | Alarm class bit 1 | Low | High | - |
+| 13 | Maintenance required | No | Yes | - |
+| 14 | Maintenance urgently required | No | Yes | - |
+| 15 | Fault gone/can be acknowledged | No | Yes | - |
+
+**Note:**
+  
+For bit 03 ... 00:  
+Bit 3, 2, 1, 0 = 0, 0, 0, 0 --> component not available.  
+Bit 3, 2, 1, 0 = 0, 0, 0, 1 --> power-up, non-cyclic DRIVE-CLiQ communication (LED
+= orange).  
+Bit 3, 2, 1, 0 = 0, 0, 1, 0 --> operating mode, cyclic DRIVE-CLiQ communication (LED
+= green).  
+Bit 3, 2, 1, 0 = 0, 0, 1, 1 --> alarm (LED = green).  
+Bit 3, 2, 1, 0 = 0, 1, 0, 0 --> fault (LED = red).  
+Bit 3, 2, 1, 0 = 0, 1, 0, 1 --> detection via LED and operating mode (LED = green/orange).  
+Bit 3, 2, 1, 0 = 0, 1, 1, 0 --> detection via LED and alarm (LED = green/orange).  
+Bit 3, 2, 1, 0 = 0, 1, 1, 1 --> detection via LED and fault (LED = red/orange).  
+Bit 3, 2, 1, 0 = 1, 0, 0, 0 --> firmware being downloaded (LED = green/red with 0.5
+Hz).  
+Bit 3, 2, 1, 0 = 1, 0, 0, 1 --> firmware download completed, wait for POWER ON (LED
+= green/red with 2.0 Hz).  
+For bits 12 ... 11:  
+These status bits are used for the classification of internal alarm classes and are
+intended for diagnostic purposes only on certain automation systems with integrated
+SINAMICS functionality.
+
+### r0197[0...1] Bootloader version
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Closed-loop control | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.6
+
+**Description:**
+  
+Displays the bootloader version.  
+Index 0:  
+Displays the bootloader version.  
+Index 1:  
+Displays the bootloader version 3 (for CU320-2 and CU310-2)  
+A value of 0 indicates that bootloader 3 is not available.
+
+**Dependency:**
+  
+  
+Refer to:
+r0018, r0128, r0148, r0158, r0198
+
+**Note:**
+  
+Example:  
+The value 1010100 should be interpreted as V01.01.01.00.
+
+### r0198[0...2] BIOS/EEPROM data version
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Closed-loop control | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Displays the BIOS and EEPROM data version.  
+r0198[0]: BIOS version  
+r0198[1]: EEPROM data version EEPROM 0  
+r0198[2]: EEPROM data version EEPROM 1
+
+**Dependency:**
+  
+  
+Refer to:
+r0018, r0128, r0148, r0158, r0197
+
+**Note:**
+  
+Example:  
+The value 1010100 should be interpreted as V01.01.01.00.
+
+### p0199[0...24] Drive object name
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( ) | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Freely assignable name for a drive object.  
+For the commissioning tool, this name cannot be entered using the expert list, but
+is specified in the configuration wizards. The object name can be subsequently modified
+in the Project Navigator using standard Windows resources.
+
+**Note:**
+  
+The parameter is not influenced by setting the factory setting.
+
+### r0203[0...15] Firmware package name
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the name of the firmware package on the memory card/device memory.  
+r0203[0]: Name character 1  
+...  
+r0203[15]: Name character 16  
+For the commissioning tool, the ASCII characters are displayed uncoded.
+
+**Notice:**
+  
+An ASCII table (excerpt) can be found, for example, in the appendix to the List Manual.
+
+### p0490 Invert measuring probe or equivalent zero mark
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 4740 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Encoder | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0000 0000 0000 0000 bin |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Setting to invert the digital input signals to connect a measuring probe or an equivalent
+zero mark.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 08 | DI/DO 8 (X122.9/X121.7) | Not inverted | Inverted | - |
+| 09 | DI/DO 9 (X122.10/X121.8) | Not inverted | Inverted | - |
+| 10 | DI/DO 10 (X122.12/X121.10) | Not inverted | Inverted | - |
+| 11 | DI/DO 11 (X122.13/X121.11) | Not inverted | Inverted | - |
+| 12 | DI/DO 12 (X132.9/X131.1) | Not inverted | Inverted | - |
+| 13 | DI/DO 13 (X132.10/X131.2) | Not inverted | Inverted | - |
+| 14 | DI/DO 14 (X132.12/X131.4) | Not inverted | Inverted | - |
+| 15 | DI/DO 15 (X132.13/X131.5) | Not inverted | Inverted | - |
+
+**Dependency:**
+  
+  
+Refer to:
+p0488, p0489, p0493, p0495, p0728
+
+**Notice:**
+  
+To select the values:  
+For CX32, NX10 and NX15, only DI/DO 8, 9, 10, 11 can be selected as fast inputs (refer
+to the Equipment Manual).  
+Regarding the terminal designation:  
+The first designation is valid for CU320-2, the second for CU310-2.
+
+**Note:**
+  
+The terminal must be set as input.  
+When the measuring probe or the equivalent zero mark is inverted, this has no effect
+on the status displays of the digital inputs (r0721, r0722, r0723).  
+DI/DO: Bidirectional Digital Input/Output
+
+### r0565[0...15] CO: Probe time stamp
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Displays, signals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Display and connector output for the time stamp MT_ZS_1 up to MT_ZS_16.  
+Displays the measuring time for an edge at the digital input for the "central measuring
+probe evaluation stage 3" function.  
+The measuring time is specified as 16-bit value with a resolution of 0.25 µs.  
+Priority:  
+MT1 ... MT8, oldest ... newest time stamp
+
+### r0566[0...3] CO: Probe time stamp reference
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Displays, signals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Display and connector output for the time stamp reference MT_ZSB1 up to MT_ZSB4.
+
+### r0567 CO: Probe diagnostics word
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Display and connector output for diagnostics word MT_DIAG.
+
+### p0680[0...7] Central measuring probe input terminal
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Encoder | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 8 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the digital input used for the function "central measuring probe evaluation".  
+p0680[0]: Digital input, measuring probe 1  
+p0680[1]: Digital input, measuring probe 2  
+...  
+p0680[7]: Digital input, measuring probe 8
+
+**Value:**
+  
+0:
+No measuring probe  
+1:
+DI/DO 9 (X122.10/X121.8)  
+2:
+DI/DO 10 (X122.12/X121.10)  
+3:
+DI/DO 11 (X122.13/X121.11)  
+4:
+DI/DO 13 (X132.10/X131.2)  
+5:
+DI/DO 14 (X132.12/X131.4)  
+6:
+DI/DO 15 (X132.13/X131.5)  
+7:
+DI/DO 8 (X122.9/X121.7)  
+8:
+DI/DO 12 (X132.9/X131.1)
+
+**Dependency:**
+  
+  
+Refer to:
+p0728
+
+**Caution:**
+  
+In order to prevent incorrect measurement values, these parameters may not be written
+during an active measurement.
+
+**Notice:**
+  
+Regarding the terminal designation:  
+The first designation is valid for CU320-2, the second for CU310-2.  
+To select the values:  
+For CX32, NX10 and NX15, only DI/DO 8, 9, 10, 11 can be selected as fast inputs (refer
+to the Equipment Manual).
+
+**Note:**
+  
+DI/DO: Bidirectional Digital Input/Output  
+Prerequisite: The DI/DO must be set as input (p0728.x = 0).  
+If a parameter change is rejected, a check should be performed as to whether the input
+terminal is already being used in p0488, p0489, p0493, p0494, p0495, p0580, p2517
+or p2518.
+
+### p0681 BI: Central measuring probe synchronizing signal signal source
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for the synchronizing signal (SYN) of the function "central
+measuring probe evaluation".  
+The signal is used to synchronize the common system time between the master and slave.
+
+**Notice:**
+  
+The parameter may be protected as a result of p0922 or p2079 and cannot be changed.
+
+### p0682 CI: Central measuring probe control word signal source
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Displays, signals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for the control word of the function "central measuring probe
+evaluation".
+
+### p0684 Central measuring probe evaluation technique
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Encoder | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 16 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the evaluation technique for the "central measuring probe evaluation" function.
+
+**Value:**
+  
+0:
+Measurement with handshake  
+1:
+Measurement without handshake 2 edges  
+16:
+Measurement without handshake more than 2 edges
+
+**Notice:**
+  
+For p0684 = 16:  
+This evaluation procedure is only activated after parameter save and POWER ON.
+
+**Note:**
+  
+During measurement without a handshake, the probe may have a higher evaluation frequency.  
+The setting "Measurement without handshake" must be supported by the higher-level
+control. This setting cannot be used for SIMOTION D with integrated SINAMICS or with
+CX32.  
+For p0684 = 0:  
+Changing this evaluation procedure to p0684 = 1 is possible in the RUN state.  
+Changing this evaluation procedure to p0684 = 16 is only activated after parameter
+save and POWER ON.  
+Permissible combinations in p0922 are:  
+p0922 = 391, 392, 393, 394  
+For p0684 = 1:  
+Changing this evaluation procedure to p0684 = 0 is possible in the RUN state.  
+Changing this evaluation procedure to p0684 = 16 is only activated after parameter
+save and POWER ON.  
+Permissible combinations in p0922 are:  
+p0922 = 391, 392, 393, 394  
+For p0684 = 16:  
+Changing this evaluation procedure to p0684 = 0 or to p0684 = 1 is only activated
+after parameter save and POWER ON.  
+Permissible combinations in p0922 are:  
+p0922 = 395
+
+### r0685 Central measuring probe control word display
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the control word for the function "central measuring probe evaluation".
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Falling edge measuring probe 1 | No | Yes | - |
+| 01 | Falling edge measuring probe 2 | No | Yes | - |
+| 02 | Falling edge measuring probe 3 | No | Yes | - |
+| 03 | Falling edge measuring probe 4 | No | Yes | - |
+| 04 | Falling edge measuring probe 5 | No | Yes | - |
+| 05 | Falling edge measuring probe 6 | No | Yes | - |
+| 06 | Falling edge measuring probe 7 | No | Yes | - |
+| 07 | Falling edge measuring probe 8 | No | Yes | - |
+| 08 | Rising edge measuring probe 1 | No | Yes | - |
+| 09 | Rising edge measuring probe 2 | No | Yes | - |
+| 10 | Rising edge measuring probe 3 | No | Yes | - |
+| 11 | Rising edge measuring probe 4 | No | Yes | - |
+| 12 | Rising edge measuring probe 5 | No | Yes | - |
+| 13 | Rising edge measuring probe 6 | No | Yes | - |
+| 14 | Rising edge measuring probe 7 | No | Yes | - |
+| 15 | Rising edge measuring probe 8 | No | Yes | - |
+
+### r0686[0...7] CO: Central measuring probe measuring time rising edge
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Displays, signals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the measuring time for a rising edge at the digital input for the "central
+measuring probe evaluation" function.  
+The measuring time is specified as 16-bit value with a resolution of 0.25 µs.  
+r0686[0]: Measuring time, rising edge measuring probe 1  
+r0686[1]: Measuring time, rising edge measuring probe 2  
+r0686[2]: Measuring time, rising edge measuring probe 3  
+r0686[3]: Measuring time, rising edge measuring probe 4  
+r0686[4]: Measuring time, rising edge measuring probe 5  
+r0686[5]: Measuring time, rising edge measuring probe 6  
+r0686[6]: Measuring time, rising edge measuring probe 7  
+r0686[7]: Measuring time, rising edge measuring probe 8
+
+**Note:**
+  
+The parameter is only active for the evaluation procedure p0684 = 0, 1.  
+For p0684 = 16, r0686[0...7] = 0 is displayed.
+
+### r0687[0...7] CO: Central measuring probe measuring time falling edge
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Displays, signals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the measuring time for a falling edge at the digital input for the "central
+measuring probe evaluation" function.  
+The measuring time is specified as 16-bit value with a resolution of 0.25 µs.  
+r0687[0]: Measuring time, falling edge measuring probe 1  
+r0687[1]: Measuring time, falling edge measuring probe 2  
+r0687[2]: Measuring time, falling edge measuring probe 3  
+r0687[3]: Measuring time, falling edge measuring probe 4  
+r0687[4]: Measuring time, falling edge measuring probe 5  
+r0687[5]: Measuring time, falling edge measuring probe 6  
+r0687[6]: Measuring time, falling edge measuring probe 7  
+r0687[7]: Measuring time, falling edge measuring probe 8
+
+**Note:**
+  
+The parameter is only active for the evaluation procedure p0684 = 0, 1.  
+For p0684 = 16, r0687[0...7] = 0 is displayed.
+
+### r0688 CO: Central measuring probe status word display
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Displays, signals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the status word for the function "central measuring probe evaluation".
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Digital input measuring probe 1 | Low | High | - |
+| 01 | Digital input measuring probe 2 | Low | High | - |
+| 02 | Digital input measuring probe 3 | Low | High | - |
+| 03 | Digital input measuring probe 4 | Low | High | - |
+| 04 | Digital input measuring probe 5 | Low | High | - |
+| 05 | Digital input measuring probe 6 | Low | High | - |
+| 06 | Digital input measuring probe 7 | Low | High | - |
+| 07 | Digital input measuring probe 8 | Low | High | - |
+| 08 | Sub-sampling measuring probe 1 | Low | High | - |
+| 09 | Sub-sampling measuring probe 2 | Low | High | - |
+| 10 | Sub-sampling measuring probe 3 | Low | High | - |
+| 11 | Sub-sampling measuring probe 4 | Low | High | - |
+| 12 | Sub-sampling measuring probe 5 | Low | High | - |
+| 13 | Sub-sampling measuring probe 6 | Low | High | - |
+| 14 | Sub-sampling measuring probe 7 | Low | High | - |
+| 15 | Sub-sampling measuring probe 8 | Low | High | - |
+
+### r0721 CU digital inputs terminal actual value
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 2119, 2120, 2121, 2130, 2131, 2132, 2133 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the actual value at the digital inputs.  
+This means that the actual input signal can be checked at terminal DI x or DI/DO x
+prior to switching from the simulation mode (p0795.x = 1) to terminal mode (p0795.x
+= 0).
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | DI 0 (X122.1/X121.1) | Low | High | - |
+| 01 | DI 1 (X122.2/X121.2) | Low | High | - |
+| 02 | DI 2 (X122.3/X121.3) | Low | High | - |
+| 03 | DI 3 (X122.4/X121.4) | Low | High | - |
+| 04 | DI 4 (X132.1 / -) | Low | High | - |
+| 05 | DI 5 (X132.2 / -) | Low | High | - |
+| 06 | DI 6 (X132.3 / -) | Low | High | - |
+| 07 | DI 7 (X132.4 / -) | Low | High | - |
+| 08 | DI/DO 8 (X122.9/X121.7) | Low | High | - |
+| 09 | DI/DO 9 (X122.10/X121.8) | Low | High | - |
+| 10 | DI/DO 10 (X122.12/X121.10) | Low | High | - |
+| 11 | DI/DO 11 (X122.13/X121.11) | Low | High | - |
+| 12 | DI/DO 12 (X132.9/X131.1) | Low | High | - |
+| 13 | DI/DO 13 (X132.10/X131.2) | Low | High | - |
+| 14 | DI/DO 14 (X132.12/X131.4) | Low | High | - |
+| 15 | DI/DO 15 (X132.13/X131.5) | Low | High | - |
+| 16 | DI 16 (X122.5/X120.3) | Low | High | - |
+| 17 | DI 17 (X122.6/X120.4) | Low | High | - |
+| 20 | DI 20 (X132.5/X120.9) | Low | High | - |
+| 21 | DI 21 (X132.6/X120.10) | Low | High | - |
+
+**Notice:**
+  
+Regarding the terminal designation:  
+The first designation is valid for CU320-2, the second for CU310-2.
+
+**Note:**
+  
+If a DI/DO is parameterized as output (p0728.x = 1), then r0721.x = 0 is displayed.  
+DI: Digital Input  
+DI/DO: Bidirectional Digital Input/Output
+
+### r0722.0...21 CO/BO: CU digital inputs status
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 2119, 2120, 2121, 2130, 2131, 2132, 2133 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Display and BICO output for the status of the digital inputs.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | DI 0 (X122.1/X121.1) | Low | High | - |
+| 01 | DI 1 (X122.2/X121.2) | Low | High | - |
+| 02 | DI 2 (X122.3/X121.3) | Low | High | - |
+| 03 | DI 3 (X122.4/X121.4) | Low | High | - |
+| 04 | DI 4 (X132.1 / -) | Low | High | - |
+| 05 | DI 5 (X132.2 / -) | Low | High | - |
+| 06 | DI 6 (X132.3 / -) | Low | High | - |
+| 07 | DI 7 (X132.4 / -) | Low | High | - |
+| 08 | DI/DO 8 (X122.9/X121.7) | Low | High | - |
+| 09 | DI/DO 9 (X122.10/X121.8) | Low | High | - |
+| 10 | DI/DO 10 (X122.12/X121.10) | Low | High | - |
+| 11 | DI/DO 11 (X122.13/X121.11) | Low | High | - |
+| 12 | DI/DO 12 (X132.9/X131.1) | Low | High | - |
+| 13 | DI/DO 13 (X132.10/X131.2) | Low | High | - |
+| 14 | DI/DO 14 (X132.12/X131.4) | Low | High | - |
+| 15 | DI/DO 15 (X132.13/X131.5) | Low | High | - |
+| 16 | DI 16 (X122.5/X120.3) | Low | High | - |
+| 17 | DI 17 (X122.6/X120.4) | Low | High | - |
+| 20 | DI 20 (X132.5/X120.9) | Low | High | - |
+| 21 | DI 21 (X132.6/X120.10) | Low | High | - |
+
+**Dependency:**
+  
+  
+Refer to:
+r0723
+
+**Notice:**
+  
+Regarding the terminal designation:  
+The first designation is valid for CU320-2, the second for CU310-2.
+
+**Note:**
+  
+DI: Digital Input  
+DI/DO: Bidirectional Digital Input/Output
+
+### r0723.0...21 CO/BO: CU digital inputs status inverted
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 2119, 2120, 2121, 2130, 2131, 2132, 2133 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Display and BICO output for the inverted status of the digital inputs.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | DI 0 (X122.1/X121.1) | Low | High | - |
+| 01 | DI 1 (X122.2/X121.2) | Low | High | - |
+| 02 | DI 2 (X122.3/X121.3) | Low | High | - |
+| 03 | DI 3 (X122.4/X121.4) | Low | High | - |
+| 04 | DI 4 (X132.1 / -) | Low | High | - |
+| 05 | DI 5 (X132.2 / -) | Low | High | - |
+| 06 | DI 6 (X132.3 / -) | Low | High | - |
+| 07 | DI 7 (X132.4 / -) | Low | High | - |
+| 08 | DI/DO 8 (X122.9/X121.7) | Low | High | - |
+| 09 | DI/DO 9 (X122.10/X121.8) | Low | High | - |
+| 10 | DI/DO 10 (X122.12/X121.10) | Low | High | - |
+| 11 | DI/DO 11 (X122.13/X121.11) | Low | High | - |
+| 12 | DI/DO 12 (X132.9/X131.1) | Low | High | - |
+| 13 | DI/DO 13 (X132.10/X131.2) | Low | High | - |
+| 14 | DI/DO 14 (X132.12/X131.4) | Low | High | - |
+| 15 | DI/DO 15 (X132.13/X131.5) | Low | High | - |
+| 16 | DI 16 (X122.5/X120.3) | Low | High | - |
+| 17 | DI 17 (X122.6/X120.4) | Low | High | - |
+| 20 | DI 20 (X132.5/X120.9) | Low | High | - |
+| 21 | DI 21 (X132.6/X120.10) | Low | High | - |
+
+**Dependency:**
+  
+  
+Refer to:
+r0722
+
+**Notice:**
+  
+Regarding the terminal designation:  
+The first designation is valid for CU320-2, the second for CU310-2.
+
+**Note:**
+  
+DI: Digital Input  
+DI/DO: Bidirectional Digital Input/Output
+
+### p0728 CU set input or output
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 2119, 2030, 2031, 2130, 2131, 2132, 2133 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0000 0000 0000 0000 bin |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the bidirectional digital inputs/outputs as an input or output.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 08 | DI/DO 8 (X122.9/X121.7) | Input | Output | - |
+| 09 | DI/DO 9 (X122.10/X121.8) | Input | Output | - |
+| 10 | DI/DO 10 (X122.12/X121.10) | Input | Output | - |
+| 11 | DI/DO 11 (X122.13/X121.11) | Input | Output | - |
+| 12 | DI/DO 12 (X132.9/X131.1) | Input | Output | - |
+| 13 | DI/DO 13 (X132.10/X131.2) | Input | Output | - |
+| 14 | DI/DO 14 (X132.12/X131.4) | Input | Output | - |
+| 15 | DI/DO 15 (X132.13/X131.5) | Input | Output | - |
+
+**Notice:**
+  
+Regarding the terminal designation:  
+The first designation is valid for CU320-2, the second for CU310-2.
+
+**Note:**
+  
+DI/DO: Bidirectional Digital Input/Output
+
+### r0729 CU digital outputs access authority
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 2030, 2031, 2130, 2131, 2132, 2133 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the access authority at the digital outputs.  
+Bit = 1:  
+The control has access authority to the digital output via PROFIBUS or direct access.  
+Bit = 0:  
+The drive has access authority to the digital output or the digital input/output is
+not set as digital output or is not available.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 08 | DI/DO 8 (X122.9/X121.7) | Low | High | - |
+| 09 | DI/DO 9 (X122.10/X121.8) | Low | High | - |
+| 10 | DI/DO 10 (X122.12/X121.10) | Low | High | - |
+| 11 | DI/DO 11 (X122.13/X121.11) | Low | High | - |
+| 12 | DI/DO 12 (X132.9/X131.1) | Low | High | - |
+| 13 | DI/DO 13 (X132.10/X131.2) | Low | High | - |
+| 14 | DI/DO 14 (X132.12/X131.4) | Low | High | - |
+| 15 | DI/DO 15 (X132.13/X131.5) | Low | High | - |
+
+**Dependency:**
+  
+  
+Refer to:
+p0728, p0738, p0739, p0740, p0741, p0742, p0743, p0744, p0745, r0747, p0748
+
+**Notice:**
+  
+Regarding the terminal designation:  
+The first designation is valid for CU320-2, the second for CU310-2.
+
+**Note:**
+  
+The DI/DO must be connected as output (p0728).  
+DI/DO: Bidirectional Digital Input/Output
+
+### p0738 BI: CU signal source for terminal DI/DO 8
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 2119, 2130 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for terminal DI/DO 8 (X122.9 / X121.7).  
+Regarding the terminal designation:  
+The first designation is valid for CU320-2, the second for CU310-2.
+
+**Notice:**
+  
+The parameter may be protected as a result of p0922 or p2079 and cannot be changed.
+
+**Note:**
+  
+Prerequisite: The DI/DO must be set as an output (p0728.8 = 1).  
+DI/DO: Bidirectional Digital Input/Output
+
+### p0739 BI: CU signal source for terminal DI/DO 9
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 2130 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for terminal DI/DO 9 (X122.10 / X121.8).  
+Regarding the terminal designation:  
+The first designation is valid for CU320-2, the second for CU310-2.
+
+**Notice:**
+  
+The parameter may be protected as a result of p0922 or p2079 and cannot be changed.
+
+**Note:**
+  
+Prerequisite: The DI/DO must be set as an output (p0728.9 = 1).  
+DI/DO: Bidirectional Digital Input/Output
+
+### p0740 BI: CU signal source for terminal DI/DO 10
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 2131 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for terminal DI/DO 10 (X122.12 / X121.10).  
+Regarding the terminal designation:  
+The first designation is valid for CU320-2, the second for CU310-2.
+
+**Notice:**
+  
+The parameter may be protected as a result of p0922 or p2079 and cannot be changed.
+
+**Note:**
+  
+Prerequisite: The DI/DO must be set as an output (p0728.10 = 1).  
+DI/DO: Bidirectional Digital Input/Output
+
+### p0741 BI: CU signal source for terminal DI/DO 11
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 2119, 2131 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for terminal DI/DO 11 (X122.13 / X121.11).  
+Regarding the terminal designation:  
+The first designation is valid for CU320-2, the second for CU310-2.
+
+**Notice:**
+  
+The parameter may be protected as a result of p0922 or p2079 and cannot be changed.
+
+**Note:**
+  
+Prerequisite: The DI/DO must be set as an output (p0728.11 = 1).  
+DI/DO: Bidirectional Digital Input/Output
+
+### p0742 BI: CU signal source for terminal DI/DO 12
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 2119, 2132 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for terminal DI/DO 12 (X132.9 / X131.1).  
+Regarding the terminal designation:  
+The first designation is valid for CU320-2, the second for CU310-2.
+
+**Notice:**
+  
+The parameter may be protected as a result of p0922 or p2079 and cannot be changed.
+
+**Note:**
+  
+Prerequisite: The DI/DO must be set as an output (p0728.12 = 1).  
+DI/DO: Bidirectional Digital Input/Output
+
+### p0743 BI: CU signal source for terminal DI/DO 13
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 2132 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for terminal DI/DO 13 (X132.10 / X131.2).  
+Regarding the terminal designation:  
+The first designation is valid for CU320-2, the second for CU310-2.
+
+**Notice:**
+  
+The parameter may be protected as a result of p0922 or p2079 and cannot be changed.
+
+**Note:**
+  
+Prerequisite: The DI/DO must be set as an output (p0728.13 = 1).  
+DI/DO: Bidirectional Digital Input/Output
+
+### p0744 BI: CU signal source for terminal DI/DO 14
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 2133 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for terminal DI/DO 14 (X132.12 / X131.4).  
+Regarding the terminal designation:  
+The first designation is valid for CU320-2, the second for CU310-2.
+
+**Notice:**
+  
+The parameter may be protected as a result of p0922 or p2079 and cannot be changed.
+
+**Note:**
+  
+Prerequisite: The DI/DO must be set as an output (p0728.14 = 1).  
+DI/DO: Bidirectional Digital Input/Output
+
+### p0745 BI: CU signal source for terminal DI/DO 15
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 2119, 2133 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for terminal DI/DO 15 (X132.13 / X131.5).  
+Regarding the terminal designation:  
+The first designation is valid for CU320-2, the second for CU310-2.
+
+**Notice:**
+  
+The parameter may be protected as a result of p0922 or p2079 and cannot be changed.
+
+**Note:**
+  
+Prerequisite: The DI/DO must be set as an output (p0728.15 = 1).  
+DI/DO: Bidirectional Digital Input/Output
+
+### r0747 CU digital outputs status
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 2130, 2131, 2132, 2133 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the status of digital outputs.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 08 | DI/DO 8 (X122.9/X121.7) | Low | High | - |
+| 09 | DI/DO 9 (X122.10/X121.8) | Low | High | - |
+| 10 | DI/DO 10 (X122.12/X121.10) | Low | High | - |
+| 11 | DI/DO 11 (X122.13/X121.11) | Low | High | - |
+| 12 | DI/DO 12 (X132.9/X131.1) | Low | High | - |
+| 13 | DI/DO 13 (X132.10/X131.2) | Low | High | - |
+| 14 | DI/DO 14 (X132.12/X131.4) | Low | High | - |
+| 15 | DI/DO 15 (X132.13/X131.5) | Low | High | - |
+
+**Notice:**
+  
+Regarding the terminal designation:  
+The first designation is valid for CU320-2, the second for CU310-2.
+
+**Note:**
+  
+Inversion using p0748 has been taken into account.  
+DI/DO: Bidirectional Digital Input/Output
+
+### p0748 CU invert digital outputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 2030, 2031, 2130, 2131, 2132, 2133 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0000 0000 0000 0000 bin |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Setting to invert the signals at the digital outputs.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 08 | DI/DO 8 (X122.9/X121.7) | Not inverted | Inverted | - |
+| 09 | DI/DO 9 (X122.10/X121.8) | Not inverted | Inverted | - |
+| 10 | DI/DO 10 (X122.12/X121.10) | Not inverted | Inverted | - |
+| 11 | DI/DO 11 (X122.13/X121.11) | Not inverted | Inverted | - |
+| 12 | DI/DO 12 (X132.9/X131.1) | Not inverted | Inverted | - |
+| 13 | DI/DO 13 (X132.10/X131.2) | Not inverted | Inverted | - |
+| 14 | DI/DO 14 (X132.12/X131.4) | Not inverted | Inverted | - |
+| 15 | DI/DO 15 (X132.13/X131.5) | Not inverted | Inverted | - |
+
+**Notice:**
+  
+If telegram 39x is set via p0922 in SINAMICS Integrated, the inversion of the output
+has no effect.  
+Regarding the terminal designation:  
+The first designation is valid for CU320-2, the second for CU310-2.
+
+**Note:**
+  
+DI/DO: Bidirectional Digital Input/Output
+
+### p0771[0...2] CI: Test sockets signal source
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned32 / Integer16 | **Dynamic index:**- | **Func. diagram:** 8134 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Terminals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for the signal to be output at the test sockets.
+
+**Index:**
+  
+[
+0]:
+T0  
+[
+1]:
+T1  
+[
+2]:
+T2
+
+**Dependency:**
+  
+Can only be set when p0776 = 99.  
+  
+Refer to:
+r0772, r0774, p0776, p0777, p0778, p0779, p0780, p0783, p0784, r0786
+
+### r0772[0...2] Test sockets output signal
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 8134 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Terminals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [%] | - [%] | [ ] - [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the actual value of the signal to be output.
+
+**Index:**
+  
+[
+0]:
+T0  
+[
+1]:
+T1  
+[
+2]:
+T2
+
+**Dependency:**
+  
+  
+Refer to:
+p0771, r0774, p0776, p0777, p0778, p0779, p0780, p0783, p0784, r0786
+
+### r0774[0...2] Test sockets output voltage
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Terminals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [V] | - [V] | [ ] - [V] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the actual output voltage for the test sockets.
+
+**Index:**
+  
+[
+0]:
+T0  
+[
+1]:
+T1  
+[
+2]:
+T2
+
+**Dependency:**
+  
+  
+Refer to:
+p0771, r0772, p0776, p0777, p0778, p0779, p0780, p0783, p0784, r0786
+
+### p0776[0...2] Test socket mode
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 8134 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Terminals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 96 | 99 | [ 0 ] 99 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the mode for the test sockets.
+
+**Value:**
+  
+96:
+Physical address (32-bit integer signal unsigned)  
+97:
+Physical address (32-bit integer signal)  
+98:
+Physical address (32-bit floating-point signal)  
+99:
+BICO signal
+
+**Index:**
+  
+[
+0]:
+T0  
+[
+1]:
+T1  
+[
+2]:
+T2
+
+**Dependency:**
+  
+  
+Refer to:
+p0771, r0772, r0774, p0777, p0778, p0779, p0780, p0783, p0784, r0786, p0788, p0789,
+r0790
+
+### p0777[0...2] Test socket characteristic value x1
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**2 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 8134 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Terminals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| -100000.00 [%] | 100000.00 [%] | [ 0 ] 0.00 [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+The scaling characteristic for the test sockets is defined using two points.  
+This parameter specifies the x coordinate (percentage) of the first point on the characteristic.
+
+**Index:**
+  
+[
+0]:
+T0  
+[
+1]:
+T1  
+[
+2]:
+T2
+
+**Dependency:**
+  
+Can only be set when p0776 = 99.  
+  
+Refer to:
+p0778, p0779, p0780, r0786
+
+**Note:**
+  
+The value 0.00 % corresponds to 2.49 V.
+
+### p0778[0...2] Test socket characteristic value y1
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**2 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 8134 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Terminals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0.00 [V] | 4.98 [V] | [ 0 ] 2.49 [V] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+The scaling characteristic for the test sockets is defined using two points.  
+This parameter specifies the y coordinate (output voltage) of the first point on the
+characteristic.
+
+**Index:**
+  
+[
+0]:
+T0  
+[
+1]:
+T1  
+[
+2]:
+T2
+
+**Dependency:**
+  
+Can only be set when p0776 = 99.  
+  
+Refer to:
+p0777, p0779, p0780, r0786
+
+### p0779[0...2] Test socket characteristic value x2
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**2 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 8134 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Terminals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| -100000.00 [%] | 427.9E9 [%] | [ 0 ] 100.00 [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+The scaling characteristic for the test sockets is defined using two points.  
+This parameter specifies the x coordinate (percentage) of the second point on the
+characteristic.
+
+**Index:**
+  
+[
+0]:
+T0  
+[
+1]:
+T1  
+[
+2]:
+T2
+
+**Dependency:**
+  
+Can only be set when p0776 = 99.  
+  
+Refer to:
+p0777, p0778, p0780, r0786
+
+**Note:**
+  
+The value 100.00 % corresponds to 4.98 V.
+
+### p0780[0...2] Test socket characteristic value y2
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**2 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 8134 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Terminals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0.00 [V] | 4.98 [V] | [ 0 ] 4.98 [V] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+The scaling characteristic for the test sockets is defined using two points.  
+This parameter specifies the y coordinate (output voltage) of the second point on
+the characteristic.
+
+**Index:**
+  
+[
+0]:
+T0  
+[
+1]:
+T1  
+[
+2]:
+T2
+
+**Dependency:**
+  
+Can only be set when p0776 = 99.  
+  
+Refer to:
+p0777, p0778, p0779, r0786
+
+### p0783[0...2] Test sockets offset
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**2 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 8134 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Terminals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| -4.98 [V] | 4.98 [V] | [ 0 ] 0.00 [V] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets an additional offset for the test sockets.
+
+**Index:**
+  
+[
+0]:
+T0  
+[
+1]:
+T1  
+[
+2]:
+T2
+
+### p0784[0...2] Test socket limit on/off
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**2 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 8134 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Terminals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the limit for a signal to be output via test sockets.
+
+**Value:**
+  
+0:
+Limiting off  
+1:
+Limiting on
+
+**Index:**
+  
+[
+0]:
+T0  
+[
+1]:
+T1  
+[
+2]:
+T2
+
+**Note:**
+  
+Limiting on:  
+If signals are output outside the permissible measuring range, the signal is limited
+to 4.98 V or to 0 V.  
+Limiting off:  
+If signals are output outside the permissible measuring range, this causes signal
+overflow. In the case of signal overflow, the signal jumps from 0 V to 4.98 V or from
+4.98 V to 0 V.
+
+### r0786[0...2] Test socket scaling per volt
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 8134 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Terminals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the scaling of the signal to be output.  
+A change in the output voltage by 1 volt corresponds to the value in this parameter.
+The units are determined by the interconnected test signal.
+
+**Index:**
+  
+[
+0]:
+T0  
+[
+1]:
+T1  
+[
+2]:
+T2
+
+**Dependency:**
+  
+  
+Refer to:
+p0771, r0772, r0774, p0777, p0778, p0779, p0780, p0783, p0784
+
+**Note:**
+  
+Example:  
+r0786[0] = 1500.0 and the measuring signal is r0063 (CO: Actual speed smoothed [rpm]).  
+A change of 1 V at the output of test socket T0 corresponds to 1500.0 [rpm].
+
+### p0788[0...2] Test sockets physical address
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Terminals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0000 bin | 1111 1111 1111 1111 1111 1111 1111 1111 bin | [ 0 ] 0000 bin |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the physical address to output signals via the test sockets.
+
+**Index:**
+  
+[
+0]:
+T0  
+[
+1]:
+T1  
+[
+2]:
+T2
+
+**Dependency:**
+  
+Changes only become effective if p0776 does not equal 99.  
+  
+Refer to:
+p0789, r0790
+
+### p0789[0...2] Test sockets physical address gain
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Terminals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| -340.28235E36 | 340.28235E36 | [ 0 ] 1.00000 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the gain of a signal output of a physical address via test sockets.
+
+**Index:**
+  
+[
+0]:
+T0  
+[
+1]:
+T1  
+[
+2]:
+T2
+
+**Dependency:**
+  
+Changes only become effective if p0776 does not equal 99.  
+  
+Refer to:
+p0788
+
+### r0790[0...2] Test sockets physical address signal value
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Terminals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the actual value of a signal determined via a physical address.
+
+**Index:**
+  
+[
+0]:
+T0  
+[
+1]:
+T1  
+[
+2]:
+T2
+
+**Dependency:**
+  
+Only effective when p0776 = 97 or p0776 = 96.  
+  
+Refer to:
+p0788
+
+### p0795 CU digital inputs simulation mode
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 2020, 2030, 2031, 2100, 2119, 2120, 2130, 2131, 2132, 2133 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0000 0000 0000 0000 0000 0000 0000 0000 bin |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the simulation mode for digital inputs.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | DI 0 (X122.1/X121.1) | Terminal eval | Simulation | - |
+| 01 | DI 1 (X122.2/X121.2) | Terminal eval | Simulation | - |
+| 02 | DI 2 (X122.3/X121.3) | Terminal eval | Simulation | - |
+| 03 | DI 3 (X122.4/X121.4) | Terminal eval | Simulation | - |
+| 04 | DI 4 (X132.1 / -) | Terminal eval | Simulation | - |
+| 05 | DI 5 (X132.2 / -) | Terminal eval | Simulation | - |
+| 06 | DI 6 (X132.3 / -) | Terminal eval | Simulation | - |
+| 07 | DI 7 (X132.4 / -) | Terminal eval | Simulation | - |
+| 08 | DI/DO 8 (X122.9/X121.7) | Terminal eval | Simulation | - |
+| 09 | DI/DO 9 (X122.10/X121.8) | Terminal eval | Simulation | - |
+| 10 | DI/DO 10 (X122.12/X121.10) | Terminal eval | Simulation | - |
+| 11 | DI/DO 11 (X122.13/X121.11) | Terminal eval | Simulation | - |
+| 12 | DI/DO 12 (X132.9/X131.1) | Terminal eval | Simulation | - |
+| 13 | DI/DO 13 (X132.10/X131.2) | Terminal eval | Simulation | - |
+| 14 | DI/DO 14 (X132.12/X131.4) | Terminal eval | Simulation | - |
+| 15 | DI/DO 15 (X132.13/X131.5) | Terminal eval | Simulation | - |
+| 16 | DI 16 (X122.5/X120.3) | Terminal eval | Simulation | - |
+| 17 | DI 17 (X122.6/X120.4) | Terminal eval | Simulation | - |
+| 20 | DI 20 (X132.5/X120.9) | Terminal eval | Simulation | - |
+| 21 | DI 21 (X132.6/X120.10) | Terminal eval | Simulation | - |
+
+**Dependency:**
+  
+The setpoint for the input signals is specified using p0796.  
+  
+Refer to:
+p0796
+
+**Notice:**
+  
+If a digital input is used as signal source for the function "STO" (BI: p9620) then
+it is not permissible to select the simulation mode and this is rejected.  
+Regarding the terminal designation:  
+The first designation stands for CU320-2, the second for CU310-2.
+
+**Note:**
+  
+This parameter is not saved when data is backed-up (p0971, p0977).  
+DI: Digital Input  
+DI/DO: Bidirectional Digital Input/Output
+
+### p0796 CU digital inputs simulation mode setpoint
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 2020, 2030, 2031, 2100, 2119, 2120, 2130, 2131, 2132, 2133 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0000 0000 0000 0000 0000 0000 0000 0000 bin |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the setpoint for the input signals in the digital input simulation mode.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | DI 0 (X122.1/X121.1) | Low | High | - |
+| 01 | DI 1 (X122.2/X121.2) | Low | High | - |
+| 02 | DI 2 (X122.3/X121.3) | Low | High | - |
+| 03 | DI 3 (X122.4/X121.4) | Low | High | - |
+| 04 | DI 4 (X132.1 / -) | Low | High | - |
+| 05 | DI 5 (X132.2 / -) | Low | High | - |
+| 06 | DI 6 (X132.3 / -) | Low | High | - |
+| 07 | DI 7 (X132.4 / -) | Low | High | - |
+| 08 | DI/DO 8 (X122.9/X121.7) | Low | High | - |
+| 09 | DI/DO 9 (X122.10/X121.8) | Low | High | - |
+| 10 | DI/DO 10 (X122.12/X121.10) | Low | High | - |
+| 11 | DI/DO 11 (X122.13/X121.11) | Low | High | - |
+| 12 | DI/DO 12 (X132.9/X131.1) | Low | High | - |
+| 13 | DI/DO 13 (X132.10/X131.2) | Low | High | - |
+| 14 | DI/DO 14 (X132.12/X131.4) | Low | High | - |
+| 15 | DI/DO 15 (X132.13/X131.5) | Low | High | - |
+| 16 | DI 16 (X122.5/X120.3) | Low | High | - |
+| 17 | DI 17 (X122.6/X120.4) | Low | High | - |
+| 20 | DI 20 (X132.5/X120.9) | Low | High | - |
+| 21 | DI 21 (X132.6/X120.10) | Low | High | - |
+
+**Dependency:**
+  
+The simulation of a digital input is selected using p0795.  
+  
+Refer to:
+p0795
+
+**Notice:**
+  
+Regarding the terminal designation:  
+The first designation is valid for CU320-2, the second for CU310-2.
+
+**Note:**
+  
+This parameter is not saved when data is backed-up (p0971, p0977).  
+DI: Digital Input  
+DI/DO: Bidirectional Digital Input/Output
+
+### p0799[0...2] CU inputs/outputs sampling time
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 3) | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 2020, 2030, 2031 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0.00 [µs] | 5000.00 [µs] | [ 0 ] 4000.00 [µs] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the sampling time for the inputs and outputs of the Control Unit.
+
+**Index:**
+  
+[
+0]:
+Digital inputs/outputs (DI/DO)  
+[
+1]:
+Analog inputs (AI)  
+[
+2]:
+Analog outputs (AO)
+
+**Dependency:**
+  
+The parameter can only be modified for p0009 = 3, 29.  
+  
+Refer to:
+p0009
+
+**Note:**
+  
+The changed sampling time is immediately effective after a completed sub-boot (p0009
+-> 0).
+
+### r0898.0...15 CO/BO: Control word drive object 1
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Displays, signals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Display and connector output for the control word of drive object 1 (Control Unit).
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Synchronization signal SYN | No | Yes | - |
+| 01 | Real time synchronization PING | No | Yes | - |
+| 07 | Acknowledge fault | No | Yes | - |
+| 12 | Master sign-of-life bit 0 | No | Yes | - |
+| 13 | Master sign-of-life bit 1 | No | Yes | - |
+| 14 | Master sign-of-life bit 2 | No | Yes | - |
+| 15 | Master sign-of-life bit 3 | No | Yes | - |
+
+### r0899.0...15 CO/BO: Status word drive object 1
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Displays, signals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Display and BICO output for the status word of the sequence control of the Control
+Unit (drive object 1).
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Reserved | No | Yes | - |
+| 03 | Fault present | No | Yes | - |
+| 07 | Alarm present | No | Yes | - |
+| 08 | System time synchronized | No | Yes | - |
+| 12 | Slave sign-of-life bit 0 | No | Yes | - |
+| 13 | Slave sign-of-life bit 1 | No | Yes | - |
+| 14 | Slave sign-of-life bit 2 | No | Yes | - |
+| 15 | Slave sign-of-life bit 3 | No | Yes | - |
+
+**Note:**
+  
+DO: Drive Object
+
+### p0918 PROFIBUS address
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2401, 2410 |
+| **Object:**CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 1 | 126 | [ 0 ] 126 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays or sets the PROFIBUS address for PROFIBUS interface on the Control Unit.  
+The address can be set as follows:  
+1) Using the address switch on the Control Unit.  
+--> p0918 can then only be read and displays the selected address.  
+--> A change only becomes effective after a POWER ON.  
+2) Using p0918  
+--> Only if the address 00 hex, 7F hex, 80 hex, or FF hex has been set using the address
+switch.  
+--> The address is saved in a non-volatile fashion using the function "copy from RAM
+to ROM".  
+--> A change only becomes effective after a POWER ON.
+
+**Note:**
+  
+Permissible PROFIBUS addresses: 1 ... 126 (01 hex ... 7E hex)  
+Address 126 is used for commissioning.  
+Every PROFIBUS address change only becomes effective after a POWER ON.  
+The parameter is not influenced by setting the factory setting.
+
+### p0922 IF1 PROFIdrive PZD telegram selection
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C2( 1) T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2401, 2420, 2423, 2481, 2483 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 390 | 999 | [ 0 ] 999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the send and receive telegram.
+
+**Value:**
+  
+390:
+SIEMENS telegram 390, PZD-2/2  
+391:
+SIEMENS telegram 391, PZD-3/7  
+392:
+SIEMENS telegram 392, PZD-3/15  
+393:
+SIEMENS telegram 393, PZD-4/21  
+394:
+SIEMENS telegram 394, PZD-3/3  
+395:
+SIEMENS telegram 395, PZD-4/25  
+999:
+Free telegram configuration with BICO
+
+### p0925 PROFIdrive clock synchronous sign-of-life tolerance
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2410 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Sets the number of tolerated consecutive sign-of-life errors of the clock-cycle synchronous
+master.  
+The sign-of-life signal is normally received in PZD4 (control word 2) from the master.
+
+**Dependency:**
+  
+  
+Refer to:
+p2045, r2065  
+Refer to:
+F01912
+
+**Note:**
+  
+The sign-of-life monitoring is disabled for p0925 = 65535.
+
+### r0944 CO: Counter for fault buffer changes
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 8060 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Display and connector output for the counter for changes of the fault buffer.  
+This counter is incremented every time the fault buffer changes.
+
+**Recommend.:**
+  
+Used to check whether the fault buffer has been read out consistently.
+
+**Dependency:**
+  
+  
+Refer to:
+r0945, r0947, r0948, r0949, r2109
+
+### r0945[0...63] Fault code
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 8050, 8060 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the numbers of faults that have occurred.
+
+**Dependency:**
+  
+  
+Refer to:
+r0947, r0948, r0949, r2109, r2130, r2133, r2136, r3120, r3122
+
+**Notice:**
+  
+The properties of the fault buffer should be taken from the corresponding product
+documentation.
+
+**Note:**
+  
+The buffer parameters are cyclically updated in the background (refer to status signal
+in r2139).  
+Fault buffer structure (general principle):  
+r0945[0], r0949[0], r0948[0], r2109[0], r3115[0] --> actual fault case, fault 1  
+. . .  
+r0945[7], r0949[7], r0948[7], r2109[7], r3115[7] --> actual fault case, fault 8  
+r0945[8], r0949[8], r0948[8], r2109[8], r3115[8] --> 1st acknowledged fault case,
+fault 1  
+. . .  
+r0945[15], r0949[15], r0948[15], r2109[15], r3115[15] --> 1st acknowledged fault case,
+fault 8  
+. . .  
+r0945[56], r0949[56], r0948[56], r2109[56], r3115[56] --> 7th acknowledged fault case,
+fault 1  
+. . .  
+r0945[63], r0949[63], r0948[63], r2109[63], r3115[63] --> 7th acknowledged fault case,
+fault 8
+
+### r0947[0...63] Fault number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 8050, 8060 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+This parameter is identical to r0945.
+
+### r0948[0...63] Fault time received in milliseconds
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 8050, 8060 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [ms] | - [ms] | [ ] - [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the system runtime in milliseconds when the fault occurred.
+
+**Dependency:**
+  
+  
+Refer to:
+r0945, r0947, r0949, r2109, r2114, r2130, r2133, r2136, r3115, r3120, r3122
+
+**Notice:**
+  
+The time comprises r2130 (days) and r0948 (milliseconds).
+
+**Note:**
+  
+The buffer parameters are cyclically updated in the background (refer to status signal
+in r2139).  
+The structure of the fault buffer and the assignment of the indices is shown in r0945.  
+When the parameter is read via PROFIdrive, the TimeDifference data type applies.
+
+### r0949[0...63] Fault value
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer32 | **Dynamic index:**- | **Func. diagram:** 8050, 8060 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays additional information about the fault that occurred (as integer number).
+
+**Dependency:**
+  
+  
+Refer to:
+r0945, r0947, r0948, r2109, r2130, r2133, r2136, r3115, r3120, r3122
+
+**Note:**
+  
+The buffer parameters are cyclically updated in the background (refer to status signal
+in r2139).  
+The structure of the fault buffer and the assignment of the indices is shown in r0945.
+
+### p0952 Fault cases counter
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 6700, 8060 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Number of fault situations that have occurred since the last reset.
+
+**Dependency:**
+  
+The fault buffer is deleted (cleared) by setting p0952 to 0.  
+POWER ON must first be carried out in order that faults with "POWER ON" acknowledgment
+can also be cleared from the fault buffer.  
+  
+Refer to:
+r0945, r0947, r0948, r0949, r2109, r2130, r2133, r2136
+
+### r0963 PROFIBUS baud rate
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the corresponding value for the PROFIBUS baud rate.
+
+**Value:**
+  
+0:
+9.6 kbit/s  
+1:
+19.2 kbit/s  
+2:
+93.75 kbit/s  
+3:
+187.5 kbit/s  
+4:
+500 kbit/s  
+6:
+1.5 Mbit/s  
+7:
+3 Mbit/s  
+8:
+6 Mbit/s  
+9:
+12 Mbit/s  
+10:
+31.25 kbit/s  
+11:
+45.45 kbit/s  
+255:
+Unknown
+
+### r0964[0...6] Device identification
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the device identification.
+
+**Index:**
+  
+[
+0]:
+Company (Siemens = 42)  
+[
+1]:
+Device type  
+[
+2]:
+Firmware version  
+[
+3]:
+Firmware date (year)  
+[
+4]:
+Firmware date (day/month)  
+[
+5]:
+Number of drive objects  
+[
+6]:
+Firmware patch/hot fix
+
+**Note:**
+  
+Example:  
+r0964[0] = 42 --> SIEMENS  
+r0964[1] = device type, see below  
+r0964[2] = 403 --> first part of the firmware version V04.03 (for second part, refer
+to index 6)  
+r0964[3] = 2010 --> year 2010  
+r0964[4] = 1705 --> 17th of May  
+r0964[5] = 2 --> 2 drive objects  
+r0964[6] = 200 --> second part, firmware version (complete version: V04.03.02.00)  
+Device type:  
+r0964[1] = 5531 --> SINAMICS SM120 CU320-2 DP  
+r0964[1] = 5532 --> SINAMICS SM120 CU320-2 PN
+
+### r0965 PROFIdrive profile number profile version
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the PROFIdrive profile number and profile version.  
+Constant value = 032A hex.  
+Byte 1: Profile number = 03 hex = PROFIdrive profile  
+Byte 2: profile version = 2A hex = 42 dec = version 4.2
+
+**Note:**
+  
+When the parameter is read via PROFIdrive, the Octet String 2 data type applies.
+
+### p0969 System runtime relative
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 8050, 8060 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Displays, signals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 [ms] | 4294967295 [ms] | [ 0 ] 0 [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the system runtime in ms since the last POWER ON.
+
+**Note:**
+  
+The value in p0969 can only be reset to 0.  
+The value overflows after approx. 49 days.  
+When the parameter is read via PROFIdrive, the TimeDifference data type applies.
+
+### p0971 Save drive object parameters
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**Factory settings | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Setting to save the parameter of the particular drive object in the non-volatile memory.  
+When saving, only the adjustable parameters intended to be saved are taken into account.
+
+**Value:**
+  
+0:
+Inactive  
+1:
+Save drive object
+
+**Dependency:**
+  
+  
+Refer to:
+p0977, p3845, r3996
+
+**Warning:**
+  
+If the Control Unit power supply is switched off while data is being saved, then the
+backup of all adjustable parameters can be lost, and the Control Unit must be recommissioned.
+
+**Notice:**
+  
+The Control Unit power supply may only be switched off after data has been saved (i.e.
+after data save has been started, wait until the parameter again has the value 0).  
+Writing to parameters is inhibited while saving.  
+The progress while saving is displayed in r3996.
+
+**Note:**
+  
+Starting from the particular drive object, the following parameters are saved:  
+CU3xx: Device-specific parameters and PROFIBUS device parameters.  
+Other objects: Parameters of the actual object and PROFIBUS device parameters.  
+Prerequisite:  
+Before saving with p0971, all parameters (topology, all drive objects) must have been
+saved at least once using p0977 = 1.
+
+## SINAMICS Parameter SINAMICS MV 00972 - 03107
+
+SINAMICS Parameter SINAMICS MV 00972 - 03107
+
+### p0972 Drive unit reset
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**All groups | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 3 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the required procedure to execute a hardware reset for the drive unit.
+
+**Value:**
+  
+0:
+Inactive  
+1:
+Hardware-Reset immediate  
+2:
+Hardware reset preparation  
+3:
+Hardware reset after cyclic communication has failed
+
+**Danger:**
+  
+It must be absolutely ensured that the system is in a safe condition.  
+The memory card/device memory of the Control Unit must not be accessed.
+
+**Note:**
+  
+For value = 1:  
+Reset is immediately executed and communications interrupted.  
+After communications have been established, check the reset operation (refer below).  
+This value cannot be set in operation.  
+For value = 2:  
+Help to check the reset operation.  
+Firstly, set p0972 = 2 and then read back. Secondly, set p0972 = 1 (it is possible
+that this request is possibly no longer acknowledged). The communication is then interrupted.  
+After communications have been established, check the reset operation (refer below).  
+If value = 3:  
+The reset is executed after interrupting cyclic communication. This setting is used
+to implement a synchronized reset by a control for several drive units.  
+If cyclic communication is not active, then the reset is immediately executed.  
+If the cyclic communication is active for both PROFIdrive interfaces, then the reset
+is executed after completing both cycle communications.  
+After communications have been established, check the reset operation (refer below).  
+To check the reset operation:  
+After the drive unit has been restarted and communications have been established,
+read p0972 and check the following:  
+p0972 = 0 --> the reset was successfully executed.  
+p0972 > 0 --> the reset was not executed.
+
+### r0975[0...10] Drive object identification
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the identification of the drive object.
+
+**Index:**
+  
+[
+0]:
+Company (Siemens = 42)  
+[
+1]:
+Drive object type  
+[
+2]:
+Firmware version  
+[
+3]:
+Firmware date (year)  
+[
+4]:
+Firmware date (day/month)  
+[
+5]:
+PROFIdrive drive object type class  
+[
+6]:
+PROFIdrive drive object sub-type Class 1  
+[
+7]:
+Drive object number  
+[
+8]:
+Reserved  
+[
+9]:
+Reserved  
+[
+10]:
+Firmware patch/hot fix
+
+**Note:**
+  
+Example:  
+r0975[0] = 42 --> SIEMENS  
+r0975[1] = 11 --> SERVO drive object type  
+r0975[2] = 102 --> first part, firmware version V01.02 (second part, refer to index
+10)  
+r0975[3] = 2003 --> year 2003  
+r0975[4] = 1401 --> 14th of January  
+r0975[5] = 1 --> PROFIdrive drive object, type class  
+r0975[6] = 9 --> PROFIdrive drive object sub-type class 1  
+r0975[7] = 2 --> drive object number = 2  
+r0975[8] = 0 (reserved)  
+r0975[9] = 0 (reserved)  
+r0975[10] = 600 --> second part, firmware version (complete version: V01.02.06.00)
+
+### p0976 Reset and load all parameters
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 30) C2( 30) | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Factory settings | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1013 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Resets or downloads all parameters of the drive system.
+
+**Value:**
+  
+0:
+Inactive  
+1:
+Start reset of all parameters to factory setting  
+2:
+Start dnload of param. saved in non-volatile mem w/ p0977=1  
+3:
+Start download of volatile parameters from RAM  
+10:
+Start dnload of param. saved in non-volatile mem w/ p0977=10  
+11:
+Start dnload of param. saved in non-volatile mem w/ p0977=11  
+12:
+Start dnload of param. saved in non-volatile mem w/ p0977=12  
+20:
+Start load of param. saved in non-volatile mem w/ p0977=20  
+21:
+Start load of param. saved in non-volatile mem w/ p0977=21  
+22:
+Start load of param. saved in non-volatile mem w/ p0977=22  
+23:
+Start load of param. saved in non-volatile mem w/ p0977=23  
+24:
+Start load of param. saved in non-volatile mem w/ p0977=24  
+25:
+Start load of param. saved in non-volatile mem w/ p0977=25  
+26:
+Start load of param. saved in non-volatile mem w/ p0977=26  
+30:
+Start loading the delivery state saved with p0977=30  
+100:
+Start resetting of all BICO interconnections  
+1011:
+Start dnload of param. saved in volatile mem w/ p0977=1011  
+1012:
+Start dnload of param. saved in volatile mem w/ p0977=1012  
+1013:
+Start dnload of param. saved in volatile mem w/ p0977=1013
+
+**Notice:**
+  
+After the value has been modified, no further parameter modifications can be made
+and the status is shown in r3996. Modifications can be made again when r3996 = 0.
+
+**Note:**
+  
+After all of the parameters have been reset to their factory setting, the system must
+be commissioned for the first time again.  
+Resetting or loading is realized in the non-volatile memory.  
+Procedure:  
+1. Set p0009 = 30 (parameter reset).  
+2. Set p0976 to "required value". The system is rebooted.  
+p0976 is automatically set to 0 and p0009 is automatically set to 1 after this has
+been carried out.
+
+### p0977 Save all parameters
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Factory settings | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1013 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Saves all parameters of the drive system to the non-volatile memory.  
+When saving, only the adjustable parameters intended to be saved are taken into account.
+
+**Value:**
+  
+0:
+Inactive  
+1:
+Save in non-volatile memory - downloaded at POWER ON  
+10:
+Save as opt. in non-vol. memory - downloaded w/ p0976=10  
+11:
+Save as opt. in non-vol. memory - downloaded w/ p0976=11  
+12:
+Save as opt. in non-vol. memory - downloaded w/ p0976=12  
+20:
+Save as opt. in non-vol. memory - loaded with p0976=20  
+21:
+Save as opt. in non-vol. memory - loaded with p0976=21  
+22:
+Save as opt. in non-vol. memory - loaded with p0976=22  
+23:
+Save as opt. in non-vol. memory - loaded with p0976=23  
+24:
+Save as opt. in non-vol. memory - loaded with p0976=24  
+25:
+Save as opt. in non-vol. memory - loaded with p0976=25  
+26:
+Save as opt. in non-vol. memory - loaded with p0976=26  
+30:
+State when delivered, save in non-volatile memory as setting 30  
+80:
+Save in non-volatile memory time-optimized (reserved)  
+1011:
+Save in volatile memory, downloaded with p0976=1011  
+1012:
+Save in volatile memory, downloaded with p0976=1012  
+1013:
+Save in volatile memory, downloaded with p0976=1013
+
+**Dependency:**
+  
+  
+Refer to:
+p0976, p3845, r3996
+
+**Notice:**
+  
+The Control Unit power supply may only be switched off after data has been saved (i.e.
+after data save has been started, wait until the parameter again has the value 0).  
+Writing to parameters is inhibited while saving.  
+The progress while saving is displayed in r3996.  
+For p0977 = 30:  
+The original state when delivered is overwritten when executing this memory function.
+
+**Note:**
+  
+Parameters saved with p0977 = 10, 11 or 12 can be downloaded again with p0976 = 10,
+11 or 12.  
+The identification and maintenance data (I&M data, p8806 and following) are only saved
+for p0977 = 1.
+
+### p0978[0...n] List of drive objects
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 1) | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Topology | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ 0 ] 1   [ 1...24 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+This parameter is an image of p0101 in conformance with PROFIdrive.  
+Parameters p0101 and p0978 contain the following information:  
+1) The same number of drive objects  
+2) The same drive objects  
+In this sense, they are consistent.  
+Difference between p0101 and p0978:  
+p0978 can be re-sorted and a zero inserted in order to identify those drive objects
+that participate in the process data exchange and to define their sequence in the
+process data exchange. Drive objects that are listed after the first zero, are excluded
+from the process data exchange.  
+For p0978, in addition, the value 255 can be inserted a multiple number of times.  
+p0978[n] = 255 means: The drive object is visible for the PROFIBUS master and is empty
+(without any actual process data exchange). This allows cyclic communications of a
+PROFIBUS master with unchanged configuring to the drive units with a lower number
+of drive objects.
+
+**Dependency:**
+  
+  
+Refer to:
+p0101, p0971, p0977
+
+**Note:**
+  
+p0978 cannot be changed when the drive system is first commissioned. The reason for
+this is that at this time the actual topology has still not been acknowledged (p0099
+is still not equal to r0098 and p0009 is set to 0).
+
+### p1818 Phase for PWM generation configuration
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Modulation | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1 | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the phase shift for offset clocking.  
+For the first active power unit, it is specified whether clocking is to start at 0°
+(value = 0) or 180° (value = 1). All other active power units are clocked alternately
+according to the setting made here.
+
+**Note:**
+  
+A change only becomes effective after a POWER ON.  
+The parameter is not influenced by setting the factory setting.
+
+### r2019[0...7] Comm IF error statistics
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the receive errors at the commissioning interface (RS232).
+
+**Index:**
+  
+[
+0]:
+Number of error-free telegrams  
+[
+1]:
+Number of rejected telegrams  
+[
+2]:
+Number of framing errors  
+[
+3]:
+Number of overrun errors  
+[
+4]:
+Number of parity errors  
+[
+5]:
+Number of starting character errors  
+[
+6]:
+Number of checksum errors  
+[
+7]:
+Number of length errors
+
+### p2020 Field bus interface baud rate
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**2 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 4 | 13 | [ 0 ] 8 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the baud rate for the fieldbus interface USS.
+
+**Value:**
+  
+4:
+2400 baud  
+5:
+4800 baud  
+6:
+9600 baud  
+7:
+19200 baud  
+8:
+38400 baud  
+9:
+57600 baud  
+10:
+76800 baud  
+11:
+93750 baud  
+12:
+115200 baud  
+13:
+187500 baud
+
+**Note:**
+  
+Fieldbus IF: Fieldbus interface  
+Changes only become effective after POWER ON.  
+The parameter is not influenced by setting the factory setting.  
+The parameter is set to the factory setting when the protocol is reselected.
+
+### p2021 Field bus interface address
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 31 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays or sets the address for the fieldbus interface USS.  
+The address can be set as follows:  
+1) Using the address switch on the Control Unit.  
+--> p2021 displays the address setting.  
+--> A change only becomes effective after a POWER ON.  
+2) Using p2021  
+--> Only if an address of 0 or an address that is invalid for the fieldbus selected
+in p2030 has been set using the address switch.  
+--> The address is saved in a non-volatile fashion using the function "copy from RAM
+to ROM".  
+--> A change only becomes effective after a POWER ON.
+
+**Dependency:**
+  
+  
+Refer to:
+p2030
+
+**Note:**
+  
+Changes only become effective after POWER ON.  
+The parameter is not influenced by setting the factory setting.  
+The parameter is set to the factory setting when the protocol is reselected.
+
+### p2022 Field bus interface USS PZD number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 16 | [ 0 ] 2 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the number of 16-bit words in the PZD part of the USS telegram for the field
+bus interface.
+
+**Dependency:**
+  
+  
+Refer to:
+p2030
+
+**Note:**
+  
+The parameter is not influenced by setting the factory setting.
+
+### p2023 Field bus int USS PKW no.
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**2 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 127 | [ 0 ] 127 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the number of 16-bit words in the PKW part of the USS telegram for the field
+bus interface.
+
+**Value:**
+  
+0:
+PKW 0 words  
+3:
+PKW 3 words  
+4:
+PKW 4 words  
+127:
+PKW variable
+
+**Dependency:**
+  
+  
+Refer to:
+p2030
+
+**Note:**
+  
+The parameter is not influenced by setting the factory setting.
+
+### p2024[0...2] Fieldbus interface times
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 [ms] | 10000 [ms] | [ 0 ] 1000 [ms]  [ 1 ] 0 [ms]  [ 2 ] 0 [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.8
+
+**Description:**
+  
+Sets the time values for the fieldbus interface.  
+The following applies for Modbus:  
+p2024[0, 1]: not relevant.  
+p2024[2]: Telegram pause time (pause time between two telegrams).
+
+**Index:**
+  
+[
+0]:
+Max. processing time  
+[
+1]:
+Character delay time  
+[
+2]:
+Telegram pause time
+
+**Dependency:**
+  
+  
+Refer to:
+p2020, p2030
+
+**Note:**
+  
+For p2024[2] (Modbus):  
+If the field bus baud rate is changed (p2020), the default time setting is restored.  
+The default setting corresponds to a time of 3.5 characters (dependent on the baud
+rate that has been set).
+
+### r2029[0...7] Field bus interface error statistics
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the receive errors on the field bus interface (USS).
+
+**Index:**
+  
+[
+0]:
+Number of error-free telegrams  
+[
+1]:
+Number of rejected telegrams  
+[
+2]:
+Number of framing errors  
+[
+3]:
+Number of overrun errors  
+[
+4]:
+Number of parity errors  
+[
+5]:
+Number of starting character errors  
+[
+6]:
+Number of checksum errors  
+[
+7]:
+Number of length errors
+
+### p2030 Field bus interface protocol selection
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 3 | 6 | [ 0 ] 3 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the communication protocol for the field bus interface.
+
+**Value:**
+  
+3:
+PROFIBUS  
+6:
+USS (X140)
+
+**Note:**
+  
+Changes only become effective after POWER ON.  
+The parameter is not influenced by setting the factory setting.
+
+### p2030 Field bus interface protocol selection
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 7 | 13 | [ 0 ] 7 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.8
+
+**Description:**
+  
+Sets the communication protocol for the field bus interface.
+
+**Value:**
+  
+7:
+PROFINET  
+10:
+EtherNet/IP  
+13:
+Modbus TCP
+
+**Note:**
+  
+Changes only become effective after POWER ON.  
+The parameter is not influenced by setting the factory setting.
+
+### p2035 Fieldbus interface USS PIV drive object number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**2 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 1 | 62 | [ 0 ] 2 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the drive object number for communication via the field bus interface (USS).
+
+**Dependency:**
+  
+  
+Refer to:
+p0978
+
+**Note:**
+  
+p2035 defines the destination for USS parameter requests (PIV).  
+p0978[0] defines the destination for USS process data (PZD).  
+The parameter is available globally on all drive objects.  
+The parameter is not influenced by setting the factory setting.
+
+### p2039 Select debug monitor interface
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 3 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the serial interface for the debug monitor.  
+The serial interface for the debug monitor is COM1 (X140) or COM2 (internal).  
+Value = 0: COM2 (internal)  
+Value = 1: COM1 (X140), commissioning protocol is deactivated  
+Value = 2: COM2 (internal)  
+Value = 3: Reserved
+
+### p2040 Fieldbus interface monitoring time
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 [ms] | 1999999 [ms] | [ 0 ] 100 [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.8
+
+**Description:**
+  
+Sets the monitoring time to monitor the process data received via the fieldbus interface.  
+If no process data is received within this time, then an appropriate message is output.
+
+**Dependency:**
+  
+  
+Refer to:
+p2030  
+Refer to:
+F01910
+
+**Note:**
+  
+The parameter is only relevant for the setting of the following fieldbus protocols.  
+- USS (X140) (p2030 = 6)  
+- Modbus TCP (p2030 = 13)  
+Value = 0: Monitoring is deactivated.
+
+### p2042 PROFIBUS Ident Number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the PROFIBUS ident number (PNO-ID).  
+SINAMICS can be operated with various identities on PROFIBUS. This allows the use
+of a PROFIBUS GSD that is independent of the device (e.g. PROFIdrive VIK-NAMUR with
+ident number 3AA0 hex).
+
+**Value:**
+  
+0:
+SINAMICS  
+1:
+VIK-NAMUR
+
+**Note:**
+  
+Every change only becomes effective after a POWER ON.
+
+### r2043.0...2 BO: IF1 PROFIdrive PZD state
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** 2410 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the PROFIdrive PZD state.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Setpoint failure | No | Yes | - |
+| 01 | Clock cycle synchronous operation active | No | Yes | - |
+| 02 | Fieldbus operation | No | Yes | - |
+
+**Dependency:**
+  
+  
+Refer to:
+p2044
+
+**Note:**
+  
+When using the "setpoint failure" signal, the bus can be monitored and an application-specific
+response triggered when the setpoint fails.
+
+### p2045 CI: PB/PN clock synchronous controller sign-of-life signal source
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Integer16 | **Dynamic index:**- | **Func. diagram:** 2410 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Connector input for the sign-of-life of the clock synchronous PROFIBUS/PROFINET controller.  
+The sign-of-life is expected at bits 12 to 15. Bits 0 to 11 are not evaluated.  
+The sign-of-life signal is normally received in PZD4 (control word 2) from the controller.
+
+**Dependency:**
+  
+  
+Refer to:
+p0925, r2065
+
+**Notice:**
+  
+The parameter may be protected as a result of p0922 or p2079 and cannot be changed.
+
+### p2047 PROFIBUS additional monitoring time
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 2410 |
+| **Object:**CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 [ms] | 20000 [ms] | [ 0 ] 0 [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the additional monitoring time to monitor the process data received via PROFIBUS.  
+Enables short bus faults to be compensated.  
+If no process data is received within this time, then an appropriate message is output.
+
+**Recommend.:**
+  
+In the isochronous mode, the additional monitoring time should not be set.
+
+**Dependency:**
+  
+  
+Refer to:
+F01910
+
+**Note:**
+  
+For controller STOP, the additional monitoring time is not effective.
+
+### p2048 IF1 PROFIdrive PZD sampling time
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 3) | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0.50 [ms] | 16.00 [ms] | [ 0 ] 4.00 [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the sampling time for the cyclic interface 1 (IF1).
+
+**Note:**
+  
+The system only permits certain sampling times and after writing to this parameter,
+displays the value that has actually been set.  
+For clock cycle synchronous operation, the specified bus cycle time applies (Tdp).
+
+### r2050[0...19] CO: IF1 PROFIdrive PZD receive word
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**4000H | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Connector output to interconnect PZD (setpoints) with word format received from the
+fieldbus controller.
+
+**Index:**
+  
+[
+0]:
+PZD 1  
+[
+1]:
+PZD 2  
+[
+2]:
+PZD 3  
+[
+3]:
+PZD 4  
+[
+4]:
+PZD 5  
+[
+5]:
+PZD 6  
+[
+6]:
+PZD 7  
+[
+7]:
+PZD 8  
+[
+8]:
+PZD 9  
+[
+9]:
+PZD 10  
+[
+10]:
+PZD 11  
+[
+11]:
+PZD 12  
+[
+12]:
+PZD 13  
+[
+13]:
+PZD 14  
+[
+14]:
+PZD 15  
+[
+15]:
+PZD 16  
+[
+16]:
+PZD 17  
+[
+17]:
+PZD 18  
+[
+18]:
+PZD 19  
+[
+19]:
+PZD 20
+
+**Note:**
+  
+IF1: Interface 1
+
+### p2051[0...24] CI: IF1 PROFIdrive PZD send word
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**4000H | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Selects the PZD (actual values) with word format to be sent to the fieldbus controller.
+
+**Index:**
+  
+[
+0]:
+PZD 1  
+[
+1]:
+PZD 2  
+[
+2]:
+PZD 3  
+[
+3]:
+PZD 4  
+[
+4]:
+PZD 5  
+[
+5]:
+PZD 6  
+[
+6]:
+PZD 7  
+[
+7]:
+PZD 8  
+[
+8]:
+PZD 9  
+[
+9]:
+PZD 10  
+[
+10]:
+PZD 11  
+[
+11]:
+PZD 12  
+[
+12]:
+PZD 13  
+[
+13]:
+PZD 14  
+[
+14]:
+PZD 15  
+[
+15]:
+PZD 16  
+[
+16]:
+PZD 17  
+[
+17]:
+PZD 18  
+[
+18]:
+PZD 19  
+[
+19]:
+PZD 20  
+[
+20]:
+PZD 21  
+[
+21]:
+PZD 22  
+[
+22]:
+PZD 23  
+[
+23]:
+PZD 24  
+[
+24]:
+PZD 25
+
+**Notice:**
+  
+The parameter may be protected as a result of p0922 or p2079 and cannot be changed.
+
+**Note:**
+  
+IF1: Interface 1
+
+### r2053[0...24] IF1 PROFIdrive diagnostics PZD send word
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Displays the PZD (actual values) with word format sent to the fieldbus controller.
+
+**Index:**
+  
+[
+0]:
+PZD 1  
+[
+1]:
+PZD 2  
+[
+2]:
+PZD 3  
+[
+3]:
+PZD 4  
+[
+4]:
+PZD 5  
+[
+5]:
+PZD 6  
+[
+6]:
+PZD 7  
+[
+7]:
+PZD 8  
+[
+8]:
+PZD 9  
+[
+9]:
+PZD 10  
+[
+10]:
+PZD 11  
+[
+11]:
+PZD 12  
+[
+12]:
+PZD 13  
+[
+13]:
+PZD 14  
+[
+14]:
+PZD 15  
+[
+15]:
+PZD 16  
+[
+16]:
+PZD 17  
+[
+17]:
+PZD 18  
+[
+18]:
+PZD 19  
+[
+19]:
+PZD 20  
+[
+20]:
+PZD 21  
+[
+21]:
+PZD 22  
+[
+22]:
+PZD 23  
+[
+23]:
+PZD 24  
+[
+24]:
+PZD 25
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Bit 0 | OFF | ON | - |
+| 01 | Bit 1 | OFF | ON | - |
+| 02 | Bit 2 | OFF | ON | - |
+| 03 | Bit 3 | OFF | ON | - |
+| 04 | Bit 4 | OFF | ON | - |
+| 05 | Bit 5 | OFF | ON | - |
+| 06 | Bit 6 | OFF | ON | - |
+| 07 | Bit 7 | OFF | ON | - |
+| 08 | Bit 8 | OFF | ON | - |
+| 09 | Bit 9 | OFF | ON | - |
+| 10 | Bit 10 | OFF | ON | - |
+| 11 | Bit 11 | OFF | ON | - |
+| 12 | Bit 12 | OFF | ON | - |
+| 13 | Bit 13 | OFF | ON | - |
+| 14 | Bit 14 | OFF | ON | - |
+| 15 | Bit 15 | OFF | ON | - |
+
+**Note:**
+  
+IF1: Interface 1
+
+### r2054 PROFIBUS status
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 2410 |
+| **Object:**CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 4 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Status display for the PROFIBUS interface.
+
+**Value:**
+  
+0:
+OFF  
+1:
+No connection (search for baud rate)  
+2:
+Connection OK (baud rate found)  
+3:
+Cyclic connection with master (data exchange)  
+4:
+Cyclic data OK
+
+**Note:**
+  
+For r2054 = 2:  
+If the state is not exited, then set or check the PROFIBUS address in p0918.  
+For r2054 = 3:  
+In state 3 (the LED flashes green), a cyclic connection has been established to the
+PROFIBUS master; however, one of the following prerequisites is missing for cyclic
+operation:  
+- no setpoints are being received as the PROFIBUS master is in the STOP condition.  
+Only for clock-cycle synchronous operation, the following applies:  
+- the drive is not in synchronism as the global control (GC) has an error.  
+For r2054 = 4:  
+In the status 4 (LED green), the cyclic connection to the PROFIBUS master has been
+established and setpoints are being received. The clock cycle synchronization is OK,
+the global control (GC) is error-free.  
+This state does not provide any statement regarding the quality of the clock cycle
+synchronous sign-of-life characters on the drive objects.
+
+### r2055[0...2] PROFIBUS diagnostics standard
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2410 |
+| **Object:**CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Diagnostics display for the PROFIBUS interface.
+
+**Index:**
+  
+[
+0]:
+Master bus address  
+[
+1]:
+Master input total length bytes  
+[
+2]:
+Master output total length bytes
+
+### r2057 PROFIBUS address switch diagnostics
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2410 |
+| **Object:**CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the setting of the PROFIBUS address switch "DP ADDRESS" on the Control Unit.
+
+**Dependency:**
+  
+  
+Refer to:
+p0918
+
+**Notice:**
+  
+The display is updated after switching on, and not cyclically.
+
+### r2064[0...7] PB/PN diagnostics clock cycle synchronism
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer32 | **Dynamic index:**- | **Func. diagram:** 2410 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the last parameter received from the PROFIBUS/PROFINET controller for clock
+synchronism.  
+The parameters for clock synchronism are created when configuring the bus and are
+transferred at the start of cyclic operation from the controller to the device.
+
+**Index:**
+  
+[
+0]:
+Clock synchronous mode activated  
+[
+1]:
+Bus cycle time (Tdp) [µs]  
+[
+2]:
+Master cycle time (Tmapc) [µs]  
+[
+3]:
+Instant of actual value sensing (Ti) [µs]  
+[
+4]:
+Instant of setpoint acquisition (To) [µs]  
+[
+5]:
+Data exchange interval (Tdx) [µs]  
+[
+6]:
+PLL window (Tpll-w) [1/12 µs]  
+[
+7]:
+PLL delay time (Tpll-d) [1/12 µs]
+
+### r2065 PB/PN controller sign of life diagnostics
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2410 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Displays how often the sign-of-life from the clock synchronous PROFIBUS/PROFINET controller
+last failed.  
+An appropriate fault is output when the tolerance, specified in p0925, is exceeded.
+
+**Dependency:**
+  
+  
+Refer to:
+F01912
+
+### r2067[0...1] IF1 PZD maximum interconnected
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Display for the maximum interconnected PZD in the receive/send direction  
+Index 0: receive (r2050, r2060)  
+Index 1: send (p2051, p2061)
+
+### r2074[0...19] IF1 PROFIdrive diagnostics bus address PZD receive
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Displays the PROFIBUS address of the sender from which the process data (PZD) is received.
+
+**Index:**
+  
+[
+0]:
+PZD 1  
+[
+1]:
+PZD 2  
+[
+2]:
+PZD 3  
+[
+3]:
+PZD 4  
+[
+4]:
+PZD 5  
+[
+5]:
+PZD 6  
+[
+6]:
+PZD 7  
+[
+7]:
+PZD 8  
+[
+8]:
+PZD 9  
+[
+9]:
+PZD 10  
+[
+10]:
+PZD 11  
+[
+11]:
+PZD 12  
+[
+12]:
+PZD 13  
+[
+13]:
+PZD 14  
+[
+14]:
+PZD 15  
+[
+15]:
+PZD 16  
+[
+16]:
+PZD 17  
+[
+17]:
+PZD 18  
+[
+18]:
+PZD 19  
+[
+19]:
+PZD 20
+
+**Note:**
+  
+IF1: Interface 1  
+Value range:  
+0 - 125: Bus address of the sender  
+65535: Not assigned
+
+### r2075[0...19] IF1 PROFIdrive diagnostics telegram offset PZD receive
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2410 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Displays the PZD byte offset in the PROFIdrive receive telegram (controller output).
+
+**Index:**
+  
+[
+0]:
+PZD 1  
+[
+1]:
+PZD 2  
+[
+2]:
+PZD 3  
+[
+3]:
+PZD 4  
+[
+4]:
+PZD 5  
+[
+5]:
+PZD 6  
+[
+6]:
+PZD 7  
+[
+7]:
+PZD 8  
+[
+8]:
+PZD 9  
+[
+9]:
+PZD 10  
+[
+10]:
+PZD 11  
+[
+11]:
+PZD 12  
+[
+12]:
+PZD 13  
+[
+13]:
+PZD 14  
+[
+14]:
+PZD 15  
+[
+15]:
+PZD 16  
+[
+16]:
+PZD 17  
+[
+17]:
+PZD 18  
+[
+18]:
+PZD 19  
+[
+19]:
+PZD 20
+
+**Note:**
+  
+IF1: Interface 1  
+Value range:  
+0 - 242: Byte offset  
+65535: Not assigned
+
+### r2076[0...24] IF1 PROFIdrive diagnostics telegram offset PZD send
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2410 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Displays the PZD byte offset in the PROFIdrive send telegram (controller input).
+
+**Index:**
+  
+[
+0]:
+PZD 1  
+[
+1]:
+PZD 2  
+[
+2]:
+PZD 3  
+[
+3]:
+PZD 4  
+[
+4]:
+PZD 5  
+[
+5]:
+PZD 6  
+[
+6]:
+PZD 7  
+[
+7]:
+PZD 8  
+[
+8]:
+PZD 9  
+[
+9]:
+PZD 10  
+[
+10]:
+PZD 11  
+[
+11]:
+PZD 12  
+[
+12]:
+PZD 13  
+[
+13]:
+PZD 14  
+[
+14]:
+PZD 15  
+[
+15]:
+PZD 16  
+[
+16]:
+PZD 17  
+[
+17]:
+PZD 18  
+[
+18]:
+PZD 19  
+[
+19]:
+PZD 20  
+[
+20]:
+PZD 21  
+[
+21]:
+PZD 22  
+[
+22]:
+PZD 23  
+[
+23]:
+PZD 24  
+[
+24]:
+PZD 25
+
+**Note:**
+  
+IF1: Interface 1  
+Value range:  
+0 - 242: Byte offset  
+65535: Not assigned
+
+### r2077[0...15] PROFIBUS diagnostics peer-to-peer data transfer addresses
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the addresses of the slaves (peers) where peer-to-peer data transfer has
+been configured via PROFIBUS.
+
+### p2079 IF1 PROFIdrive PZD telegram selection extended
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 390 | 999 | [ 0 ] 999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the send and receive telegram.  
+Contrary to p0922, a telegram can be selected using p2079 and subsequently expanded.
+
+**Value:**
+  
+390:
+SIEMENS telegram 390, PZD-2/2  
+391:
+SIEMENS telegram 391, PZD-3/7  
+392:
+SIEMENS telegram 392, PZD-3/15  
+393:
+SIEMENS telegram 393, PZD-4/21  
+394:
+SIEMENS telegram 394, PZD-3/3  
+395:
+SIEMENS telegram 395, PZD-4/25  
+999:
+Free telegram configuration with BICO
+
+**Note:**
+  
+For p0922 < 999 the following applies:  
+p2079 has the same value and is inhibited. All of the interconnections and extensions
+contained in the telegram are inhibited.  
+For p0922 = 999 the following applies:  
+p2079 can be freely set. If p2079 is also set to 999, then all of the interconnections
+can be set.  
+For p0922 = 999 and p2079 < 999 the following applies:  
+The interconnections contained in the telegram are inhibited. However, the telegram
+can be extended.
+
+### p2080[0...15] BI: IF1 binector-connector converter status word 1
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 2472 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Selects bits to be sent to the PROFIdrive controller.  
+The individual bits are combined to form status word 1.
+
+**Index:**
+  
+[
+0]:
+Bit 0  
+[
+1]:
+Bit 1  
+[
+2]:
+Bit 2  
+[
+3]:
+Bit 3  
+[
+4]:
+Bit 4  
+[
+5]:
+Bit 5  
+[
+6]:
+Bit 6  
+[
+7]:
+Bit 7  
+[
+8]:
+Bit 8  
+[
+9]:
+Bit 9  
+[
+10]:
+Bit 10  
+[
+11]:
+Bit 11  
+[
+12]:
+Bit 12  
+[
+13]:
+Bit 13  
+[
+14]:
+Bit 14  
+[
+15]:
+Bit 15
+
+**Dependency:**
+  
+  
+Refer to:
+p2088, r2089
+
+**Notice:**
+  
+The parameter may be protected as a result of p0922 or p2079 and cannot be changed.
+
+### p2081[0...15] BI: IF1 binector-connector converter status word 2
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 2472 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Selects bits to be sent to the PROFIdrive controller.  
+The individual bits are combined to form status word 2.
+
+**Index:**
+  
+[
+0]:
+Bit 0  
+[
+1]:
+Bit 1  
+[
+2]:
+Bit 2  
+[
+3]:
+Bit 3  
+[
+4]:
+Bit 4  
+[
+5]:
+Bit 5  
+[
+6]:
+Bit 6  
+[
+7]:
+Bit 7  
+[
+8]:
+Bit 8  
+[
+9]:
+Bit 9  
+[
+10]:
+Bit 10  
+[
+11]:
+Bit 11  
+[
+12]:
+Bit 12  
+[
+13]:
+Bit 13  
+[
+14]:
+Bit 14  
+[
+15]:
+Bit 15
+
+**Dependency:**
+  
+  
+Refer to:
+p2088, r2089
+
+**Notice:**
+  
+The parameter may be protected as a result of p0922 or p2079 and cannot be changed.
+
+**Note:**
+  
+For clock synchronous operation, bit 12 to 15 to transfer the sign-of-life are reserved
+in status word 2 - and may not be freely interconnected.
+
+### p2082[0...15] BI: IF1 binector-connector converter status word 3
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 2472 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Selects bits to be sent to the PROFIdrive controller.  
+The individual bits are combined to form free status word 3.
+
+**Index:**
+  
+[
+0]:
+Bit 0  
+[
+1]:
+Bit 1  
+[
+2]:
+Bit 2  
+[
+3]:
+Bit 3  
+[
+4]:
+Bit 4  
+[
+5]:
+Bit 5  
+[
+6]:
+Bit 6  
+[
+7]:
+Bit 7  
+[
+8]:
+Bit 8  
+[
+9]:
+Bit 9  
+[
+10]:
+Bit 10  
+[
+11]:
+Bit 11  
+[
+12]:
+Bit 12  
+[
+13]:
+Bit 13  
+[
+14]:
+Bit 14  
+[
+15]:
+Bit 15
+
+**Dependency:**
+  
+  
+Refer to:
+p2088, r2089
+
+**Notice:**
+  
+The parameter may be protected as a result of p0922 or p2079 and cannot be changed.
+
+### p2083[0...15] BI: IF1 binector-connector converter status word 4
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 2472 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Selects bits to be sent to the PROFIdrive controller.  
+The individual bits are combined to form free status word 4.
+
+**Index:**
+  
+[
+0]:
+Bit 0  
+[
+1]:
+Bit 1  
+[
+2]:
+Bit 2  
+[
+3]:
+Bit 3  
+[
+4]:
+Bit 4  
+[
+5]:
+Bit 5  
+[
+6]:
+Bit 6  
+[
+7]:
+Bit 7  
+[
+8]:
+Bit 8  
+[
+9]:
+Bit 9  
+[
+10]:
+Bit 10  
+[
+11]:
+Bit 11  
+[
+12]:
+Bit 12  
+[
+13]:
+Bit 13  
+[
+14]:
+Bit 14  
+[
+15]:
+Bit 15
+
+**Dependency:**
+  
+  
+Refer to:
+p2088, r2089
+
+### p2084[0...15] BI: IF1 binector-connector converter status word 5
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 2472 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Selects bits to be sent to the PROFIdrive controller.  
+The individual bits are combined to form free status word 5.
+
+**Index:**
+  
+[
+0]:
+Bit 0  
+[
+1]:
+Bit 1  
+[
+2]:
+Bit 2  
+[
+3]:
+Bit 3  
+[
+4]:
+Bit 4  
+[
+5]:
+Bit 5  
+[
+6]:
+Bit 6  
+[
+7]:
+Bit 7  
+[
+8]:
+Bit 8  
+[
+9]:
+Bit 9  
+[
+10]:
+Bit 10  
+[
+11]:
+Bit 11  
+[
+12]:
+Bit 12  
+[
+13]:
+Bit 13  
+[
+14]:
+Bit 14  
+[
+15]:
+Bit 15
+
+**Dependency:**
+  
+  
+Refer to:
+p2088, r2089
+
+### p2088[0...4] IF1 invert binector-connector converter status word
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2472 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0000 0000 0000 0000 bin |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Setting to invert the individual binector inputs of the binector connector converter.
+
+**Index:**
+  
+[
+0]:
+Status word 1  
+[
+1]:
+Status word 2  
+[
+2]:
+Free status word 3  
+[
+3]:
+Free status word 4  
+[
+4]:
+Free status word 5
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Bit 0 | Not inverted | Inverted | - |
+| 01 | Bit 1 | Not inverted | Inverted | - |
+| 02 | Bit 2 | Not inverted | Inverted | - |
+| 03 | Bit 3 | Not inverted | Inverted | - |
+| 04 | Bit 4 | Not inverted | Inverted | - |
+| 05 | Bit 5 | Not inverted | Inverted | - |
+| 06 | Bit 6 | Not inverted | Inverted | - |
+| 07 | Bit 7 | Not inverted | Inverted | - |
+| 08 | Bit 8 | Not inverted | Inverted | - |
+| 09 | Bit 9 | Not inverted | Inverted | - |
+| 10 | Bit 10 | Not inverted | Inverted | - |
+| 11 | Bit 11 | Not inverted | Inverted | - |
+| 12 | Bit 12 | Not inverted | Inverted | - |
+| 13 | Bit 13 | Not inverted | Inverted | - |
+| 14 | Bit 14 | Not inverted | Inverted | - |
+| 15 | Bit 15 | Not inverted | Inverted | - |
+
+**Dependency:**
+  
+  
+Refer to:
+p2080, p2081, p2082, p2083, r2089
+
+### r2089[0...4] CO: IF1 send binector-connector converter status word
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2472 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Connector output to interconnect the status words to a PZD send word.
+
+**Index:**
+  
+[
+0]:
+Status word 1  
+[
+1]:
+Status word 2  
+[
+2]:
+Free status word 3  
+[
+3]:
+Free status word 4  
+[
+4]:
+Free status word 5
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Bit 0 | OFF | ON | - |
+| 01 | Bit 1 | OFF | ON | - |
+| 02 | Bit 2 | OFF | ON | - |
+| 03 | Bit 3 | OFF | ON | - |
+| 04 | Bit 4 | OFF | ON | - |
+| 05 | Bit 5 | OFF | ON | - |
+| 06 | Bit 6 | OFF | ON | - |
+| 07 | Bit 7 | OFF | ON | - |
+| 08 | Bit 8 | OFF | ON | - |
+| 09 | Bit 9 | OFF | ON | - |
+| 10 | Bit 10 | OFF | ON | - |
+| 11 | Bit 11 | OFF | ON | - |
+| 12 | Bit 12 | OFF | ON | - |
+| 13 | Bit 13 | OFF | ON | - |
+| 14 | Bit 14 | OFF | ON | - |
+| 15 | Bit 15 | OFF | ON | - |
+
+**Dependency:**
+  
+  
+Refer to:
+p2051, p2080, p2081, p2082, p2083
+
+**Note:**
+  
+r2089 together with p2080 to p2084 forms five binector-connector converters.
+
+### r2090.0...15 BO: IF1 PROFIBUS PZD1 receive bit-serial
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2468 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Binector output for bit-serial interconnection of PZD1 (normally control word 1) received
+from the PROFIdrive controller.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Bit 0 | OFF | ON | - |
+| 01 | Bit 1 | OFF | ON | - |
+| 02 | Bit 2 | OFF | ON | - |
+| 03 | Bit 3 | OFF | ON | - |
+| 04 | Bit 4 | OFF | ON | - |
+| 05 | Bit 5 | OFF | ON | - |
+| 06 | Bit 6 | OFF | ON | - |
+| 07 | Bit 7 | OFF | ON | - |
+| 08 | Bit 8 | OFF | ON | - |
+| 09 | Bit 9 | OFF | ON | - |
+| 10 | Bit 10 | OFF | ON | - |
+| 11 | Bit 11 | OFF | ON | - |
+| 12 | Bit 12 | OFF | ON | - |
+| 13 | Bit 13 | OFF | ON | - |
+| 14 | Bit 14 | OFF | ON | - |
+| 15 | Bit 15 | OFF | ON | - |
+
+**Note:**
+  
+IF1: Interface 1
+
+### r2091.0...15 BO: IF1 PROFIdrive PZD2 receive bit-serial
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2468 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Binector output for bit-serial interconnection of PZD2 received from the PROFIdrive
+controller.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Bit 0 | OFF | ON | - |
+| 01 | Bit 1 | OFF | ON | - |
+| 02 | Bit 2 | OFF | ON | - |
+| 03 | Bit 3 | OFF | ON | - |
+| 04 | Bit 4 | OFF | ON | - |
+| 05 | Bit 5 | OFF | ON | - |
+| 06 | Bit 6 | OFF | ON | - |
+| 07 | Bit 7 | OFF | ON | - |
+| 08 | Bit 8 | OFF | ON | - |
+| 09 | Bit 9 | OFF | ON | - |
+| 10 | Bit 10 | OFF | ON | - |
+| 11 | Bit 11 | OFF | ON | - |
+| 12 | Bit 12 | OFF | ON | - |
+| 13 | Bit 13 | OFF | ON | - |
+| 14 | Bit 14 | OFF | ON | - |
+| 15 | Bit 15 | OFF | ON | - |
+
+**Note:**
+  
+IF1: Interface 1
+
+### r2092.0...15 BO: IF1 PROFIdrive PZD3 receive bit-serial
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2468 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Binector output for bit-serial interconnection of PZD3 received from the PROFIdrive
+controller.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Bit 0 | OFF | ON | - |
+| 01 | Bit 1 | OFF | ON | - |
+| 02 | Bit 2 | OFF | ON | - |
+| 03 | Bit 3 | OFF | ON | - |
+| 04 | Bit 4 | OFF | ON | - |
+| 05 | Bit 5 | OFF | ON | - |
+| 06 | Bit 6 | OFF | ON | - |
+| 07 | Bit 7 | OFF | ON | - |
+| 08 | Bit 8 | OFF | ON | - |
+| 09 | Bit 9 | OFF | ON | - |
+| 10 | Bit 10 | OFF | ON | - |
+| 11 | Bit 11 | OFF | ON | - |
+| 12 | Bit 12 | OFF | ON | - |
+| 13 | Bit 13 | OFF | ON | - |
+| 14 | Bit 14 | OFF | ON | - |
+| 15 | Bit 15 | OFF | ON | - |
+
+**Note:**
+  
+IF1: Interface 1
+
+### r2093.0...15 BO: IF1 PROFIdrive PZD4 receive bit-serial
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2468 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Binector output for bit-serial interconnection of PZD4 (normally control word 2) received
+from the PROFIdrive controller.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Bit 0 | OFF | ON | - |
+| 01 | Bit 1 | OFF | ON | - |
+| 02 | Bit 2 | OFF | ON | - |
+| 03 | Bit 3 | OFF | ON | - |
+| 04 | Bit 4 | OFF | ON | - |
+| 05 | Bit 5 | OFF | ON | - |
+| 06 | Bit 6 | OFF | ON | - |
+| 07 | Bit 7 | OFF | ON | - |
+| 08 | Bit 8 | OFF | ON | - |
+| 09 | Bit 9 | OFF | ON | - |
+| 10 | Bit 10 | OFF | ON | - |
+| 11 | Bit 11 | OFF | ON | - |
+| 12 | Bit 12 | OFF | ON | - |
+| 13 | Bit 13 | OFF | ON | - |
+| 14 | Bit 14 | OFF | ON | - |
+| 15 | Bit 15 | OFF | ON | - |
+
+**Note:**
+  
+IF1: Interface 1
+
+### r2094.0...15 BO: IF1 connector-binector converter binector output
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2468 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Binector output for bit-serial onward interconnection of a PZD word received from
+the PROFIdrive controller.  
+The PZD is selected via p2099[0].
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Bit 0 | OFF | ON | - |
+| 01 | Bit 1 | OFF | ON | - |
+| 02 | Bit 2 | OFF | ON | - |
+| 03 | Bit 3 | OFF | ON | - |
+| 04 | Bit 4 | OFF | ON | - |
+| 05 | Bit 5 | OFF | ON | - |
+| 06 | Bit 6 | OFF | ON | - |
+| 07 | Bit 7 | OFF | ON | - |
+| 08 | Bit 8 | OFF | ON | - |
+| 09 | Bit 9 | OFF | ON | - |
+| 10 | Bit 10 | OFF | ON | - |
+| 11 | Bit 11 | OFF | ON | - |
+| 12 | Bit 12 | OFF | ON | - |
+| 13 | Bit 13 | OFF | ON | - |
+| 14 | Bit 14 | OFF | ON | - |
+| 15 | Bit 15 | OFF | ON | - |
+
+**Dependency:**
+  
+  
+Refer to:
+p2099
+
+### r2095.0...15 BO: IF1 connector-binector converter binector output
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2468 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Binector output for bit-serial interconnection of a PZD word received from the PROFIdrive
+controller.  
+The PZD is selected via p2099[1].
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Bit 0 | OFF | ON | - |
+| 01 | Bit 1 | OFF | ON | - |
+| 02 | Bit 2 | OFF | ON | - |
+| 03 | Bit 3 | OFF | ON | - |
+| 04 | Bit 4 | OFF | ON | - |
+| 05 | Bit 5 | OFF | ON | - |
+| 06 | Bit 6 | OFF | ON | - |
+| 07 | Bit 7 | OFF | ON | - |
+| 08 | Bit 8 | OFF | ON | - |
+| 09 | Bit 9 | OFF | ON | - |
+| 10 | Bit 10 | OFF | ON | - |
+| 11 | Bit 11 | OFF | ON | - |
+| 12 | Bit 12 | OFF | ON | - |
+| 13 | Bit 13 | OFF | ON | - |
+| 14 | Bit 14 | OFF | ON | - |
+| 15 | Bit 15 | OFF | ON | - |
+
+**Dependency:**
+  
+  
+Refer to:
+p2099
+
+### p2098[0...1] IF1 invert connector-binector converter binector output
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2468 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0000 0000 0000 0000 bin |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Setting to invert the individual binector outputs of the connector-binector converter.  
+Using p2098[0], the signals of connector input p2099[0] are influenced.  
+Using p2098[1], the signals of connector input p2099[1] are influenced.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Bit 0 | Not inverted | Inverted | - |
+| 01 | Bit 1 | Not inverted | Inverted | - |
+| 02 | Bit 2 | Not inverted | Inverted | - |
+| 03 | Bit 3 | Not inverted | Inverted | - |
+| 04 | Bit 4 | Not inverted | Inverted | - |
+| 05 | Bit 5 | Not inverted | Inverted | - |
+| 06 | Bit 6 | Not inverted | Inverted | - |
+| 07 | Bit 7 | Not inverted | Inverted | - |
+| 08 | Bit 8 | Not inverted | Inverted | - |
+| 09 | Bit 9 | Not inverted | Inverted | - |
+| 10 | Bit 10 | Not inverted | Inverted | - |
+| 11 | Bit 11 | Not inverted | Inverted | - |
+| 12 | Bit 12 | Not inverted | Inverted | - |
+| 13 | Bit 13 | Not inverted | Inverted | - |
+| 14 | Bit 14 | Not inverted | Inverted | - |
+| 15 | Bit 15 | Not inverted | Inverted | - |
+
+**Dependency:**
+  
+  
+Refer to:
+r2094, r2095, p2099
+
+### p2099[0...1] CI: IF1 connector-binector converter signal source
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Integer16 | **Dynamic index:**- | **Func. diagram:** 2468 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for the connector-binector converter.  
+A PZD receive word can be selected as signal source. The signals are available to
+be serially passed-on (interconnection).
+
+**Dependency:**
+  
+  
+Refer to:
+r2094, r2095
+
+**Note:**
+  
+From the signal source set via the connector input, the corresponding lower 16 bits
+are converted.  
+p2099[0...1] together with r2094.0...15 and r2095.0...15 forms two connector-binector
+converters:  
+Connector input p2099[0] to binector output in r2094.0...15  
+Connector input p2099[1] to binector output in r2095.0...15
+
+### p2100[0...19] Change fault response fault number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 8050, 8075 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Selects the faults for which the fault response should be changed
+
+**Dependency:**
+  
+The fault is selected and the required response is set under the same index.  
+  
+Refer to:
+p2101
+
+**Note:**
+  
+Re-parameterization is also possible if a fault is present. The change only becomes
+effective after the fault has been resolved.
+
+### p2101[0...19] Change fault response response
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 8050, 8075 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORDM, TECBASE, TM31, TM15DI_DO, TM150, TB30, ENC, HUB | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 0 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the fault response for the selected fault.
+
+**Value:**
+  
+0:
+NONE
+
+**Dependency:**
+  
+The fault is selected and the required response is set under the same index.
+
+**Notice:**
+  
+For the following cases, it is not possible to re-parameterize the fault response
+to a fault:  
+- fault number does not exist (exception value = 0).  
+- Message type is not "fault" (F).  
+- fault response is not permissible for the set fault number.
+
+**Note:**
+  
+Re-parameterization is also possible if a fault is present. The change only becomes
+effective after the fault has been resolved.
+
+### p2102 BI: Acknowledge all faults
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 2546, 8060 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source to acknowledge all faults at all drive objects of the drive
+system.
+
+**Note:**
+  
+A fault acknowledgment is triggered with a 0/1 signal.
+
+### p2103 BI: 1st acknowledge faults
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC, HUB | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the first signal source to acknowledge faults.
+
+**Notice:**
+  
+The parameter may be protected as a result of p0922 or p2079 and cannot be changed.
+
+**Note:**
+  
+A fault acknowledgment is triggered with a 0/1 signal.
+
+### p2104 BI: 2nd acknowledge faults
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC, HUB | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the second signal source to acknowledge faults.
+
+**Note:**
+  
+A fault acknowledgment is triggered with a 0/1 signal.
+
+### p2105 BI: 3rd acknowledge faults
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC, HUB | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the third signal source to acknowledge faults.
+
+**Note:**
+  
+A fault acknowledgment is triggered with a 0/1 signal.
+
+### p2106 BI: External fault 1
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC, HUB | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for external fault 1.
+
+**Dependency:**
+  
+  
+Refer to:
+F07860
+
+**Note:**
+  
+An external fault is triggered with a 0 signal.  
+If this fault is output at the Control Unit, then it is transferred to all existing
+drive objects.
+
+### p2107 BI: External fault 2
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC, HUB | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for external fault 2.
+
+**Dependency:**
+  
+  
+Refer to:
+F07861
+
+**Note:**
+  
+An external fault is triggered with a 0 signal.  
+If this fault is output at the Control Unit, then it is transferred to all existing
+drive objects.
+
+### p2108 BI: External fault 3
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC, HUB | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for external fault 3.  
+External fault 3 is initiated by the following AND logic operation:  
+- BI: p2108 negated  
+- BI: p3111  
+- BI: p3112 negated
+
+**Dependency:**
+  
+  
+Refer to:
+p3110, p3111, p3112  
+Refer to:
+F07862
+
+**Note:**
+  
+An external fault is triggered with a 0 signal.  
+If this fault is output at the Control Unit, then it is transferred to all existing
+drive objects.
+
+### r2109[0...63] Fault time removed in milliseconds
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 8050, 8060 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [ms] | - [ms] | [ ] - [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the system runtime in milliseconds when the fault was removed.
+
+**Dependency:**
+  
+  
+Refer to:
+r0945, r0947, r0948, r0949, r2114, r2130, r2133, r2136, r3115, r3120, r3122
+
+**Notice:**
+  
+The time comprises r2136 (days) and r2109 (milliseconds).
+
+**Note:**
+  
+The buffer parameters are cyclically updated in the background (refer to status signal
+in r2139).  
+The structure of the fault buffer and the assignment of the indices is shown in r0945.
+
+### r2110[0...63] Alarm number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 8065 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+This parameter is identical to r2122.
+
+### p2111 Alarm counter
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 8050, 8065 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Number of alarms that have occurred after the last reset.
+
+**Dependency:**
+  
+When p2111 is set to 0, the following is initiated:  
+- all of the alarms of the alarm buffer that have gone [0...7] are transferred into
+the alarm history [8...63].  
+- the alarm buffer [0...7] is deleted.  
+  
+Refer to:
+r2110, r2122, r2123, r2124, r2125
+
+**Note:**
+  
+The parameter is reset to 0 at POWER ON.
+
+### p2112 BI: External alarm 1
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC, HUB | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for external alarm 1.
+
+**Dependency:**
+  
+  
+Refer to:
+A07850
+
+**Note:**
+  
+An external alarm is triggered with a 0 signal.
+
+### r2114[0...1] System runtime total
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the total system runtime for the drive unit.  
+The time comprises r2114[0] (milliseconds) and r2114[1] (days).  
+After r2114[0] has reached a value of 86.400.000 ms (24 hours) this value is reset
+and r2114[1] is incremented.
+
+**Index:**
+  
+[
+0]:
+Milliseconds  
+[
+1]:
+Days
+
+**Dependency:**
+  
+  
+Refer to:
+r0948, r2109, r2123, r2125, r2130, r2136, r2145, r2146
+
+**Note:**
+  
+The time in r2114 is used to display the times for faults and alarms.  
+When the electronic power supply is switched out, the counter values are saved.  
+After the drive unit is switched on, the counter continues to run with the last value
+that was saved.
+
+### p2116 BI: External alarm 2
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC, HUB | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for external alarm 2.
+
+**Dependency:**
+  
+  
+Refer to:
+A07851
+
+**Note:**
+  
+An external alarm is triggered with a 0 signal.
+
+### p2117 BI: External alarm 3
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC, HUB | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for external alarm 3.
+
+**Dependency:**
+  
+  
+Refer to:
+A07852
+
+**Note:**
+  
+An external alarm is triggered with a 0 signal.
+
+### p2118[0...19] Change message type message number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 8050, 8075 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC, HUB | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Selects faults or alarms for which the message type should be changed.
+
+**Dependency:**
+  
+Selects the fault or alarm selection and sets the required type of message realized
+under the same index.  
+  
+Refer to:
+p2119
+
+**Note:**
+  
+Re-parameterization is also possible if a message is present. The change only becomes
+effective after the message has gone.
+
+### p2119[0...19] Change message type type
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 8050, 8075 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC, HUB | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 1 | 3 | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the message type for the selected fault or alarm.
+
+**Value:**
+  
+1:
+Fault (F)  
+2:
+Alarm (A)  
+3:
+No message (N)
+
+**Dependency:**
+  
+Selects the fault or alarm selection and sets the required type of message realized
+under the same index.  
+  
+Refer to:
+p2118
+
+**Note:**
+  
+Re-parameterization is also possible if a message is present. The change only becomes
+effective after the message has gone.  
+The message type can only be changed for messages with the appropriate identification
+(exception, value = 0).  
+Example:  
+F12345(A) --> Fault F12345 can be changed to alarm A12345.  
+In this case, the message number that may be possibly entered in p2100[0...19] and
+p2126[0...19] is automatically removed.
+
+### r2120 CO: Sum of fault and alarm buffer changes
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 8065 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the sum of all of the fault and alarm buffer changes in the drive unit.
+
+**Dependency:**
+  
+  
+Refer to:
+r0944, r2121
+
+### r2121 CO: Counter alarm buffer changes
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 8065 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+This counter is incremented every time the alarm buffer changes.
+
+**Dependency:**
+  
+  
+Refer to:
+r2110, r2122, r2123, r2124, r2125
+
+### r2122[0...63] Alarm code
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 8050, 8065 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the number of alarms that have occurred.
+
+**Dependency:**
+  
+  
+Refer to:
+r2110, r2123, r2124, r2125, r2134, r2145, r2146, r3121, r3123
+
+**Notice:**
+  
+The properties of the alarm buffer should be taken from the corresponding product
+documentation.
+
+**Note:**
+  
+The buffer parameters are cyclically updated in the background (refer to status signal
+in r2139).  
+Alarm buffer structure (general principle):  
+r2122[0], r2124[0], r2123[0], r2125[0] --> alarm 1 (the oldest)  
+. . .  
+r2122[7], r2124[7], r2123[7], r2125[7] --> Alarm 8 (the latest)  
+When the alarm buffer is full, the alarms that have gone are entered into the alarm
+history:  
+r2122[8], r2124[8], r2123[8], r2125[8] --> Alarm 1 (the latest)  
+. . .  
+r2122[63], r2124[63], r2123[63], r2125[63] --> alarm 56 (the oldest)
+
+### r2123[0...63] Alarm time received in milliseconds
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 8050, 8065 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [ms] | - [ms] | [ ] - [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the system runtime in milliseconds when the alarm occurred.
+
+**Dependency:**
+  
+  
+Refer to:
+r2110, r2114, r2122, r2124, r2125, r2134, r2145, r2146, r3121, r3123
+
+**Notice:**
+  
+The time comprises r2145 (days) and r2123 (milliseconds).
+
+**Note:**
+  
+The buffer parameters are cyclically updated in the background (refer to status signal
+in r2139).  
+The structure of the alarm buffer and the assignment of the indices is shown in r2122.
+
+### r2124[0...63] Alarm value
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer32 | **Dynamic index:**- | **Func. diagram:** 8050, 8065 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays additional information about the active alarm (as integer number).
+
+**Dependency:**
+  
+  
+Refer to:
+r2110, r2122, r2123, r2125, r2134, r2145, r2146, r3121, r3123
+
+**Note:**
+  
+The buffer parameters are cyclically updated in the background (refer to status signal
+in r2139).  
+The structure of the alarm buffer and the assignment of the indices is shown in r2122.
+
+### r2125[0...63] Alarm time removed in milliseconds
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 8050, 8065 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [ms] | - [ms] | [ ] - [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the system runtime in milliseconds when the alarm was cleared.
+
+**Dependency:**
+  
+  
+Refer to:
+r2110, r2114, r2122, r2123, r2124, r2134, r2145, r2146, r3121, r3123
+
+**Notice:**
+  
+The time comprises r2146 (days) and r2125 (milliseconds).
+
+**Note:**
+  
+The buffer parameters are cyclically updated in the background (refer to status signal
+in r2139).  
+The structure of the alarm buffer and the assignment of the indices is shown in r2122.
+
+### p2126[0...19] Change acknowledge mode fault number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 8050, 8075 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Selects the faults for which the acknowledge mode is to be changed
+
+**Dependency:**
+  
+Selects the faults and sets the required acknowledge mode realized under the same
+index  
+  
+Refer to:
+p2127
+
+**Note:**
+  
+Re-parameterization is also possible if a fault is present. The change only becomes
+effective after the fault has been resolved.
+
+### p2127[0...19] Change acknowledge mode mode
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 8050, 8075 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 1 | 3 | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the acknowledge mode for selected fault.
+
+**Value:**
+  
+1:
+Acknowledgment only using POWER ON  
+2:
+Ack IMMEDIATELY after the fault cause has been removed  
+3:
+Acknowledgment only for PULSE INHIBIT
+
+**Dependency:**
+  
+Selects the faults and sets the required acknowledge mode realized under the same
+index  
+  
+Refer to:
+p2126
+
+**Notice:**
+  
+It is not possible to re-parameterize the acknowledge mode for a fault in the following
+cases:  
+- fault number does not exist (exception value = 0).  
+- Message type is not "fault" (F).  
+- Acknowledge mode is not permissible for the set fault number.
+
+**Note:**
+  
+Re-parameterization is also possible if a fault is present. The change only becomes
+effective after the fault has been resolved.  
+The acknowledge mode can only be changed for faults with the appropriate identification.  
+Example:  
+F12345 and acknowledge mode = IMMEDIATELY (POWER ON)  
+--> The acknowledge mode can be changed from IMMEDIATELY to POWER ON.
+
+### p2128[0...15] Faults/alarms trigger selection
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 8050, 8070 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the faults/alarms for which a trigger signal should be generated in r2129.0...15.
+
+**Dependency:**
+  
+If the fault/alarm set in p2128[0...15] occurs, then the particular binector output
+r2129.0...15 is set.  
+  
+Refer to:
+r2129
+
+### r2129.0...15 CO/BO: Faults/alarms trigger word
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 8070 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Display and BICO output for the trigger signals of the faults/alarms set in p2128[0...15].
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Trigger signal p2128[0] | OFF | ON | - |
+| 01 | Trigger signal p2128[1] | OFF | ON | - |
+| 02 | Trigger signal p2128[2] | OFF | ON | - |
+| 03 | Trigger signal p2128[3] | OFF | ON | - |
+| 04 | Trigger signal p2128[4] | OFF | ON | - |
+| 05 | Trigger signal p2128[5] | OFF | ON | - |
+| 06 | Trigger signal p2128[6] | OFF | ON | - |
+| 07 | Trigger signal p2128[7] | OFF | ON | - |
+| 08 | Trigger signal p2128[8] | OFF | ON | - |
+| 09 | Trigger signal p2128[9] | OFF | ON | - |
+| 10 | Trigger signal p2128[10] | OFF | ON | - |
+| 11 | Trigger signal p2128[11] | OFF | ON | - |
+| 12 | Trigger signal p2128[12] | OFF | ON | - |
+| 13 | Trigger signal p2128[13] | OFF | ON | - |
+| 14 | Trigger signal p2128[14] | OFF | ON | - |
+| 15 | Trigger signal p2128[15] | OFF | ON | - |
+
+**Dependency:**
+  
+If the fault/alarm set in p2128[0...15] occurs, then the particular binector output
+r2129.0...15 is set.  
+  
+Refer to:
+p2128
+
+**Note:**
+  
+CO: r2129 = 0 --> None of the selected messages has occurred.  
+CO: r2129 > 0 --> At least one of the selected messages has occurred.
+
+### r2130[0...63] Fault time received in days
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 8060 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the system runtime in days when the fault occurred.
+
+**Dependency:**
+  
+  
+Refer to:
+r0945, r0947, r0948, r0949, r2109, r2114, r2133, r2136, p3100, r3115, r3120, r3122
+
+**Notice:**
+  
+The time comprises r2130 (days) and r0948 (milliseconds).  
+The time display depends on the selected mode (p3100).
+
+**Note:**
+  
+The buffer parameters are cyclically updated in the background (refer to status signal
+in r2139).
+
+### r2131 CO: Actual fault code
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 8060 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the code of the oldest active fault.
+
+**Dependency:**
+  
+  
+Refer to:
+r3131, r3132
+
+**Note:**
+  
+0: No fault present.
+
+### r2132 CO: Actual alarm code
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 8065 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the code of the last alarm that occurred.
+
+**Note:**
+  
+0: No alarm present.
+
+### r2133[0...63] Fault value for float values
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 8060 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays additional information about the fault that occurred for float values.
+
+**Dependency:**
+  
+  
+Refer to:
+r0945, r0947, r0948, r0949, r2109, r2130, r2136, r3115
+
+**Note:**
+  
+The buffer parameters are cyclically updated in the background (refer to status signal
+in r2139).
+
+### r2134[0...63] Alarm value for float values
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 8065 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays additional information about the active alarm for float values.
+
+**Dependency:**
+  
+  
+Refer to:
+r2110, r2122, r2123, r2124, r2125, r2145, r2146, r3121, r3123
+
+**Note:**
+  
+The buffer parameters are cyclically updated in the background (refer to status signal
+in r2139).
+
+### r2135.0...15 CO/BO: Status word faults/alarms 2
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2548 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORGL, VECTORDM, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC, HUB | **P-Group:**Displays, signals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Display and BICO output for the second status word of faults and alarms.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Fault encoder 1 | No | Yes | - |
+| 01 | Fault encoder 2 | No | Yes | - |
+| 02 | Fault encoder 3 | No | Yes | - |
+| 12 | Fault motor overtemperature | No | Yes | 8016 |
+| 13 | Fault power unit thermal overload | No | Yes | 8021 |
+| 14 | Alarm motor overtemperature | No | Yes | 8016 |
+| 15 | Alarm power unit thermal overload | No | Yes | 8021 |
+
+### r2136[0...63] Fault time removed in days
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 8060 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the system runtime in days when the fault was removed.
+
+**Dependency:**
+  
+  
+Refer to:
+r0945, r0947, r0948, r0949, r2109, r2114, r2130, r2133, r3115, r3120, r3122
+
+**Notice:**
+  
+The time comprises r2136 (days) and r2109 (milliseconds).
+
+**Note:**
+  
+The buffer parameters are cyclically updated in the background (refer to status signal
+in r2139).
+
+### r2138.7...15 CO/BO: Control word faults/alarms
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2546 |
+| **Object:**All objects | **P-Group:**Displays, signals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Display and BICO output for the control word of faults and alarms.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 07 | Acknowledge fault | No | Yes | 8060 |
+| 10 | External alarm 1 (A07850) effective | No | Yes | 8065 |
+| 11 | External alarm 2 (A07851) effective | No | Yes | 8065 |
+| 12 | External alarm 3 (A07852) effective | No | Yes | 8065 |
+| 13 | External fault 1 (F07860) effective | No | Yes | 8060 |
+| 14 | External fault 2 (F07861) effective | No | Yes | 8060 |
+| 15 | External fault 3 (F07862) effective | No | Yes | 8060 |
+
+**Dependency:**
+  
+  
+Refer to:
+p2103, p2104, p2105, p2106, p2107, p2108, p2112, p2116, p2117, p3110, p3111, p3112
+
+### r2139.0...15 CO/BO: Status word faults/alarms 1
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2548 |
+| **Object:**All objects | **P-Group:**Displays, signals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Display and BICO output for status word 1 of faults and alarms.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Being acknowledged | No | Yes | - |
+| 01 | Acknowledgment required | No | Yes | - |
+| 03 | Fault present | No | Yes | 8060 |
+| 05 | Safety message present | No | Yes | - |
+| 06 | Internal message 1 present | No | Yes | - |
+| 07 | Alarm present | No | Yes | 8065 |
+| 08 | Internal message 2 present | No | Yes | - |
+| 11 | Alarm class bit 0 | Low | High | - |
+| 12 | Alarm class bit 1 | Low | High | - |
+| 13 | Maintenance required | No | Yes | - |
+| 14 | Maintenance urgently required | No | Yes | - |
+| 15 | Fault gone/can be acknowledged | No | Yes | - |
+
+**Note:**
+  
+For bit 03, 05, 07:  
+These bits are set if at least one fault/alarm occurs. Data is entered into the fault/alarm
+buffer with delay. For this reason, the fault/alarm buffer should only be read if,
+after "Fault active" or "Alarm active" occurs, a change is also identified in the
+buffer (r0944, r9744, r2121).  
+For bit 06, 08:  
+These status bits are used for internal diagnostic purposes only.  
+For bit 12, 11:  
+These status bits are used for the classification of internal alarm classes and are
+intended for diagnostic purposes only on certain automation systems with integrated
+SINAMICS functionality.
+
+### r2145[0...63] Alarm time received in days
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 8065 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the system runtime in days when the alarm occurred.
+
+**Dependency:**
+  
+  
+Refer to:
+r2110, r2114, r2122, r2123, r2124, r2125, r2134, r2146, r3121, r3123
+
+**Notice:**
+  
+The time comprises r2145 (days) and r2123 (milliseconds).
+
+**Note:**
+  
+The buffer parameters are cyclically updated in the background (refer to status signal
+in r2139).
+
+### r2146[0...63] Alarm time removed in days
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 8065 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the system runtime in days when the alarm was cleared.
+
+**Dependency:**
+  
+  
+Refer to:
+r2110, r2114, r2122, r2123, r2124, r2125, r2134, r2145, r3121, r3123
+
+**Notice:**
+  
+The time comprises r2146 (days) and r2125 (milliseconds).
+
+**Note:**
+  
+The buffer parameters are cyclically updated in the background (refer to status signal
+in r2139).
+
+### p2147 Delete fault buffer of all drive objects
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 8060 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Displays, signals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Setting to delete the fault buffer of all existing drive objects.
+
+**Value:**
+  
+0:
+Inactive  
+1:
+Start to delete the fault buffer of all drive objects
+
+**Dependency:**
+  
+  
+Refer to:
+r0945, r0947, r0948, r0949, r2109, r2130, r2133, r2136
+
+**Note:**
+  
+p2147 is automatically set to 0 after execution.  
+POWER ON must first be carried out in order that faults with "POWER ON" acknowledgment
+can also be cleared from the fault buffer.
+
+### p3100 RTC time stamp mode
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 2 | [ 0 ] 2 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the mode for the time stamp
+
+**Value:**
+  
+0:
+Operating hours  
+1:
+UTC format  
+2:
+Operating hours + 01.01.2000
+
+**Notice:**
+  
+For p3100 = 1:  
+The system prevents this setting from being changed. The parameter can only be influenced
+after "Set factory setting" or with a "Project download".
+
+**Note:**
+  
+RTC: Real-time clock  
+UTC: Universal Time Coordinates  
+For p3100 = 1:  
+Time of day synchronization is only possible with this setting.  
+The UTC time started, according to the definition on 01.01.1970 at 00:00:00 and is
+output in days and milliseconds.
+
+### p3101[0...1] Setting UTC time
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 4294967295 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Setting the UTC time.  
+This means that the drive system is synchronized to the time specified by the time
+master.  
+To start p3101[1] must be written to followed by p3101[0]. After writing to p3101[0],
+the UTC time is accepted.
+
+**Index:**
+  
+[
+0]:
+Milliseconds  
+[
+1]:
+Days
+
+**Dependency:**
+  
+  
+Refer to:
+p3100
+
+### r3102[0...1] Displaying UTC time
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displaying the current UTC time.
+
+**Index:**
+  
+[
+0]:
+Milliseconds  
+[
+1]:
+Days
+
+**Dependency:**
+  
+  
+Refer to:
+p3100
+
+**Notice:**
+  
+The time display depends on the selected mode (p3100).
+
+### p3103 UTC synchronization process
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 3 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Setting the synchronization process.
+
+**Value:**
+  
+0:
+PING/SNAP  
+1:
+Reserved  
+2:
+Parameter  
+3:
+Reserved
+
+**Dependency:**
+  
+  
+Refer to:
+p3101, p3104
+
+**Note:**
+  
+For p3103 = 0:  
+The PING/SNAP technique allows the UTC time to be set with a high degree of accuracy
+using p3104 and p3101.  
+See the SINAMICS S120 Function Manual Drive Functions for more information.  
+For p3103 = 2:  
+Simply setting the UTC time via p3101.  
+For p3103 = 4:  
+Only for CU3x0-2 PN X150.  
+Synchronization via Network Time Protocol (NTP).
+
+### p3103 UTC synchronization process
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 99 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Setting the synchronization process.
+
+**Value:**
+  
+0:
+PING/SNAP  
+1:
+Reserved  
+2:
+Parameter  
+3:
+Reserved  
+4:
+Network Time Protocol  
+99:
+No synchronization
+
+**Dependency:**
+  
+  
+Refer to:
+p3101, p3104
+
+**Note:**
+  
+For p3103 = 0:  
+The PING/SNAP technique allows the UTC time to be set with a high degree of accuracy
+using p3104 and p3101.  
+See the SINAMICS S120 Function Manual Drive Functions for more information.  
+For p3103 = 2:  
+Simply setting the UTC time via p3101.  
+For p3103 = 4:  
+Only for CU3x0-2 PN X150.  
+Synchronization via Network Time Protocol (NTP).
+
+### p3104 BI: UTC PING synchronization
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for the PING event to set the UTC time.
+
+**Notice:**
+  
+The parameter may be protected as a result of p0922 or p2079 and cannot be changed.
+
+### p3105[0...3] NTP server IP address
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+5.1
+
+**Description:**
+  
+Sets the IP address of the NTP server for time synchronization via Network Time Protocol
+(NTP).
+
+**Dependency:**
+  
+  
+Refer to:
+p3103
+
+**Note:**
+  
+p3105[0...3] = 0 means:  
+PROFINET controller is NTP server.
+
+### p3106 NTP time zone
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 38 | [ 0 ] 14 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+5.1
+
+**Description:**
+  
+Sets the local time zone for NTP (Network Time Protocol).
+
+**Value:**
+  
+0:
+UTC-12 (AOE)  
+1:
+UTC-11 (NURT)  
+2:
+UTC-10 (HAST)  
+3:
+UTC-9:30 (MART)  
+4:
+UTC-9 (AKST)  
+5:
+UTC-8 (PST)  
+6:
+UTC-7 (MST)  
+7:
+UTC-6 (CST)  
+8:
+UTC-5 (EST)  
+9:
+UTC-4 (VET)  
+10:
+UTC-3:30 (NST)  
+11:
+UTC-3 (ART)  
+12:
+UTC-2 (GST)  
+13:
+UTC-1 (CVT)  
+14:
+UTC+0 (GMT)  
+15:
+UTC+1 (CET)  
+16:
+UTC+2 (EEK)  
+17:
+UTC+3 (MISK)  
+18:
+UTC+3:30 (IRST)  
+19:
+UTC+4 (GST)  
+20:
+UTC+4:30 (AFT)  
+21:
+UTC+5 (UZT)  
+22:
+UTC+5:30 (IST)  
+23:
+UTC+5:45 (NPT)  
+24:
+UTC+6 (BST)  
+25:
+UTC+6:30 (MMT)  
+26:
+UTC+7 (WIB)  
+27:
+UTC+8 (CST)  
+28:
+UTC+8:30 (PYT)  
+29:
+UTC+8:45 (ACWST)  
+30:
+UTC+9 (JST)  
+31:
+UTC+9:30 (ACST)  
+32:
+UTC+10 (AEST)  
+33:
+UTC+10:30 (ACDT)  
+34:
+UTC+11 (AEDT)  
+35:
+UTC+12 (ANAT)  
+36:
+UTC+13 (NZDT)  
+37:
+UTC+13:45 (CHADT)  
+38:
+UTC+14 (LINT)
+
+**Dependency:**
+  
+  
+Refer to:
+p3103
+
+### r3107[0...3] UTC synchronization time out of tolerance
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Displays the last synchronizing event that was out of tolerance.
+
+**Index:**
+  
+[
+0]:
+Milliseconds after sync  
+[
+1]:
+Days after sync  
+[
+2]:
+Milliseconds before sync  
+[
+3]:
+Days before sync
+
+**Dependency:**
+  
+  
+Refer to:
+p3109  
+Refer to:
+A01099
+
+**Note:**
+  
+For r3107[0, 1]:  
+Displays the UTC time after synchronization.  
+For 3107[2, 3]:  
+Displays the UTC time before synchronization.
+
+## SINAMICS Parameter SINAMICS MV 03108 - 07815
+
+SINAMICS Parameter SINAMICS MV 03108 - 07815
+
+### r3108[0...1] UTC synchronization deviation
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the absolute value of the last synchronization deviation that was determined.
+
+**Index:**
+  
+[
+0]:
+Milliseconds  
+[
+1]:
+Days
+
+### p3109 UTC synchronization tolerance
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 [ms] | 10000 [ms] | [ 0 ] 100 [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the tolerance for time of day synchronization.  
+When this tolerance is exceeded, an appropriate alarm is output.
+
+**Dependency:**
+  
+  
+Refer to:
+A01099
+
+### p3110 External fault 3 switch-on delay
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2546 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 [ms] | 1000 [ms] | [ 0 ] 0 [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the delay time for external fault 3.
+
+**Dependency:**
+  
+  
+Refer to:
+p2108, p3111, p3112  
+Refer to:
+F07862
+
+### p3111 BI: External fault 3 enable
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 2546 |
+| **Object:**CU_MV_PN, CU_MV_DP, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC, HUB | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for the enable signal of external fault 3.  
+External fault 3 is initiated by the following AND logic operation:  
+- BI: p2108 negated  
+- BI: p3111  
+- BI: p3112 negated
+
+**Dependency:**
+  
+  
+Refer to:
+p2108, p3110, p3112  
+Refer to:
+F07862
+
+### p3112 BI: External fault 3 enable negated
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 2546 |
+| **Object:**CU_MV_PN, CU_MV_DP, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC, HUB | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for the negated enable signal of external fault 3.  
+External fault 3 is initiated by the following AND logic operation:  
+- BI: p2108 negated  
+- BI: p3111  
+- BI: p3112 negated
+
+**Dependency:**
+  
+  
+Refer to:
+p2108, p3110, p3111  
+Refer to:
+F07862
+
+### r3113.0...15 CO/BO: NAMUR message bit bar
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Display and BICO output for the status of the NAMUR message bit bar.  
+The faults and alarms are assigned to the appropriate signaling/message classes and
+influence a specific message bit.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Fault converter information electronics/software error | No | Yes | - |
+| 01 | Network fault | No | Yes | - |
+| 02 | DC link overvoltage | No | Yes | - |
+| 03 | Fault drive converter power electronics | No | Yes | - |
+| 04 | Drive converter overtemperature | No | Yes | - |
+| 05 | Ground fault | No | Yes | - |
+| 06 | Motor overload | No | Yes | - |
+| 07 | Bus error | No | Yes | - |
+| 08 | External safety-relevant shutdown | No | Yes | - |
+| 09 | Mot encoder fault | No | Yes | - |
+| 10 | Error communication internal | No | Yes | - |
+| 11 | Fault infeed | No | Yes | - |
+| 15 | Other faults | No | Yes | - |
+
+**Note:**
+  
+For bit 00:  
+Hardware or software malfunction was identified. Carry out a POWER ON of the component
+involved. If it occurs again, contact Technical Support.  
+For bit 01:  
+A line supply fault has occurred (phase failure, voltage level, ...). Check the line
+supply / fuses. Check the supply voltage. Check the wiring.  
+For bit 02:  
+The DC link voltage has assumed an inadmissibly high value. Check the dimensioning
+of the system (line supply, reactor, voltages). Check the infeed settings.  
+For bit 03:  
+An inadmissible operating state of the power electronics was identified (overcurrent,
+overtemperature, IGBT failure, ...). Check that the permissible load cycles are maintained.
+Check the ambient temperatures (fan).  
+For bit 04:  
+The temperature in the component has exceeded the highest permissible limit. Check
+the ambient temperature / control cabinet cooling.  
+For bit 05:  
+A ground fault / inter-phase short-circuit was detected in the power cables or in
+the motor windings. Check the power cables (connection). Check the motor.  
+For bit 06:  
+The motor was operated outside the permissible limits (temperature, current, torque,
+...). Check the load cycles and limits that have been set. Check the ambient temperature
+/ motor cooling.  
+For bit 07:  
+The communication to the higher-level control system (internal coupling, PROFIBUS,
+PROFINET, ...) is either faulted or interrupted. Check the state of the higher-level
+control system. Check the communication connection/wiring. Check the bus configuration
+/ clock cycles.  
+For bit 08:  
+A safety operation monitoring function (Safety) has detected an error.  
+For bit 09:  
+When evaluating the encoder signals (track signals, zero marks, absolute values, ...)
+an illegal signal state was detected. Check the encoder / state of the encoder signals.
+Observe the maximum frequencies.  
+For bit 10:  
+The internal communication between the SINAMICS components is faulted or interrupted.
+Check the DRIVE-CLiQ wiring. Ensure an EMC-compliant design. Observe the maximum permissible
+quantity structure / clock cycles.  
+For bit 11:  
+The infeed is faulted or has failed. Check the infeed and the surroundings (line supply,
+filter, reactors, fuses, ...). Check the closed-loop infeed control.  
+For bit 15:  
+Group fault. Determine the precise cause of the fault using the commissioning tool.
+
+### r3114.9...11 CO/BO: Messages status word global
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Displays, signals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the global status word for messages.  
+The appropriate bit is set if at least one message is present at the drive objects.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 09 | Group alarm present | No | Yes | 8065 |
+| 10 | Group fault present | No | Yes | 8060 |
+| 11 | Safety group message present | No | Yes | - |
+
+**Note:**
+  
+The status bits are displayed with delay.
+
+### r3115[0...63] Fault drive object initiating
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer32 | **Dynamic index:**- | **Func. diagram:** 8050, 8060 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the drive object number of the initiating drive object for this fault as
+integer number.  
+Value = 63:  
+The fault was initiated by the drive object itself.
+
+**Dependency:**
+  
+  
+Refer to:
+r0945, r0947, r0948, r0949, r2109, r2130, r2133, r2136, r3120, r3122
+
+**Notice:**
+  
+The values of this parameter are only saved in a volatile fashion and are lost when
+switching off or for a warm restart.
+
+**Note:**
+  
+The buffer parameters are cyclically updated in the background (refer to status signal
+in r2139).  
+The structure of the fault buffer and the assignment of the indices is shown in r0945.
+
+### p3116 BI: Suppress automatic acknowledgment
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for the automatic acknowledgment of Control Unit faults.  
+BI: p3116 = 0 signal:  
+Acknowledgeable faults are automatically acknowledged on the Control Unit.  
+Control Unit faults with LOCAL propagation are passed on to the first active drive
+object.  
+BI: p3116 = 1 signal:  
+Acknowledgeable faults are not automatically acknowledged on the Control Unit.  
+Control Unit faults with LOCAL propagation are not passed on.
+
+**Dependency:**
+  
+  
+Refer to:
+p2102, p2103, p2104, p2105, p3981
+
+**Note:**
+  
+When selecting a standard telegram, the BICO interconnection for control signal STW1.10
+(master control by PLC) is automatically established.
+
+### p3117 Change safety message type
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 1) | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the re-parameterization of all safety messages for faults and alarms.  
+The relevant message type during changeover is selected by the firmware.  
+0: Safety messages are not re-parameterized  
+1: Safety messages are re-parameterized
+
+**Note:**
+  
+A change only becomes effective after a POWER ON.
+
+### p3118[0...1] Issue messages
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, BMM2C | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.6
+
+**Description:**
+  
+Setting to issue messages.  
+The message is issued after writing a valid message number to index 0.  
+All of the messages issued using this mechanism are reset after writing the value
+0 to index 0.
+
+**Index:**
+  
+[
+0]:
+Message number  
+[
+1]:
+Message value
+
+**Notice:**
+  
+This parameter may only be used by qualified service personnel.
+
+**Note:**
+  
+Example:  
+Alarm A07850 should be output with alarm value 5.  
+p3118[1] = 5  
+p3118[0] = 7850  
+Additional messages can be issued.
+
+### r3120[0...63] Component fault
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 8060 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the component of the fault which has occurred.
+
+**Dependency:**
+  
+  
+Refer to:
+r0945, r0947, r0948, r0949, r2109, r2130, r2133, r2136, r3122
+
+**Note:**
+  
+Value = 0: Assignment to a component not possible.  
+The buffer parameters are cyclically updated in the background (refer to status signal
+in r2139).  
+The structure of the fault buffer and the assignment of the indices is shown in r0945.
+
+### r3121[0...63] Component alarm
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 8065 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the component of the alarm which has occurred.
+
+**Dependency:**
+  
+  
+Refer to:
+r2110, r2122, r2123, r2124, r2125, r2134, r2145, r2146, r3123
+
+**Note:**
+  
+Value = 0: Assignment to a component not possible.  
+The buffer parameters are cyclically updated in the background (refer to status signal
+in r2139).  
+The structure of the alarm buffer and the assignment of the indices is shown in r2122.
+
+### r3122[0...63] Diagnostic attribute fault
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 8060 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the diagnostic attribute of the fault which has occurred.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Hardware replacement recommended | No | Yes | - |
+| 15 | Message has gone | No | Yes | - |
+| 16 | PROFIdrive fault class bit 0 | Low | High | - |
+| 17 | PROFIdrive fault class bit 1 | Low | High | - |
+| 18 | PROFIdrive fault class bit 2 | Low | High | - |
+| 19 | PROFIdrive fault class bit 3 | Low | High | - |
+| 20 | PROFIdrive fault class bit 4 | Low | High | - |
+
+**Dependency:**
+  
+  
+Refer to:
+r0945, r0947, r0948, r0949, r2109, r2130, r2133, r2136, r3120
+
+**Note:**
+  
+The buffer parameters are cyclically updated in the background (refer to status signal
+in r2139).  
+The structure of the fault buffer and the assignment of the indices is shown in r0945.  
+For bits 20 ... 16:  
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 0 --> PROFIdrive message class 0: not assigned  
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 1 --> PROFIdrive message class 1: hardware fault/software
+error  
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 0 --> PROFIdrive message class 2: line fault  
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 1 --> PROFIdrive message class 3: supply voltage
+fault  
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 0 --> PROFIdrive message class 4: DC link fault  
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 1 --> PROFIdrive message class 5: power electronics
+faulted  
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 0 --> PROFIdrive message class 6: overtemperature
+electronic components  
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 1 --> PROFIdrive message class 7: ground fault/phase
+fault detected  
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 0 --> PROFIdrive message class 8: motor overload  
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 1 --> PROFIdrive message class 9: communication
+error to the higher-level control  
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 0 --> PROFIdrive message class 10: safe monitoring
+channel has identified an error  
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 1 --> PROFIdrive message class 11: incorrect
+position actual value/speed actual value or not available  
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --> PROFIdrive message class 12: internal
+(DRIVE-CLiQ) communication error  
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 1 --> PROFIdrive message class 13: infeed unit
+faulted  
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 0 --> PROFIdrive message class 14: braking controller/Braking
+Module faulted  
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 1 --> PROFIdrive message class 15: line filter
+faulted  
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 0 --> PROFIdrive message class 16: external
+measured value/signal state outside the permissible range  
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 1 --> PROFIdrive message class 17: application/technology
+function faulted  
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 0 --> PROFIdrive message class 18: error in
+the parameterization/configuration/commissioning sequence  
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 1 --> PROFIdrive message class 19: general drive
+fault  
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --> PROFIdrive message class 20: auxiliary
+unit faulted
+
+### r3123[0...63] Diagnostic attribute alarm
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 8065 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the diagnostic attribute of the alarm which has occurred.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Hardware replacement recommended | No | Yes | - |
+| 11 | Alarm class bit 0 | Low | High | - |
+| 12 | Alarm class bit 1 | Low | High | - |
+| 13 | Maintenance required | No | Yes | - |
+| 14 | Maintenance urgently required | No | Yes | - |
+| 15 | Message has gone | No | Yes | - |
+| 16 | PROFIdrive fault class bit 0 | Low | High | - |
+| 17 | PROFIdrive fault class bit 1 | Low | High | - |
+| 18 | PROFIdrive fault class bit 2 | Low | High | - |
+| 19 | PROFIdrive fault class bit 3 | Low | High | - |
+| 20 | PROFIdrive fault class bit 4 | Low | High | - |
+
+**Dependency:**
+  
+  
+Refer to:
+r2110, r2122, r2123, r2124, r2125, r2134, r2145, r2146, r3121
+
+**Note:**
+  
+The buffer parameters are cyclically updated in the background (refer to status signal
+in r2139).  
+The structure of the alarm buffer and the assignment of the indices is shown in r2122.  
+For bit 12, 11:  
+These status bits are used for the classification of internal alarm classes and are
+intended for diagnostic purposes only on certain automation systems with integrated
+SINAMICS functionality.  
+For bits 20 ... 16:  
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 0 --> PROFIdrive message class 0: not assigned  
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 0, 1 --> PROFIdrive message class 1: hardware fault/software
+error  
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 0 --> PROFIdrive message class 2: line fault  
+Bits 20, 19, 18, 17, 16 = 0, 0, 0, 1, 1 --> PROFIdrive message class 3: supply voltage
+fault  
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 0 --> PROFIdrive message class 4: DC link fault  
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 0, 1 --> PROFIdrive message class 5: power electronics
+faulted  
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 0 --> PROFIdrive message class 6: overtemperature
+electronic components  
+Bits 20, 19, 18, 17, 16 = 0, 0, 1, 1, 1 --> PROFIdrive message class 7: ground fault/phase
+fault detected  
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 0 --> PROFIdrive message class 8: motor overload  
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 0, 1 --> PROFIdrive message class 9: communication
+error to the higher-level control  
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 0 --> PROFIdrive message class 10: safe monitoring
+channel has identified an error  
+Bits 20, 19, 18, 17, 16 = 0, 1, 0, 1, 1 --> PROFIdrive message class 11: incorrect
+position actual value/speed actual value or not available  
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --> PROFIdrive message class 12: internal
+(DRIVE-CLiQ) communication error  
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 1 --> PROFIdrive message class 13: infeed unit
+faulted  
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 0 --> PROFIdrive message class 14: braking controller/Braking
+Module faulted  
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 1, 1 --> PROFIdrive message class 15: line filter
+faulted  
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 0 --> PROFIdrive message class 16: external
+measured value/signal state outside the permissible range  
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 0, 1 --> PROFIdrive message class 17: application/technology
+function faulted  
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 0 --> PROFIdrive message class 18: error in
+the parameterization/configuration/commissioning sequence  
+Bits 20, 19, 18, 17, 16 = 1, 0, 0, 1, 1 --> PROFIdrive message class 19: general drive
+fault  
+Bits 20, 19, 18, 17, 16 = 0, 1, 1, 0, 0 --> PROFIdrive message class 20: auxiliary
+unit faulted
+
+### r3131 CO: Actual fault value
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer32 | **Dynamic index:**- | **Func. diagram:** 8060 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the fault value of the oldest active fault.
+
+**Dependency:**
+  
+  
+Refer to:
+r2131, r3132
+
+### r3132 CO: Actual component number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer32 | **Dynamic index:**- | **Func. diagram:** 8060 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the component number of the oldest fault that is still active.
+
+**Dependency:**
+  
+  
+Refer to:
+r2131, r3131
+
+### p3950 Service parameter
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( ) UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**All groups | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+For service personnel only.
+
+### r3974 Drive unit status word
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the status word for the drive unit.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Software reset active | No | Yes | - |
+| 01 | Writing of parameters disabled as parameter save in progress | No | Yes | - |
+| 02 | Writing of parameters disabled as macro is running | No | Yes | - |
+
+### r3977 BICO counter topology
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the BICO interconnections that have been parameterized in the complete (overall)
+topology.  
+The counter is incremented by one for each modified BICO interconnection.
+
+**Dependency:**
+  
+  
+Refer to:
+r3978, r3979
+
+### r3978 BICO CounterDevice
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the counter reading for modified BICO interconnections on this device.  
+The counter is incremented by one for each modified BICO interconnection.
+
+### p3981 Acknowledge drive object faults
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** 8060 |
+| **Object:**All objects | **P-Group:**Messages | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Setting to acknowledge all active faults of a drive object.
+
+**Notice:**
+  
+Safety messages cannot be acknowledged using this parameter.
+
+**Note:**
+  
+Parameter should be set from 0 to 1 to acknowledge.  
+After acknowledgment, the parameter is automatically reset to 0.
+
+### r3986 Number of parameters
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the number of parameters for this drive unit.  
+The number comprises the device-specific and the drive-specific parameters.
+
+### r3988[0...1] Boot state
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 10800 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Index 0:  
+Displays the boot state.  
+Index 1:  
+Displays the partial boot state.
+
+**Value:**
+  
+0:
+Not active  
+1:
+Fatal fault  
+10:
+Fault  
+20:
+Reset all parameters  
+30:
+Drive object modified  
+40:
+Download using the commissioning tool  
+50:
+Parameter download using commissioning tool  
+90:
+Reset Control Unit and delete drive objects  
+100:
+Start initialization  
+101:
+Wait for topology input  
+110:
+Instantiate Control Unit basis  
+111:
+Insert drive object  
+112:
+Remove drive object  
+113:
+Change drive object number  
+114:
+Change component number  
+115:
+Parameter download using commissioning tool  
+117:
+Remove component  
+150:
+Wait until actual topology determined  
+160:
+Evaluate topology  
+170:
+Instantiate Control Unit reset  
+180:
+Initialization YDB configuration information  
+200:
+First commissioning  
+210:
+Create drive packages  
+250:
+Wait for topology acknowledge  
+325:
+Wait for input of drive type  
+350:
+Determine drive type  
+360:
+Write into topology-dependent parameters  
+370:
+Wait until p0009 = 0 is set  
+380:
+Check topology  
+550:
+Call conversion functions for parameter  
+625:
+Wait non-cyclic starting DRIVE-CLiQ  
+650:
+Start cyclic operation  
+660:
+Evaluate drive commissioning status  
+670:
+Automatic FW update DRIVE-CLiQ components  
+680:
+Wait for CU LINK slaves  
+690:
+Wait non-cyclic starting DRIVE-CLiQ  
+700:
+Save parameters  
+725:
+Wait until DRIVE-CLiQ cyclic  
+740:
+Check the ability to operate  
+745:
+Start of the time slices  
+750:
+Interrupt enable  
+800:
+Initialization finished  
+10050:
+Wait for synchronization  
+10100:
+Wait for CU LINK slaves  
+10150:
+Wait until actual topology determined  
+10200:
+Evaluate component status  
+10250:
+Call conversion functions for parameter  
+10300:
+Preparation cyclic operation  
+10350:
+Automatic FW update DRIVE-CLiQ components  
+10400:
+Wait for slave properties  
+10450:
+Check CX/NX status  
+10500:
+Wait until DRIVE-CLiQ cyclic  
+10550:
+Carry out warm start  
+10600:
+Evaluate, encoder status  
+10800:
+Partial boot completed
+
+**Index:**
+  
+[
+0]:
+System  
+[
+1]:
+Partial boot
+
+### r3996[0...1] Parameter write inhibit status
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Displays whether writing to parameters is inhibited.  
+r3996[0] = 0:  
+Parameter write not inhibited.  
+0 < r3996[0] < 100:  
+Parameter write inhibited. The value shows how the calculations are progressing.
+
+**Index:**
+  
+[
+0]:
+Progress calculations  
+[
+1]:
+Cause
+
+**Note:**
+  
+For index [1]:  
+Only for internal Siemens troubleshooting.
+
+### p4650 Encoder functional reserve component number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Displays, signals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 399 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the component number (p0141) of the encoder whose functional reserve is to be
+displayed (r4651).
+
+**Dependency:**
+  
+  
+Refer to:
+r4651
+
+### r4651[0...3] Encoder functional reserve
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Displays, signals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [%] | - [%] | [ ] - [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the functional reserve of the encoder selected via p4650.  
+0 ... 25 %:  
+The function limit has been reached. A service is recommended.  
+26 ... 100 %:  
+The encoder is working in the specified range.
+
+**Index:**
+  
+[
+0]:
+Function reserve 1  
+[
+1]:
+Function reserve 2  
+[
+2]:
+Function reserve 3  
+[
+3]:
+Function reserve 4
+
+**Dependency:**
+  
+  
+Refer to:
+p4650
+
+**Note:**
+  
+Value = 999 means:  
+- the component specified in p4650 is not connected  
+- the encoder does not support the display of the functional reserve
+
+### p4690 SMI spare part component number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Displays, signals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 399 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the component number for the SMI/DQI for which motor and/or encoder data should
+be saved, deleted or downloaded.
+
+**Dependency:**
+  
+  
+Refer to:
+p4691, p4692, p4693
+
+**Note:**
+  
+DQI: DRIVE-CLiQ Sensor Integrated  
+SMI: SINAMICS Sensor Module Integrated
+
+### p4691 SMI spare part save/download data
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Displays, signals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 39 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Setting for the saving/downloading/deletion of motor and/or encoder data for the component
+specified in p4690 (SMI/DQI).  
+A backup of this data can be saved to non-volatile memory. The backup procedure is
+performed automatically as part of the function for saving to non-volatile memory
+(p0977 = 1 or "Copy RAM to ROM"). If a part is replaced, the saved data can be reloaded.  
+Procedure:  
+p4690 = set component number  
+p4691 = 1, 2, 30: Set the required procedure (save/download/delete).  
+p4691 = 9, 10, 36: Feedback signal on successful completion of the procedure.  
+p4691 = 11... 22, 37, 38: Error values if the procedure could not be executed successfully.
+
+**Value:**
+  
+0:
+Inactive  
+1:
+Save SMI data  
+2:
+Download SMI data  
+9:
+SMI data downloaded and POWER ON required for component  
+10:
+SMI data backup complete  
+11:
+SMI data backup for selected component not found  
+12:
+Selected component not available or not connected  
+13:
+Insufficient memory space for backup  
+14:
+Format of saved data is incompatible  
+15:
+Transfer fault during data download  
+16:
+Transfer fault during data backup  
+17:
+Data backup does not match parameterized encoder/motor  
+18:
+Data backup directory not permissible  
+19:
+Component already contains data  
+20:
+Component does not contain any data  
+21:
+Component is not an SMI or a DQI  
+22:
+SMI data cannot be downloaded for component  
+30:
+Delete SMI data  
+35:
+Confirmation of SMI data delete required  
+36:
+SMI data deleted and POWER ON required for component  
+37:
+Access level not sufficient for delete  
+38:
+Delete SMI data not permitted for component  
+39:
+SMI data for component cannot be deleted
+
+**Dependency:**
+  
+  
+Refer to:
+p4690, p4692, p4693
+
+**Notice:**
+  
+Once SMI/DQI data has been deleted or downloaded successfully, the component has to
+be switched on (POWER ON).
+
+**Note:**
+  
+SMI: SINAMICS Sensor Module Integrated  
+DQI: DRIVE-CLiQ Sensor Integrated  
+Help for error value = 11:  
+- Save the data for the original SMI on the memory card.  
+- Use an SMI with a suitable hardware version.  
+Help for error value = 12:  
+- set the correct component number or connect the component.  
+Help for error value = 13:  
+- Use a memory card with more memory space.  
+Help for error value = 14:  
+- Create a data backup on the memory card corresponding to the SMI type.  
+Help for error value = 15:  
+- check the DRIVE-CLiQ wiring for the component.  
+Remedy for fault value = 16:  
+- check the DRIVE-CLiQ wiring for the component.  
+Help for error value = 17:  
+- Save the data for the original SMI on the memory card.  
+Remedy for fault value = 18:  
+- set parameter p4693 to an appropriate value.  
+Remedy for fault value = 19:  
+- Perform an SMI delete or use a blank SMI.  
+Remedy for fault value = 20:  
+- Use an SMI that is not blank.  
+Remedy for fault value = 21:  
+- set the correct component number (p4690).  
+Note for error value = 22:  
+- Data cannot be downloaded for component.  
+Remedy for fault value = 35:  
+- Reset parameter p4691 to 30.  
+Remedy for fault value = 37:  
+- set the access level to Expert or higher.  
+Help for error value = 38:  
+- insert the SMI/DQI into the actual topology as an additional component (component
+number >= 200).  
+- set the component number from the actual topology (p4690 >= 200).  
+- set the correct component number (p4690 >= 200).  
+Note for error value = 39:  
+- SMI already deleted or too old. Delete not possible.
+
+### p4692 SMI spare part save data of all SMIs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Displays, signals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 29 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Setting to back up the data of all SMIs and DQIs featured in the target topology.
+
+**Value:**
+  
+0:
+Inactive  
+1:
+Save data of all SMIs and DQIs  
+10:
+Save all data successful  
+13:
+Insufficient memory space for backup  
+16:
+Transfer fault during data backup  
+20:
+Component does not contain any data  
+29:
+Not all components from target topology saved
+
+**Note:**
+  
+SMI: SINAMICS Sensor Module Integrated  
+p4692 = 10: Automatic on successful completion of backup procedure.  
+p4692 = 13, 16, 20, 29: Error values if the procedure could not be executed successfully.  
+The procedure must be repeated if the data save operation was interrupted (e.g. if
+the power supply voltage failed).  
+Help for error value = 13:  
+- Use a memory card with more memory space.  
+Remedy for fault value = 16:  
+- Check the DRIVE-CLiQ wiring.  
+Remedy for fault value = 20:  
+- Use an SMI that is not blank.  
+Help for error value = 29:  
+- check and correct the target and actual topologies for the SMIs.  
+- Repeat the save procedure.
+
+### p4693[0...1] SMI spare part data backup directory
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Displays, signals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 399 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the directory for downloading and saving data.  
+Example:  
+The SMI has the component number 5 and the SMI data (motor/encoder data) is to be
+stored in subdirectory C205.  
+--> p4690 = 5, p4693[0] = 205, p4691 = 1
+
+**Index:**
+  
+[
+0]:
+Subdirectory selection  
+[
+1]:
+Reserved
+
+**Dependency:**
+  
+  
+Refer to:
+p4691, r4694
+
+**Notice:**
+  
+If p4693[0] is not equal to 0 and p4693[0] is not equal to p4690, the following applies:  
+- Only a number >= 200 may be selected for the subdirectory when saving.  
+- in the case of downloads, a selection for the subdirectory may only be made for
+an SMI/DQI with a component number >= 200 (preliminary component number) (p4690 >=
+200).
+
+**Note:**
+  
+DQI: DRIVE-CLiQ Sensor Integrated  
+SMI: SINAMICS Sensor Module Integrated  
+For index [0]:  
+This index is used to select the subdirectory for saving and downloading data. The
+motor article number (MLFB) of the corresponding data backup is displayed in r4694.  
+For p4693[0] = 0, the following applies:  
+The directory is determined by the setting of p4690.
+
+### r4694[0...19] SMI spare part data backup motor article number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Displays, signals | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the motor article number (MLFB) of the data backup selected with p4693.
+
+**Dependency:**
+  
+  
+Refer to:
+p4691, p4692
+
+**Caution:**
+  
+If the selected subdirectory contains a number of data sets, "More Datasets" is displayed
+in r4694[0...19].  
+If there is no SMI data (motor/encoder data) in the selected subdirectory or if the
+selected subdirectory does not exist, the following applies:  
+- the number of the next subdirectory located is displayed.  
+- this subdirectory is not checked for valid SMI data.  
+- if another subdirectory cannot be located, nothing is displayed in r4694[0...19].
+
+**Note:**
+  
+SMI: SINAMICS Sensor Module Integrated
+
+### p4707 Measurement function configuration
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Trace and function generator | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**0 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Setting to configure the measurement function.
+
+**Value:**
+  
+0:
+Standard  
+1:
+Free measuring function
+
+**Dependency:**
+  
+The parameter cannot be changed when the measurement function has been started (r4706
+= 2, 3).
+
+**Note:**
+  
+This parameter involves free measurement functions, and is only active for p4810 =
+6.  
+For value = 0:  
+The free measuring function is parameterized with master control.  
+For value = 1:  
+The free measuring function is parameterized without master control.
+
+### p4800 Function generator control
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Trace and function generator | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**0 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 3 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+The function generator is started with p4800 = 1.  
+The signal is only generated for a 1 signal of binector input p4819.
+
+**Value:**
+  
+0:
+Stop function generator  
+1:
+Start function generator  
+2:
+Check function generator parameterization  
+3:
+Start function generator without enable signals
+
+**Dependency:**
+  
+  
+Refer to:
+p4819
+
+### r4805 Function generator status
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Trace and function generator | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**0 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 6 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the actual status of the function generator.
+
+**Value:**
+  
+0:
+Inactive  
+1:
+Generate accelerating ramp to offset  
+2:
+Generate parameterized signal shape  
+3:
+Generate braking ramp  
+4:
+Function generator stopped due to missing enable signals  
+5:
+Function generator waits for BI: p4819  
+6:
+Function generator parameterization has been checked
+
+**Dependency:**
+  
+  
+Refer to:
+p4800, p4819
+
+### r4806.0 BO: Function generator status signal
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Trace and function generator | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**0 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the status of the function generator.  
+0 signal: Function generator inactive  
+1 signal: Function generator running
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Bit 0 | OFF | ON | - |
+
+### p4810 Function generator mode
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Trace and function generator | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**0 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 99 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the operating mode of the function generator.
+
+**Value:**
+  
+0:
+Connection at connector output r4818  
+1:
+Connection at current setpoint after filter and r4818  
+2:
+Connection as disturbing torque and r4818  
+3:
+Connection at speed setpoint after filter and r4818  
+4:
+Connection at current setpoint before filter and r4818  
+5:
+Connection at speed setpoint before filter and r4818  
+6:
+Connection for free measurement function r4818 and r4834  
+99:
+Connection at physical address and r4818
+
+### p4812 Function generator physical address
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Trace and function generator | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**0 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 4294967295 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the physical address where the function generator is to be connected.
+
+**Dependency:**
+  
+Only effective when p4810 = 99.
+
+### p4813 Function generator physical address reference value
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Trace and function generator | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**0 |
+| **Min** | **Max** | **Factory setting** |
+| 1.00 | 1000000.00 | [ 0 ] 1.00 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the reference value for 100 % for referred inputs.
+
+**Dependency:**
+  
+Only effective when p4810 = 99.
+
+### p4816 Function generator output signal integer number scaling
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Integer32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| -2147483648 | 2147483647 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the scaling for the integer number of the output signal for the function generator.
+
+**Dependency:**
+  
+  
+Refer to:
+r4805, r4817
+
+**Note:**
+  
+The parameter can only be changed in the following operating states:  
+r4805 = 0, 4, 6
+
+### r4817 CO: Function generator output signal integer number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Integer32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Trace and function generator | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**0 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Display and connector output for the integer number of the output signal for the function
+generator.
+
+**Dependency:**
+  
+  
+Refer to:
+p4816
+
+**Note:**
+  
+The value is output independent of the function generator operating mode.
+
+### r4818 CO: Function generator output signal
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Trace and function generator | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**0 |
+| **Min** | **Max** | **Factory setting** |
+| - [%] | - [%] | [ ] - [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the output signal for the function generator.
+
+**Dependency:**
+  
+  
+Refer to:
+p4810
+
+**Note:**
+  
+The value is displayed independently of the function generator mode.
+
+### p4819 BI: Function generator control
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Trace and function generator | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**0 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source to control the function generator.  
+When the function generator is running, signal generation is stopped with binector
+p4819 = 0 signal and p4800 is set = 0.
+
+**Dependency:**
+  
+  
+Refer to:
+p4800
+
+### p4820 Function generator signal shape
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Trace and function generator | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**0 |
+| **Min** | **Max** | **Factory setting** |
+| 1 | 5 | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal to be generated for the function generator.
+
+**Value:**
+  
+1:
+Square-wave  
+2:
+Staircase  
+3:
+Delta  
+4:
+Binary noise - PRBS (Pseudo Random Binary Signal)  
+5:
+Sine-wave
+
+### p4821 Function generator period
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Trace and function generator | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**0 |
+| **Min** | **Max** | **Factory setting** |
+| 0.00 [ms] | 60000.00 [ms] | [ 0 ] 1000.00 [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the period of the signal to be generated for the function generator.
+
+**Dependency:**
+  
+Ineffective when p4820 = 4 (PRBS).
+
+### p4822 Function generator pulse width
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Trace and function generator | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**0 |
+| **Min** | **Max** | **Factory setting** |
+| 0.00 [ms] | 60000.00 [ms] | [ 0 ] 500.00 [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the pulse width for the signal to be generated for the function generator.
+
+**Dependency:**
+  
+Only effective when p4820 = 1 (square-wave).
+
+### p4823 Function generator bandwidth
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Trace and function generator | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**0 |
+| **Min** | **Max** | **Factory setting** |
+| 0.0025 [Hz] | 16000.0000 [Hz] | [ 0 ] 4000.0000 [Hz] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the bandwidth for the signal to be generated for the function generator.
+
+**Dependency:**
+  
+Only effective when p4820 = 4 (PRBS).  
+  
+Refer to:
+p4830  
+Refer to:
+A02041
+
+### p4824 Function generator amplitude
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Trace and function generator | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**0 |
+| **Min** | **Max** | **Factory setting** |
+| -1600.00 [%] | 1600.00 [%] | [ 0 ] 5.00 [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the amplitude for the signal to be generated for the function generator.
+
+**Dependency:**
+  
+Units are dependent on p4810.  
+If p4810 = 1, 2, 4: The amplitude is referred to p2002 (reference current).  
+If p4810 = 3, 5: The amplitude is referred to p2000 (reference speed).
+
+### p4825 Function generator 2nd amplitude
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Trace and function generator | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**0 |
+| **Min** | **Max** | **Factory setting** |
+| -1600.00 [%] | 1600.00 [%] | [ 0 ] 7.00 [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the second amplitude for the signal to be generated for the function generator.
+
+**Dependency:**
+  
+Only effective for p4820 = 2 (staircase).  
+Units are dependent on p4810.  
+If p4810 = 1, 2, 4: The amplitude is referred to p2002 (reference current).  
+If p4810 = 3, 5: The amplitude is referred to p2000 (reference speed).
+
+### p4826 Function generator offset
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Trace and function generator | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**0 |
+| **Min** | **Max** | **Factory setting** |
+| -1600.00 [%] | 1600.00 [%] | [ 0 ] 0.00 [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the offset (DC component) of the signal to be generated for the function generator.
+
+**Dependency:**
+  
+Units are dependent on p4810.  
+If p4810 = 1, 2, 4: The offset is referred to p2002 (reference current).  
+If p4810 = 3, 5: The offset is referred to p2000 (reference speed).  
+If p4810 = 2: In order to avoid the undesirable effects of play (backlash), the offset
+does not act on the current setpoint, but instead on the speed setpoint.
+
+### p4827 Function generator ramp-up time to offset
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Trace and function generator | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**0 |
+| **Min** | **Max** | **Factory setting** |
+| 0.00 [ms] | 100000.00 [ms] | [ 0 ] 32.00 [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the ramp-up time to the offset for the function generator.
+
+### p4828 Function generator lower limit
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Trace and function generator | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**0 |
+| **Min** | **Max** | **Factory setting** |
+| -10000.00 [%] | 0.00 [%] | [ 0 ] -100.00 [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the lower limit for the function generator.
+
+**Dependency:**
+  
+For p4810 = 2 the limit only applies to the current setpoint, but not the speed setpoint
+(offset).
+
+### p4829 Function generator upper limit
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Trace and function generator | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**0 |
+| **Min** | **Max** | **Factory setting** |
+| 0.00 [%] | 10000.00 [%] | [ 0 ] 100.00 [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the upper limit for the function generator.
+
+**Dependency:**
+  
+For p4810 = 2 the limit only applies to the current setpoint, but not the speed setpoint
+(offset).
+
+### p4830 Function generator time slice cycle
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Trace and function generator | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**0 |
+| **Min** | **Max** | **Factory setting** |
+| 0.03125 [ms] | 2.00000 [ms] | [ 0 ] 0.12500 [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the time slice cycle in which the function generator is called.
+
+### p4831 Function generator amplitude scaling
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Trace and function generator | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**0 |
+| **Min** | **Max** | **Factory setting** |
+| 0.00000 [%] | 200.00000 [%] | [ 0 ] 100.00000 [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the scaling for the amplitude of the signal waveforms for all output channels.  
+The value can be changed while the function generator is running.
+
+### p4832[0...2] Function generator amplitude scaling
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Trace and function generator | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**0 |
+| **Min** | **Max** | **Factory setting** |
+| -340.28235E36 [%] | 340.28235E36 [%] | [ 0 ] 100.00000 [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the scaling for the amplitude of the signal waveforms separately for each output
+channel.  
+The value cannot be changed while the function generator is running.
+
+**Index:**
+  
+[
+0]:
+First drive for connection  
+[
+1]:
+Second drive for connection  
+[
+2]:
+Third drive for connection
+
+### p4833[0...2] Function generator offset scaling
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Trace and function generator | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**0 |
+| **Min** | **Max** | **Factory setting** |
+| -340.28235E36 [%] | 340.28235E36 [%] | [ 0 ] 100.00000 [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the scaling for the offset of the signal waveforms separately for each output
+channel.  
+The value cannot be changed while the function generator is running.
+
+**Index:**
+  
+[
+0]:
+First drive for connection  
+[
+1]:
+Second drive for connection  
+[
+2]:
+Third drive for connection
+
+### r4834[0...4] CO: Function generator free measurement output signal
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Trace and function generator | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**0 |
+| **Min** | **Max** | **Factory setting** |
+| - [%] | - [%] | [ ] - [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the output signal for the free measurement function.
+
+**Index:**
+  
+[
+0]:
+Signal 1  
+[
+1]:
+Signal 2  
+[
+2]:
+Signal 3  
+[
+3]:
+Signal 4  
+[
+4]:
+Signal 5
+
+**Dependency:**
+  
+  
+Refer to:
+p4810
+
+**Note:**
+  
+The signals are only output in the "free measurement function" operating mode (p4810
+= 6)
+
+### p4835[0...4] Function generator free measurement function scaling
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Trace and function generator | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**0 |
+| **Min** | **Max** | **Factory setting** |
+| -200.00000 [%] | 200.00000 [%] | [ 0 ] 100.00000 [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the scaling of the output signals for the free measurement function.
+
+**Index:**
+  
+[
+0]:
+Signal 1  
+[
+1]:
+Signal 2  
+[
+2]:
+Signal 3  
+[
+3]:
+Signal 4  
+[
+4]:
+Signal 5
+
+**Note:**
+  
+The parameter cannot be changed when the measurement function has been started (r4706
+= 2, 3).
+
+### r4950 TEC DO-specific number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**OEM range | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the number of Technology Extensions installed on this drive object.
+
+**Dependency:**
+  
+  
+Refer to:
+r4951, r4952, r4955, p4956, r4957, r4958, r4959, r4960
+
+**Note:**
+  
+DO: Drive Object  
+TEC: Technology Extension
+
+### r4951 TEC DO-specific identifier total length
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**OEM range | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 288 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the total length of the identifier of the Technology Extensions installed
+on this drive object.
+
+**Dependency:**
+  
+  
+Refer to:
+r4950, r4952, r4955, p4956, r4957, r4958, r4959, r4960
+
+**Note:**
+  
+The identifier of a Technology Extension comprises a maximum of 8 characters plus
+separator.  
+TEC: Technology Extension
+
+### r4952 TEC DO-specific GUID total length
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**OEM range | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 576 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the total length of the GUIDs of the Technology Extensions installed on this
+drive object.
+
+**Dependency:**
+  
+  
+Refer to:
+r4950, r4951, r4955, p4956, r4957, r4958, r4959, r4960
+
+**Note:**
+  
+The GUID of a Technology Extension comprises 16 characters plus 1 character major
+information plus 1 character, minor information.  
+GUID: Globally Unique IDentifier  
+TEC: Technology Extension
+
+### r4955[0...n] TEC DO-specific identifier
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned8 | **Dynamic index:**r4951 | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**OEM range | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the identifier of the Technology Extensions installed on this drive object.  
+r4955[0...8]: Identifier of Technology Extension 1  
+r4955[9...17]: Identifier of Technology Extension 2, ...
+
+**Dependency:**
+  
+  
+Refer to:
+r4950, r4951, r4952, p4956, r4957, r4958, r4959, r4960
+
+**Notice:**
+  
+This parameter is only indexed if at least one drive object-specific Technology Extension
+exists (p4950 > 0).
+
+**Note:**
+  
+TEC: Technology Extension
+
+### p4956[0...n] TEC DO-specific activation
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( ) T | **Calculated:**- | **Access level:**4 |
+| **Data type:**Integer16 | **Dynamic index:**r4950 | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**OEM range | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Setting to activate the Technology Extensions installed on this drive object.  
+r4956[0]: Activation of Technology Extension 1  
+r4956[1]: Activation of Technology Extension 2, ...
+
+**Value:**
+  
+0:
+Technology Extension inactive  
+1:
+Technology Extension active
+
+**Dependency:**
+  
+  
+Refer to:
+r4950, r4951, r4952, r4955, r4957, r4958, r4959, r4960
+
+**Notice:**
+  
+This parameter is only indexed if at least one drive object-specific Technology Extension
+exists (p4950 > 0).
+
+**Note:**
+  
+TEC: Technology Extension
+
+### r4957[0...n] TEC DO-specific version
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**r4950 | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**OEM range | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 4294967295 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the version of the Technology Extensions installed on this drive object.  
+r4957[0]: Version of Technology Extension 1  
+r4957[1]: Version of Technology Extension 2, ...
+
+**Dependency:**
+  
+  
+Refer to:
+r4950, r4951, r4952, r4955, p4956, r4958, r4959, r4960
+
+**Notice:**
+  
+This parameter is only indexed if at least one drive object-specific Technology Extension
+exists (p4950 > 0).
+
+**Note:**
+  
+TEC: Technology Extension  
+Example:  
+The value 1010100 should be interpreted as V01.01.01.00.
+
+### r4958[0...n] TEC DO-specific interface version
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**r4950 | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**OEM range | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the interface version of Technology Extensions installed on this drive object.  
+r4958[0]: Interface version of Technology Extension 1  
+r4958[1]: Interface version of Technology Extension 2, ...
+
+**Dependency:**
+  
+  
+Refer to:
+r4950, r4951, r4952, r4955, p4956, r4957, r4959, r4960
+
+**Notice:**
+  
+This parameter is only indexed if at least one drive object-specific Technology Extension
+exists (p4950 > 0).
+
+**Note:**
+  
+TEC: Technology Extension  
+Example:  
+The value 1010100 should be interpreted as V01.01.01.00.
+
+### r4959[0...n] TEC DO-specific GUID
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned8 | **Dynamic index:**r4952 | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**OEM range | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the GUIDs of the Technology Extensions installed on this drive object.  
+r4959[0...15]: GUID of Technology Extension 1  
+r4959[16]: Major information of Technology Extension 1  
+r4959[17]: Minor information of Technology Extension 1  
+r4959[18...33]: GUID of Technology Extension 2  
+r4959[34]: Major information of Technology Extension 2  
+r4959[35]: Minor information of Technology Extension 2, ...
+
+**Dependency:**
+  
+  
+Refer to:
+r4950, r4951, r4952, r4955, p4956, r4957, r4958, r4960
+
+**Notice:**
+  
+This parameter is only indexed if at least one drive object-specific Technology Extension
+exists (p4950 > 0).
+
+**Note:**
+  
+TEC: Technology Extension
+
+### r4960[0...n] TEC DO-specific GUID drive object
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned8 | **Dynamic index:**r4952 | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**OEM range | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the GUIDs of this drive object of the Technology Extensions installed on
+the memory card/device memory.  
+r4960[0...15]: GUID of this drive object of Technology Extension 1  
+r4960[16]: Major information of this drive object of Technology Extension 1  
+r4960[17]: Minor information of this drive object of Technology Extension 1  
+r4960[18...33]: GUID of this drive object of Technology Extension 2  
+r4960[34]: Major information of this drive object of Technology Extension 2  
+r4960[35]: Minor information of this drive object of Technology Extension 2, ...
+
+**Dependency:**
+  
+  
+Refer to:
+r4950, r4951, r4952, r4955, p4956, r4957, r4958, r4959
+
+**Notice:**
+  
+This parameter is only indexed if at least one drive object-specific Technology Extension
+exists (p4950 > 0).
+
+**Note:**
+  
+TEC: Technology Extension
+
+### p4961[0...n] TEC DO-specific logbook module selection
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**r4950 | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**OEM range | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0000 hex | FFFF FFFF hex | [ 0 ] 0000 hex |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Only for service purposes.
+
+**Note:**
+  
+TEC: Technology Extension
+
+### r4975 TEC invalid number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**OEM range | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the number of invalid Technology Extensions installed on the memory card/device
+memory.
+
+**Dependency:**
+  
+  
+Refer to:
+r4976, r4978, r4979
+
+**Note:**
+  
+TEC: Technology Extension
+
+### r4976 TEC invalid identifier total length
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**OEM range | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the total length of the IDs of all the invalid Technology Extensions installed
+on the memory card/device memory.
+
+**Dependency:**
+  
+  
+Refer to:
+r4975, r4978, r4979
+
+**Note:**
+  
+TEC: Technology Extension  
+The identifier of an invalid Technology Extension comprises a maximum of 8 characters
+plus separator.
+
+### r4978[0...n] TEC invalid identifier
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned8 | **Dynamic index:**r4976 | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**OEM range | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the IDs of all the invalid Technology Extensions installed on the memory
+card/device memory.  
+r4978[0...8]: Identifier of invalid Technology Extension 1  
+r4978[9...17]: Identifier of invalid Technology Extension 2, ...
+
+**Dependency:**
+  
+  
+Refer to:
+r4975, r4976, r4979
+
+**Notice:**
+  
+This parameter is only indexed if at least one invalid Technology Extension exists
+(p4975 > 0).
+
+**Note:**
+  
+TEC: Technology Extension
+
+### r4979[0...n] TEC invalid error code
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**r4975 | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**OEM range | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the error code of the invalid Technology Extensions installed on the memory
+card/device memory.  
+r4979[0]: error code from Technology Extension 1  
+r4979[1]: error code from Technology Extension 2, ...
+
+**Dependency:**
+  
+  
+Refer to:
+r4975, r4976, r4978
+
+**Notice:**
+  
+This parameter is only indexed if at least one invalid Technology Extension exists
+(p4975 > 0).
+
+**Note:**
+  
+TEC: Technology Extension  
+The value in the error code must be interpreted in binary form. The bits have the
+following meaning:  
+Bit 00: Incompatible version of the TEC interface.  
+Bit 01: Technology Extension could not be loaded.  
+Bit 02: Incorrect description files.  
+Bit 03: Technology Extension does not define a CPU type.  
+Bit 04: Technology Extension for this device not available (incorrect CPU type).  
+Bit 05: Technology Extension for this device not available (incorrect type ID).  
+Bit 06: Incorrect description files (Const/Startup incompatible).  
+Bit 07: Number range of the Technology Extension overlaps with the number range of
+another Technology Extension  
+Bit 08: No compatible custom interface was found.  
+Bit 09: The custom interface defined by the Technology Extension already exists.  
+Bit 10: The version of the System Technology Extension differs from the SINAMICS firmware
+version.
+
+### r4985 TEC count
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**OEM range | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Displays the number of Technology Extensions installed on the memory card/device memory.
+
+**Dependency:**
+  
+  
+Refer to:
+r4986, r4987, r4988, r4989, r4990, r4991, r4992, r4993, r4994
+
+**Note:**
+  
+TEC: Technology Extension
+
+### r4986 TEC identifier total length
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**OEM range | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 288 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Displays the total length of the IDs of all the Technology Extensions installed on
+the memory card/device memory.
+
+**Dependency:**
+  
+  
+Refer to:
+r4985, r4987, r4988, r4989, r4990, r4991, r4992, r4993, r4994
+
+**Note:**
+  
+TEC: Technology Extension  
+The identifier of a Technology Extension comprises a maximum of 8 characters plus
+separator.
+
+### r4987 TEC GUID total length
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**OEM range | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 576 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Displays the total length of the GUIDs of all the Technology Extensions installed
+on the memory card/device memory.
+
+**Dependency:**
+  
+  
+Refer to:
+r4985, r4986, r4988, r4989, r4990, r4991, r4992, r4993, r4994
+
+**Note:**
+  
+The GUID of a Technology Extension comprises 16 characters plus 1 character major
+information plus 1 character, minor information.  
+GUID: Globally Unique IDentifier  
+TEC: Technology Extension
+
+### r4988[0...n] TEC identifier
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned8 | **Dynamic index:**r4986 | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**OEM range | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Displays the IDs of all the Technology Extensions installed on the memory card/device
+memory.  
+r4988[0...8]: Identifier of Technology Extension 1  
+r4988[9...17]: Identifier of Technology Extension 2, ...
+
+**Dependency:**
+  
+  
+Refer to:
+r4985, r4986, r4987, r4989, r4990, r4991, r4992, r4993, r4994
+
+**Notice:**
+  
+This parameter is only indexed if at least one Technology Extension exists (p4985
+> 0).
+
+**Note:**
+  
+TEC: Technology Extension
+
+### r4989[0...n] TEC version
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**r4985 | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**OEM range | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Displays the version of all the Technology Extensions installed on the memory card/device
+memory.  
+r4989[0]: Version of Technology Extension 1  
+r4989[1]: Version of Technology Extension 2, ...
+
+**Dependency:**
+  
+  
+Refer to:
+r4985, r4986, r4987, r4988, r4990, r4991, r4992, r4993, r4994
+
+**Notice:**
+  
+This parameter is only indexed if at least one Technology Extension exists (p4985
+> 0).
+
+**Note:**
+  
+TEC: Technology Extension  
+Example:  
+The value 1010100 should be interpreted as V01.01.01.00.
+
+### r4990[0...n] TEC interface version
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**r4985 | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**OEM range | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Displays the interface version of all the Technology Extensions installed on the memory
+card/device memory.  
+r4990[0]: Interface version of Technology Extension 1  
+r4990[1]: Interface version of Technology Extension 2, ...
+
+**Dependency:**
+  
+  
+Refer to:
+r4985, r4986, r4987, r4988, r4989, r4991, r4992, r4993, r4994
+
+**Notice:**
+  
+This parameter is only indexed if at least one Technology Extension exists (p4985
+> 0).
+
+**Note:**
+  
+TEC: Technology Extension  
+Example:  
+The value 1010100 should be interpreted as V01.01.01.00.
+
+### r4991[0...n] TEC GUID
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned8 | **Dynamic index:**r4987 | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**OEM range | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Displays the GUIDs of all the Technology Extensions installed on the memory card/device
+memory.  
+r4991[0...15]: GUID of Technology Extension 1  
+r4991[16]: Major information of Technology Extension 1  
+r4991[17]: Minor information of Technology Extension 1  
+r4991[18...33]: GUID of Technology Extension 2  
+r4991[34]: Major information of Technology Extension 2  
+r4991[35]: Minor information of Technology Extension 2, ...
+
+**Dependency:**
+  
+  
+Refer to:
+r4985, r4986, r4987, r4988, r4989, r4990, r4992, r4993, r4994
+
+**Notice:**
+  
+This parameter is only indexed if at least one Technology Extension exists (p4985
+> 0).
+
+**Note:**
+  
+TEC: Technology Extension
+
+### r4992[0...n] TEC GUID ES
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned8 | **Dynamic index:**r4987 | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**OEM range | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Displays the GUIDs of all the Technology Extensions installed on the memory card/device
+memory.  
+r4992[0...15]: GUID of Technology Extension 1  
+r4992[16]: Major information of Technology Extension 1  
+r4992[17]: Minor information of Technology Extension 1  
+r4992[18...33]: GUID of Technology Extension 2  
+r4992[34]: Major information of Technology Extension 2  
+r4992[35]: Minor information of Technology Extension 2, ...
+
+**Dependency:**
+  
+  
+Refer to:
+r4985, r4986, r4987, r4988, r4989, r4990, r4991, r4993, r4994
+
+**Notice:**
+  
+This parameter is only indexed if at least one Technology Extension exists (p4985
+> 0).
+
+**Note:**
+  
+TEC: Technology Extension
+
+### r4993[0...n] TEC activation status
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Integer16 | **Dynamic index:**r4985 | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**OEM range | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Displays the activation status of the Technology Extensions installed on the memory
+card/device memory.  
+r4993[0]: Activation of Technology Extension 1  
+r4993[1]: Activation of Technology Extension 2, ...
+
+**Value:**
+  
+0:
+Technology Extension inactive  
+1:
+Technology Extension active
+
+**Dependency:**
+  
+  
+Refer to:
+r4985, r4986, r4987, r4988, r4989, r4990, r4991, r4992, r4994
+
+**Notice:**
+  
+This parameter is only indexed if at least one Technology Extension exists (p4985
+> 0).
+
+**Note:**
+  
+TEC: Technology Extension
+
+### r4994[0...n] TEC properties
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**r4985 | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**OEM range | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Displays the properties of all the Technology Extensions installed on the memory card/device
+memory.  
+r4994[0]: Property of Technology Extension 1  
+r4994[1]: Property of Technology Extension 2, ...
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Properties diagnostics bit 0 | No | Yes | - |
+| 01 | Properties diagnostics bit 1 | No | Yes | - |
+| 02 | Properties diagnostics bit 2 | No | Yes | - |
+| 03 | OEM | Yes | No | - |
+| 04 | Properties diagnostics bit 4 | No | Yes | - |
+| 05 | Properties diagnostics bit 5 | No | Yes | - |
+| 06 | Properties diagnostics bit 6 | No | Yes | - |
+
+**Dependency:**
+  
+  
+Refer to:
+r4985, r4986, r4987, r4988, r4989, r4990, r4991, r4992, r4993
+
+**Notice:**
+  
+This parameter is only indexed if at least one Technology Extension exists (p4985
+> 0).
+
+**Note:**
+  
+TEC: Technology Extension  
+The parameter is only for internal Siemens diagnostics.
+
+### r4995[0...n] TEC external version
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**r4985 | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**OEM range | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.8
+
+**Description:**
+  
+Displays the external version of all the Technology Extensions installed on the memory
+card/device memory.  
+r4995[0]: External version of Technology Extension 1  
+r4995[1]: External version of Technology Extension 2, ...
+
+**Dependency:**
+  
+  
+Refer to:
+r4985, r4986, r4987, r4988, r4990, r4991, r4992, r4993, r4994
+
+**Notice:**
+  
+This parameter is only indexed if at least one Technology Extension exists (p4985
+> 0).
+
+**Note:**
+  
+Example:  
+The value 1010100 should be interpreted as V01.01.01.00.
+
+### r6543 HW-DESC Version CF
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, BMM2C | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the version of the hardware description data on the CompactFlash Card.  
+The version is displayed in the form MAMIVA (major|minor|version, example: 010305).
+
+**Dependency:**
+  
+  
+Refer to:
+r6545, r6547  
+Refer to:
+F01275, A01276
+
+### r6545[0...37] HW-DESC GUID CF
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, BMM2C | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the GUID of the hardware description data on the CompactFlash Card.  
+The individual characters of the GUID are displayed as ASCII code in the form {XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}
+in the indices.
+
+**Dependency:**
+  
+  
+Refer to:
+F01275
+
+**Note:**
+  
+An ASCII table (excerpt) can be found, for example, in the appendix to the List Manual.  
+GUID: Globally Unique IDentifier
+
+### r6547[0...10] HW description data A5E CF
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, BMM2C | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the A5E number (CADIM) of the hardware description data on the CompactFlash
+card.  
+The individual characters of the CADIM number are displayed in the form A5EXXXXXXXX
+as ASCII code.
+
+**Dependency:**
+  
+  
+Refer to:
+r6543, r6545  
+Refer to:
+F01275
+
+**Note:**
+  
+An ASCII table (excerpt) can be found, for example, in the appendix to the List Manual.
+
+### p6577[0...29] BI: Circuit monitoring functions signal source
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 8032 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal sources for the current monitoring functions.  
+BI: p6577[x] = 0 signal  
+Protective breaker tripped.  
+BI: p6577[x] = 1 signal  
+Protective breaker not tripped.
+
+**Index:**
+  
+[
+0]:
+Not used  
+[
+1]:
+Protective breaker trip main circuit  
+[
+2]:
+Protective breaker trip redundant main circuit  
+[
+3]:
+Protective breaker trip 24 V circuit  
+[
+4]:
+Not used  
+[
+5]:
+Not used  
+[
+6]:
+Protective breaker trip terminal strip 24 V circuit  
+[
+7]:
+Not used  
+[
+8]:
+Not used  
+[
+9]:
+Protective breaker trip PU supply circuit  
+[
+10]:
+Not used  
+[
+11]:
+Not used  
+[
+12]:
+Not used  
+[
+13]:
+Protective breaker trip synchronizing voltage  
+[
+14]:
+Protective breaker trip fan circuit  
+[
+15]:
+Not used  
+[
+16]:
+Not used  
+[
+17]:
+Protective breaker trip excitation 230 V AC circuit  
+[
+18]:
+Protective breaker trip output cooling unit 230 V AC circuit  
+[
+19]:
+Protective breaker trip door solenoids 24 V circuit  
+[
+20]:
+Prot. breaker trip lighting supply/socket outlets 230V AC cct  
+[
+21]:
+Protective breaker trip SITOP 24 V circuit  
+[
+22]:
+Not used  
+[
+23]:
+Not used  
+[
+24]:
+Not used  
+[
+25]:
+UPS not ready  
+[
+26]:
+UPS battery operation  
+[
+27]:
+UPS battery discharged  
+[
+28]:
+Protective breaker trip PU supply 400 V circuit  
+[
+29]:
+Protective breaker trip anti-condensation heating
+
+**Dependency:**
+  
+  
+Refer to:
+A49920, A49921, A49922, A49923, A49924, A49926, A49927, A49933, A49934, A49935, A49936,
+A49937, A49938, A49939, A49940, A49941, A49942
+
+### r6587.1...30 CO/BO: Circuit monitoring functions status
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 8032 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the status of the circuit monitoring functions.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 01 | Protective breaker trip, main power supply | No | Yes | - |
+| 02 | Protective breaker trip, main power supply redundant | No | Yes | - |
+| 03 | Protective breaker trip 24 V circuit | No | Yes | - |
+| 06 | Protective breaker trip 24 V circuit terminal strip | No | Yes | - |
+| 09 | Protective breaker trip power unit supply circuit | No | Yes | - |
+| 13 | Protective breaker trip synchronizing voltage | No | Yes | - |
+| 14 | Protective breaker trip auxiliary fan | No | Yes | - |
+| 17 | Protective breaker trip 230 V AC circuit excitation | No | Yes | - |
+| 18 | Prot. breaker trip 230V AC circuit cooling unit outgoing feeder | No | Yes | - |
+| 19 | Protective breaker trip 24 V circuit door solenoids | No | Yes | - |
+| 20 | Prot. breaker trip 230V AC cct lighting supply/socket outlets | No | Yes | - |
+| 21 | Protective breaker trip SITOP | No | Yes | - |
+| 25 | UPS not ready | No | Yes | - |
+| 26 | UPS battery operation | No | Yes | - |
+| 27 | UPS battery discharged | No | Yes | - |
+| 28 | Protective breaker trip PU supply 400 V circuit | No | Yes | - |
+| 29 | Protective breaker trip anti-condensation heating | No | Yes | - |
+| 30 | Minimum 1 protective breaker tripped | No | Yes | - |
+
+**Dependency:**
+  
+  
+Refer to:
+p6577
+
+**Note:**
+  
+For bit 30:  
+This bit takes into account all status bits with the exception of bit 20.
+
+### r7758[0...19] KHP Control Unit serial number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Displays the actual serial number of the Control Unit.  
+The individual characters of the serial number are displayed in the ASCII code in
+the indices.  
+For the commissioning tool, the ASCII characters are displayed uncoded.
+
+**Dependency:**
+  
+  
+Refer to:
+p7765
+
+**Notice:**
+  
+An ASCII table (excerpt) can be found, for example, in the appendix to the List Manual.
+
+**Note:**
+  
+KHP: Know-How Protection
+
+### p7759[0...19] KHP Control Unit reference serial number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Sets the reference serial number for the Control Unit.  
+Using this parameter, if a Control Unit and/or a memory card is replaced at the end
+customer, the OEM can again adapt the project to the modified hardware.
+
+**Dependency:**
+  
+  
+Refer to:
+p7765
+
+**Note:**
+  
+KHP: Know-How Protection  
+- the OEM may only change this parameter for the use case "Sending encrypted SINAMICS
+data".  
+- SINAMICS only evaluates this parameter when powering up from the encrypted "Load
+into file system..." output or when powering up from the encrypted PS files. The evaluation
+is only made when know-how protection and memory card copy protection have been activated.
+
+### r7760.0...12 CO/BO: Write protection/know-how protection status
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.8
+
+**Description:**
+  
+Displays the status for the write protection and know-how protection.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Write protection active | No | Yes | - |
+| 01 | Know-how protection active | No | Yes | - |
+| 02 | Know-how protection temporarily withdrawn | No | Yes | - |
+| 03 | Know-how protection cannot be deactivated | No | Yes | - |
+| 04 | Extended copy protection is active | No | Yes | - |
+| 05 | Basic copy protection is active | No | Yes | - |
+| 06 | Trace and measuring functions for diagnostic purposes active | No | Yes | - |
+| 12 | Reserved, Siemens-internal | No | Yes | - |
+
+**Dependency:**
+  
+  
+Refer to:
+p7761, p7765
+
+**Note:**
+  
+KHP: Know-How Protection  
+For bit 00:  
+Write protection can be activated/deactivated via p7761 on the Control Unit.  
+For bit 01:  
+The know-how protection can be activated by entering a password (p7766 ... p7768).  
+For bit 02:  
+If it has already been activated, know-how protection can be temporarily deactivated
+by entering the valid password in p7766. In this case, bit 1 = 0 and bit 2 = 1 offset.  
+For bit 03:  
+Know-how protection cannot be deactivated, as p7766 is not entered in the OEM exception
+list (only the factory setting is possible). This bit is only set if know-how protection
+is active (bit 1 = 1) and p7766 has not been entered in the OEM exception list.  
+For bit 04:  
+When know-how protection has been activated, the contents of the memory card (parameter
+and DCC data) can be additionally protected against being used with other memory cards/Control
+Units. This bit is only set if know-how protection is active and in p7765.0 is set
+= 1.  
+For bit 05:  
+When know-how protection has been activated, the contents of the memory card (parameter
+and DCC data) can be additionally protected against being used with other memory cards.
+This bit is only set if know-how protection is active and p7765.1 is set = 1 and p7765.0
+is set = 0.  
+For bit 06:  
+When know-how protection is activated, the drive data can be traced using the device
+trace function. This bit is only set if know-how protection is active and p7765.2
+is set = 1.  
+For bit 12:  
+Together with p7755, the bit is used to monitor write protection.  
+Bit = 1, if p7755 is not equal to 0 and write protection is active (r7760.0 = 1).  
+Bit = 0, if write protection was deactivated. p7755 is set to 0, and when write protection
+is activated again, bit 12 remains at 0.
+
+### p7761 Write protection
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Setting for activating/deactivating the write protection for adjustable parameters.
+
+**Value:**
+  
+0:
+Deactivate write protection  
+1:
+Activate write protection
+
+**Dependency:**
+  
+  
+Refer to:
+r7760
+
+**Notice:**
+  
+While write protection is active, a download is prevented; however, it is still possible
+to restore the factory settings.
+
+**Note:**
+  
+Parameters with the "WRITE_NO_LOCK" attributes are excluded from the write protection.  
+A product-specific list of these parameters is also available in the corresponding
+List Manual.
+
+### p7762 Write protection multi-master fieldbus system access behavior
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Sets the behavior for write protection when accessing via multi-master fieldbus systems
+(e.g. CAN, BACnet).
+
+**Value:**
+  
+0:
+Write access independent of p7761  
+1:
+Write access dependent on p7761
+
+**Dependency:**
+  
+  
+Refer to:
+r7760, p7761
+
+### p7763 KHP OEM exception list number of indices for p7764
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 1 | 500 | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Sets the number of parameters for the OEM exception list (p7764[0...n]).  
+p7764[0...n], with n = p7763 - 1
+
+**Dependency:**
+  
+  
+Refer to:
+p7764
+
+**Note:**
+  
+KHP: Know-How Protection  
+Even if know-how protection is set, parameters in this list can be read and written
+to.
+
+### p7764[0...n] KHP OEM exception list
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**p7763 | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ 0 ] 7766   [ 1...499 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+OEM exception list (p7764[0...n] for setting parameters that should be excluded from
+know-how protection.  
+p7764[0...n], with n = p7763 - 1
+
+**Dependency:**
+  
+The number of indices depends on p7763.  
+  
+Refer to:
+p7763
+
+**Note:**
+  
+KHP: Know-How Protection  
+Even if know-how protection is set, parameters in this list can be read and written
+to.
+
+### p7765 KHP configuration
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0000 bin |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Configuration settings for know-how protection.  
+For bit 00, 01:  
+When KHP is activated, this means that the OEM can define whether the parameters and
+DCC data encrypted on the memory card should be protected before using on other memory
+cards/Control Units.  
+For bit 02:  
+This means that the OEM can define whether it is possible or not to trace the drive
+data using the device trace function although KHP is activated.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Extended copy protection - linked to the memory card and CU | No | Yes | - |
+| 01 | Basic copy protection - linked to the memory card | No | Yes | - |
+| 02 | Permit trace and measuring functions for diagnostic purposes | No | Yes | - |
+
+**Note:**
+  
+KHP: Know-How Protection  
+For copy protection, the serial numbers of the memory card and/or Control Unit are
+checked.  
+The memory card copy protection and preventing data to be traced are only effective
+when the know-how protection has been activated.  
+For bit 00, 01:  
+If both bits are inadvertently set to 1 (e.g. at the BOP), then the setting of bit
+0 applies.  
+There is no copy protection if both bits are set to 0.
+
+### p7769[0...20] KHP memory card reference serial number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Sets the reference serial number for the memory card.  
+Using this parameter, if a Control Unit and/or a memory card is replaced at the end
+customer, the OEM can again adapt the project to the modified hardware.
+
+**Dependency:**
+  
+  
+Refer to:
+p7765
+
+**Note:**
+  
+KHP: Know-How Protection  
+- the OEM may only change this parameter for the use case "Sending encrypted SINAMICS
+data".  
+- SINAMICS only evaluates this parameter when powering up from the encrypted "Load
+into file system..." output or when powering up from the encrypted PS files. The evaluation
+is only made when know-how protection and memory card copy protection have been activated.
+
+### p7775 NVRAM data backup/import/delete
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( ) UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**All groups | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 17 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Setting to backup/import/delete NVRAM data.  
+NVRAM data are non-volatile data in the device (e.g. fault buffer).  
+For NVRAM data actions, the following data are excluded:  
+- crash diagnostics  
+- CU operating hours counter  
+- CU temperature  
+- safety logbook
+
+**Value:**
+  
+0:
+Inactive  
+1:
+NVRAM data backup to memory card  
+2:
+Import NVRAM data from the memory card  
+3:
+Delete NVRAM data in the device  
+10:
+Error when clearing  
+11:
+Error when backing up, memory card not available  
+12:
+Error when backing up, insufficient memory space  
+13:
+Error when backing up  
+14:
+Error when importing, memory card not available  
+15:
+Error when importing, checksum error  
+16:
+Error when importing, no NVRAM data available  
+17:
+Error when importing
+
+**Notice:**
+  
+For value = 2, 3:  
+These actions are only possible when pulses are inhibited.
+
+**Note:**
+  
+After the action has been successfully completed, the parameter is automatically set
+to zero.  
+The actions importing and deleting NVRAM data immediately initiate a warm restart.  
+If the procedure was not successfully completed, then an appropriate fault value is
+displayed (p7775 >= 10).
+
+### p7814[0...1] EEPROM download logical address and block number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ 0 ] 65535 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.6
+
+**Description:**
+  
+Index 0: Selects the component for the EEPROM download  
+0: Control Unit  
+1: Option Slot of the Control Unit  
+2 ... n: Component number of the DRIVE-CLiQ component  
+Index 1: Block number  
+0 ... 255:  
+For EFS the following applies: Parameter index within the file selected using p7809.
+It is not possible to select a block number.  
+Otherwise the following applies: Block number of a special EEPROM block.  
+FFFE hex (only EFS): The file selected using p7809 is loaded.  
+FFFF hex: The complete EEPROM is loaded.
+
+### p7815 EEPROM download source (file number)
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 99999999 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.6
+
+**Description:**
+  
+Selects the source for the EEPROM download.  
+p7815 = 99999999  
+The source is the contents of p7819 including the information/data from p7818.  
+p7815 = 0 ... 99999  
+The source is a file on the CompactFlash card.  
+The file name comprises 8 characters and has the ending .bin:  
+<component type>e<p7815>.bin  
+Example:  
+The component is a TM31 and p7815 = 45 results in tm31e045.bin  
+p7815 = 100000 ... 99999998  
+The source is a file on the CompactFlash card.  
+The file name comprises 8 characters and has the ending .bin  
+Example:  
+The component is a PSA and p7815 = 736778 results in 00736778.bin
+
+## SINAMICS Parameter SINAMICS MV 07816 - 08893
+
+SINAMICS Parameter SINAMICS MV 07816 - 08893
+
+### p7816 EEPROM activate download
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| -9999 | 5 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.6
+
+**Description:**
+  
+Setting to activate data transfer (download, upload).  
+When this parameter is set to either a value of 1 or 2, the data from the file, selected
+using p7815 is downloaded into the EEPROM of the component selected using p7814.  
+5: Download active with restoration of the data, controlled from the list.  
+4: Download active without overwriting the calibration data  
+3: Uploading data  
+2: Download active with overwriting of the Node ID (serial number, etc.)  
+1: Download active without overwriting calibration data and Node ID (serial number,
+etc.)  
+0: Download completed without error  
+<0: Download interrupted with error  
+Note:  
+- settings 1, 4 and 5 are only permissible when writing complete EEPROM images (not
+for individual blocks, files or parameters).  
+- restoring calibration data is currently only supported by power units without EFS.  
+- setting 5 is now only supported by the Control Unit
+
+### p7820 DRIVE-CLiQ component component number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the component number of the DRIVE-CLiQ component whose parameters are to be accessed.
+
+**Dependency:**
+  
+  
+Refer to:
+p7821, p7822, r7823
+
+### p7821 DRIVE-CLiQ component parameter number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the parameter number to access a parameter of a DRIVE-CLiQ component.
+
+**Dependency:**
+  
+  
+Refer to:
+p7820, p7822, r7823
+
+### p7822[0...1] DRIVE-CLiQ component parameter index/number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ 0 ] 0   [ 1 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.8
+
+**Description:**
+  
+Sets the parameter index and the number of indices.  
+For index [0]:  
+Sets the parameter index to access a parameter of a DRIVE-CLiQ component.  
+For index [1]:  
+Number of indices that should be written to.  
+Write:  
+If several indices are to be written using a DRIVE-CLiQ task, then the values must
+be transferred to the CU via p7837.  
+The DRIVE-CLiQ task is executed if the number n, set using p7822[1], is written to
+p7837 [n].
+
+**Dependency:**
+  
+  
+Refer to:
+p7820, p7821, r7823
+
+### r7823[0...254] DRIVE-CLiQ component read parameter value
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.8
+
+**Description:**
+  
+Displays the parameter value read from the DRIVE-CLiQ component.
+
+**Dependency:**
+  
+  
+Refer to:
+p7820, p7821, p7822
+
+### r7825[0...6] DRIVE-CLiQ component versions
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the firmware and EEPROM versions of the DRIVE-CLiQ component selected using
+p7828[1].
+
+**Index:**
+  
+[
+0]:
+Reference firmware version  
+[
+1]:
+Actual firmware version  
+[
+2]:
+EEPROM0 version  
+[
+3]:
+EEPROM1 version  
+[
+4]:
+AndEEPROM2 version  
+[
+5]:
+EEPROM3 version  
+[
+6]:
+EEPROM4 version
+
+**Dependency:**
+  
+  
+Refer to:
+p7828
+
+**Note:**
+  
+For index [0]:  
+Firmware version on the memory card/device memory.  
+For index [1]:  
+Actual firmware version of the DRIVE-CLiQ component.  
+For index [2...6]:  
+Actual EEPROM version of the DRIVE-CLiQ component.
+
+### p7826 Firmware update automatic
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 2 | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the behavior for the automatic firmware update of the DRIVE-CLiQ components.
+
+**Value:**
+  
+0:
+Deactivated  
+1:
+Upgrade and downgrade  
+2:
+Upgrade
+
+**Notice:**
+  
+If this parameter is changed, it only becomes effective the next time that the drive
+system boots.
+
+**Note:**
+  
+The firmware is automatically updated when the system boots. The boot can take several
+minutes.  
+After the update has been completed, it is necessary to carry out a new POWER ON (switch-off/switch-on)
+for the components involved.  
+The firmware update procedure is displayed as follows:  
+Control Unit (LED RDY):  
+Flashes yellow with 0.5 Hz --> firmware is being updated.  
+Flashing yellow with 2 Hz --> POWER ON is required for the components involved.  
+Components involved:  
+Flashing red/green with 0.5 Hz --> firmware is being updated.  
+Flashing red/green with 2 Hz --> POWER ON of the components is required.  
+Only components from firmware version 2.5 support the red/green flashing at 2 Hz.
+
+### r7827 Firmware update progress display
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [%] | - [%] | [ ] - [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the progress when updating the firmware of the DRIVE-CLiQ components.
+
+### p7828[0...1] Firmware download component number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 399 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the component number for the required DRIVE-CLiQ component.  
+For index [0]:  
+Component number of the DRIVE-CLiQ component for which a firmware download is to be
+made.  
+For index [1]:  
+Component number of the DRIVE-CLiQ component for which the reference firmware version,
+saved in r7825 on the memory card/device memory, is to be displayed.
+
+**Index:**
+  
+[
+0]:
+Firmware download  
+[
+1]:
+Reference firmware version
+
+**Dependency:**
+  
+  
+Refer to:
+p0121, p0141, p0151, p7829
+
+**Note:**
+  
+For p7828[0] = 399, the firmware for all of the existing components is downloaded.  
+The firmware download is started with p7829 = 1.
+
+### p7829 Activate firmware download
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| -1 | 999 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Activating the firmware download for the DRIVE-CLiQ components specified in p7828.  
+1: Activate download.  
+-1: activate the download and carry out a reset.  
+0: Download successfully completed.  
+> 1: Fault code  
+011: DRIVE-CLiQ component has detected a checksum error.  
+015: The selected DRIVE-CLiQ components did not accept the contents of the firmware
+file.  
+018: Firmware version is too old and is not accepted by the component.  
+019: Firmware version is not suitable for the hardware release of the component.  
+101: After several communication attempts, no response from the DRIVE-CLiQ component.  
+140: Firmware file for the DRIVE-CLiQ component not available on the memory card/device
+memory.  
+143: Component has not changed to the mode for firmware download. It was not possible
+to delete the existing firmware.  
+144: When checking the firmware that was downloaded (checksum), the component detected
+a fault. It is possible that the file on the memory card/device memory is defective.  
+145: Checking the loaded firmware (checksum) was not completed by the component in
+the appropriate time.  
+156: Component with the specified component number is not available.  
+Additional values:  
+Only for internal Siemens troubleshooting.
+
+**Dependency:**
+  
+  
+Refer to:
+p7828
+
+**Note:**
+  
+p7829 is automatically set to 0 after the firmware has been successfully downloaded.  
+The new firmware only becomes active at the next system run-up.
+
+### r7843[0...20] Memory card serial number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the actual serial number of the memory card.  
+The individual characters of the serial number are displayed in the ASCII code in
+the indices.
+
+**Dependency:**
+  
+  
+Refer to:
+p9920, p9921
+
+**Notice:**
+  
+An ASCII table (excerpt) can be found, for example, in the appendix to the List Manual.
+
+**Note:**
+  
+Example: displaying the serial number for a memory card:  
+r7843[0] = 49 dec --> ASCII characters = "1" --> serial number, character 1  
+r7843[1] = 49 dec --> ASCII characters = "1" --> serial number, character 2  
+r7843[2] = 49 dec --> ASCII characters = "1" --> serial number, character 3  
+r7843[3] = 57 dec --> ASCII characters = "9" --> serial number, character 4  
+r7843[4] = 50 dec --> ASCII characters = "2" --> serial number, character 5  
+r7843[5] = 51 dec --> ASCII characters = "3" --> serial number, character 6  
+r7843[6] = 69 dec --> ASCII characters = "E" --> serial number, character 7  
+r7843[7] = 0 dec --> ASCII characters = " " --> serial number, character 8  
+...  
+r7843[19] = 0 dec --> ASCII characters = " " --> serial number, character 20  
+r7843[20] = 0 dec  
+Serial number = 111923E
+
+### r7844[0...3] Memory card/device memory firmware version
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+5.2
+
+**Description:**
+  
+Displays the version of the firmware stored on the memory medium of the converter.  
+Depending on the converter being used, the memory medium is a memory card (e.g. SINAMICS
+S120) - or the internal, non-volatile device memory (e.g. SINAMICS G120).
+
+**Index:**
+  
+[
+0]:
+Internal  
+[
+1]:
+External  
+[
+2]:
+Parameter backup  
+[
+3]:
+Motor data addon
+
+**Note:**
+  
+For index [0]:  
+Displays the internal firmware version (e.g. 04402315).  
+This firmware version is the version of the memory card/device memory and not the
+CU firmware (r0018), however, normally they have the same versions.  
+For index [1]:  
+Displays the external firmware version (e.g. 04040000 -> 4.4).  
+For automation systems with SINAMICS Integrated this is the runtime version of the
+automation system.  
+For index [2]:  
+Displays the internal firmware version of the parameter backup.  
+With this CU firmware version, the parameter backup was saved, which was used when
+powering up.  
+For index [3]:  
+Displays the version of the subsequently loaded motor database.  
+If there is no motor data available, then this index has a value of 0.
+
+### r7850[0...n] Drive object operational/not operational
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| -32786 | 32767 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Displays whether, for an activated drive object, all activated topology components
+are available or not (or whether these can be addressed).  
+0: Drive object not ready for operation  
+1: Drive object ready for operation
+
+### p7852 Number of indices for r7853
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 1 | 200 | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the number of indices for r7853[0...n].  
+This corresponds to the number of DRIVE-CLiQ components that are in the target topology.
+
+**Dependency:**
+  
+  
+Refer to:
+r7853
+
+**Note:**
+  
+The values are valid if all available Control Units adopt the "Initialization finished"
+state (r3988 = 800) following power up.
+
+### r7853[0...n] Component available/not available
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**p7852 | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0000 hex | FFFF hex | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the component and whether this component is currently present.  
+High byte: Component number  
+Low byte: 0/1 (not available/available)
+
+**Dependency:**
+  
+  
+Refer to:
+p7852
+
+**Note:**
+  
+The values are valid if all available Control Units adopt the "Initialization finished"
+state (r3988 = 800) following power up.
+
+### r7867 Status/configuration changes global
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays status and configuration changes of all of the drive objects in the complete
+unit.  
+When changing the status or the configuration of the Control Unit or a drive object,
+the value of this parameter is incremented.
+
+**Dependency:**
+  
+  
+Refer to:
+r7868, r7869, r7870
+
+### r7868[0...24] Configuration changes drive object reference
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Reference to the drive objects whose configuration has changed.  
+For index [0]:  
+When changing one of the following indices, then the value in this index is increased.  
+For index [1...n]:  
+The drive object with object number in p0101[n-1] has changed its configuration.  
+Example:  
+r7868[3] was incremented since the last time it was read.  
+--> the configuration of the drive object with object number in p0101[2] was changed.
+
+**Index:**
+  
+[
+0]:
+Sum of the following indices  
+[
+1]:
+Object number in p0101[0]  
+[
+2]:
+Object number in p0101[1]  
+[
+3]:
+Object number in p0101[2]  
+[
+4]:
+Object number in p0101[3]  
+[
+5]:
+Object number in p0101[4]  
+[
+6]:
+Object number in p0101[5]  
+[
+7]:
+Object number in p0101[6]  
+[
+8]:
+Object number in p0101[7]  
+[
+9]:
+Object number in p0101[8]  
+[
+10]:
+Object number in p0101[9]  
+[
+11]:
+Object number in p0101[10]  
+[
+12]:
+Object number in p0101[11]  
+[
+13]:
+Object number in p0101[12]  
+[
+14]:
+Object number in p0101[13]  
+[
+15]:
+Object number in p0101[14]  
+[
+16]:
+Object number in p0101[15]  
+[
+17]:
+Object number in p0101[16]  
+[
+18]:
+Object number in p0101[17]  
+[
+19]:
+Object number in p0101[18]  
+[
+20]:
+Object number in p0101[19]  
+[
+21]:
+Object number in p0101[20]  
+[
+22]:
+Object number in p0101[21]  
+[
+23]:
+Object number in p0101[22]  
+[
+24]:
+Object number in p0101[23]
+
+**Dependency:**
+  
+  
+Refer to:
+p0101, r7867, r7871
+
+### r7869[0...24] Status changes drive object reference
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Reference to the drive objects whose status has changed.  
+For index [0]:  
+When changing one of the following indices, then the value in this index is increased.  
+For index [1...n]:  
+The drive object with object number in p0101[n-1] has changed its status.  
+Example:  
+r7868[3] was incremented since the last time it was read.  
+--> the status of the drive object with object number in p0101[2] was changed.
+
+**Index:**
+  
+[
+0]:
+Sum of the following indices  
+[
+1]:
+Object number in p0101[0]  
+[
+2]:
+Object number in p0101[1]  
+[
+3]:
+Object number in p0101[2]  
+[
+4]:
+Object number in p0101[3]  
+[
+5]:
+Object number in p0101[4]  
+[
+6]:
+Object number in p0101[5]  
+[
+7]:
+Object number in p0101[6]  
+[
+8]:
+Object number in p0101[7]  
+[
+9]:
+Object number in p0101[8]  
+[
+10]:
+Object number in p0101[9]  
+[
+11]:
+Object number in p0101[10]  
+[
+12]:
+Object number in p0101[11]  
+[
+13]:
+Object number in p0101[12]  
+[
+14]:
+Object number in p0101[13]  
+[
+15]:
+Object number in p0101[14]  
+[
+16]:
+Object number in p0101[15]  
+[
+17]:
+Object number in p0101[16]  
+[
+18]:
+Object number in p0101[17]  
+[
+19]:
+Object number in p0101[18]  
+[
+20]:
+Object number in p0101[19]  
+[
+21]:
+Object number in p0101[20]  
+[
+22]:
+Object number in p0101[21]  
+[
+23]:
+Object number in p0101[22]  
+[
+24]:
+Object number in p0101[23]
+
+**Dependency:**
+  
+  
+Refer to:
+p0101, r7867, r7872
+
+### r7870[0...8] Configuration changes global
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+5.1
+
+**Description:**
+  
+Displays the configuration changes of all of the drive objects in the complete unit.
+
+**Index:**
+  
+[
+0]:
+Sum of the following indices  
+[
+1]:
+r7871[0] of a drive object  
+[
+2]:
+p0101 or r0102  
+[
+3]:
+PROFIBUS configuration (p0978)  
+[
+4]:
+DRIVE-CLiQ actual topology (r9900 or r9901)  
+[
+5]:
+DRIVE-CLiQ target topology (r9902 or r9903)  
+[
+6]:
+DRIVE-CLiQ sockets (p0109)  
+[
+7]:
+Technology Extensions  
+[
+8]:
+Topology comparison result
+
+**Dependency:**
+  
+  
+Refer to:
+r7867, r7871
+
+**Note:**
+  
+For index [0]:  
+When changing one of the following indices, then the value in this index is incremented.  
+For index [1]:  
+Drive object configuration. When changing r7871[0] on a drive object, the value in
+this index is incremented.  
+For index [2]:  
+Drive object, configuration unit. When changing either p0101 or r0102, the value in
+this index is incremented.  
+For index [3]:  
+PROFIBUS configuration unit. When changing p0978, the value in this index is incremented.  
+For index [4]:  
+DRIVE-CLiQ actual topology. When changing either r9900 or r9901, the value in this
+index is incremented.  
+For index [5]:  
+DRIVE-CLiQ target topology. When changing either p9902 or p9903, the value in this
+index is incremented.  
+For index [6]:  
+DRIVE-CLiQ sockets. When changing p0109, the value in this index is incremented.  
+For index [7]:  
+Technology Extensions When changing Technology Extensions, the value in this index
+is incremented.  
+For index [8]:  
+Topology comparison result. When changing the topology comparison result, the value
+in this index is incremented.
+
+### r7871[0...15] Configuration changes drive object
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, A_INFM2C, TM31, TM15DI_DO, TM150, TB30, HUB | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.6
+
+**Description:**
+  
+Displays the configuration changes on the drive object.
+
+**Index:**
+  
+[
+0]:
+Sum of the following indices  
+[
+1]:
+p0010, p0107, p0108  
+[
+2]:
+Drive object name (p0199)  
+[
+3]:
+Structure-relevant parameters (e.g. p0180)  
+[
+4]:
+BICO interconnections  
+[
+5]:
+Activate/deactivate drive object  
+[
+6]:
+Data backup required  
+[
+7]:
+Reserved  
+[
+8]:
+Reference or changeover parameters (e.g. p2000)  
+[
+9]:
+Parameter count through Drive Control Chart (DCC)  
+[
+10]:
+p0107, p0108  
+[
+11]:
+Reserved  
+[
+12]:
+Write protection and know-how protection status  
+[
+13]:
+Reserved  
+[
+14]:
+Reserved  
+[
+15]:
+Reserved
+
+**Dependency:**
+  
+  
+Refer to:
+r7868, r7870
+
+**Note:**
+  
+For index [0]:  
+When changing one of the following indices, then the value in this index is incremented.  
+For index [1]:  
+Drive object commissioning: When changing p0010, p0107 or p0108, the value in this
+index is incremented.  
+For index [2]:  
+Drive object name. When changing p0199, the value in this index is incremented.  
+For index [3]:  
+Drive object structure. When changing a parameter that is relevant for the structure
+(e.g. number of data sets), the value in this index is incremented.  
+For index [4]:  
+Drive object BICO interconnections. When changing r3977, the value in this index is
+incremented.  
+For index [5]:  
+Drive object activity: When changing p0105, the value in this index is incremented.  
+For index [6]:  
+Drive object, data save.  
+0: There are no parameter changes to save.  
+1: There are parameter changes to save.  
+For index [8]:  
+Drive object changeover of units. When changing reference or changeover parameters
+(e.g. p2000, p0304), the value in this index is incremented.  
+For index [9]:  
+Drive object parameter count. When changing the number of parameters by loading Drive
+Control Chart (DCC), the value in this index is incremented.  
+For index [10]:  
+Drive object configuration. When changing either p0107 or p0108, the value in this
+index is incremented.  
+For index [12]:  
+Drive object configuration. When activating/deactivating write protection or know-how
+protection, the value in this index is incremented.
+
+### r7872[0...3] Drive object status changes
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, A_INFMV, B_INFMV, A_INFM2C, TM31, TM15DI_DO, TM150, TB30, ENC, HUB | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the status changes on the drive object.
+
+**Index:**
+  
+[
+0]:
+Sum of the following indices  
+[
+1]:
+Faults (r0944)  
+[
+2]:
+Alarms (r2121)  
+[
+3]:
+Safety messages (r9744)
+
+**Dependency:**
+  
+  
+Refer to:
+r7869
+
+**Note:**
+  
+For index [0]:  
+When changing one of the following indices, then the value in this index is incremented.  
+For index [1]:  
+Drive object faults. When changing r0944, the value in this index is incremented.  
+For index [2]:  
+Drive object alarms. When changing r2121, the value in this index is incremented.  
+For index [3]:  
+Drive object safety messages. When changing r9744, the value in this index is incremented.
+
+### p7900[0...23] Drive objects priority
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the priority for processing the existing drive objects in the system.  
+The parameter enables a free sequence to be set for processing the drive objects.
+For this purpose all the drive object numbers existing in the system have to be written
+in the desired sequence into the corresponding indices of the parameter. After re-booting
+this sequence will be effective without a plausibility check.  
+With the factory setting the following priorities regarding processing are applicable:  
+- the drive objects are pre-sorted according to their type as follows: CONTROL UNIT,
+INFEED, SERVO, VECTOR, TM, HUB, CU_LINK  
+- if they are of the same type, they are sorted in ascending order according to their
+drive object number, i.e. the lower the number, the higher the priority for processing.
+
+**Index:**
+  
+[
+0]:
+Drive object number Control Unit  
+[
+1]:
+Drive object number object 1  
+[
+2]:
+Drive object number object 2  
+[
+3]:
+Drive object number object 3  
+[
+4]:
+Drive object number object 4  
+[
+5]:
+Drive object number object 5  
+[
+6]:
+Drive object number object 6  
+[
+7]:
+Drive object number object 7  
+[
+8]:
+Drive object number object 8  
+[
+9]:
+Drive object number object 9  
+[
+10]:
+Drive object number object 10  
+[
+11]:
+Drive object number object 11  
+[
+12]:
+Drive object number object 12  
+[
+13]:
+Drive object number object 13  
+[
+14]:
+Drive object number object 14  
+[
+15]:
+Drive object number object 15  
+[
+16]:
+Drive object number object 16  
+[
+17]:
+Drive object number object 17  
+[
+18]:
+Drive object number object 18  
+[
+19]:
+Drive object number object 19  
+[
+20]:
+Drive object number object 20  
+[
+21]:
+Drive object number object 21  
+[
+22]:
+Drive object number object 22  
+[
+23]:
+Drive object number object 23
+
+**Notice:**
+  
+This parameter may only be used by qualified service personnel.
+
+**Note:**
+  
+If the same drive object numbers are used and if the existing drive object numbers
+in the system are entered incompletely, the content of this parameter is ignored entirely.
+The behavior as with factory setting will then become effective.
+
+### r7901[0...81] Sampling times
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [µs] | - [µs] | [ ] - [µs] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Displays the sampling times currently present on the drive unit.  
+r7901[0...63]: sampling times of hardware time slices.  
+r7901[64...82]: sampling times of software time slices.  
+r7901[x] = 0, means the following:  
+No methods have been registered in the time slice involved.
+
+**Note:**
+  
+The basis for the software time slices is T_NRK = p7901[15].
+
+### r7903 Hardware sampling times still assignable
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the number of hardware sampling times that can still be assigned.  
+These free sampling times can be used by technology functions such as TEC, DCC or
+FBLOCKS.
+
+**Note:**
+  
+TEC: Technology Extension  
+DCC: Drive Control Chart  
+FBLOCKS: free blocks  
+  
+The displayed value depends on the following:  
+The specific CU version (Sinamics S provides more sampling times than Sinamics G/DCM);  
+The sampling times that existed in the system up until now;  
+The internally reserved sampling times.  
+  
+Additional application and system-dependent criteria must be taken into consideration
+for the possibility of registering an OA runtime group or a clock cycle change.
+
+### p8500[0...7] BI: Input signal bit-serially 0
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 2195 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for bit-serial input signals.  
+The signals are available at binector output r8510.0 ... 7 for interconnection.
+
+**Index:**
+  
+[
+0]:
+To BO: r8510.0  
+[
+1]:
+To BO: r8510.1  
+[
+2]:
+To BO: r8510.2  
+[
+3]:
+To BO: r8510.3  
+[
+4]:
+To BO: r8510.4  
+[
+5]:
+To BO: r8510.5  
+[
+6]:
+To BO: r8510.6  
+[
+7]:
+To BO: r8510.7
+
+**Dependency:**
+  
+  
+Refer to:
+r8510
+
+### p8501[0...21] BI: Input signal bit-serially 1
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 2195 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for bit-serial input signals.  
+The signals are available at binector output r8511.0 ... 21 for interconnection.
+
+**Index:**
+  
+[
+0]:
+To BO: r8511.0  
+[
+1]:
+To BO: r8511.1  
+[
+2]:
+To BO: r8511.2  
+[
+3]:
+To BO: r8511.3  
+[
+4]:
+To BO: r8511.4  
+[
+5]:
+To BO: r8511.5  
+[
+6]:
+To BO: r8511.6  
+[
+7]:
+To BO: r8511.7  
+[
+8]:
+To BO: r8511.8  
+[
+9]:
+To BO: r8511.9  
+[
+10]:
+To BO: r8511.10  
+[
+11]:
+To BO: r8511.11  
+[
+12]:
+To BO: r8511.12  
+[
+13]:
+To BO: r8511.13  
+[
+14]:
+To BO: r8511.14  
+[
+15]:
+To BO: r8511.15  
+[
+16]:
+To BO: r8511.16  
+[
+17]:
+To BO: r8511.17  
+[
+18]:
+To BO: r8511.18  
+[
+19]:
+To BO: r8511.19  
+[
+20]:
+To BO: r8511.20  
+[
+21]:
+To BO: r8511.21
+
+**Dependency:**
+  
+  
+Refer to:
+r8511
+
+### p8502 CI: Input signal word-serially 0
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned32 / Integer32 | **Dynamic index:**- | **Func. diagram:** 2195 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for wordwise input signals.  
+This signal value is available at connector output r8512 for interconnection.
+
+**Dependency:**
+  
+  
+Refer to:
+r8512
+
+### p8503 CI: Input signal word-serially 1
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned32 / Integer32 | **Dynamic index:**- | **Func. diagram:** 2195 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for wordwise input signals.  
+This signal value is available in connector output r8513 for further interconnection.
+
+**Dependency:**
+  
+  
+Refer to:
+r8513
+
+### p8504 CI: Input signal word-serially 2
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned32 / Integer32 | **Dynamic index:**- | **Func. diagram:** 2195 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for wordwise input signals.  
+This signal value is available in connector output r8514 for further interconnection.
+
+**Dependency:**
+  
+  
+Refer to:
+r8514
+
+### p8505 CI: Input signal word-serially 3
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned32 / Integer32 | **Dynamic index:**- | **Func. diagram:** 2195 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for wordwise input signals.  
+This signal value is available in connector output r8515 for further interconnection.
+
+**Dependency:**
+  
+  
+Refer to:
+r8515
+
+### r8510.0...7 BO: Output signal bit-serially 0
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 2195 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Display and binector output for the signal interconnected via binector input p8500[0...7].
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | From BI: p8500[0] | OFF | ON | - |
+| 01 | From BI: p8500[1] | OFF | ON | - |
+| 02 | From BI: p8500[2] | OFF | ON | - |
+| 03 | From BI: p8500[3] | OFF | ON | - |
+| 04 | From BI: p8500[4] | OFF | ON | - |
+| 05 | From BI: p8500[5] | OFF | ON | - |
+| 06 | From BI: p8500[6] | OFF | ON | - |
+| 07 | From BI: p8500[7] | OFF | ON | - |
+
+**Dependency:**
+  
+  
+Refer to:
+p8500
+
+### r8511.0...21 BO: Output signal bit-serially 1
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 2195 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Display and binector output for the signal interconnected via binector input p8501[0...21].
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | From BI: p8501[0] | OFF | ON | - |
+| 01 | From BI: p8501[1] | OFF | ON | - |
+| 02 | From BI: p8501[2] | OFF | ON | - |
+| 03 | From BI: p8501[3] | OFF | ON | - |
+| 04 | From BI: p8501[4] | OFF | ON | - |
+| 05 | From BI: p8501[5] | OFF | ON | - |
+| 06 | From BI: p8501[6] | OFF | ON | - |
+| 07 | From BI: p8501[7] | OFF | ON | - |
+| 08 | From BI: p8501[8] | OFF | ON | - |
+| 09 | From BI: p8501[9] | OFF | ON | - |
+| 10 | From BI: p8501[10] | OFF | ON | - |
+| 11 | From BI: p8501[11] | OFF | ON | - |
+| 12 | From BI: p8501[12] | OFF | ON | - |
+| 13 | From BI: p8501[13] | OFF | ON | - |
+| 14 | From BI: p8501[14] | OFF | ON | - |
+| 15 | From BI: p8501[15] | OFF | ON | - |
+| 16 | From BI: p8501[16] | OFF | ON | - |
+| 17 | From BI: p8501[17] | OFF | ON | - |
+| 18 | From BI: p8501[18] | OFF | ON | - |
+| 19 | From BI: p8501[19] | OFF | ON | - |
+| 20 | From BI: p8501[20] | OFF | ON | - |
+| 21 | From BI: p8501[21] | OFF | ON | - |
+
+**Dependency:**
+  
+  
+Refer to:
+p8501
+
+### r8512 CO: Output signal wordwise 0
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 2195 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [%] | - [%] | [ ] - [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Display and connector output for the signal interconnected via connector input p8502.
+
+**Dependency:**
+  
+  
+Refer to:
+p8502
+
+### r8513 CO: Output signal wordwise 1
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 2195 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [%] | - [%] | [ ] - [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Display and connector output for the signal interconnected via connector input p8503.
+
+**Dependency:**
+  
+  
+Refer to:
+p8503
+
+### r8514 CO: Output signal wordwise 2
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 2195 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [%] | - [%] | [ ] - [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Display and connector output for the signal interconnected via connector input p8504.
+
+**Dependency:**
+  
+  
+Refer to:
+p8504
+
+### r8515 CO: Output signal wordwise 3
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 2195 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [%] | - [%] | [ ] - [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Display and connector output for the signal interconnected via connector input p8505.
+
+**Dependency:**
+  
+  
+Refer to:
+p8505
+
+### p8550 AOP LOCAL/REMOTE
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0000 0000 0000 1001 bin |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Setting for saving the actual configuration of the Advanced Operator Panel (AOP).
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | LOCAL save | No | Yes | - |
+| 01 | Start in LOCAL | No | Yes | - |
+| 02 | Change in oper | No | Yes | - |
+| 03 | OFF acts like OFF1 | No | Yes | - |
+| 04 | OFF acts like OFF2 | No | Yes | - |
+| 05 | OFF acts like OFF3 | No | Yes | - |
+| 06 | Reserved | No | Yes | - |
+| 07 | CW/CCW active | No | Yes | - |
+| 08 | Jog active | No | Yes | - |
+| 09 | Save speed setpoint | No | Yes | - |
+| 14 | Inhibit operation | No | Yes | - |
+| 15 | Inhibit parameterization | No | Yes | - |
+
+### r8600 CAN device type
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (CAN), CU_MV_DP (CAN) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays all of the devices connected to the CAN bus after run-up.  
+r8600  
+= 00000000 hex: No drive recognized.  
+= FFFF0192 hex: Several drives - 1st drive is an Active Line Module, servo drive or
+vector drive  
+= FFFF0191 hex: Several drives - 1st drive is a Terminal Module  
+= 02010192 hex: 1 Vector drive  
+= 00020192 hex: 1 Servo drive  
+= 01000192 hex: 1 Active Line Module  
+= 00080191 hex: 1 Terminal Module
+
+**Note:**
+  
+Corresponds to the CANopen object 1000 hex.  
+For each detected drive, the device type is displayed in object 67FF hex + 800 hex
+* x (x: Drive number 0 ... 7).
+
+### r8601 CAN error register
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (CAN), CU_MV_DP (CAN) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the error register for CANopen.  
+Bit 0: Generic error.  
+0 signal: No error present.  
+1 signal: Generic error present.  
+Bit 1 ... 3: Not supported (always a 0 signal).  
+Bit 4: Communications error.  
+0 signal: There is no message in the range 8700 ... 8799.  
+1 signal: There is at least one message (fault or alarm) in the range 8700 ... 8799.  
+Bit 5 ... 6: Not supported (always a 0 signal).  
+Bit 7: Fault outside the range 8700 ... 8799.  
+0 signal: There is no fault outside the range 8700 ... 8799.  
+1 signal: There is at least one fault outside the range 8700 ... 8799.
+
+**Note:**
+  
+Corresponds to the CANopen object 1001 hex.
+
+### p8602 CAN SYNC object
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (CAN), CU_MV_DP (CAN) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0000 hex | FFFF FFFF hex | [ 0 ] 0080 hex |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the SYNC object parameter for the following CANopen objects:  
+- 1005 hex: COB-ID
+
+**Note:**
+  
+SINAMICS operates as SYNC load.  
+COB-ID: CAN object identification
+
+### p8603 CAN COB-ID Emergency Message
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (CAN), CU_MV_DP (CAN) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0000 hex | FFFF FFFF hex | [ 0 ] 0000 hex |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the COB-ID for the emergency message (error telegram).  
+It corresponds to the CANopen objects:  
+- 1014 hex: COB-ID
+
+**Note:**
+  
+If, when downloading, the pre-set value 0 is downloaded, then the CANopen pre-set
+value 80 hex + Node-ID is automatically set.  
+Online, the value 0 is rejected as, according to the CANopen Standard, COB-ID 0 is
+not permitted here.  
+The changeover of the node ID using the hardware switch at the Control Unit or per
+software has no effect on the COB-ID EMCY. The saved value remains effective.
+
+### p8604[0...1] CAN life guarding
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (CAN), CU_MV_DP (CAN) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the life guarding parameter for the following CANopen objects:  
+- 100C hex: Guard Time  
+- 100D hex: Life Time Factor  
+The life time is derived by multiplying guard time by the life time factor.
+
+**Index:**
+  
+[
+0]:
+Time interval [ms] for the life time  
+[
+1]:
+Factor for the lifetime
+
+**Dependency:**
+  
+  
+Refer to:
+p8606  
+Refer to:
+F08700
+
+**Note:**
+  
+For p8604[0] = 0 and/or p8604[1] = 0, the life guarding event service (monitoring
+the node guarding, fault F08700 with fault value = 2) is deactivated.  
+The node guarding protocol is active without the life guarding event service, if the
+heartbeat protocol is activated (p8606 > 0).  
+The life guarding event service is deactivated in the first commissioning.
+
+### p8606 CAN Producer Heartbeat Time
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (CAN), CU_MV_DP (CAN) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 [ms] | 65535 [ms] | [ 0 ] 0 [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the time [ms] to cyclically send heartbeat telegrams.  
+The smallest cycle is 100 ms.  
+For p8606 = 0, heartbeat telegrams are not sent.
+
+**Dependency:**
+  
+  
+Refer to:
+p8604
+
+**Note:**
+  
+Corresponds to the CANopen object 1017 hex.  
+Activating the heartbeat protocol automatically deactivates the node guarding.
+
+### r8607[0...3] CAN Identity Object
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (CAN), CU_MV_DP (CAN) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+General device information display.
+
+**Index:**
+  
+[
+0]:
+Vendor ID  
+[
+1]:
+Product code  
+[
+2]:
+Revision number  
+[
+3]:
+Serial number
+
+**Note:**
+  
+Corresponds to the CANopen object 1018 hex.  
+For index [3]:  
+The SINAMICS serial number comprises 60 bits.  
+Of these bits, the following are displayed in this index:  
+Bits 0 ... 19: Consecutive number  
+Bits 20 ... 23: Production ID  
+- 0 hex: Development  
+- 1 hex: P1 unique number  
+- 2 hex: P2 unique number  
+- 3 hex: WA unique number  
+- 9 hex: Pattern  
+- F hex: All others  
+Bits 24 ... 27: Month of manufacture (0 means January, B means December)  
+Bits 28 ... 31: Year of manufacture (0 means 2002)
+
+### p8608[0...1] CAN Clear Bus Off Error
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (CAN), CU_MV_DP (CAN) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+As a result of a Bus Off error, the CAN controller is set into the initialization
+state.  
+For index [0]:  
+The CAN controller is manually started after resolving the cause of the error with
+p8608[0] = 1  
+For index [1]:  
+The automatic CAN bus start function is activated using p8608[1] = 1.  
+At 2 second intervals, the CAN controller is automatically restarted until the cause
+of the error has been resolved and a CAN connection has been established.
+
+**Value:**
+  
+0:
+Inactive  
+1:
+Start CAN controller
+
+**Index:**
+  
+[
+0]:
+Manual controller start function  
+[
+1]:
+Activating the automatic controller start function
+
+**Note:**
+  
+For index [0]:  
+This parameter is automatically reset to 0 after start.
+
+### p8609[0...1] CAN Error Behavior
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (CAN), CU_MV_DP (CAN) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 2 | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the behavior of the CAN node referred to the communications error or equipment
+fault.
+
+**Value:**
+  
+0:
+Pre-operational  
+1:
+No change  
+2:
+Stopped
+
+**Index:**
+  
+[
+0]:
+Behavior for communication errors  
+[
+1]:
+Behavior for device faults
+
+**Note:**
+  
+Corresponds to the CANopen object 1029 hex.
+
+### r8610[0...1] CAN First Server SDO
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (CAN), CU_MV_DP (CAN) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the identifier (client/server and server/client) of the SDO channel.
+
+**Index:**
+  
+[
+0]:
+COB-ID from the client to the server  
+[
+1]:
+COB-ID from the server to the client
+
+**Dependency:**
+  
+  
+Refer to:
+p8612
+
+**Note:**
+  
+Corresponds to the CANopen object 1200 hex.  
+SDO: Service Data Object
+
+### p8611[0...82] CAN Pre-defined Error Field
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (CAN), CU_MV_DP (CAN) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0000 hex | FFFF 1000 hex | [ 0 ] 0000 hex |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the Pre-defined Error Field of the CAN node.  
+It includes the number of all errors that have occurred, the number of errors that
+have occurred for each drive and the errors according to their history.  
+The first 16 bits represent the CANopen error code and the second 16 bits the SINAMICS
+error code.  
+Index 1 has the same structure - however, the drive object ID is in the second 16
+bits instead of the SINAMICS error code.  
+CANopen error code:  
+0000 hex: No error present.  
+8110 hex: Alarm A08751 present.  
+8120 hex: Alarm A08752 present.  
+8130 hex: Alarm A08700(F) with alarm value = 2 present.  
+1000 hex: Generic error 1 present (there is at least one fault outside the range 8700
+... 8799)  
+1001 hex: Generic error 2 present (there is at least one alarm in the range 8700 ...
+8799 with the exception of A08751, A08752, A08700)  
+All drive objects are acknowledged by writing the value 0 to index 0. As soon as a
+fault has been acknowledged or an alarm cleared, then it is also cleared from the
+fault list.
+
+**Index:**
+  
+[
+0]:
+Number of all faults in the drive unit  
+[
+1]:
+Actual drive number/fault number  
+[
+2]:
+Number of faults drive 1  
+[
+3]:
+Fault 1/ drive 1  
+[
+4]:
+Fault 2/ drive 1  
+[
+5]:
+Fault 3/ drive 1  
+[
+6]:
+Fault 4/ drive 1  
+[
+7]:
+Fault 5/ drive 1  
+[
+8]:
+Fault 6/ drive 1  
+[
+9]:
+Fault 7/ drive 1  
+[
+10]:
+Fault 8/ drive 1  
+[
+11]:
+Number of faults drive 2  
+[
+12]:
+Fault 1/ drive 2  
+[
+13]:
+Fault 2/ drive 2  
+[
+14]:
+Fault 3/ drive 2  
+[
+15]:
+Fault 4/ drive 2  
+[
+16]:
+Fault 5/ drive 2  
+[
+17]:
+Fault 6/ drive 2  
+[
+18]:
+Fault 7/ drive 2  
+[
+19]:
+Fault 8/ drive 2  
+[
+20]:
+Number of faults drive 3  
+[
+21]:
+Fault 1/ drive 3  
+[
+22]:
+Fault 2/ drive 3  
+[
+23]:
+Fault 3/ drive 3  
+[
+24]:
+Fault 4/ drive 3  
+[
+25]:
+Fault 5/ drive 3  
+[
+26]:
+Fault 6/ drive 3  
+[
+27]:
+Fault 7/ drive 3  
+[
+28]:
+Fault 8/ drive 3  
+[
+29]:
+Number of faults drive 4  
+[
+30]:
+Fault 1/ drive 4  
+[
+31]:
+Fault 2/ drive 4  
+[
+32]:
+Fault 3/ drive 4  
+[
+33]:
+Fault 4/ drive 4  
+[
+34]:
+Fault 5/ drive 4  
+[
+35]:
+Fault 6/ drive 4  
+[
+36]:
+Fault 7/ drive 4  
+[
+37]:
+Fault 8/ drive 4  
+[
+38]:
+Number of faults drive 5  
+[
+39]:
+Fault 1/ drive 5  
+[
+40]:
+Fault 2/ drive 5  
+[
+41]:
+Fault 3/ drive 5  
+[
+42]:
+Fault 4/ drive 5  
+[
+43]:
+Fault 5/ drive 5  
+[
+44]:
+Fault 6/ drive 5  
+[
+45]:
+Fault 7/ drive 5  
+[
+46]:
+Fault 8/ drive 5  
+[
+47]:
+Number of faults drive 6  
+[
+48]:
+Fault 1/ drive 6  
+[
+49]:
+Fault 2/ drive 6  
+[
+50]:
+Fault 3/ drive 6  
+[
+51]:
+Fault 4/ drive 6  
+[
+52]:
+Fault 5/ drive 6  
+[
+53]:
+Fault 6/ drive 6  
+[
+54]:
+Fault 7/ drive 6  
+[
+55]:
+Fault 8/ drive 6  
+[
+56]:
+Number of faults drive 7  
+[
+57]:
+Fault 1/ drive 7  
+[
+58]:
+Fault 2/ drive 7  
+[
+59]:
+Fault 3/ drive 7  
+[
+60]:
+Fault 4/ drive 7  
+[
+61]:
+Fault 5/ drive 7  
+[
+62]:
+Fault 6/ drive 7  
+[
+63]:
+Fault 7/ drive 7  
+[
+64]:
+Fault 8/ drive 7  
+[
+65]:
+Number of faults drive 8  
+[
+66]:
+Fault 1/ drive 8  
+[
+67]:
+Fault 2/ drive 8  
+[
+68]:
+Fault 3/ drive 8  
+[
+69]:
+Fault 4/ drive 8  
+[
+70]:
+Fault 5/ drive 8  
+[
+71]:
+Fault 6/ drive 8  
+[
+72]:
+Fault 7/ drive 8  
+[
+73]:
+Fault 8/ drive 8  
+[
+74]:
+Number of faults Control Unit  
+[
+75]:
+Fault 1/Control Unit  
+[
+76]:
+Fault 2/Control Unit  
+[
+77]:
+Fault 3/Control Unit  
+[
+78]:
+Fault 4/Control Unit  
+[
+79]:
+Fault 5/Control Unit  
+[
+80]:
+Fault 6/Control Unit  
+[
+81]:
+Fault 7/Control Unit  
+[
+82]:
+Fault 8/Control Unit
+
+**Dependency:**
+  
+  
+Refer to:
+r8743
+
+**Note:**
+  
+Corresponds to the CANopen object 1003 hex.  
+Parameter r8743 is used to display the assignment of the drive object (drive object
+number) to the CANopen device module.
+
+### p8612[0...1] CAN drive object server SDO
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (CAN), CU_MV_DP (CAN), VECTORMV (CAN), VECTORGL (CAN), VECTOR3P (CAN), VECTORSL (CAN), VECTORM2C (CAN), VECTORDM (CAN), A_INFMV (CAN), B_INFMV (CAN), A_INFM2C (CAN), BMM2C (CAN) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0581 hex | 8000 067F hex | [ 0 ] 8000 0000 hex |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.6
+
+**Description:**
+  
+Sets the identifier (client/server and server/client) of the additional SDO server.  
+Using these SDO servers, it is possible to access manufacturer-specific CANopen objects
+of the supported drive objects.
+
+**Index:**
+  
+[
+0]:
+COB-ID drive object from the client to the server  
+[
+1]:
+COB-ID drive object from the server to the client
+
+**Dependency:**
+  
+  
+Refer to:
+r8610
+
+**Note:**
+  
+SDO: Service Data Object  
+Regarding the drive object Control Unit:  
+- Corresponds to the CANopen object 1201 hex  
+Regarding the drive object with closed-loop control functions:  
+- Corresponds to the CANopen object 1202 hex + 1 * x (x: Drive number 0 ... 7)
+
+### p8620 CAN Node-ID
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (CAN), CU_MV_DP (CAN) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 1 | 127 | [ 0 ] 126 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Display or setting of the CANopen Node ID.  
+The Node ID can be set as follows:  
+1) Using the address switch on the Control Unit.  
+--> p8620 can then only be read and displays the selected Node ID.  
+--> A change only becomes effective after a POWER ON.  
+--> CANopen Node ID and PROFIBUS address are identical.  
+2) Using p8620  
+--> Only if address 0 is set using the address switch.  
+--> the Node ID is set as standard to 126.  
+--> A change only becomes effective after save and POWER ON.
+
+**Dependency:**
+  
+  
+Refer to:
+r8621
+
+**Note:**
+  
+Every node ID change only becomes effective after a POWER ON.  
+The active node ID is displayed in r8621.  
+The parameter is not influenced by setting the factory setting.  
+It is only possible to independently set CANopen node ID and the PROFIBUS address
+using p0918 and p8620 (prerequisite: the address 0 is set for the address switch).
+
+### r8621 CAN Node-ID active
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (CAN), CU_MV_DP (CAN) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the active CANopen Node ID.
+
+**Dependency:**
+  
+  
+Refer to:
+p8620
+
+### p8622 CAN bit rate
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (CAN), CU_MV_DP (CAN) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 7 | [ 0 ] 6 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Setting the bit rate for the CAN bus.  
+The appropriate bit timings are selected that are defined in p8623 in the associated
+sub-index.  
+Example:  
+Bit rate = 20 kbit/s --> p8622 = 6 --> associated bit timing is in p8623[6].
+
+**Value:**
+  
+0:
+1 Mbit/s  
+1:
+800 kbit/s  
+2:
+500 kbit/s  
+3:
+250 kbit/s  
+4:
+125 kbit/s  
+5:
+50 kbit/s  
+6:
+20 kbit/s  
+7:
+10 kbit/s
+
+**Dependency:**
+  
+  
+Refer to:
+p8623
+
+**Note:**
+  
+The parameter is not influenced by setting the factory setting.
+
+### p8623[0...7] CAN Bit Timing selection
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (CAN), CU_MV_DP (CAN) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0000 hex | 000F 7FFF hex | [ 0 ] 1405 hex   [ 1 ] 1605 hex   [ 2 ] 1C05 hex   [ 3 ] 1C0B hex   [ 4 ] 1C17 hex   [ 5 ] 1C3B hex   [ 6 ] 0002 1C15 hex   [ 7 ] 0004 1C2B hex |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the bit timing for the C_CAN controller to the associated and selected bit rate
+(p8622).  
+Bits are distributed to the following parameters of the C_CAN controller in p8623[0...7]:  
+Bit 0 ... 5: BRP (Baud Rate Prescaler)  
+Bit 6 ... 7: SJW (Synchronization Jump Width)  
+Bit 8 ... 11: TSEG1 (Time Segment 1, before the sampling point)  
+Bit 12 ... 14: TSEG2 (Time Segment 2, after the sampling point)  
+Bit 15: Reserved  
+Bit 16 ... 19: BRPE (Baud Rate Prescaler Extension)  
+Bit 20 ... 31: Reserved  
+Example:  
+Bit rate = 20 kbit/s --> p8622 = 6 --> associated bit timing is in p8623[6] --> 0001
+2FB6
+
+**Recommend.:**
+  
+Use the factory setting when setting the bit timing.
+
+**Index:**
+  
+[
+0]:
+1 Mbit/s  
+[
+1]:
+800 kbit/s  
+[
+2]:
+500 kbit/s  
+[
+3]:
+250 kbit/s  
+[
+4]:
+125 kbit/s  
+[
+5]:
+50 kbit/s  
+[
+6]:
+20 kbit/s  
+[
+7]:
+10 kbit/s
+
+**Dependency:**
+  
+  
+Refer to:
+p8622
+
+**Note:**
+  
+The parameter is not influenced by setting the factory setting.
+
+### p8630[0...2] CAN virtual objects
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (CAN), CU_MV_DP (CAN) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the drive object selection (index 0), the sub-index area (index 1) and the parameter
+area (index 2) when using virtual objects.  
+This means that it is possible to access all SINAMICS parameters via CAN.  
+Index 0 (drive object number):  
+0: Not possible to access virtual CANopen objects  
+1: Device  
+2 ... 65535: Drive object number of drive 1 ... 8  
+Index 1 (sub-index area):  
+0: 0 ... 255  
+1: 256 ... 511  
+2: 512 ... 767  
+3: 768 ... 1023  
+Index 2 (parameter area):  
+0: 1 ... 9999  
+1: 10000 ... 19999  
+2: 20000 ... 29999  
+3: 30000 ... 39999
+
+**Index:**
+  
+[
+0]:
+Drive object number  
+[
+1]:
+Sub-index range  
+[
+2]:
+Parameter range
+
+### r8680[0...36] CAN Diagnosis Hardware
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (CAN), CU_MV_DP (CAN) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the register of the CAN controller C_CAN:  
+Register, Message Interface Register and Message Handler Register - referred to the
+CAN protocol.
+
+**Index:**
+  
+[
+0]:
+Control register  
+[
+1]:
+Status register  
+[
+2]:
+Error counter  
+[
+3]:
+Bit timing register  
+[
+4]:
+Interrupt register  
+[
+5]:
+Test register  
+[
+6]:
+Baud rate prescaler extension register  
+[
+7]:
+Interface 1 command request register  
+[
+8]:
+Interface 1 command mask register  
+[
+9]:
+Interface 1 mask 1 register  
+[
+10]:
+Interface 1 mask 2 register  
+[
+11]:
+Interface 1 arbitration 1 register  
+[
+12]:
+Interface 1 arbitration 2 register  
+[
+13]:
+Interface 1 message control register  
+[
+14]:
+Interface 1 data A1 register  
+[
+15]:
+Interface 1 data A2 register  
+[
+16]:
+Interface 1 data B1 register  
+[
+17]:
+Interface 1 data B2 register  
+[
+18]:
+Interface 2 command request register  
+[
+19]:
+Interface 2 command mask register  
+[
+20]:
+Interface 2 mask 1 register  
+[
+21]:
+Interface 2 mask 2 register  
+[
+22]:
+Interface 2 arbitration 1 register  
+[
+23]:
+Interface 2 arbitration 2 register  
+[
+24]:
+Interface 2 message control register  
+[
+25]:
+Interface 2 data A1 register  
+[
+26]:
+Interface 2 data A2 register  
+[
+27]:
+Interface 2 data B1 register  
+[
+28]:
+Interface 2 data B2 register  
+[
+29]:
+Transmission request 1 register  
+[
+30]:
+Transmission request 2 register  
+[
+31]:
+New data 1 register  
+[
+32]:
+New data 2 register  
+[
+33]:
+Interrupt pending 1 register  
+[
+34]:
+Interrupt pending 2 register  
+[
+35]:
+Message valid 1 register  
+[
+36]:
+Message valid 2 register
+
+**Note:**
+  
+A description of the individual registers of the C_CAN controller can be taken from
+"C_CAN User's Manual".
+
+### p8684 CAN NMT state after booting
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (CAN), CU_MV_DP (CAN) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 4 | 127 | [ 0 ] 127 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the CANopen NMT state that is effective after booting.
+
+**Value:**
+  
+4:
+Stopped  
+5:
+Operational  
+127:
+Pre-operational
+
+**Dependency:**
+  
+  
+Refer to:
+p8685
+
+**Note:**
+  
+Booting in the NMT state pre-operational corresponds to the CANopen standard
+
+### p8685 CAN NMT states
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (CAN), CU_MV_DP (CAN) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 129 | [ 0 ] 127 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets and displays the CANopen NMT state.
+
+**Value:**
+  
+0:
+Initialization  
+4:
+Stopped  
+5:
+Operational  
+127:
+Pre-operational  
+128:
+Reset node  
+129:
+Reset Communication
+
+**Note:**
+  
+The value 0 (initialization) is only displayed and cannot be set.
+
+### p8699 CAN: RPDO monitoring time
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (CAN), CU_MV_DP (CAN) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 [ms] | 65535000 [ms] | [ 0 ] 100 [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the monitoring time for the process data received via the CAN bus.  
+A value that is not a multiple integer of the CANopen sampling time is rounded-off.  
+If no process data is received within this time, then fault F08702 is output.
+
+**Dependency:**
+  
+  
+Refer to:
+r8843, p8848  
+Refer to:
+F08702
+
+**Note:**
+  
+Monitoring is deactivated for setting p8699 = 0.  
+RPDO monitoring is deactivated in the first commissioning (as no RPDOs are configured).  
+The activated and started RPDO monitoring is displayed using PROFIdrive PZD status
+"Fieldbus running" (r8843.2).  
+RPDO: Receive Process Data Object  
+p8848: CANopen sampling time
+
+### r8739 Minimum CAN processing time
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (CAN), CU_MV_DP (CAN) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [µs] | - [µs] | [ ] - [µs] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.8
+
+**Description:**
+  
+Displays the minimum, internal, cyclic processing time of CAN communication.  
+The total number of valid TPDO of all CANopen supported drive objects is defined using
+the following ratio.  
+CAN sampling time (p8848) / CAN minimum processing time (r8739)
+
+**Dependency:**
+  
+  
+Refer to:
+r8742, p8848  
+Refer to:
+A08758
+
+**Note:**
+  
+For r8739 = 0.0, the following applies:  
+The total number of valid TPDO of all CANopen-supported drive objects is not limited.
+
+### r8742[0...1] CAN PDO available number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (CAN), CU_MV_DP (CAN) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.6
+
+**Description:**
+  
+Displays the RPDO or TPDO channels that are still available.
+
+**Index:**
+  
+[
+0]:
+RPDO  
+[
+1]:
+TPDO
+
+**Dependency:**
+  
+  
+Refer to:
+A08758
+
+**Note:**
+  
+RPDO: Receive Process Data Object  
+TPDO: Transmit Process Data Object  
+The total number of valid RPDO of all CANopen supported drive objects is 25 valid
+RPDO as a result of the hardware.  
+The total number of valid TPDO of all CANopen supported drive objects is defined using
+the following ratio.  
+CAN sampling time (p8848) / CAN minimum processing time (r8739)
+
+### r8743[0...7] CAN device module assignment
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (CAN), CU_MV_DP (CAN) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the assignment of the drive object (drive object number) to the CANopen device
+module.
+
+**Index:**
+  
+[
+0]:
+Drive object number for device module 0  
+[
+1]:
+Drive object number for device module 1  
+[
+2]:
+Drive object number for device module 2  
+[
+3]:
+Drive object number for device module 3  
+[
+4]:
+Drive object number for device module 4  
+[
+5]:
+Drive object number for device module 5  
+[
+6]:
+Drive object number for device module 6  
+[
+7]:
+Drive object number for device module 7
+
+### p8806[0...53] Identification and Maintenance 1
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Parameters for the PROFINET data set "Identification and Maintenance 1" (I&M 1).  
+This information is known as "System identifier" and "Location identifier".
+
+**Dependency:**
+  
+  
+Refer to:
+p8807, p8808
+
+**Notice:**
+  
+Only characters belonging to the standard ASCII character set may be used (32 dec
+to 126 dec).
+
+**Note:**
+  
+An ASCII table (excerpt) can be found, for example, in the appendix to the List Manual.  
+For p8806[0...31]:  
+System identifier.  
+For p8806[32...53]:  
+Location identifier.
+
+### p8807[0...15] Identification and Maintenance 2
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Parameters for the PROFINET data set "Identification and Maintenance 2" (I&M 2).  
+This information is known as "Installation date".
+
+**Dependency:**
+  
+  
+Refer to:
+p8806, p8808
+
+**Note:**
+  
+An ASCII table (excerpt) can be found, for example, in the appendix to the List Manual.  
+For p8807[0...15]:  
+Dates of installation or first commissioning of the device with the following format
+options (ASCII):  
+YYYY-MM-DD  
+or  
+YYYY-MM-DD hh:mm  
+- YYYY: year  
+- MM: month 01 ... 12  
+- DD: day 01 ... 31  
+- hh: hours 00 ... 23  
+- mm: minutes 00 ... 59  
+The separators between the individual data - i.e. hyphen '-', space ' ' and colon
+':' - must be entered.
+
+### p8808[0...53] Identification and Maintenance 3
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Parameters for the PROFINET data set "Identification and Maintenance 3" (I&M 3).  
+This information is known as "Supplementary information".
+
+**Dependency:**
+  
+  
+Refer to:
+p8806, p8807
+
+**Notice:**
+  
+Only characters belonging to the standard ASCII character set may be used (32 dec
+to 126 dec).
+
+**Note:**
+  
+An ASCII table (excerpt) can be found, for example, in the appendix to the List Manual.  
+For p8808[0...53]:  
+Any supplementary information and comments (ASCII).
+
+### r8809[0...53] Identification and Maintenance 4
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+5.1
+
+**Description:**
+  
+Parameters for the PROFINET data set "Identification and Maintenance 4" (I&M 4).  
+This information is known as "Signature".
+
+**Note:**
+  
+Parameter r8809 contains the information described below.  
+For r8809[0...3]:  
+Contains the value from r9781[0] "SI change tracking checksum functional".  
+For r8809[4...7]:  
+Contains the value from r9782[0] "SI change tracking time stamp checksum functional".  
+For r8809[8...53]:  
+Reserved.
+
+### p8811 SINAMICS Link project selection
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 1) | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 2197, 2198 |
+| **Object:**CU_MV_PN (PN CBE20), CU_MV_DP (PN CBE20) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 8 | 64 | [ 0 ] 64 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Project selection for SINAMICS Link.
+
+**Value:**
+  
+8:
+Project 8 participants, 32 words  
+12:
+Project 12 participants, 24 words  
+16:
+Project 16 participants, 16 words  
+64:
+Project 64 participants, 16 words
+
+**Note:**
+  
+SINAMICS Link requires that the appropriate CBE20 firmware version is selected (p8835
+= 3).  
+The parameter must be set the same for all participants.  
+A change only becomes effective after a POWER ON.  
+The parameter is not influenced by setting the factory setting.
+
+### p8812[0...1] SINAMICS Link clock cycle settings
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 1) | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2197, 2198 |
+| **Object:**CU_MV_PN (PN CBE20), CU_MV_DP (PN CBE20) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 2000 | [ 0 ] 1   [ 1 ] 2000 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Sets the clock cycle for SINAMICS Link.  
+For index [0]:  
+0 = clock synchronous mode not activated, 1 = clock synchronous mode activated  
+For index [1]:  
+Possible values: 500, 1000, 2000 µs
+
+**Index:**
+  
+[
+0]:
+Activate isochronous mode  
+[
+1]:
+Bus CC [µs]
+
+**Dependency:**
+  
+  
+Refer to:
+p8811
+
+**Note:**
+  
+SINAMICS Link requires that the appropriate CBE20 firmware version is selected (p8835
+= 3).  
+A change only becomes effective after a POWER ON.  
+The parameter is not influenced by setting the factory setting.  
+For index [0]:  
+Is applicable for the synchronization of the application. The SINAMICS Link itself
+is always synchronous.  
+For index [1]:  
+The value must be set the same for all participants.  
+When newly selecting the project p8811, p8812[1] is set to the factory setting.  
+For p8811 = 8, 12, 16 the following applies:  
+Min/max/factory setting: 500/500/500 µs  
+For p8811 = 64, the following applies:  
+Min/max/factory setting: 1000/2000/2000 µs
+
+### p8815[0...1] IF1/IF2 PZD functionality selection
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 1) | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 1 | 2 | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Selects the PZD interface for the clock cycle synchronization functionality and PROFIsafe.
+
+**Value:**
+  
+1:
+Interface 1 (IF1)  
+2:
+Interface 2 (IF2)
+
+**Index:**
+  
+[
+0]:
+Isochronous mode  
+[
+1]:
+PROFIsafe
+
+**Dependency:**
+  
+  
+Refer to:
+p8839
+
+**Note:**
+  
+A change only becomes effective after POWER ON, reset or project download.  
+Example:  
+p8815[0] = 1: IF1 supports the isochronous mode.  
+p8815[1] = 2: IF2 supports PROFIsafe.
+
+### p8835 CBE20 firmware selection
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 1) | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 2197, 2198 |
+| **Object:**CU_MV_PN (PN CBE20), CU_MV_DP (PN CBE20) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 1 | 99 | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Selects the firmware version for the CBE20.
+
+**Value:**
+  
+1:
+PROFINET Device  
+2:
+PROFINET gate  
+3:
+SINAMICS Link  
+4:
+EtherNet/IP  
+5:
+Modbus TCP  
+99:
+Customer-specific from the OEM directory
+
+**Note:**
+  
+A change only becomes effective after a POWER ON.  
+The parameter is not influenced by setting the factory setting.  
+CBE20: Communication Board Ethernet 20
+
+### p8836 SINAMICS link node address
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 1) | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2198 |
+| **Object:**CU_MV_PN (PN CBE20), CU_MV_DP (PN CBE20) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 64 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Selects the node address for the SINAMICS Link on the Communication Board Ethernet
+20 (CBE20).  
+p8836 = 0: SINAMICS Link deactivated  
+p8836 = 1 ... 64: SINAMICS Link node address
+
+**Dependency:**
+  
+  
+Refer to:
+p8811, p8835
+
+**Note:**
+  
+The maximum number of permitted participant addresses is limited by the project selection
+p8811.  
+SINAMICS Link requires that the appropriate CBE20 firmware version is selected (p8835
+= 3).  
+A change only becomes effective after a POWER ON.  
+The parameter is not influenced by setting the factory setting.
+
+### p8839[0...1] PZD interface hardware assignment
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 1) | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 2197, 2198 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 99 | [ 0 ] 99 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Assignment of the hardware for cyclic communications via PZD interface 1 (IF1) and
+interface 2 (IF2).
+
+**Value:**
+  
+0:
+Inactive  
+1:
+Control Unit onboard  
+2:
+COMM BOARD  
+99:
+Automatic
+
+**Index:**
+  
+[
+0]:
+Interface 1  
+[
+1]:
+Interface 2
+
+**Dependency:**
+  
+  
+Refer to:
+p2030, p8815
+
+**Note:**
+  
+For value = 99 (automatic) the following applies:  
+- if a COMM BOARD is not inserted, then the onboard interface (PROFIBUS/PROFINET/USS)
+communicates via IF1.  
+- if a CBE20 is inserted, then the following applies:  
+-- CU320-2 DP: PROFINET CBE20 communicates via IF1 and PROFIBUS/USS via IF2.  
+-- CU320-2 PN: PROFINET onboard communicates via IF1 and PROFINET CBE20 via IF2.  
+- CAN CBC10 always communicates via IF2.  
+For a value not equal to 99 (automatic) the following applies:  
+- both indices must be set to a number not equal to 99 (automatic).  
+A change only becomes effective after POWER ON, reset or download.
+
+### p8840 COMM BOARD monitoring time
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (COMM BOARD, PN CBE20), CU_MV_DP (COMM BOARD, PN CBE20) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 [ms] | 65535000 [ms] | [ 0 ] 20 [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the monitoring time to monitor the process data received via COMM BOARD.  
+If, during this time, the Control Unit does not receive any process data from the
+COMM BOARD, then an appropriate message is output.
+
+**Dependency:**
+  
+  
+Refer to:
+p8835  
+Refer to:
+F08501
+
+**Note:**
+  
+This monitoring function only monitors the connection between the Control Unit and
+COMM BOARD and not the data traffic on the fieldbus.  
+For CBE20, the parameter is only active for firmware version "SINAMICS Link" or "EtherNet/IP"
+(p8835 = 3, 4, 5).  
+For CBE20 firmware version Modbus TCP (p8835 =5) then the fieldbus data traffic is
+also monitored.  
+Value = 0: Monitoring is deactivated.
+
+### p8841[0...239] COMM BOARD send configuration data
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (COMM BOARD, PN CBE20), CU_MV_DP (COMM BOARD, PN CBE20) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the send configuration data for the COMM BOARD.  
+The setting is activated with p8842.
+
+**Dependency:**
+  
+  
+Refer to:
+p8842
+
+**Note:**
+  
+The configuration data are specific to the inserted COMM BOARD.  
+For CBE20, the configuration data are not relevant.
+
+### p8842 Activate COMM BOARD send configuration
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2199, 2200 |
+| **Object:**CU_MV_PN (COMM BOARD, PN CBE20), CU_MV_DP (COMM BOARD, PN CBE20) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Activate a modified send configuration for COMM BOARD.  
+With p8842 = 1, the values in p8841 are transferred to the COMM BOARD and activated.
+After this, p8842 is automatically set to zero.
+
+**Dependency:**
+  
+  
+Refer to:
+p8841
+
+**Note:**
+  
+For CBE20, certain SINAMICS parameters are newly evaluated and activated. An existing,
+cyclic bus connection is interrupted.  
+For CBE20, the parameter is only active for firmware version "SINAMICS Link" (p8835
+= 3).
+
+### r8843.0...2 BO: IF2 PZD state
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** 2410 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the PROFIdrive PZD state.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Setpoint failure | No | Yes | - |
+| 01 | Clock cycle synchronous operation active | No | Yes | - |
+| 02 | Fieldbus operation | No | Yes | - |
+
+**Dependency:**
+  
+  
+Refer to:
+p2044
+
+**Note:**
+  
+When using the "setpoint failure" signal, the bus can be monitored and an application-specific
+response triggered when the setpoint fails.
+
+### p8848 IF2 PZD sampling time
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 3) | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0.50 [ms] | 16.00 [ms] | [ 0 ] 4.00 [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the sampling time for the cyclic interface 2 (IF2).
+
+**Note:**
+  
+The system only permits certain sampling times and after writing to this parameter,
+displays the value that has actually been set.  
+For clock cycle synchronous operation, the specified bus cycle time applies (Tdp).
+
+### r8849[0...139] COMM BOARD receive configuration data
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (COMM BOARD, PN CBE20), CU_MV_DP (COMM BOARD, PN CBE20) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the receive configuration data for the COMM BOARD.
+
+**Note:**
+  
+For CBE20, the parameter is only active for firmware version "SINAMICS Link" or "EtherNet/IP"
+(p8835 = 3, 4).
+
+### r8850[0...19] CO: IF2 PZD receive word
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 2491 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**4000H | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Connector output for interconnecting the PZD (setpoints) received via interface 2
+in the word format.
+
+**Index:**
+  
+[
+0]:
+PZD 1  
+[
+1]:
+PZD 2  
+[
+2]:
+PZD 3  
+[
+3]:
+PZD 4  
+[
+4]:
+PZD 5  
+[
+5]:
+PZD 6  
+[
+6]:
+PZD 7  
+[
+7]:
+PZD 8  
+[
+8]:
+PZD 9  
+[
+9]:
+PZD 10  
+[
+10]:
+PZD 11  
+[
+11]:
+PZD 12  
+[
+12]:
+PZD 13  
+[
+13]:
+PZD 14  
+[
+14]:
+PZD 15  
+[
+15]:
+PZD 16  
+[
+16]:
+PZD 17  
+[
+17]:
+PZD 18  
+[
+18]:
+PZD 19  
+[
+19]:
+PZD 20
+
+**Note:**
+  
+IF2: Interface 2  
+PZD1 to PZD2 are displayed bit-serially in r8890 to r8891.
+
+### p8851[0...24] CI: IF2 PZD send word
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Integer16 | **Dynamic index:**- | **Func. diagram:** 2493, 9210 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**4000H | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Selects the PZD (actual values) to be sent via interface 2 in the word format.
+
+**Index:**
+  
+[
+0]:
+PZD 1  
+[
+1]:
+PZD 2  
+[
+2]:
+PZD 3  
+[
+3]:
+PZD 4  
+[
+4]:
+PZD 5  
+[
+5]:
+PZD 6  
+[
+6]:
+PZD 7  
+[
+7]:
+PZD 8  
+[
+8]:
+PZD 9  
+[
+9]:
+PZD 10  
+[
+10]:
+PZD 11  
+[
+11]:
+PZD 12  
+[
+12]:
+PZD 13  
+[
+13]:
+PZD 14  
+[
+14]:
+PZD 15  
+[
+15]:
+PZD 16  
+[
+16]:
+PZD 17  
+[
+17]:
+PZD 18  
+[
+18]:
+PZD 19  
+[
+19]:
+PZD 20  
+[
+20]:
+PZD 21  
+[
+21]:
+PZD 22  
+[
+22]:
+PZD 23  
+[
+23]:
+PZD 24  
+[
+24]:
+PZD 25
+
+**Note:**
+  
+IF2: Interface 2
+
+### r8853[0...24] IF2 diagnostics PZD send
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2493 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Displays the sent PZD (actual values) sent via interface 2.
+
+**Index:**
+  
+[
+0]:
+PZD 1  
+[
+1]:
+PZD 2  
+[
+2]:
+PZD 3  
+[
+3]:
+PZD 4  
+[
+4]:
+PZD 5  
+[
+5]:
+PZD 6  
+[
+6]:
+PZD 7  
+[
+7]:
+PZD 8  
+[
+8]:
+PZD 9  
+[
+9]:
+PZD 10  
+[
+10]:
+PZD 11  
+[
+11]:
+PZD 12  
+[
+12]:
+PZD 13  
+[
+13]:
+PZD 14  
+[
+14]:
+PZD 15  
+[
+15]:
+PZD 16  
+[
+16]:
+PZD 17  
+[
+17]:
+PZD 18  
+[
+18]:
+PZD 19  
+[
+19]:
+PZD 20  
+[
+20]:
+PZD 21  
+[
+21]:
+PZD 22  
+[
+22]:
+PZD 23  
+[
+23]:
+PZD 24  
+[
+24]:
+PZD 25
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Bit 0 | OFF | ON | - |
+| 01 | Bit 1 | OFF | ON | - |
+| 02 | Bit 2 | OFF | ON | - |
+| 03 | Bit 3 | OFF | ON | - |
+| 04 | Bit 4 | OFF | ON | - |
+| 05 | Bit 5 | OFF | ON | - |
+| 06 | Bit 6 | OFF | ON | - |
+| 07 | Bit 7 | OFF | ON | - |
+| 08 | Bit 8 | OFF | ON | - |
+| 09 | Bit 9 | OFF | ON | - |
+| 10 | Bit 10 | OFF | ON | - |
+| 11 | Bit 11 | OFF | ON | - |
+| 12 | Bit 12 | OFF | ON | - |
+| 13 | Bit 13 | OFF | ON | - |
+| 14 | Bit 14 | OFF | ON | - |
+| 15 | Bit 15 | OFF | ON | - |
+
+**Note:**
+  
+IF2: Interface 2
+
+### r8854 COMM BOARD state
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (COMM BOARD, PN CBE20), CU_MV_DP (COMM BOARD, PN CBE20) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Status display for COMM BOARD.
+
+**Value:**
+  
+0:
+No initialization  
+1:
+Fatal fault  
+2:
+Initialization  
+3:
+Send configuration  
+4:
+Receive configuration  
+5:
+Non-cyclic communication  
+6:
+Cyclic communications but no setpoints (stop/no clock cycle)  
+255:
+Cyclic communication
+
+**Note:**
+  
+For CBE20, the parameter is only active for firmware version "SINAMICS Link" (p8835
+= 3).  
+For firmware version "PROFINET Device" or "EtherNet/IP" (p8835 = 1, 4), parameter
+p8956 should be observed.
+
+### r8858[0...39] COMM BOARD read diagnostics channel
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (COMM BOARD, PN CBE20), CU_MV_DP (COMM BOARD, PN CBE20) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the COMM BOARD diagnostics data.
+
+**Note:**
+  
+The display depends on the COMM BOARD being used.  
+For CBE20, the parameter is only active for firmware version "SINAMICS Link" or "EtherNet/IP"
+(p8835 = 3, 4).  
+Example for CBE20:  
+r8858[0] = 4201 --> Siemens CBE20  
+r8858[1] = 3 --> firmware version = SINAMICS Link (see p8835)  
+r8858[2 ... 39] --> only for internal Siemens diagnostics.
+
+### r8859[0...7] COMM BOARD identification data
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (COMM BOARD, PN CBE20), CU_MV_DP (COMM BOARD, PN CBE20) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the COMM BOARD identification data
+
+**Index:**
+  
+[
+0]:
+Version interface structure  
+[
+1]:
+Version interface driver  
+[
+2]:
+Company (Siemens = 42)  
+[
+3]:
+CB type  
+[
+4]:
+Firmware version  
+[
+5]:
+Firmware date (year)  
+[
+6]:
+Firmware date (day/month)  
+[
+7]:
+Firmware patch/hot fix
+
+**Note:**
+  
+Example for CBE20:  
+r8859[0] = 100 --> version of the interface structure V1.00  
+r8859[1] = 111 --> version of the interface driver V1.11  
+r8859[2] = 42 --> SIEMENS  
+r8859[3] = 0 --> CBE20  
+r8859[4] = 1200 --> first part, firmware version V12.00 (second part, see index 7)  
+r8859[5] = 2010 --> year 2010  
+r8859[6] = 2306 --> 23rd June  
+r8859[7] = 1300 --> second part, firmware version (complete version: V12.00.13.00)
+
+### r8867[0...1] IF2 PZD maximum interconnected
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Display for the maximum interconnected PZD in the receive/send direction  
+Index 0: receive (r8850, r8860)  
+Index 1: send (p8851, p8861)
+
+### p8870[0...15] SINAMICS Link PZD receive word
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2198, 2199 |
+| **Object:**CU_MV_PN (PN CBE20), CU_MV_DP (PN CBE20), TECBASE (PN CBE20), TM31 (PN CBE20), TM15DI_DO (PN CBE20), TM150 (PN CBE20), TB30 (PN CBE20), ENC (PN CBE20) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Assignment of a PZD to a telegram word from a SINAMICS Link receive telegram.  
+For p8839[0] = 2 (COMM BOARD via interface 1), the following applies:  
+- PZD p2050[index] is assigned by means of p8870[index], p8872[index].  
+For p8839[1] = 2 (COMM BOARD via interface 2), the following applies:  
+- using p8870[index], p8872[index], the PZD is assigned r8850[Index].
+
+**Index:**
+  
+[
+0]:
+PZD 1  
+[
+1]:
+PZD 2  
+[
+2]:
+PZD 3  
+[
+3]:
+PZD 4  
+[
+4]:
+PZD 5  
+[
+5]:
+PZD 6  
+[
+6]:
+PZD 7  
+[
+7]:
+PZD 8  
+[
+8]:
+PZD 9  
+[
+9]:
+PZD 10  
+[
+10]:
+PZD 11  
+[
+11]:
+PZD 12  
+[
+12]:
+PZD 13  
+[
+13]:
+PZD 14  
+[
+14]:
+PZD 15  
+[
+15]:
+PZD 16
+
+**Dependency:**
+  
+  
+Refer to:
+p8872
+
+**Note:**
+  
+Value range:  
+0: Not used  
+1 ... 32: telegram word  
+A pair of values p8870[index], p8872[index] may only be used once in single a device.  
+A change only becomes effective after POWER ON, reset, project download or p8842 =
+1.
+
+### p8871[0...15] SINAMICS Link PZD send word
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2198, 2199 |
+| **Object:**CU_MV_PN (PN CBE20), CU_MV_DP (PN CBE20), TECBASE (PN CBE20), TM31 (PN CBE20), TM15DI_DO (PN CBE20), TM150 (PN CBE20), TB30 (PN CBE20), ENC (PN CBE20) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Assigns a PZD to a telegram word in the SINAMICS Link send telegram.  
+For p8839[0] = 2 (COMM BOARD via interface 1), the following applies:  
+- p8871[index] assigns PZD p2051[index].  
+For p8839[1] = 2 (COMM BOARD via interface 2), the following applies:  
+- p8871[index] assigns PZD p8851[index].
+
+**Index:**
+  
+[
+0]:
+PZD 1  
+[
+1]:
+PZD 2  
+[
+2]:
+PZD 3  
+[
+3]:
+PZD 4  
+[
+4]:
+PZD 5  
+[
+5]:
+PZD 6  
+[
+6]:
+PZD 7  
+[
+7]:
+PZD 8  
+[
+8]:
+PZD 9  
+[
+9]:
+PZD 10  
+[
+10]:
+PZD 11  
+[
+11]:
+PZD 12  
+[
+12]:
+PZD 13  
+[
+13]:
+PZD 14  
+[
+14]:
+PZD 15  
+[
+15]:
+PZD 16
+
+**Dependency:**
+  
+  
+Refer to:
+p2051, p8851  
+Refer to:
+A50002
+
+**Note:**
+  
+Value range:  
+0: Not used  
+1 ... 32: send telegram word  
+A specific telegram word send may only be used once within a single device.  
+A change only becomes effective after POWER ON, reset, project download or p8842 =
+1.
+
+### p8872[0...15] SINAMICS Link PZD receive address
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2198, 2199 |
+| **Object:**CU_MV_PN (PN CBE20), CU_MV_DP (PN CBE20), TECBASE (PN CBE20), TM31 (PN CBE20), TM15DI_DO (PN CBE20), TM150 (PN CBE20), TB30 (PN CBE20), ENC (PN CBE20) | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 64 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Selects the address of the SINAMICS Link sender from which the process data (PZD)
+is received.
+
+**Index:**
+  
+[
+0]:
+PZD 1  
+[
+1]:
+PZD 2  
+[
+2]:
+PZD 3  
+[
+3]:
+PZD 4  
+[
+4]:
+PZD 5  
+[
+5]:
+PZD 6  
+[
+6]:
+PZD 7  
+[
+7]:
+PZD 8  
+[
+8]:
+PZD 9  
+[
+9]:
+PZD 10  
+[
+10]:
+PZD 11  
+[
+11]:
+PZD 12  
+[
+12]:
+PZD 13  
+[
+13]:
+PZD 14  
+[
+14]:
+PZD 15  
+[
+15]:
+PZD 16
+
+**Dependency:**
+  
+  
+Refer to:
+p8870
+
+**Note:**
+  
+Value range:  
+0: Not used  
+1 ... 64: address  
+A change only becomes effective after POWER ON, reset, project download or p8842 =
+1.
+
+### r8874[0...19] IF2 diagnostics bus address PZD receive
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Displays the bus address of sender from which the PZD is received.
+
+**Index:**
+  
+[
+0]:
+PZD 1  
+[
+1]:
+PZD 2  
+[
+2]:
+PZD 3  
+[
+3]:
+PZD 4  
+[
+4]:
+PZD 5  
+[
+5]:
+PZD 6  
+[
+6]:
+PZD 7  
+[
+7]:
+PZD 8  
+[
+8]:
+PZD 9  
+[
+9]:
+PZD 10  
+[
+10]:
+PZD 11  
+[
+11]:
+PZD 12  
+[
+12]:
+PZD 13  
+[
+13]:
+PZD 14  
+[
+14]:
+PZD 15  
+[
+15]:
+PZD 16  
+[
+16]:
+PZD 17  
+[
+17]:
+PZD 18  
+[
+18]:
+PZD 19  
+[
+19]:
+PZD 20
+
+### r8875[0...19] IF2 diagnostics telegram offset PZD receive
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Displays the byte offset of the PZD in the receive telegram.
+
+**Index:**
+  
+[
+0]:
+PZD 1  
+[
+1]:
+PZD 2  
+[
+2]:
+PZD 3  
+[
+3]:
+PZD 4  
+[
+4]:
+PZD 5  
+[
+5]:
+PZD 6  
+[
+6]:
+PZD 7  
+[
+7]:
+PZD 8  
+[
+8]:
+PZD 9  
+[
+9]:
+PZD 10  
+[
+10]:
+PZD 11  
+[
+11]:
+PZD 12  
+[
+12]:
+PZD 13  
+[
+13]:
+PZD 14  
+[
+14]:
+PZD 15  
+[
+15]:
+PZD 16  
+[
+16]:
+PZD 17  
+[
+17]:
+PZD 18  
+[
+18]:
+PZD 19  
+[
+19]:
+PZD 20
+
+### r8876[0...24] IF2 diagnostics telegram offset PZD send
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Displays the byte offset of the PZD in the send telegram.
+
+**Index:**
+  
+[
+0]:
+PZD 1  
+[
+1]:
+PZD 2  
+[
+2]:
+PZD 3  
+[
+3]:
+PZD 4  
+[
+4]:
+PZD 5  
+[
+5]:
+PZD 6  
+[
+6]:
+PZD 7  
+[
+7]:
+PZD 8  
+[
+8]:
+PZD 9  
+[
+9]:
+PZD 10  
+[
+10]:
+PZD 11  
+[
+11]:
+PZD 12  
+[
+12]:
+PZD 13  
+[
+13]:
+PZD 14  
+[
+14]:
+PZD 15  
+[
+15]:
+PZD 16  
+[
+16]:
+PZD 17  
+[
+17]:
+PZD 18  
+[
+18]:
+PZD 19  
+[
+19]:
+PZD 20  
+[
+20]:
+PZD 21  
+[
+21]:
+PZD 22  
+[
+22]:
+PZD 23  
+[
+23]:
+PZD 24  
+[
+24]:
+PZD 25
+
+### p8880[0...15] BI: IF2 binector-connector converter status word 1
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 2489 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Selects bits to be sent via interface 2.  
+The individual bits are combined to form status word 1.
+
+**Index:**
+  
+[
+0]:
+Bit 0  
+[
+1]:
+Bit 1  
+[
+2]:
+Bit 2  
+[
+3]:
+Bit 3  
+[
+4]:
+Bit 4  
+[
+5]:
+Bit 5  
+[
+6]:
+Bit 6  
+[
+7]:
+Bit 7  
+[
+8]:
+Bit 8  
+[
+9]:
+Bit 9  
+[
+10]:
+Bit 10  
+[
+11]:
+Bit 11  
+[
+12]:
+Bit 12  
+[
+13]:
+Bit 13  
+[
+14]:
+Bit 14  
+[
+15]:
+Bit 15
+
+**Dependency:**
+  
+  
+Refer to:
+p8888, r8889
+
+### p8881[0...15] BI: IF2 binector-connector converter status word 2
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 2489 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Selects bits to be sent via interface 2.  
+The individual bits are combined to form status word 2.
+
+**Index:**
+  
+[
+0]:
+Bit 0  
+[
+1]:
+Bit 1  
+[
+2]:
+Bit 2  
+[
+3]:
+Bit 3  
+[
+4]:
+Bit 4  
+[
+5]:
+Bit 5  
+[
+6]:
+Bit 6  
+[
+7]:
+Bit 7  
+[
+8]:
+Bit 8  
+[
+9]:
+Bit 9  
+[
+10]:
+Bit 10  
+[
+11]:
+Bit 11  
+[
+12]:
+Bit 12  
+[
+13]:
+Bit 13  
+[
+14]:
+Bit 14  
+[
+15]:
+Bit 15
+
+**Dependency:**
+  
+  
+Refer to:
+p8888, r8889
+
+### p8882[0...15] BI: IF2 binector-connector converter status word 3
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 2489 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Selects bits to be sent via interface 2.  
+The individual bits are combined to form free status word 3.
+
+**Index:**
+  
+[
+0]:
+Bit 0  
+[
+1]:
+Bit 1  
+[
+2]:
+Bit 2  
+[
+3]:
+Bit 3  
+[
+4]:
+Bit 4  
+[
+5]:
+Bit 5  
+[
+6]:
+Bit 6  
+[
+7]:
+Bit 7  
+[
+8]:
+Bit 8  
+[
+9]:
+Bit 9  
+[
+10]:
+Bit 10  
+[
+11]:
+Bit 11  
+[
+12]:
+Bit 12  
+[
+13]:
+Bit 13  
+[
+14]:
+Bit 14  
+[
+15]:
+Bit 15
+
+**Dependency:**
+  
+  
+Refer to:
+p8888, r8889
+
+### p8883[0...15] BI: IF2 binector-connector converter status word 4
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 2489 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Selects bits to be sent via interface 2.  
+The individual bits are combined to form free status word 4.
+
+**Index:**
+  
+[
+0]:
+Bit 0  
+[
+1]:
+Bit 1  
+[
+2]:
+Bit 2  
+[
+3]:
+Bit 3  
+[
+4]:
+Bit 4  
+[
+5]:
+Bit 5  
+[
+6]:
+Bit 6  
+[
+7]:
+Bit 7  
+[
+8]:
+Bit 8  
+[
+9]:
+Bit 9  
+[
+10]:
+Bit 10  
+[
+11]:
+Bit 11  
+[
+12]:
+Bit 12  
+[
+13]:
+Bit 13  
+[
+14]:
+Bit 14  
+[
+15]:
+Bit 15
+
+**Dependency:**
+  
+  
+Refer to:
+p8888, r8889
+
+### p8884[0...15] BI: IF2 binector-connector converter status word 5
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 2489 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Selects bits to be sent via interface 2.  
+The individual bits are combined to form free status word 5.
+
+**Index:**
+  
+[
+0]:
+Bit 0  
+[
+1]:
+Bit 1  
+[
+2]:
+Bit 2  
+[
+3]:
+Bit 3  
+[
+4]:
+Bit 4  
+[
+5]:
+Bit 5  
+[
+6]:
+Bit 6  
+[
+7]:
+Bit 7  
+[
+8]:
+Bit 8  
+[
+9]:
+Bit 9  
+[
+10]:
+Bit 10  
+[
+11]:
+Bit 11  
+[
+12]:
+Bit 12  
+[
+13]:
+Bit 13  
+[
+14]:
+Bit 14  
+[
+15]:
+Bit 15
+
+**Dependency:**
+  
+  
+Refer to:
+p8888, r8889
+
+### p8888[0...4] IF2 invert binector-connector converter status word
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2489 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0000 0000 0000 0000 bin |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Setting to invert the individual binector inputs of the binector connector converter.
+
+**Index:**
+  
+[
+0]:
+Status word 1  
+[
+1]:
+Status word 2  
+[
+2]:
+Free status word 3  
+[
+3]:
+Free status word 4  
+[
+4]:
+Free status word 5
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Bit 0 | Not inverted | Inverted | - |
+| 01 | Bit 1 | Not inverted | Inverted | - |
+| 02 | Bit 2 | Not inverted | Inverted | - |
+| 03 | Bit 3 | Not inverted | Inverted | - |
+| 04 | Bit 4 | Not inverted | Inverted | - |
+| 05 | Bit 5 | Not inverted | Inverted | - |
+| 06 | Bit 6 | Not inverted | Inverted | - |
+| 07 | Bit 7 | Not inverted | Inverted | - |
+| 08 | Bit 8 | Not inverted | Inverted | - |
+| 09 | Bit 9 | Not inverted | Inverted | - |
+| 10 | Bit 10 | Not inverted | Inverted | - |
+| 11 | Bit 11 | Not inverted | Inverted | - |
+| 12 | Bit 12 | Not inverted | Inverted | - |
+| 13 | Bit 13 | Not inverted | Inverted | - |
+| 14 | Bit 14 | Not inverted | Inverted | - |
+| 15 | Bit 15 | Not inverted | Inverted | - |
+
+**Dependency:**
+  
+  
+Refer to:
+p8880, p8881, p8882, p8883, p8884, r8889
+
+### r8889[0...4] CO: IF2 send binector-connector converter status word
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Connector output to interconnect the status words to a PZD send word.
+
+**Index:**
+  
+[
+0]:
+Status word 1  
+[
+1]:
+Status word 2  
+[
+2]:
+Free status word 3  
+[
+3]:
+Free status word 4  
+[
+4]:
+Free status word 5
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Bit 0 | OFF | ON | - |
+| 01 | Bit 1 | OFF | ON | - |
+| 02 | Bit 2 | OFF | ON | - |
+| 03 | Bit 3 | OFF | ON | - |
+| 04 | Bit 4 | OFF | ON | - |
+| 05 | Bit 5 | OFF | ON | - |
+| 06 | Bit 6 | OFF | ON | - |
+| 07 | Bit 7 | OFF | ON | - |
+| 08 | Bit 8 | OFF | ON | - |
+| 09 | Bit 9 | OFF | ON | - |
+| 10 | Bit 10 | OFF | ON | - |
+| 11 | Bit 11 | OFF | ON | - |
+| 12 | Bit 12 | OFF | ON | - |
+| 13 | Bit 13 | OFF | ON | - |
+| 14 | Bit 14 | OFF | ON | - |
+| 15 | Bit 15 | OFF | ON | - |
+
+**Dependency:**
+  
+  
+Refer to:
+p8851, p8880, p8881, p8882, p8883, p8884, p8888
+
+**Note:**
+  
+r8889 together with p8880 to p8884 forms five binector-connector converters.
+
+### r8890.0...15 BO: IF2 PZD1 receive bit-serial
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2485, 2491, 9204, 9206 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Binector output for bit-serial interconnection of PZD1 (normally control word 1) received
+via interface 2.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Bit 0 | OFF | ON | - |
+| 01 | Bit 1 | OFF | ON | - |
+| 02 | Bit 2 | OFF | ON | - |
+| 03 | Bit 3 | OFF | ON | - |
+| 04 | Bit 4 | OFF | ON | - |
+| 05 | Bit 5 | OFF | ON | - |
+| 06 | Bit 6 | OFF | ON | - |
+| 07 | Bit 7 | OFF | ON | - |
+| 08 | Bit 8 | OFF | ON | - |
+| 09 | Bit 9 | OFF | ON | - |
+| 10 | Bit 10 | OFF | ON | - |
+| 11 | Bit 11 | OFF | ON | - |
+| 12 | Bit 12 | OFF | ON | - |
+| 13 | Bit 13 | OFF | ON | - |
+| 14 | Bit 14 | OFF | ON | - |
+| 15 | Bit 15 | OFF | ON | - |
+
+**Dependency:**
+  
+  
+Refer to:
+r8850
+
+**Note:**
+  
+IF2: Interface 2
+
+### r8891.0...15 BO: IF2 PZD2 receive bit-serial
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2485, 2491, 9204, 9206 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Binector output for bit-serial interconnection of PZD2 received via interface 2.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Bit 0 | OFF | ON | - |
+| 01 | Bit 1 | OFF | ON | - |
+| 02 | Bit 2 | OFF | ON | - |
+| 03 | Bit 3 | OFF | ON | - |
+| 04 | Bit 4 | OFF | ON | - |
+| 05 | Bit 5 | OFF | ON | - |
+| 06 | Bit 6 | OFF | ON | - |
+| 07 | Bit 7 | OFF | ON | - |
+| 08 | Bit 8 | OFF | ON | - |
+| 09 | Bit 9 | OFF | ON | - |
+| 10 | Bit 10 | OFF | ON | - |
+| 11 | Bit 11 | OFF | ON | - |
+| 12 | Bit 12 | OFF | ON | - |
+| 13 | Bit 13 | OFF | ON | - |
+| 14 | Bit 14 | OFF | ON | - |
+| 15 | Bit 15 | OFF | ON | - |
+
+**Dependency:**
+  
+  
+Refer to:
+r8850
+
+**Note:**
+  
+IF2: Interface 2
+
+### r8892.0...15 BO: IF2 PZD3 receive bit-serial
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2485, 9204, 9206 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Binector output for bit-serial interconnection of PZD3 received via interface 2.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Bit 0 | OFF | ON | - |
+| 01 | Bit 1 | OFF | ON | - |
+| 02 | Bit 2 | OFF | ON | - |
+| 03 | Bit 3 | OFF | ON | - |
+| 04 | Bit 4 | OFF | ON | - |
+| 05 | Bit 5 | OFF | ON | - |
+| 06 | Bit 6 | OFF | ON | - |
+| 07 | Bit 7 | OFF | ON | - |
+| 08 | Bit 8 | OFF | ON | - |
+| 09 | Bit 9 | OFF | ON | - |
+| 10 | Bit 10 | OFF | ON | - |
+| 11 | Bit 11 | OFF | ON | - |
+| 12 | Bit 12 | OFF | ON | - |
+| 13 | Bit 13 | OFF | ON | - |
+| 14 | Bit 14 | OFF | ON | - |
+| 15 | Bit 15 | OFF | ON | - |
+
+**Dependency:**
+  
+  
+Refer to:
+r8850
+
+**Note:**
+  
+IF2: Interface 2
+
+### r8893.0...15 BO: IF2 PZD4 receive bit-serial
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2485, 9204, 9206 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Binector output for bit-serial interconnection of PZD4 (normally control word 2) received
+via interface 2.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Bit 0 | OFF | ON | - |
+| 01 | Bit 1 | OFF | ON | - |
+| 02 | Bit 2 | OFF | ON | - |
+| 03 | Bit 3 | OFF | ON | - |
+| 04 | Bit 4 | OFF | ON | - |
+| 05 | Bit 5 | OFF | ON | - |
+| 06 | Bit 6 | OFF | ON | - |
+| 07 | Bit 7 | OFF | ON | - |
+| 08 | Bit 8 | OFF | ON | - |
+| 09 | Bit 9 | OFF | ON | - |
+| 10 | Bit 10 | OFF | ON | - |
+| 11 | Bit 11 | OFF | ON | - |
+| 12 | Bit 12 | OFF | ON | - |
+| 13 | Bit 13 | OFF | ON | - |
+| 14 | Bit 14 | OFF | ON | - |
+| 15 | Bit 15 | OFF | ON | - |
+
+**Dependency:**
+  
+  
+Refer to:
+r8850
+
+**Note:**
+  
+IF2: Interface 2
+
+## SINAMICS Parameter SINAMICS MV 08894 - 09935
+
+SINAMICS Parameter SINAMICS MV 08894 - 09935
+
+### r8894.0...15 BO: IF2 connector-binector converter binector output
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2485, 2491 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Binector output for bit-serial interconnection of a PZD word received via interface
+2.  
+The PZD is selected via p8899[0].
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Bit 0 | OFF | ON | - |
+| 01 | Bit 1 | OFF | ON | - |
+| 02 | Bit 2 | OFF | ON | - |
+| 03 | Bit 3 | OFF | ON | - |
+| 04 | Bit 4 | OFF | ON | - |
+| 05 | Bit 5 | OFF | ON | - |
+| 06 | Bit 6 | OFF | ON | - |
+| 07 | Bit 7 | OFF | ON | - |
+| 08 | Bit 8 | OFF | ON | - |
+| 09 | Bit 9 | OFF | ON | - |
+| 10 | Bit 10 | OFF | ON | - |
+| 11 | Bit 11 | OFF | ON | - |
+| 12 | Bit 12 | OFF | ON | - |
+| 13 | Bit 13 | OFF | ON | - |
+| 14 | Bit 14 | OFF | ON | - |
+| 15 | Bit 15 | OFF | ON | - |
+
+**Dependency:**
+  
+  
+Refer to:
+p8899
+
+### r8895.0...15 BO: IF2 connector-binector converter binector output
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2485, 2491 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Binector output for bit-serial interconnection of a PZD word received via interface
+2.  
+The PZD is selected via p8899[1].
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Bit 0 | OFF | ON | - |
+| 01 | Bit 1 | OFF | ON | - |
+| 02 | Bit 2 | OFF | ON | - |
+| 03 | Bit 3 | OFF | ON | - |
+| 04 | Bit 4 | OFF | ON | - |
+| 05 | Bit 5 | OFF | ON | - |
+| 06 | Bit 6 | OFF | ON | - |
+| 07 | Bit 7 | OFF | ON | - |
+| 08 | Bit 8 | OFF | ON | - |
+| 09 | Bit 9 | OFF | ON | - |
+| 10 | Bit 10 | OFF | ON | - |
+| 11 | Bit 11 | OFF | ON | - |
+| 12 | Bit 12 | OFF | ON | - |
+| 13 | Bit 13 | OFF | ON | - |
+| 14 | Bit 14 | OFF | ON | - |
+| 15 | Bit 15 | OFF | ON | - |
+
+**Dependency:**
+  
+  
+Refer to:
+p8898, p8899
+
+### p8898[0...1] IF2 invert connector-binector converter binector output
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2485, 2491 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0000 0000 0000 0000 bin |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Setting to invert the individual binector outputs of the connector-binector converter.  
+Using p8898[0], the signals of CI: p8899[0] are influenced.  
+Using p8898[1], the signals of CI: p8899[1] are influenced.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Bit 0 | Not inverted | Inverted | - |
+| 01 | Bit 1 | Not inverted | Inverted | - |
+| 02 | Bit 2 | Not inverted | Inverted | - |
+| 03 | Bit 3 | Not inverted | Inverted | - |
+| 04 | Bit 4 | Not inverted | Inverted | - |
+| 05 | Bit 5 | Not inverted | Inverted | - |
+| 06 | Bit 6 | Not inverted | Inverted | - |
+| 07 | Bit 7 | Not inverted | Inverted | - |
+| 08 | Bit 8 | Not inverted | Inverted | - |
+| 09 | Bit 9 | Not inverted | Inverted | - |
+| 10 | Bit 10 | Not inverted | Inverted | - |
+| 11 | Bit 11 | Not inverted | Inverted | - |
+| 12 | Bit 12 | Not inverted | Inverted | - |
+| 13 | Bit 13 | Not inverted | Inverted | - |
+| 14 | Bit 14 | Not inverted | Inverted | - |
+| 15 | Bit 15 | Not inverted | Inverted | - |
+
+**Dependency:**
+  
+  
+Refer to:
+r8894, r8895, p8899
+
+### p8899[0...1] CI: IF2 connector-binector converter signal source
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Integer16 | **Dynamic index:**- | **Func. diagram:** 2485, 2491 |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, BMM2C, ENC | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the signal source for the connector-binector converter.  
+A PZD receive word can be selected as signal source. The signals are available to
+be serially passed-on (interconnection).
+
+**Dependency:**
+  
+  
+Refer to:
+r8850, r8894, r8895, p8898
+
+**Note:**
+  
+From the signal source set via the connector input, the corresponding lower 16 bits
+are converted.  
+p8899[0...1] together with r8894.0...15 and r8895.0...15 forms two connector-binector
+converters:  
+Connector input p8899[0] to binector output in r8894.0...15  
+Connector input p8899[1] to binector output in r8895.0...15
+
+### p8900[0...239] IE Name of Station
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the station name for the Industrial Ethernet interface (X127) on the Control
+Unit.  
+The actual station name is displayed in r8910.
+
+**Dependency:**
+  
+  
+Refer to:
+p8905, r8910
+
+**Note:**
+  
+An ASCII table (excerpt) can be found, for example, in the appendix to the List Manual.  
+The interface configuration (p8900 and following) is activated with p8905.  
+The parameter is not influenced by setting the factory setting.  
+IE: Industrial Ethernet
+
+### p8901[0...3] IE IP address
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the IP address for the Industrial Ethernet interface (X127) on the Control Unit.  
+The actual IP address is displayed in r8911.
+
+**Dependency:**
+  
+  
+Refer to:
+p8905, r8911
+
+**Note:**
+  
+The interface configuration (p8900 and following) is activated with p8905.  
+The parameter is not influenced by setting the factory setting.
+
+### p8902[0...3] IE Default Gateway
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the default gateway for the Industrial Ethernet interface (X127) on the Control
+Unit.  
+The actual default gateway is displayed in r8912.
+
+**Dependency:**
+  
+  
+Refer to:
+p8905, r8912
+
+**Note:**
+  
+The setting p8902[0...3] = 0 or p8902 = p8901 (own IP address) means that a standard
+gateway has not been set.  
+The interface configuration (p8900 and following) is activated with p8905.  
+The parameter is not influenced by setting the factory setting.
+
+### p8903[0...3] IE Subnet Mask
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the subnet mask for the Industrial Ethernet interface (X127) on the Control Unit.  
+The actual subnet mask is displayed in r8913.
+
+**Dependency:**
+  
+  
+Refer to:
+p8905, r8913
+
+**Note:**
+  
+The interface configuration (p8900 and following) is activated with p8905.  
+The parameter is not influenced by setting the factory setting.
+
+### p8904 IE DHCP mode
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 3 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the DHCP mode for the Industrial Ethernet interface (X127) on the Control Unit.  
+The actual DHCP mode is displayed in parameter r8914.
+
+**Value:**
+  
+0:
+DHCP off  
+2:
+DHCP on, identification using MAC address  
+3:
+DHCP on, identification via name of station
+
+**Dependency:**
+  
+  
+Refer to:
+p8905, r8914
+
+**Note:**
+  
+The interface configuration (p8900 and following) is activated with p8905.  
+The parameter is not influenced by setting the factory setting.
+
+### p8905 Activate IE interface configuration
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 3 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Setting to activate the interface configuration for the Industrial Ethernet interface
+(X127) on the Control Unit.  
+p8905 is automatically set to 0 at the end of an operation.
+
+**Value:**
+  
+0:
+No function  
+1:
+Activate configuration  
+2:
+Activate and save configuration  
+3:
+Delete configuration
+
+**Dependency:**
+  
+  
+Refer to:
+p8900, p8901, p8902, p8903, p8904  
+Refer to:
+A08561
+
+**Note:**
+  
+When a project is downloaded, the interface configuration is only activated if, in
+the offline project, parameter p8905 is set = 1 or 2.  
+For p8905 = 1:  
+The interface configuration (p8900 and following) is activated.  
+For p8905 = 2:  
+The interface configuration (p8900 and following) is activated and saved to non-volatile
+memory.  
+For p8905 = 3:  
+The interface configuration is reset to the factory setting at all points.  
+The factory settings for the interface configuration are loaded on activation (p8905
+= 1) or at the next POWER ON.
+
+### p8906 Commissioning tool maximum telegram length
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 2 | [ 0 ] 2 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+5.2
+
+**Description:**
+  
+Sets the maximum telegram length for the Ethernet connection to a commissioning tool
+(e.g. STARTER, Startdrive, HMI).
+
+**Value:**
+  
+0:
+240 bytes  
+1:
+480 bytes  
+2:
+960 bytes
+
+**Note:**
+  
+The parameter is effective for Ethernet interfaces (Ethernet X127, PROFINET X150,
+PROFINET CBE20 X1400).  
+The telegram length actually used is negotiated between the nodes.  
+We recommend that the telegram length is reduced to 240 bytes in the following cases:  
+- Problems when operating with routed connections.  
+- operation with a SINUMERIK 840D.  
+A change only becomes effective after a POWER ON or reset.  
+The parameter is not influenced by setting the factory setting.
+
+### p8908 Activate FTP
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Activation of the FTP server.  
+Permits the FTP access to the /INSTALL/SINAMICS directory of the memory card.
+
+**Value:**
+  
+0:
+No  
+1:
+Yes
+
+**Note:**
+  
+Activation of the FTP server becomes effective immediately.  
+Deactivation only becomes effective after a POWER ON of the Control Unit.  
+Before the first commissioning, the FTP server is activated irrespective of the parameter
+setting.
+
+### r8909 PN device ID
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the PROFINET Device ID.  
+Every SINAMICS device type has its own PROFINET Device ID and its own PROFINET GSD.
+
+**Note:**
+  
+List of the SINAMICS Device IDs:  
+0501 hex: S120/S150  
+0504 hex: G130/G150  
+050A hex: DC MASTER  
+050C hex: MV  
+050F hex: G120P  
+0510 hex: G120C  
+0511 hex: G120 CU240E-2  
+0512 hex: G120D  
+0513 hex: G120 CU250S-2 Vector  
+0514 hex: G110M  
+0519 hex: DCP  
+051B hex: S210  
+0523 hex: G120X
+
+### r8910[0...239] IE Name of Station actual
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the actual station name for the Industrial Ethernet interface (X127) on the
+Control Unit.
+
+### r8911[0...3] IE IP address actual
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the actual IP address for the Industrial Ethernet interface (X127) on the
+Control Unit.
+
+### r8912[0...3] IE Default Gateway actual
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the actual default gateway for the Industrial Ethernet interface (X127) on
+the Control Unit.
+
+### r8913[0...3] IE Subnet Mask actual
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the actual subnet mask for the Industrial Ethernet interface (X127) on the
+Control Unit.
+
+### r8914 IE DHCP mode actual
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 3 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the actual DHCP mode for the Industrial Ethernet interface (X127) on the
+Control Unit.
+
+**Value:**
+  
+0:
+DHCP off  
+2:
+DHCP on, identification using MAC address  
+3:
+DHCP on, identification via name of station
+
+### r8915[0...5] IE MAC address
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0000 hex | 00FF hex | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the MAC address for the Industrial Ethernet interface (X127) on the Control
+Unit.
+
+### p8920[0...239] PN Name of Station
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the station name for the onboard PROFINET interface on the Control Unit.  
+The actual station name is displayed in r8930.
+
+**Dependency:**
+  
+  
+Refer to:
+p8925, r8930
+
+**Note:**
+  
+An ASCII table (excerpt) can be found, for example, in the appendix to the List Manual.  
+The interface configuration (p8920 and following) is activated with p8925.  
+The parameter is not influenced by setting the factory setting.  
+PN: PROFINET
+
+### p8921[0...3] PN IP address
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the IP address for the onboard PROFINET interface on the Control Unit.  
+The actual IP address is displayed in r8931.
+
+**Dependency:**
+  
+  
+Refer to:
+p8925, r8931
+
+**Note:**
+  
+The interface configuration (p8920 and following) is activated with p8925.  
+The parameter is not influenced by setting the factory setting.
+
+### p8922[0...3] PN Default Gateway
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the default gateway for the onboard PROFINET interface on the Control Unit.  
+The actual standard gateway is displayed in r8932.
+
+**Dependency:**
+  
+  
+Refer to:
+p8925, r8932
+
+**Note:**
+  
+The setting p8922[0...3] = 0 or p8922 = p8921 (own IP address) means that a standard
+gateway has not been set.  
+The interface configuration (p8920 and following) is activated with p8925.  
+The parameter is not influenced by setting the factory setting.
+
+### p8923[0...3] PN Subnet Mask
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the subnet mask for the onboard PROFINET interface on the Control Unit.  
+The actual subnet mask is displayed in r8933.
+
+**Dependency:**
+  
+  
+Refer to:
+p8925, r8933
+
+**Note:**
+  
+The interface configuration (p8920 and following) is activated with p8925.  
+The parameter is not influenced by setting the factory setting.
+
+### p8924 PN DHCP Mode
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 3 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Sets the DHCP mode for the onboard PROFINET interface on the Control Unit.  
+The actual DHCP mode is displayed in parameter r8934.
+
+**Value:**
+  
+0:
+DHCP off  
+2:
+DHCP on, identification using MAC address  
+3:
+DHCP on, identification via name of station
+
+**Dependency:**
+  
+  
+Refer to:
+p8925, r8934
+
+**Notice:**
+  
+When the DHCP mode is active (p8924 not equal to 0), then PROFINET communication via
+this interface is no longer possible! However, the interface can be used by the STARTER/SCOUT
+commissioning tool.
+
+**Note:**
+  
+The interface configuration (p8920 and following) is activated with p8925.  
+The parameter is not influenced by setting the factory setting.
+
+### p8925 Activate PN interface configuration
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 3 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Setting to activate the interface configuration for the onboard PROFINET interface
+on the Control Unit.  
+p8925 is automatically set to 0 at the end of the operation.
+
+**Value:**
+  
+0:
+No function  
+1:
+Activate configuration  
+2:
+Activate and save configuration  
+3:
+Delete configuration
+
+**Dependency:**
+  
+  
+Refer to:
+p8920, p8921, p8922, p8923, p8924  
+Refer to:
+A08563
+
+**Notice:**
+  
+When the DHCP mode is active (p8924 > 0), then PROFINET communication via this interface
+is no longer possible! However, the interface can be used by the STARTER/SCOUT commissioning
+tool.
+
+**Note:**
+  
+When a project is downloaded, the interface configuration is only activated if, in
+the offline project, parameter p8925 is set = 1 or 2.  
+For p8925 = 1:  
+The interface configuration (p8920 and following) is activated.  
+For p8925 = 2:  
+The interface configuration (p8920 and following) is activated and saved to non-volatile
+memory.  
+For p8925 = 3:  
+All storage locations for the interface configuration are restored to the factory
+setting.  
+The factory settings for the interface configuration are loaded on activation (p8925
+= 1) or at the next POWER ON.
+
+### r8930[0...239] PN Name of Station actual
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the actual station name for the onboard PROFINET interface on the Control
+Unit.
+
+### r8931[0...3] PN IP address actual
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the actual IP address for the onboard PROFINET interface on the Control Unit.
+
+### r8932[0...3] PN Default Gateway actual
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the actual default gateway for the onboard PROFINET interface on the Control
+Unit.
+
+### r8933[0...3] PN Subnet Mask actual
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the actual subnet mask for the onboard PROFINET interface on the Control
+Unit.
+
+### r8934 PN DHCP Mode actual
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 3 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Displays the actual DHCP mode for the onboard PROFINET interface on the Control Unit.
+
+**Value:**
+  
+0:
+DHCP off  
+2:
+DHCP on, identification using MAC address  
+3:
+DHCP on, identification via name of station
+
+**Notice:**
+  
+When the DHCP mode is active (parameter value not equal to 0), PROFINET communication
+via this interface is no longer possible! However, the interface can be used by the
+STARTER/SCOUT commissioning tool.
+
+### r8935[0...5] PN MAC address
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0000 hex | 00FF hex | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the MAC address for the onboard PROFINET interface on the Control Unit.
+
+### r8936[0...1] Cyclic connection status
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 13 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the status of cyclic connections.
+
+**Value:**
+  
+0:
+Interrupted  
+1:
+Not connected  
+2:
+Connection starts to be established  
+3:
+Module information expected  
+4:
+Module information received  
+5:
+Module address expected  
+6:
+Module address received  
+7:
+Parameterization data expected  
+8:
+Parameterization data received  
+9:
+Evaluate parameterization data  
+10:
+Connection being established completion expected  
+11:
+Configured controller RUN expected  
+12:
+Configured controller STOP  
+13:
+Configured controller RUN
+
+**Index:**
+  
+[
+0]:
+Controller 1  
+[
+1]:
+Controller 2
+
+**Dependency:**
+  
+  
+Refer to:
+r8961, r8962
+
+**Note:**
+  
+The parameter is active when the "PROFINET Device" and "EtherNet/IP" protocols are
+selected (p2030 = 7, 10).  
+For PROFINET, the following applies:  
+For two connections (Shared Device or system redundancy) the display in the index
+depends on the sequence in which the connections are established.  
+The IP addresses of controllers 1 and 2 are displayed in r8961 and r8962.  
+The following states are displayed for system redundancy:  
+Primary controller: r8936[x] = 13  
+Backup controller: r8936[x] = 11  
+If value = 10:  
+If the connection remains in this state, then when using PROFINET IRT the following
+can apply:  
+- topology error (incorrect port assignment).  
+- synchronization missing.  
+For EtherNet/IP, the following applies:  
+Only a cyclic connection is possible for EtherNet/IP. Index 0 indicates the status
+of the cyclic connection.
+
+### r8937[0...5] Cyclic connection diagnostics
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Display for the cyclic connection diagnostics.
+
+**Index:**
+  
+[
+0]:
+Number of cyclic connections  
+[
+1]:
+Number of send subslots of all connections  
+[
+2]:
+Number of send net data (bytes) of all connections  
+[
+3]:
+Number of receive subslots of all connections  
+[
+4]:
+Number of receive net data (bytes) of all connections  
+[
+5]:
+Connection type (RT, IRT)
+
+**Note:**
+  
+The parameter is active when the "PROFINET Device" and "EtherNet/IP" protocols are
+selected (p2030 = 7, 10).  
+For PROFINET, the following applies:  
+For index [5]:  
+Bit 0 = 1: there is at least one RT connection.  
+Bit 1 = 1: there is an IRT connection.  
+For EtherNet/IP, the following applies:  
+For index [1, 3, 5]:  
+These indices are not relevant.
+
+### r8939 PN DAP ID
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the DAP ID for the onboard PROFINET interface.  
+The combination of device ID (r8909) and DAP ID uniquely identifies a PROFINET access
+point.
+
+**Note:**
+  
+DAP ID: Device Access Point ID  
+List of the SINAMICS DAP IDs:  
+20008 hex: CBE20 V4.6  
+20009 hex: CBE20 V4.7  
+2000A hex: CBE20 V4.8  
+2000C hex: CBE20 V5.1  
+2000D hex: CBE20 V5.2  
+20108 hex: CU310-2 PN V4.6  
+20109 hex: CU310-2 PN V4.7  
+2010A hex: CU310-2 PN V4.8  
+2010C hex: CU310-2 PN V5.1  
+2010D hex: CU310-2 PN V5.2  
+20308 hex: CU320-2 PN V4.6  
+20309 hex: CU320-2 PN V4.7  
+2030A hex: CU320-2 PN V4.8  
+2030C hex: CU320-2 PN V5.1  
+2030D hex: CU320-2 PN V5.2
+
+### p8940[0...239] CBExx name of station
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (PN CBE20), CU_MV_DP (PN CBE20) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the station name for the Communication Board Ethernet 20/25/41 (CBE20/CBE25/CBE41).
+
+**Dependency:**
+  
+  
+Refer to:
+p8945, r8950
+
+**Note:**
+  
+An ASCII table (excerpt) can be found, for example, in the appendix to the List Manual.  
+The interface configuration (p8940 and following) is activated with p8945.  
+The parameter is not influenced by setting the factory setting.
+
+### p8941[0...3] CBExx IP address
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (PN CBE20), CU_MV_DP (PN CBE20) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the IP address for the Communication Board Ethernet 20/25/41 (CBE20/CBE25/CBE41).
+
+**Dependency:**
+  
+  
+Refer to:
+p8945, r8951
+
+**Note:**
+  
+The interface configuration (p8940 and following) is activated with p8945.  
+The parameter is not influenced by setting the factory setting.
+
+### p8942[0...3] CBExx default gateway
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (PN CBE20), CU_MV_DP (PN CBE20) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the default gateway for the Communication Board Ethernet 20/25/41 (CBE20/CBE25/CBE41).
+
+**Dependency:**
+  
+  
+Refer to:
+p8945, r8952
+
+**Note:**
+  
+The setting p8942[0...3] = 0 or p8942 = p8941 (own IP address) means that a standard
+gateway has not been set.  
+The interface configuration (p8940 and following) is activated with p8945.  
+The parameter is not influenced by setting the factory setting.
+
+### p8943[0...3] CBExx subnet mask
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (PN CBE20), CU_MV_DP (PN CBE20) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the subnet mask for the Communication Board Ethernet 20/25/41 (CBE20/CBE25/CBE41).
+
+**Dependency:**
+  
+  
+Refer to:
+p8945, r8953
+
+**Note:**
+  
+The interface configuration (p8940 and following) is activated with p8945.  
+The parameter is not influenced by setting the factory setting.
+
+### p8944 CBExx DHCP mode
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (PN CBE20), CU_MV_DP (PN CBE20) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 3 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the DHCP mode for the Communication Board Ethernet 20/25/41 (CBE20/CBE25/CBE41).  
+The actual DHCP mode is displayed in parameter r8954.
+
+**Value:**
+  
+0:
+DHCP off  
+2:
+DHCP on, identification using MAC address  
+3:
+DHCP on, identification via name of station
+
+**Dependency:**
+  
+  
+Refer to:
+p8945, r8954
+
+**Notice:**
+  
+When the DHCP mode is active (p8944 not equal to 0), then PROFINET communication via
+this interface is no longer possible! However, the interface can be used by the STARTER/SCOUT
+commissioning tool.
+
+**Note:**
+  
+The interface configuration (p8940 and following) is activated with p8945.  
+The parameter is not influenced by setting the factory setting.
+
+### p8945 CBExx activate configuration of interfaces
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (PN CBE20), CU_MV_DP (PN CBE20) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 3 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Setting to activate the interface configuration for the Communication Board Ethernet
+20/25/41 (CBE20/CBE25/CBE41).  
+p8945 is automatically set to 0 at the end of an operation.
+
+**Value:**
+  
+0:
+No function  
+1:
+Activate configuration  
+2:
+Activate and save configuration  
+3:
+Delete configuration
+
+**Dependency:**
+  
+  
+Refer to:
+p8940, p8941, p8942, p8943, p8944  
+Refer to:
+A08565
+
+**Notice:**
+  
+When the DHCP mode is active (p8944 > 0), then PROFINET communication via this interface
+is no longer possible! However, the interface can be used by the STARTER/SCOUT commissioning
+tool.
+
+**Note:**
+  
+For CBE20, the parameter is only valid for firmware version "PROFINET Device" (p8835
+= 1), "EtherNet/IP" (p8835 = 4) or "MODBUS TCP (p8835 = 5). Otherwise, it is locked.  
+This restriction is not applicable for the CBE25.  
+When a project is downloaded, the interface configuration is only activated if parameter
+p8945 is set = 1 or 2 in the offline project.  
+For p8945 = 1:  
+The interface configuration (p8940 and following) is activated.  
+For p8945 = 2:  
+The interface configuration (p8940 and following) is activated - and is saved in a
+non-volatile fashion (retentively).  
+For p8945 = 3:  
+All storage locations for the interface configuration are restored to the factory
+setting.  
+The factory setting of the interface configuration is loaded when activated (p8945
+= 1) or with the next POWER ON.
+
+### r8950[0...239] CBExx name of station actual
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (PN CBE20), CU_MV_DP (PN CBE20) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the actual station name for the Communication Board Ethernet 20/25/41 (CBE20/CBE25/CBE41).
+
+### r8951[0...3] CBExx IP address actual
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (PN CBE20), CU_MV_DP (PN CBE20) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the actual IP address for the Communication Board Ethernet 20/25/41 (CBE20/CBE25/CBE41).
+
+### r8952[0...3] CBExx default gateway actual
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (PN CBE20), CU_MV_DP (PN CBE20) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the actual default gateway for the Communication Board Ethernet 20/25/41
+(CBE20/CBE25/CBE41).
+
+### r8953[0...3] CBExx subnet mask actual
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (PN CBE20), CU_MV_DP (PN CBE20) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the actual subnet mask for the Communication Board Ethernet 20/25/41 (CBE20/CBE25/CBE41).
+
+### r8954 CBExx DHCP mode actual
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (PN CBE20), CU_MV_DP (PN CBE20) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 3 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the actual DHCP mode for the Communication Board Ethernet 20/25/41 (CBE20/CBE25/CBE41).
+
+**Value:**
+  
+0:
+DHCP off  
+2:
+DHCP on, identification using MAC address  
+3:
+DHCP on, identification via name of station
+
+**Notice:**
+  
+When the DHCP mode is active (parameter value greater than 0), PROFINET communication
+via this interface is no longer possible! However, the interface can be used by the
+STARTER/SCOUT commissioning tool.
+
+### r8955[0...5] CBExx MAC address
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (PN CBE20), CU_MV_DP (PN CBE20) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0000 hex | 00FF hex | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the MAC address for the Communication Board Ethernet 20/25/41 (CBE20/CBE25/CBE41).
+
+### r8956[0...1] CBExx cyclic connection state
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (PN CBE20), CU_MV_DP (PN CBE20) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 13 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+5.1
+
+**Description:**
+  
+Displays the status of the cyclic PROFINET connections via the Communication Board
+Ethernet 20/25/41 (CBE20/CBE25/CBE41).
+
+**Value:**
+  
+0:
+Interrupted  
+1:
+Not connected  
+2:
+Connection starts to be established  
+3:
+Module information expected  
+4:
+Module information received  
+5:
+Module address expected  
+6:
+Module address received  
+7:
+Parameterization data expected  
+8:
+Parameterization data received  
+9:
+Evaluate parameterization data  
+10:
+Connection being established completion expected  
+11:
+Configured controller RUN expected  
+12:
+Configured controller STOP  
+13:
+Configured controller RUN
+
+**Index:**
+  
+[
+0]:
+Controller 1  
+[
+1]:
+Controller 2
+
+**Note:**
+  
+For CBE20, the parameter for firmware versions "PROFINET Device" and "EtherNet/IP"
+(p8835 = 1, 4) is active.  
+For PROFINET, the following applies:  
+If value = 10:  
+If the connection remains in this state, then when using PROFINET IRT the following
+can apply:  
+- topology error (incorrect port assignment).  
+- synchronization missing.  
+For EtherNet/IP, the following applies:  
+Only a cyclic connection is possible for EtherNet/IP. Index 0 indicates the status
+of the cyclic connection.
+
+### r8957[0...5] CBExx cyclic connection diagnostics
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (PN CBE20), CU_MV_DP (PN CBE20) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+5.1
+
+**Description:**
+  
+Display to diagnose the cyclic PROFINET connections via the Communication Board Ethernet
+20/25/41 (CBE20/CBE25/CBE41).
+
+**Index:**
+  
+[
+0]:
+Number of cyclic connections  
+[
+1]:
+Number of send subslots of all connections  
+[
+2]:
+Number of send net data (bytes) of all connections  
+[
+3]:
+Number of receive subslots of all connections  
+[
+4]:
+Number of receive net data (bytes) of all connections  
+[
+5]:
+Connection type (RT, IRT)
+
+**Note:**
+  
+For CBE20, the parameter for firmware versions "PROFINET Device" and "EtherNet/IP"
+(p8835 = 1, 4) is active.  
+For PROFINET, the following applies:  
+For index [5]:  
+Bit 0 = 1: there is at least one RT connection.  
+Bit 1 = 1: there is an IRT connection.  
+For EtherNet/IP, the following applies:  
+For index [1, 3, 5]:  
+These indices are not relevant.
+
+### r8959 CBExx DAP ID
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (PN CBE20), CU_MV_DP (PN CBE20) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0000 hex | FFFF FFFF hex | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the DAP ID for PROFINET via the Communication Board Ethernet 20/25/41 (CBE20/CBE25/CBE41).  
+The combination of device ID (r8909) and DAP ID (r8959) uniquely identifies a PROFINET
+access point.
+
+**Note:**
+  
+DAP ID: Device Access Point ID  
+DAP ID = 20008 hex: SINAMICS CBE20 V4.6  
+DAP ID = 20009 hex: SINAMICS CBE20 V4.7  
+DAP ID = 2000A hex: SINAMICS CBE20 V4.8  
+DAP ID = 2000C hex: SINAMICS CBE20 V5.1  
+DAP ID = 2000D hex: SINAMICS CBE20 V5.2
+
+### r8960[0...3] PN subslot controller assignment
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTORGL, VECTOR3P, VECTORSL, VECTORM2C, VECTORDM, A_INFMV, B_INFMV, A_INFM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, BMM2C, ENC | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 8 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+5.1
+
+**Description:**
+  
+Displays the controller assignment of a PROFINET subslot on the actual drive object.  
+The display is only relevant for Shared Device.
+
+**Index:**
+  
+[
+0]:
+Subslot 2 PROFIsafe  
+[
+1]:
+Subslot 3 PZD telegram  
+[
+2]:
+Subslot 4 PZD supplementary data  
+[
+3]:
+Subslot 5 PZD supplementary data
+
+**Dependency:**
+  
+  
+Refer to:
+r8961, r8962
+
+**Note:**
+  
+Example:  
+If the parameter contains the value 2 in index [1], then this means that subslot 3
+is assigned to controller 2.
+
+### r8961[0...3] PN IP Address Remote Controller 1
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Displays the IP address of the first PROFINET controller connected with the device
+via PN onboard.
+
+### r8962[0...3] IP address remote controller 2
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Displays the IP address of the second PROFINET controller connected with the device
+via PN onboard.  
+The display is only relevant for Shared Device - or system redundancy.
+
+### r8970[0...3] CBExx subslot controller assignment
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (PN CBE20), CU_MV_DP (PN CBE20), VECTORMV (PN CBE20), VECTORGL (PN CBE20), VECTOR3P (PN CBE20), VECTORSL (PN CBE20), VECTORM2C (PN CBE20), VECTORDM (PN CBE20), A_INFMV (PN CBE20), B_INFMV (PN CBE20), A_INFM2C (PN CBE20), TECBASE (PN CBE20), TM31 (PN CBE20), TM15DI_DO (PN CBE20), TM150 (PN CBE20), TB30 (PN CBE20), BMM2C (PN CBE20), ENC (PN CBE20) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 8 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+5.1
+
+**Description:**
+  
+Displays the controller assignment of a PROFINET subslot on the actual drive object.
+
+**Index:**
+  
+[
+0]:
+Subslot 2 PROFIsafe  
+[
+1]:
+Subslot 3 PZD telegram  
+[
+2]:
+Subslot 4 PZD supplementary data  
+[
+3]:
+Subslot 5 PZD supplementary data
+
+**Dependency:**
+  
+  
+Refer to:
+r8971, r8972
+
+**Note:**
+  
+Example:  
+If the parameter contains the value 2 in index [1], then this means that subslot 3
+is assigned to controller 2.
+
+### r8971[0...3] CBExx IP address remote controller 1
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (PN CBE20), CU_MV_DP (PN CBE20) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Displays the IP address of the first PROFINET controller connected with the device
+via CBE20/CBE25/CBE41.
+
+### r8972[0...3] CBExx IP address remote controller 2
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN (PN CBE20), CU_MV_DP (PN CBE20) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Displays the IP address of the second PROFINET controller connected with the device
+via CBE20/CBE25/CBE41.
+
+### p8979 Activate SNMP
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Communications | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1 | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+5.2
+
+**Description:**
+  
+The setting to activate/deactivate SNMP for the Industrial Ethernet interface (X127)
+and the onboard PROFINET interface (X150).  
+Facilitates SNMP access for network diagnostic tools (e.g. PRONETA).
+
+**Value:**
+  
+0:
+No  
+1:
+Yes
+
+**Notice:**
+  
+When SNMP is activated, carefully note the impact relating to Industrial Security.
+
+**Note:**
+  
+SNMP: Simple Network Management Protocol  
+A change only becomes effective after a POWER ON or reset.  
+The setting is only active on onboard interfaces (X127/X150).  
+For PROFINET CBExx, SNMP is always activated.
+
+### p8984[0...1] BI: Web server interface enable signal source
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 1   [ 1 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+5.1
+
+**Description:**
+  
+Sets the signal source to enable the interface to access the web server.
+
+**Index:**
+  
+[
+0]:
+Reserved  
+[
+1]:
+PROFINET X150
+
+**Dependency:**
+  
+The web server must be activated using p8986.0 = 1 before it can be used.  
+  
+Refer to:
+p8986
+
+**Note:**
+  
+BI:p8984[1] = 1 signal:  
+PROFINET interface X150 is enabled for access to the web server.  
+BI:p8984[1] = 0 signal:  
+PROFINET interface X150 is blocked for access to the web server.
+
+### p8985[0...1] Web server interface configuration
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0000 bin   [ 1 ] 0001 bin |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+5.1
+
+**Description:**
+  
+Setting to block the interface for the http access to the web server.
+
+**Index:**
+  
+[
+0]:
+Reserved  
+[
+1]:
+PROFINET X150
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Inhibit access via http | No | Yes | - |
+
+**Dependency:**
+  
+p8985[1].0 is only relevant for:  
+- p8986.0 = 1 (activate web server)  
+- p8986.1 = 0 (enable http)  
+- p8984[1] = 1 signal (enable the web server for X150)  
+  
+Refer to:
+p8984, p8986
+
+**Note:**
+  
+p8985[1].0 = 1:  
+PROFINET interface X150 is blocked for http access to the web server.  
+p8985[1].0 = 0:  
+PROFINET interface X150 is enabled for http access to the web server.
+
+### p8986 Web server configuration
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0000 bin |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.6
+
+**Description:**
+  
+Setting to activate and configure the "Web server" function in the drive.  
+It is possible to access the web server via the integrated Ethernet and PROFINET interfaces
+of the drive. The addressing is realized via the set IP address.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Activating | No | Yes | - |
+| 01 | Only permit access via https | No | Yes | - |
+| 02 | Enable "SINAMICS" user | No | Yes | - |
+| 03 | Enable "Administrator" user | No | Yes | - |
+
+### p8987[0...1] Web server port assignment
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 1 | 32767 | [ 0 ] 80   [ 1 ] 443 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.6
+
+**Description:**
+  
+Sets the port assignment for the web server.
+
+**Index:**
+  
+[
+0]:
+Port for standard transfer (http)  
+[
+1]:
+Port for secure transfer (https)
+
+**Note:**
+  
+With the exception of values 80 and 443, values greater than or equal to 1024 are
+permitted.
+
+### p8994[0...1] BI: Comm tool interface enable signal source
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 1   [ 1 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+5.1
+
+**Description:**
+  
+Sets the signal source to enable the interface to access a commissioning tool.
+
+**Index:**
+  
+[
+0]:
+Reserved  
+[
+1]:
+PROFINET X150
+
+**Note:**
+  
+The parameter influences access operations initiated by STARTER, Startdrive and SIMATIC
+HMI.  
+BI: p8994[1] = 1 signal:  
+PROFINET interface X150 is enabled for access by a commissioning tool.  
+BI: p8994[1] = 0 signal:  
+PROFINET interface X150 is blocked for access by a commissioning tool.
+
+### p9206[0...2] Topology direct access
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Topology | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 4294967295 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Data setting to read topology properties.  
+The result is displayed depending on the property in r9207 or r9208.  
+For index [0]:  
+0: actual topology, 1: target topology  
+For index [1]:  
+Sets the component number of the component involved.  
+For index [2]:  
+7: Name (r9208)  
+8: Component type (r9207)  
+9: Number of DRIVE-CLiQ connections (r9207)  
+11: Manufacturer (upper byte) and version (lower byte) (r9207)  
+12: Serial number (r9208)  
+13: Index (r9207)  
+15: Comparison level (r9207)  
+23: Article number (r9207)  
+24: Hardware serial number (r9208)  
+25: envelope article number (r9207)  
+28: Firmware version (r9207)  
+29: EEPROM version (r9207)  
+30: Hardware version (r9207)  
+1000: Name of DRIVE-CLiQ connection 0 (r9208)  
+1001: Name of DRIVE-CLiQ connection 1 (r9208)  
+...  
+1015: Name of DRIVE-CLiQ connection 15 (r9208)
+
+**Index:**
+  
+[
+0]:
+Actual topology/target topology  
+[
+1]:
+Component number  
+[
+2]:
+Identifier/property
+
+**Dependency:**
+  
+  
+Refer to:
+r9207, r9208
+
+### r9207 Topology direct access integer value
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Topology | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the value for the property set in p9206.  
+A value is only displayed for integer type properties.
+
+**Dependency:**
+  
+  
+Refer to:
+p9206, r9208
+
+### r9208[0...50] Topology direct access string
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Topology | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the value for the property set in p9206.  
+A value is only displayed for string type properties.
+
+**Dependency:**
+  
+  
+Refer to:
+p9206, r9207
+
+**Note:**
+  
+An ASCII table (excerpt) can be found, for example, in the appendix to the List Manual.
+
+### p9210 Flashing component number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Topology | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 499 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the component number for a component to get its status LED to flash.
+
+**Dependency:**
+  
+  
+Refer to:
+p9211
+
+### p9211 Flash function
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Topology | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| -1 | 1 | [ 0 ] -1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the function for the components selected in p9210.  
+After initiating a function, the parameter is automatically reset again.  
+Example:  
+- set the component number (p9210).  
+- select the "flashing on" function (set p9211 = 1).
+
+**Value:**
+  
+-1:
+Select function  
+0:
+Flashing off  
+1:
+Flashing on
+
+**Dependency:**
+  
+  
+Refer to:
+p9210
+
+**Notice:**
+  
+If a task cannot be executed (e.g. the component number in p9210 does not exist),
+the following applies:  
+- there is no negative feedback signal.  
+- the value is reset anyway.
+
+### r9220 Statistics number of entries
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Displays the number of statistic entries in r9222.
+
+**Dependency:**
+  
+In p9221, the component Id is set whose statistical entries are to be displayed.  
+  
+Refer to:
+p9221, r9222
+
+### p9221 Statistic components Id
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0000 hex | 00FF hex | [ 0 ] 0002 hex |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Selects the component Id whose statistics are to be displayed in r9222.
+
+**Dependency:**
+  
+  
+Refer to:
+r9220, r9222
+
+### r9222[0...n] Statistic DRIVE-CLiQ acyclic communication
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**r9220 | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Displays the statistics for the acyclic DRIVE-CLiQ communication of a component.  
+The component is preset in p9221.  
+The entry comprises the following elements:  
+Index 0: Parameter Id.  
+Index 1: Number of messages sent.  
+Index 2: Minimum time of all acyclic tasks referred to parameter Id (index 0).  
+Index 3: Maximum time of all acyclic requests referred to the parameter Id (index
+0).  
+Index 4: Average of all acyclic requests referred to the parameter Id (index 0).  
+The time unit is 10 µs.
+
+**Dependency:**
+  
+The number of statistic entries is displayed in p9220.  
+In p9221, the component Id can be set whose statistic is to be displayed.  
+  
+Refer to:
+r9220, p9221
+
+**Note:**
+  
+As a statistic entry comprises 5 data, when calling the entries via the terminal,
+a size that represents a multiple of 5 must be specified.  
+Example:  
+The 2nd entry should be called:  
+rdp 1 9222 5 5  
+or  
+rdpa 1 9222 5 5
+
+### r9406[0...19] PS file parameter number parameter not transferred
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the parameters that were not able to be transferred when reading the parameter
+back-up files (PS files) from the non-volatile memory (e.g. memory card).  
+r9406[0] = 0  
+--> All of the parameter values were able to be transferred error-free.  
+r9406[0...x] > 0  
+--> indicates the parameter number in the following cases:  
+- parameter, whose value was not able to be completely accepted.  
+- indexed parameter, where at least 1 index was not able to be accepted. The first
+index that is not transferred is displayed in r9407.
+
+**Dependency:**
+  
+  
+Refer to:
+r9407, r9408
+
+**Note:**
+  
+All indices from r9406 to r9408 designate the same parameter.  
+r9406[x] parameter number, parameter not accepted  
+r9407[x] parameter index, parameter not accepted  
+r9408[x] fault code, parameter not accepted
+
+### r9407[0...19] PS file parameter index parameter not transferred
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the first index of the parameters that could not be transferred when the
+parameter backup files (PS files) were read from the non-volatile memory (e.g. memory
+card).  
+If, from an indexed parameter, at least one index was not able to be transferred,
+then the parameter number is displayed in r9406[n] and the first index that was not
+transferred is displayed in r9407[n].  
+r9406[0] = 0  
+--> All of the parameter values were able to be transferred error-free.  
+r9406[n] > 0  
+--> Displays r9407[n] the first index of the parameter number r9406[n] that was not
+transferred.
+
+**Dependency:**
+  
+  
+Refer to:
+r9406, r9408
+
+**Note:**
+  
+All indices from r9406 to r9408 designate the same parameter.  
+r9406[x] parameter number, parameter not accepted  
+r9407[x] parameter index, parameter not accepted  
+r9408[x] fault code, parameter not accepted
+
+### r9408[0...19] PS file fault code parameter not transferred
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Only for internal Siemens service purposes.
+
+**Dependency:**
+  
+  
+Refer to:
+r9406, r9407
+
+**Note:**
+  
+All indices from r9406 to r9408 designate the same parameter.  
+r9406[x] parameter number, parameter not accepted  
+r9407[x] parameter index, parameter not accepted  
+r9408[x] fault code, parameter not accepted
+
+### r9409 Number of parameters to be saved
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the number of modified parameters and those that have still not be saved
+for this drive object.
+
+**Dependency:**
+  
+  
+Refer to:
+p0971, p0977
+
+**Notice:**
+  
+Inherent to the system, the list of the parameters to be backed up is empty after
+the following actions:  
+- Download  
+- Warm restart  
+- Factory setting  
+In these cases, a new parameter backup must be initiated, which is then the starting
+point for the list of modified parameters.
+
+**Note:**
+  
+The modified parameters that still need to be saved are internally listed in r9410
+... r9419.
+
+### r9490 Number of BICO interconnections to other drives
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the number of signal sources from this drive to other drives/drive objects
+(Binector Output/Connector Output, BO/CO).
+
+**Dependency:**
+  
+  
+Refer to:
+r9491, r9492, p9493
+
+### r9491[0...9] BI/CI of BICO interconnections to other drives
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the signal receiver list (Binector Input/Connector Input, BI/CI) for the
+first interconnections between this drive and other drives/drive objects.
+
+**Dependency:**
+  
+  
+Refer to:
+r9490, r9492, p9493
+
+**Notice:**
+  
+A drive cannot be deleted if this list is not empty!  
+Otherwise, another drive would continue to attempt to read a signal from a drive that
+no longer existed.
+
+**Note:**
+  
+All indices of r9491 to p9493 designate the same interconnection.  
+r9491[x] contains the signal receiver and r9492[x] the matching signal source; p9493[x]
+can be set to modify the interconnection.
+
+### r9492[0...9] BO/CO of BICO interconnections to other drives
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the signal source list (Binector Output/Connector Output, BO/CO) for the
+first interconnections between this drive and other drives/drive objects.
+
+**Dependency:**
+  
+  
+Refer to:
+r9490, r9491, p9493
+
+**Notice:**
+  
+A drive cannot be deleted if this list is not empty!  
+Otherwise, another drive would continue to attempt to read a signal from a drive that
+no longer existed.
+
+**Note:**
+  
+All indices of r9491 to p9493 designate the same interconnection.  
+r9491[x] contains the signal receiver and r9492[x] the matching signal source; p9493[x]
+can be set to modify the interconnection.
+
+### p9493[0...9] Reset BICO interconnections to other drives
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 15 | [ 0 ] 15 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Setting to reset the BICO interconnections to other drives.  
+Each interconnection can be individually reset.
+
+**Value:**
+  
+0:
+Set connection to 0  
+1:
+Set connection to 1 (100 %)  
+2:
+Set connection to factory setting  
+15:
+Finished
+
+**Dependency:**
+  
+  
+Refer to:
+r9490, r9491, r9492
+
+**Note:**
+  
+All indices of r9491 to p9493 designate the same interconnection.  
+r9491[x] contains the signal receiver and r9492[x] the matching signal source; p9493[x]
+can be set to modify the interconnection.
+
+### p9495 BICO behavior for deactivated drive objects
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTOR3P, VECTORSL, VECTORM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, ENC | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 2 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the behavior for BICO interconnections to drive objects that are either not capable
+of operation or have been deactivated.  
+BO/CO parameters are on the drive object that is either not capable of operation or
+has been deactivated (signal source).
+
+**Value:**
+  
+0:
+Inactive  
+1:
+Save interconnections  
+2:
+Save interconnections and establish the factory setting
+
+**Dependency:**
+  
+  
+Refer to:
+p9496, p9497, p9498, p9499  
+Refer to:
+A01318, A01507
+
+**Note:**
+  
+For p9495 = 0, the following applies:  
+- the number of interconnections is zero (p9497 = 0).  
+For p9495 not equal to 0, the following applies:  
+- the BI/CI parameters involved are listed in p9498[0...29] (signal sink).  
+- the associated BO/CO parameters are listed in p9499[0...29] (signal source).
+
+### p9496 BICO behavior when activating drive objects
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTOR3P, VECTORSL, VECTORM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, ENC | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 2 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the behavior when activating BICO interconnections to drive objects that are
+either not capable of operation or have been deactivated.
+
+**Value:**
+  
+0:
+Inactive  
+1:
+Restore the interconnections from the list  
+2:
+Delete the interconnections from the list
+
+**Dependency:**
+  
+  
+Refer to:
+p9495, p9497, p9498, p9499  
+Refer to:
+A01318, A01507
+
+**Note:**
+  
+The BI/CI parameters involved are listed in p9498[0...29] (signal sink).  
+The associated BO/CO parameters are listed in p9499[0...29] (signal source).  
+After p9496 = 1, 2 the following applies:  
+- p9497 = 0  
+- p9496 = 0
+
+### p9497 BICO interconnections to deactivated drive objects number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTOR3P, VECTORSL, VECTORM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, ENC | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the number of saved BICO interconnections to drive objects that are either
+not capable of operation or have been deactivated.  
+BO/CO parameters are on the drive object that is either not capable of operation or
+has been deactivated (signal source).
+
+**Dependency:**
+  
+  
+Refer to:
+p9495, p9496, p9498, p9499  
+Refer to:
+A01318, A01507
+
+### p9498[0...29] BICO BI/CI parameters to deactivated drive objects
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTOR3P, VECTORSL, VECTORM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, ENC | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the saved BI/CI parameters (signal sink), whose source is located on drive
+objects that are either not capable of operation or have been deactivated.
+
+**Dependency:**
+  
+  
+Refer to:
+p9495, p9496, p9497, p9499  
+Refer to:
+A01318, A01507
+
+**Note:**
+  
+A BICO interconnection (signal sink, signal source) is displayed in the same index
+of p9498 and p9499.
+
+### p9499[0...29] BICO BO/CO parameters to deactivated drive objects
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP, VECTORMV, VECTOR3P, VECTORSL, VECTORM2C, TECBASE, TM31, TM15DI_DO, TM150, TB30, ENC | **P-Group:**Commands | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the saved BO/CO parameters (signal source), which are located on drive objects
+that are either not capable of operation or have been deactivated.
+
+**Dependency:**
+  
+  
+Refer to:
+p9495, p9496, p9497, p9498  
+Refer to:
+A01318, A01507
+
+**Note:**
+  
+A BICO interconnection (signal sink, signal source) is displayed in the same index
+of p9498 and p9499.
+
+### p9904 Topology comparison acknowledge differences
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 1) | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Topology | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0000 hex | FFFF FFFF hex | [ 0 ] 0000 hex |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+If, when comparing the actual topology and target topology, only error has occurred,
+that can be acknowledged, then using this parameter, a new comparison can be started
+- acknowledging the error in the target topology.  
+Differences that can be acknowledged:  
+- topology comparison, component shifted  
+- topology comparison, serial number of a component has been detected to be different
+(byte 3 = 1)  
+- topology comparison shows one component that is connected differently  
+The following parameter values are available:  
+p9904 = 1 --> the procedure is started.  
+p9904 = 0 after starting --> the procedure has been successfully completed.  
+p9904 > 1 after starting --> the procedure has not been successfully completed.  
+The possible causes for an unsuccessful procedure are located in bytes 4, 3, 2.  
+Byte 2:  
+Number of structural differences.  
+Byte 3:  
+Number of differences that can be acknowledged (p9904).  
+Byte 4:  
+Number of differences. These differences can be resolved as follows:  
+- sets the topology comparison (p9906 or p9907/p9908).  
+- change over the actual topology.  
+The appropriate action should be selected corresponding to the message that is displayed/output.
+
+**Note:**
+  
+In order to permanently accept the acknowledgment of the fault that can be resolved,
+then it must be saved in a non-volatile fashion (p0977).
+
+### p9905 Device specialization
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 1) | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Topology | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 2 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+With p9905 = 1, the serial numbers and the hardware versions of all of the components
+are transferred from the actual topology into the target topology and a new comparison
+is started.  
+For this device specialization, the components of the target topology may only differ
+from those of the actual topology by the serial numbers.  
+With p9905 = 2, the serial numbers, the hardware versions and the article numbers
+of all of the components are transferred from the actual topology into the target
+topology and a new comparison is started.  
+For this device specialization, the components of the target topology may only differ
+from those of the actual topology by the serial numbers and article numbers.
+
+**Note:**
+  
+p9905 is automatically set to 0 at the end of the operation.  
+In order to permanently accept the data, it is necessary to save in a non-volatile
+fashion (p0977).
+
+### p9906 Topology comparison all components comparison level
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 1) | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Topology | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 99 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the type of comparison between the actual topology and target topology.  
+The comparison is started by setting the required value.
+
+**Value:**
+  
+0:
+High: Compares the complete electronic rating plate  
+1:
+Medium: Compares the component type and the article number  
+2:
+Low: Compares the component type  
+3:
+Minimum: Compares the component class  
+99:
+Topology has different comparison stages
+
+**Note:**
+  
+The electronic rating plate comprises the following data:  
+- component type (e.g. "SMC20")  
+- article number (e.g. "6SL3055-0AA0-5BA0")  
+- manufacturer (e.g. SIEMENS)  
+- hardware version (e.g. "A")  
+- Serial No. (e.g. "T-P30050495")  
+When comparing the topology, the following data is compared in the target and actual
+topologies:  
+p9906 = 0: Component type, Article Number, Hardware version, Manufacturer, Serial
+No.  
+p9906 = 1: Component type, Article Number  
+p9906 = 2: Component type  
+p9906 = 3: Component class (e.g. Sensor Module or Motor Module)
+
+### p9907 Topology comparison component number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 1) | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Topology | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 199 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Enters the number of the component where the setting of how the actual topology should
+be compared to the target topology should be changed.
+
+**Dependency:**
+  
+  
+Refer to:
+p9908
+
+### p9908 Topology comparison of a component comparison level
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 1) | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Topology | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 99 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Sets the type of comparison of a component in the target topology with the actual
+topology.  
+The comparison is started by setting the required value.
+
+**Value:**
+  
+0:
+High: Compares the complete electronic rating plate  
+1:
+Medium: Compares the component type and the article number  
+2:
+Low: Compares the component type  
+3:
+Minimum: Compares the component class  
+99:
+Topology has different comparison stages
+
+**Dependency:**
+  
+  
+Refer to:
+p9907
+
+**Note:**
+  
+The electronic rating plate comprises the following data:  
+- component type (e.g. "SMC20")  
+- article number (e.g. "6SL3055-0AA0-5BA0")  
+- manufacturer (e.g. SIEMENS)  
+- hardware version (e.g. "A")  
+- Serial No. (e.g. "T-P30050495")  
+When comparing the topology, the following data is compared in the target and actual
+topologies:  
+p9908 = 0: Component type, Article No., Hardware version, Manufacturer, Serial No.  
+p9908 = 1: Component type, Article Number  
+p9908 = 2: Component type  
+p9908 = 3: Component class (e.g. Sensor Module or Motor Module)
+
+### p9909 Topology comparison component replacement
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 1) | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Topology | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1 | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+For p9909 = 1, the serial number and the hardware version of the new replaced component
+is automatically transferred from the actual topology into the target topology and
+then saved in a non-volatile fashion.  
+For the components that have been replaced, the electronic rating plate must match
+as far as the following data is concerned:  
+- component type (e.g. "SMC20")  
+- article number (e.g. "6SL3055-0AA0-5BA0")  
+For p9909 = 0, serial numbers and hardware versions are not automatically transferred.
+In this case, the transfer must be made using p9904.
+
+**Dependency:**
+  
+  
+Refer to:
+p9904, p9905
+
+**Note:**
+  
+The modified target topology is automatically saved in a non-volatile fashion when
+the drive object runs-up (e.g. after a POWER ON).  
+Special case for Control Unit and option slot modules:  
+When replacing these components, independent of p9909, the serial number and hardware
+version are automatically transferred and saved in a non-volatile fashion.
+
+### p9910 Target topology accept additional components
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 1) | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Topology | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 6 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Accept additional inserted DRIVE-CLiQ components into the target topology.  
+The corresponding drive objects are added to the project.
+
+**Value:**
+  
+0:
+No selection  
+1:
+Drive object type SERVO  
+2:
+Drive object type VECTOR  
+3:
+SINAMICS GM (DFEMV & VECTORMV)  
+4:
+SINAMICS SM (AFEMV & VECTORMV)  
+5:
+SINAMICS GL (VECTORGL)  
+6:
+SINAMICS SL (VECTORSL)
+
+### p9915 DRIVE-CLiQ data transfer error shutdown threshold master
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 1) | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Topology | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0000 hex | 0007 07FF hex | [ 0 ] 0007 02FF hex |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Only for internal Siemens service purposes.
+
+### p9916 DRIVE-CLiQ data transfer error shutdown threshold slave
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:** C1( 1) | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**Topology | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0000 hex | 0007 07FF hex | [ 0 ] 0007 02FF hex |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Only for internal Siemens service purposes.
+
+### p9918 Licensing active Trial License
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**2 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+5.1
+
+**Description:**
+  
+Activating the "Trial License" function.  
+Activation must be made for each period. A period comprises 300 hours. 3 periods are
+available.  
+The actual status of the "Trial License" function is indicated in r9919.  
+It is not possible to activate the "Trial License" function in the following situations:  
+- the existing license is adequate.  
+- the function requiring a license does not support "Trial License".
+
+**Value:**
+  
+0:
+Inactive  
+1:
+Activate Trial License
+
+**Dependency:**
+  
+  
+Refer to:
+r9919
+
+**Note:**
+  
+After a period has expired, then p9918 is automatically set = 0.
+
+### r9919[0...3] Licensing Trial License status
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+5.1
+
+**Description:**
+  
+Displays the status of the "Trial License" function.
+
+**Index:**
+  
+[
+0]:
+Period actual remaining time  
+[
+1]:
+Period actual  
+[
+2]:
+Maximum period duration  
+[
+3]:
+Maximum number of periods
+
+**Dependency:**
+  
+  
+Refer to:
+p9918
+
+**Note:**
+  
+For index [0]:  
+Displays the remaining time of the actual period in hours.  
+For index [1]:  
+Displays the actual periods.  
+For index [2]:  
+Displays the maximum duration of a period in hours.  
+For index [3]:  
+Displays the number of maximum periods.
+
+### p9920[0...99] Licensing enter license key
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Enters the license key for this drive unit.  
+Example of the license key:  
+EACZ-QBCA = 69 65 67 90 45 81 66 67 65 dec (ASCII characters)  
+Index 0 = license key character 1 (e.g. 69 dec)  
+Index 1 = license key character 2 (e.g. 65 dec)  
+...  
+Index 8 = license key character 9 (e.g. 65 dec)  
+Index 9 = license key character 10 (e.g. 0 dec)  
+...
+
+**Dependency:**
+  
+  
+Refer to:
+r7843, p9921  
+Refer to:
+F13000, A13001, F13010
+
+**Notice:**
+  
+An ASCII table (excerpt) can be found, for example, in the appendix to the List Manual.  
+With the STARTER commissioning tool, the ASCII characters are not entered coded, i.e.
+the license key characters can be entered as printed in the Certificate of License.
+In this case, the commissioning tool codes the characters.
+
+**Note:**
+  
+For an invalid license key, all the indices have the value 0 dec.  
+Only the ASCII characters contained in a license key can be entered ("1" to "9", "A"
+to "H", "K" to "N", "P" to "Z" as well as "-").  
+When manually changing p9920[x] to the value 0 dec, all the values of all the following
+indices are also set to 0 dec.  
+After entering the license key, the license key must be activated (p9921).  
+The following fault and LED indicate that the licensing is not adequate:  
+- F13000 --> licensing not adequate  
+- LED READY --> flashes red at approximately 2 Hz
+
+### p9921 Licensing activate license key
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**2 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Activates the entered license key.  
+The following is executed when activating the license key.  
+- the checksum of the entered license key is checked.  
+- the entered license key is saved in a non-volatile fashion on the memory card.  
+- re-enter the license key.
+
+**Value:**
+  
+0:
+Inactive  
+1:
+Activate start license key
+
+**Dependency:**
+  
+  
+Refer to:
+p9920  
+Refer to:
+F13000, A13001, F13010
+
+**Note:**
+  
+Before activation, the license key entered using parameter p9920 is checked. If this
+check identifies an error, activation is rejected. In this case, writing a 1 to p9921
+is rejected.  
+When the license key has been activated, p9921 is automatically set to 0.
+
+### r9925[0...99] Firmware file incorrect
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the directory and name of the file whose status as shipped from the factory
+was identified as impermissible.
+
+**Dependency:**
+  
+  
+Refer to:
+r9926  
+Refer to:
+A01016
+
+**Note:**
+  
+The directory and name of the file is displayed in the ASCII code.
+
+### r9926 Firmware check status
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**2 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the status when the firmware is checked when the system is booted.  
+0: Firmware not yet checked.  
+1: Check running.  
+2: Check successfully completed.  
+3: Check indicates an error.
+
+**Dependency:**
+  
+  
+Refer to:
+r9925  
+Refer to:
+A01016
+
+### p9930[0...8] System logbook activation
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Only for service purposes.
+
+**Index:**
+  
+[
+0]:
+System logbook stage (0: Not active)  
+[
+1]:
+COM2/COM1 (0: COM2, 1: COM1)  
+[
+2]:
+Activate file write (0: Not active)  
+[
+3]:
+Display time stamp (0: Not displayed)  
+[
+4...7]:
+Reserved  
+[
+8]:
+System logbook file size (stages, each 10 kB)
+
+**Notice:**
+  
+Before switching off the Control Unit, ensure that the system logbook is switched
+out (p9930[0] = 0).  
+If writing to the file is activated (p9930[2] = 1), writing to the file must be deactivated
+again before switching off the Control Unit (p9930[2] = 0) in order to ensure that
+the system logbook has been completely written to the file.
+
+### p9931[0...194] System logbook module selection
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0000 hex | FFFF FFFF hex | [ 0 ] 0000 hex |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+5.1
+
+**Description:**
+  
+Only for service purposes.
+
+### p9932 Save system logbook EEPROM
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 255 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Only for service purposes.
+
+### r9935.0 BO: POWER ON delay signal
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Display and binector output for a delay after POWER ON.  
+After switch-on, binector output r9935.0 is set with the start of the first sampling
+time and is again reset after approx. 100 ms.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | POWER ON delay signal | Low | High | - |
+
+## SINAMICS Parameter SINAMICS MV 09936 - 20079
+
+SINAMICS Parameter SINAMICS MV 09936 - 20079
+
+### r9936[0...199] DRIVE-CLiQ diagnostic error counter connection
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Integer32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.6
+
+**Description:**
+  
+Displays the error counter for the individual DRIVE-CLiQ connections/cables.  
+r9936[0]: sum of the error counter for all connections  
+r9936[1]: not used  
+r9936[2]: error counter for the feeder cable to DRIVE-CLiQ components with component
+number 2  
+...  
+r9936[199]: error counter for the feeder cable to DRIVE-CLiQ components with component
+number 199  
+The feeder cable is the DRIVE-CLiQ cable that is connected to a component in the direction
+of the Control Unit.
+
+**Dependency:**
+  
+  
+Refer to:
+p9937, p9938
+
+### p9937 DRIVE-CLiQ diagnostic configuration
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0000 0000 0000 0000 bin |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.6
+
+**Description:**
+  
+Sets the configuration for the DRIVE-CLiQ diagnostics (error counter r9936).  
+Using this function, connections and cables of DRIVE-CLiQ connections can be checked
+for transfer errors. The error counter is evaluated in the PHY blocks involved.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Alarm for connection error | No | Yes | - |
+| 08 | Reset error counter | No | Yes | - |
+
+**Dependency:**
+  
+  
+Refer to:
+r9936, p9938  
+Refer to:
+A01839
+
+**Note:**
+  
+For bit 00:  
+To activate this function, p9938 must be set to 0 (inactive).  
+After changing the error counter (r9936), an appropriate alarm is output.  
+The alarm automatically disappears after 5 seconds.  
+For bit 08:  
+With p9937.8 = 1, the error counters are reset (r9936[0...199]).  
+After the reset, p9937.8 is automatically set to 0.
+
+### p9938 DRIVE-CLiQ detailed diagnostics configuration
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 6 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.6
+
+**Description:**
+  
+Sets the configuration for the DRIVE-CLiQ detailed diagnostics (r9943).  
+Using the detailed diagnostics, it is possible to investigate data transfer errors
+on an individual connection, selected using p9942.
+
+**Value:**
+  
+0:
+Inactive  
+1:
+Sum send and receive errors  
+2:
+Only send errors  
+3:
+Only receive errors  
+4:
+Siemens internal  
+5:
+Siemens internal  
+6:
+Siemens internal
+
+**Dependency:**
+  
+The functions in p9938 can only be set for p9937.0 = 0.  
+  
+Refer to:
+r9936, p9937, p9939, p9942
+
+**Notice:**
+  
+For value = 0:  
+- detailed diagnostics is inactive.  
+- the error counter is active (r9936).  
+If value > 0:  
+- the detailed diagnostics as configured is active (r9943).  
+- the error counter is inactive (r9936).
+
+### p9939 DRIVE-CLiQ detailed diagnostics time interval
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 1 [s] | 3600 [s] | [ 0 ] 1 [s] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.6
+
+**Description:**
+  
+Sets the time interval for recording the error counter in r9943.
+
+**Dependency:**
+  
+  
+Refer to:
+r9936, p9938, p9942, r9943
+
+### p9942 DRIVE-CLiQ detailed diagnostics select individual connection
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 199 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.6
+
+**Description:**
+  
+Sets the component, whose feeder cable is monitored for data transfer errors.  
+The feeder cable is the DRIVE-CLiQ cable that is connected to a component in the direction
+of the Control Unit.  
+Errors that have occurred in the selected time interval (p9939) can be read-out from
+r9943.
+
+**Dependency:**
+  
+  
+Refer to:
+r9936, p9938, p9939, r9943
+
+### r9943 DRIVE-CLiQ detailed diagn. individual connection error counter
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Integer32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.6
+
+**Description:**
+  
+Displays the connection errors of the individual connection that have occurred within
+the time interval (p9939).  
+The detailed diagnostics for the individual connection is activated via p9938 > 0
+and is selected via p9942.
+
+**Dependency:**
+  
+  
+Refer to:
+r9936, p9938, p9939, p9942
+
+### r9975[0...7] System utilization measured
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [%] | - [%] | [ ] - [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the measured system utilization.  
+The higher the value displayed, the higher the system utilization.
+
+**Index:**
+  
+[
+0]:
+Computing time utilization (min)  
+[
+1]:
+Computing time utilization (averaged)  
+[
+2]:
+Computing time utilization (max)  
+[
+3]:
+Largest total utilization (min)  
+[
+4]:
+Largest total utilization (averaged)  
+[
+5]:
+Largest total utilization (max)  
+[
+6]:
+Reserved  
+[
+7]:
+Reserved
+
+**Dependency:**
+  
+  
+Refer to:
+r9976, r9979, r9980, r9981  
+Refer to:
+F01054, F01205
+
+**Note:**
+  
+For index [3...5]:  
+The total utilizations are determined using all sampling times used. The largest total
+utilizations are mapped here. The sampling time with the largest total utilization
+is displayed in r9979.  
+Total utilization:  
+Computing time load of sampling time involved including load from higher-priority
+sampling times (interrupts).
+
+### r9976[0...7] System utilization
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [%] | - [%] | [ ] - [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the system utilization.  
+If the utilization is greater than 100%, fault F01054 is output.
+
+**Index:**
+  
+[
+0]:
+Reserved  
+[
+1]:
+Computing time utilization  
+[
+2]:
+Reserved  
+[
+3]:
+Reserved  
+[
+4]:
+Reserved  
+[
+5]:
+Largest total utilization  
+[
+6]:
+Reserved  
+[
+7]:
+Reserved
+
+**Dependency:**
+  
+  
+Refer to:
+r9979, r9980  
+Refer to:
+F01054, F01205
+
+**Note:**
+  
+For index [1]:  
+The value shows the total computing time load of the system.  
+For index [5]:  
+The total utilization is determined using all sampling times used. The largest total
+utilization is mapped here. The sampling time with the largest total utilization is
+displayed in r9979.  
+Total utilization:  
+Computing time load of sampling time involved including load from higher-priority
+sampling times (interrupts).
+
+### r9979 Sampling time with largest total utilization
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [µs] | - [µs] | [ ] - [µs] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the sampling time with the largest total utilization.
+
+**Dependency:**
+  
+  
+Refer to:
+r7901, r9976  
+Refer to:
+F01054
+
+**Note:**
+  
+The largest total utilization is displayed in r9976[5].  
+Total utilization:  
+Computing time load of sampling time involved including load from higher-priority
+sampling times (interrupts).
+
+### r9980[0...165] Sampling times utilization calculated
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [%] | - [%] | [ ] - [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.6
+
+**Description:**
+  
+Displays the calculated utilizations for the active sampling times based on the existing
+target topology.
+
+**Index:**
+  
+[
+0]:
+Net utilization 0  
+[
+1]:
+Total utilization 0  
+[
+2]:
+Net utilization 1  
+[
+3]:
+Total utilization 1  
+[
+4]:
+Net utilization 2  
+[
+5]:
+Total utilization 2  
+[
+6]:
+Net utilization 3  
+[
+7]:
+Total utilization 3  
+[
+8]:
+Net utilization 4  
+[
+9]:
+Total utilization 4  
+[
+10]:
+Net utilization 5  
+[
+11]:
+Total utilization 5  
+[
+12]:
+Net utilization 6  
+[
+13]:
+Total utilization 6  
+[
+14]:
+Net utilization 7  
+[
+15]:
+Total utilization 7  
+[
+16]:
+Net utilization 8  
+[
+17]:
+Total utilization 8  
+[
+18]:
+Net utilization 9  
+[
+19]:
+Total utilization 9  
+[
+20]:
+Net utilization 10  
+[
+21]:
+Total utilization 10  
+[
+22]:
+Net utilization 11  
+[
+23]:
+Total utilization 11  
+[
+24]:
+Net utilization 12  
+[
+25]:
+Total utilization 12  
+[
+26]:
+Net utilization 13  
+[
+27]:
+Total utilization 13  
+[
+28]:
+Net utilization 14  
+[
+29]:
+Total utilization 14  
+[
+30]:
+Net utilization 15  
+[
+31]:
+Total utilization 15  
+[
+32]:
+Net utilization 16  
+[
+33]:
+Total utilization 16  
+[
+34]:
+Net utilization 17  
+[
+35]:
+Total utilization 17  
+[
+36]:
+Net utilization 18  
+[
+37]:
+Total utilization 18  
+[
+38]:
+Net utilization 19  
+[
+39]:
+Total utilization 19  
+[
+40]:
+Net utilization 20  
+[
+41]:
+Total utilization 20  
+[
+42]:
+Net utilization 21  
+[
+43]:
+Total utilization 21  
+[
+44]:
+Net utilization 22  
+[
+45]:
+Total utilization 22  
+[
+46]:
+Net utilization 23  
+[
+47]:
+Total utilization 23  
+[
+48]:
+Net utilization 24  
+[
+49]:
+Total utilization 24  
+[
+50]:
+Net utilization 25  
+[
+51]:
+Total utilization 25  
+[
+52]:
+Net utilization 26  
+[
+53]:
+Total utilization 26  
+[
+54]:
+Net utilization 27  
+[
+55]:
+Total utilization 27  
+[
+56]:
+Net utilization 28  
+[
+57]:
+Total utilization 28  
+[
+58]:
+Net utilization 29  
+[
+59]:
+Total utilization 29  
+[
+60]:
+Net utilization 30  
+[
+61]:
+Total utilization 30  
+[
+62]:
+Net utilization 31  
+[
+63]:
+Total utilization 31  
+[
+64]:
+Net utilization 32  
+[
+65]:
+Total utilization 32  
+[
+66]:
+Net utilization 33  
+[
+67]:
+Total utilization 33  
+[
+68]:
+Net utilization 34  
+[
+69]:
+Total utilization 34  
+[
+70]:
+Net utilization 35  
+[
+71]:
+Total utilization 35  
+[
+72]:
+Net utilization 36  
+[
+73]:
+Total utilization 36  
+[
+74]:
+Net utilization 37  
+[
+75]:
+Total utilization 37  
+[
+76]:
+Net utilization 38  
+[
+77]:
+Total utilization 38  
+[
+78]:
+Net utilization 39  
+[
+79]:
+Total utilization 39  
+[
+80]:
+Net utilization 40  
+[
+81]:
+Total utilization 40  
+[
+82]:
+Net utilization 41  
+[
+83]:
+Total utilization 41  
+[
+84]:
+Net utilization 42  
+[
+85]:
+Total utilization 42  
+[
+86]:
+Net utilization 43  
+[
+87]:
+Total utilization 43  
+[
+88]:
+Net utilization 44  
+[
+89]:
+Total utilization 44  
+[
+90]:
+Net utilization 45  
+[
+91]:
+Total utilization 45  
+[
+92]:
+Net utilization 46  
+[
+93]:
+Total utilization 46  
+[
+94]:
+Net utilization 47  
+[
+95]:
+Total utilization 47  
+[
+96]:
+Net utilization 48  
+[
+97]:
+Total utilization 48  
+[
+98]:
+Net utilization 49  
+[
+99]:
+Total utilization 49  
+[
+100]:
+Net utilization 50  
+[
+101]:
+Total utilization 50  
+[
+102]:
+Net utilization 51  
+[
+103]:
+Total utilization 51  
+[
+104]:
+Net utilization 52  
+[
+105]:
+Total utilization 52  
+[
+106]:
+Net utilization 53  
+[
+107]:
+Total utilization 53  
+[
+108]:
+Net utilization 54  
+[
+109]:
+Total utilization 54  
+[
+110]:
+Net utilization 55  
+[
+111]:
+Total utilization 55  
+[
+112]:
+Net utilization 56  
+[
+113]:
+Total utilization 56  
+[
+114]:
+Net utilization 57  
+[
+115]:
+Total utilization 57  
+[
+116]:
+Net utilization 58  
+[
+117]:
+Total utilization 58  
+[
+118]:
+Net utilization 59  
+[
+119]:
+Total utilization 59  
+[
+120]:
+Net utilization 60  
+[
+121]:
+Total utilization 60  
+[
+122]:
+Net utilization 61  
+[
+123]:
+Total utilization 61  
+[
+124]:
+Net utilization 62  
+[
+125]:
+Total utilization 62  
+[
+126]:
+Net utilization 63  
+[
+127]:
+Total utilization 63  
+[
+128]:
+Net utilization 64  
+[
+129]:
+Total utilization 64  
+[
+130]:
+Net utilization 65  
+[
+131]:
+Total utilization 65  
+[
+132]:
+Net utilization 66  
+[
+133]:
+Total utilization 66  
+[
+134]:
+Net utilization 67  
+[
+135]:
+Total utilization 67  
+[
+136]:
+Net utilization 68  
+[
+137]:
+Total utilization 68  
+[
+138]:
+Net utilization 69  
+[
+139]:
+Total utilization 69  
+[
+140]:
+Net utilization 70  
+[
+141]:
+Total utilization 70  
+[
+142]:
+Net utilization 71  
+[
+143]:
+Total utilization 71  
+[
+144]:
+Net utilization 72  
+[
+145]:
+Total utilization 72  
+[
+146]:
+Net utilization 73  
+[
+147]:
+Total utilization 73  
+[
+148]:
+Net utilization 74  
+[
+149]:
+Total utilization 74  
+[
+150]:
+Net utilization 75  
+[
+151]:
+Total utilization 75  
+[
+152]:
+Net utilization 76  
+[
+153]:
+Total utilization 76  
+[
+154]:
+Net utilization 77  
+[
+155]:
+Total utilization 77  
+[
+156]:
+Net utilization 78  
+[
+157]:
+Total utilization 78  
+[
+158]:
+Net utilization 79  
+[
+159]:
+Total utilization 79  
+[
+160]:
+Net utilization 80  
+[
+161]:
+Total utilization 80  
+[
+162]:
+Net utilization 81  
+[
+163]:
+Total utilization 81  
+[
+164]:
+Net utilization 82  
+[
+165]:
+Total utilization 82
+
+**Dependency:**
+  
+  
+Refer to:
+r7901, r9976, r9979  
+Refer to:
+F01054
+
+**Note:**
+  
+The corresponding sampling times can be read out in parameter r7901.  
+Net utilization:  
+Computing time load that is only called by the sampling time involved.  
+Total utilization:  
+Computing time load of sampling time involved including load from higher-priority
+sampling times (interrupts).
+
+### r9981[0...165] Sampling times utilization measured
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [%] | - [%] | [ ] - [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.6
+
+**Description:**
+  
+Displays the utilizations measured for the active sampling times.
+
+**Index:**
+  
+[
+0]:
+Net utilization 0  
+[
+1]:
+Total utilization 0  
+[
+2]:
+Net utilization 1  
+[
+3]:
+Total utilization 1  
+[
+4]:
+Net utilization 2  
+[
+5]:
+Total utilization 2  
+[
+6]:
+Net utilization 3  
+[
+7]:
+Total utilization 3  
+[
+8]:
+Net utilization 4  
+[
+9]:
+Total utilization 4  
+[
+10]:
+Net utilization 5  
+[
+11]:
+Total utilization 5  
+[
+12]:
+Net utilization 6  
+[
+13]:
+Total utilization 6  
+[
+14]:
+Net utilization 7  
+[
+15]:
+Total utilization 7  
+[
+16]:
+Net utilization 8  
+[
+17]:
+Total utilization 8  
+[
+18]:
+Net utilization 9  
+[
+19]:
+Total utilization 9  
+[
+20]:
+Net utilization 10  
+[
+21]:
+Total utilization 10  
+[
+22]:
+Net utilization 11  
+[
+23]:
+Total utilization 11  
+[
+24]:
+Net utilization 12  
+[
+25]:
+Total utilization 12  
+[
+26]:
+Net utilization 13  
+[
+27]:
+Total utilization 13  
+[
+28]:
+Net utilization 14  
+[
+29]:
+Total utilization 14  
+[
+30]:
+Net utilization 15  
+[
+31]:
+Total utilization 15  
+[
+32]:
+Net utilization 16  
+[
+33]:
+Total utilization 16  
+[
+34]:
+Net utilization 17  
+[
+35]:
+Total utilization 17  
+[
+36]:
+Net utilization 18  
+[
+37]:
+Total utilization 18  
+[
+38]:
+Net utilization 19  
+[
+39]:
+Total utilization 19  
+[
+40]:
+Net utilization 20  
+[
+41]:
+Total utilization 20  
+[
+42]:
+Net utilization 21  
+[
+43]:
+Total utilization 21  
+[
+44]:
+Net utilization 22  
+[
+45]:
+Total utilization 22  
+[
+46]:
+Net utilization 23  
+[
+47]:
+Total utilization 23  
+[
+48]:
+Net utilization 24  
+[
+49]:
+Total utilization 24  
+[
+50]:
+Net utilization 25  
+[
+51]:
+Total utilization 25  
+[
+52]:
+Net utilization 26  
+[
+53]:
+Total utilization 26  
+[
+54]:
+Net utilization 27  
+[
+55]:
+Total utilization 27  
+[
+56]:
+Net utilization 28  
+[
+57]:
+Total utilization 28  
+[
+58]:
+Net utilization 29  
+[
+59]:
+Total utilization 29  
+[
+60]:
+Net utilization 30  
+[
+61]:
+Total utilization 30  
+[
+62]:
+Net utilization 31  
+[
+63]:
+Total utilization 31  
+[
+64]:
+Net utilization 32  
+[
+65]:
+Total utilization 32  
+[
+66]:
+Net utilization 33  
+[
+67]:
+Total utilization 33  
+[
+68]:
+Net utilization 34  
+[
+69]:
+Total utilization 34  
+[
+70]:
+Net utilization 35  
+[
+71]:
+Total utilization 35  
+[
+72]:
+Net utilization 36  
+[
+73]:
+Total utilization 36  
+[
+74]:
+Net utilization 37  
+[
+75]:
+Total utilization 37  
+[
+76]:
+Net utilization 38  
+[
+77]:
+Total utilization 38  
+[
+78]:
+Net utilization 39  
+[
+79]:
+Total utilization 39  
+[
+80]:
+Net utilization 40  
+[
+81]:
+Total utilization 40  
+[
+82]:
+Net utilization 41  
+[
+83]:
+Total utilization 41  
+[
+84]:
+Net utilization 42  
+[
+85]:
+Total utilization 42  
+[
+86]:
+Net utilization 43  
+[
+87]:
+Total utilization 43  
+[
+88]:
+Net utilization 44  
+[
+89]:
+Total utilization 44  
+[
+90]:
+Net utilization 45  
+[
+91]:
+Total utilization 45  
+[
+92]:
+Net utilization 46  
+[
+93]:
+Total utilization 46  
+[
+94]:
+Net utilization 47  
+[
+95]:
+Total utilization 47  
+[
+96]:
+Net utilization 48  
+[
+97]:
+Total utilization 48  
+[
+98]:
+Net utilization 49  
+[
+99]:
+Total utilization 49  
+[
+100]:
+Net utilization 50  
+[
+101]:
+Total utilization 50  
+[
+102]:
+Net utilization 51  
+[
+103]:
+Total utilization 51  
+[
+104]:
+Net utilization 52  
+[
+105]:
+Total utilization 52  
+[
+106]:
+Net utilization 53  
+[
+107]:
+Total utilization 53  
+[
+108]:
+Net utilization 54  
+[
+109]:
+Total utilization 54  
+[
+110]:
+Net utilization 55  
+[
+111]:
+Total utilization 55  
+[
+112]:
+Net utilization 56  
+[
+113]:
+Total utilization 56  
+[
+114]:
+Net utilization 57  
+[
+115]:
+Total utilization 57  
+[
+116]:
+Net utilization 58  
+[
+117]:
+Total utilization 58  
+[
+118]:
+Net utilization 59  
+[
+119]:
+Total utilization 59  
+[
+120]:
+Net utilization 60  
+[
+121]:
+Total utilization 60  
+[
+122]:
+Net utilization 61  
+[
+123]:
+Total utilization 61  
+[
+124]:
+Net utilization 62  
+[
+125]:
+Total utilization 62  
+[
+126]:
+Net utilization 63  
+[
+127]:
+Total utilization 63  
+[
+128]:
+Net utilization 64  
+[
+129]:
+Total utilization 64  
+[
+130]:
+Net utilization 65  
+[
+131]:
+Total utilization 65  
+[
+132]:
+Net utilization 66  
+[
+133]:
+Total utilization 66  
+[
+134]:
+Net utilization 67  
+[
+135]:
+Total utilization 67  
+[
+136]:
+Net utilization 68  
+[
+137]:
+Total utilization 68  
+[
+138]:
+Net utilization 69  
+[
+139]:
+Total utilization 69  
+[
+140]:
+Net utilization 70  
+[
+141]:
+Total utilization 70  
+[
+142]:
+Net utilization 71  
+[
+143]:
+Total utilization 71  
+[
+144]:
+Net utilization 72  
+[
+145]:
+Total utilization 72  
+[
+146]:
+Net utilization 73  
+[
+147]:
+Total utilization 73  
+[
+148]:
+Net utilization 74  
+[
+149]:
+Total utilization 74  
+[
+150]:
+Net utilization 75  
+[
+151]:
+Total utilization 75  
+[
+152]:
+Net utilization 76  
+[
+153]:
+Total utilization 76  
+[
+154]:
+Net utilization 77  
+[
+155]:
+Total utilization 77  
+[
+156]:
+Net utilization 78  
+[
+157]:
+Total utilization 78  
+[
+158]:
+Net utilization 79  
+[
+159]:
+Total utilization 79  
+[
+160]:
+Net utilization 80  
+[
+161]:
+Total utilization 80  
+[
+162]:
+Net utilization 81  
+[
+163]:
+Total utilization 81  
+[
+164]:
+Net utilization 82  
+[
+165]:
+Total utilization 82
+
+**Dependency:**
+  
+  
+Refer to:
+r7901, r9975, r9980  
+Refer to:
+F01054
+
+**Note:**
+  
+The corresponding sampling times can be read out in parameter r7901.  
+Net utilization:  
+Computing time load that is only called by the sampling time involved.  
+Total utilization:  
+Computing time load of sampling time involved including load from higher-priority
+sampling times (interrupts).
+
+### r9982[0...4] Data memory utilization
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [%] | - [%] | [ ] - [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the calculated data memory utilization rates based on the existing target
+topology.
+
+**Index:**
+  
+[
+0]:
+Fast data memory 1  
+[
+1]:
+Fast data memory 2  
+[
+2]:
+Fast data memory 3  
+[
+3]:
+Fast data memory 4  
+[
+4]:
+Reserved
+
+**Dependency:**
+  
+  
+Refer to:
+F01068
+
+### r9983[0...4] Measured data memory utilization (actual load)
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [%] | - [%] | [ ] - [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the measured data memory utilization rates based on the existing target topology.
+
+**Index:**
+  
+[
+0]:
+Fast Memory 1  
+[
+1]:
+Fast Memory 2  
+[
+2]:
+Fast Memory 3  
+[
+3]:
+Fast Memory 4  
+[
+4]:
+Heap
+
+**Dependency:**
+  
+  
+Refer to:
+F01068
+
+### r9984[0...4] Data memory utilization TEC
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [%] | - [%] | [ ] - [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the data memory utilization as a result of Technology Extensions.
+
+**Index:**
+  
+[
+0]:
+Fast Memory 1  
+[
+1]:
+Fast Memory 2  
+[
+2]:
+Fast Memory 3  
+[
+3]:
+Fast Memory 4  
+[
+4]:
+Reserved
+
+**Dependency:**
+  
+  
+Refer to:
+F01068
+
+**Note:**
+  
+TEC: Technology Extension
+
+### r9986[0...7] DRIVE-CLiQ system load
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [%] | - [%] | [ ] - [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the calculated DRIVE-CLiQ system utilization based on the existing target
+topology.  
+The values are only available in the "Initialization finished" state (r3988 = 800).  
+Index 0 ... 7 corresponds to DRIVE-CLiQ socket X100 ... X107.
+
+**Dependency:**
+  
+  
+Refer to:
+F01340
+
+### r9987[0...7] DRIVE-CLiQ bandwidth load
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [%] | - [%] | [ ] - [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the calculated DRIVE-CLiQ bandwidth utilization based on the existing target
+topology.  
+The values are only available in the "Initialization finished" state (r3988 = 800).  
+Index 0 ... 7 corresponds to DRIVE-CLiQ socket X100 ... X107.
+
+**Dependency:**
+  
+  
+Refer to:
+F01340
+
+### r9988[0...7] DRIVE-CLiQ DPRAM load
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [%] | - [%] | [ ] - [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the calculated DRIVE-CLiQ DPRAM load based on the existing target topology.  
+The values are not made available until the RUNUP READY (800) state is adopted (see
+p3988).  
+Index 0 ... 7 corresponds to DRIVE-CLiQ socket X100 ... X107.
+
+**Dependency:**
+  
+  
+Refer to:
+F01340
+
+### p9990 DO memory usage actual value determination selection
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+The meaning of the parameter differs for reading and writing.  
+Read:  
+- Returns the number of memory areas monitored.  
+Write:  
+- Memory usage of a drive object: Enter drive object number  
+- Memory usage of the complete system: Enter value 65535
+
+### r9991[0...4] Memory usage drive object actual value
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the memory usage for each drive object as actual value.
+
+**Index:**
+  
+[
+0]:
+Fast Memory 1  
+[
+1]:
+Fast Memory 2  
+[
+2]:
+Fast Memory 3  
+[
+3]:
+Fast Memory 4  
+[
+4]:
+Heap
+
+### r9992[0...4] Memory usage drive object reference value
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the memory usage for each drive object as reference value.
+
+**Index:**
+  
+[
+0]:
+Fast Memory 1  
+[
+1]:
+Fast Memory 2  
+[
+2]:
+Fast Memory 3  
+[
+3]:
+Fast Memory 4  
+[
+4]:
+Heap
+
+### r9993[0...4] Memory utilization Technology Extension
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays the memory usage of a Technology Extension.
+
+**Index:**
+  
+[
+0]:
+Fast Memory 1  
+[
+1]:
+Fast Memory 2  
+[
+2]:
+Fast Memory 3  
+[
+3]:
+Fast Memory 4  
+[
+4]:
+Heap
+
+**Note:**
+  
+TEC: Technology Extension
+
+### r9999[0...99] Software error internal supplementary diagnostics
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Diagnostics parameter to display additional information for internal software errors.
+
+**Note:**
+  
+Only for internal Siemens troubleshooting.
+
+### p17530 Multiplexer operating mode
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2205 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 99 | [ 0 ] 99 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Sets the operating mode of the multiplexer.  
+For value = 99:  
+The setting corresponds to normal multiplexer operation. All of the input signals
+are consecutively output via connector output r17536.  
+For value = 0 ... 7:  
+These values select a certain input signal. This signal is output via connector r17536.  
+For value = 8 ... 98:  
+These values are rejected.
+
+### p17534[0...7] CI: Multiplexer input signal source
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Integer16 | **Dynamic index:**- | **Func. diagram:** 2203, 2205 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**4000H | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Sets the signal source for the individual input signals of the multiplexer.
+
+**Index:**
+  
+[
+0]:
+Channel 0  
+[
+1]:
+Channel 1  
+[
+2]:
+Channel 2  
+[
+3]:
+Channel 3  
+[
+4]:
+Channel 4  
+[
+5]:
+Channel 5  
+[
+6]:
+Channel 6  
+[
+7]:
+Channel 7
+
+**Dependency:**
+  
+  
+Refer to:
+p17530, r17535, r17536, r17537, r17538
+
+### r17535[0...7] Multiplexer input display
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 2205 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**4000H | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Displays the individual input signals of the multiplexer.
+
+**Index:**
+  
+[
+0]:
+Channel 0  
+[
+1]:
+Channel 1  
+[
+2]:
+Channel 2  
+[
+3]:
+Channel 3  
+[
+4]:
+Channel 4  
+[
+5]:
+Channel 5  
+[
+6]:
+Channel 6  
+[
+7]:
+Channel 7
+
+**Dependency:**
+  
+  
+Refer to:
+p17530, p17534, r17536, r17537, r17538
+
+### r17536 CO: Multiplexer output
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 2203, 2205 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**4000H | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Display and connector output for the output signal of the multiplexer.
+
+**Dependency:**
+  
+  
+Refer to:
+p17530, p17534, r17535, r17537, r17538
+
+### r17537 CO: Multiplexer output status word
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2203, 2205 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Display and connector output for the status word of the multiplexer.  
+r17537 = 0: input signal from connector input p17534[0] is output via connector output
+r17536.  
+r17537 = 1: input signal from connector input p17534[1] is output via connector output
+r17536.  
+...  
+r17537 = 7: input signal from connector input p17534[7] is output via connector output
+r17536.
+
+**Dependency:**
+  
+  
+Refer to:
+p17530, p17534, r17535, r17536, r17538
+
+### r17538 Multiplexer cycle time
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 2205 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| -340.28235E36 [µs] | 340.28235E36 [µs] | [ ] - [µs] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Displays the cycle time of the multiplexer.  
+The basis sampling time of the multiplexer is 500 µs.
+
+**Dependency:**
+  
+For operating mode p17530 = 99, the cycle time is 4000 µs (8 * basis sampling time).  
+For operating mode p17530 = 0 ... 7, the cycle time is 500 µs (1 * basis sampling
+time).  
+  
+Refer to:
+p17530
+
+### p17540 CI: Demultiplexer input signal source
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Integer16 | **Dynamic index:**- | **Func. diagram:** 2203, 2205 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**4000H | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Sets the signal source for the input signal of the demultiplexer.
+
+**Dependency:**
+  
+  
+Refer to:
+p17541, r17542, r17543, r17544, r17545
+
+### p17541 CI: Demultiplexer control word signal source
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Integer16 | **Dynamic index:**- | **Func. diagram:** 2203, 2205 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Sets the signal source for the control word of the demultiplexer.
+
+**Dependency:**
+  
+  
+Refer to:
+p17540, r17542, r17543, r17544, r17545
+
+### r17542 Demultiplexer input display:
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 2205 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Displays the output signal of the demultiplexer.
+
+**Dependency:**
+  
+  
+Refer to:
+p17540, p17541, r17543, r17544, r17545
+
+### r17543 Demultiplexer control word display
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2205 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Displays the control word of the demultiplexer.
+
+**Dependency:**
+  
+  
+Refer to:
+p17540, p17541, r17542, r17544, r17545
+
+### r17544[0...7] CO: Demultiplexer output
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 2203, 2205 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**4000H | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Display and connector output for the output signal of the demultiplexer.
+
+**Index:**
+  
+[
+0]:
+Channel 0  
+[
+1]:
+Channel 1  
+[
+2]:
+Channel 2  
+[
+3]:
+Channel 3  
+[
+4]:
+Channel 4  
+[
+5]:
+Channel 5  
+[
+6]:
+Channel 6  
+[
+7]:
+Channel 7
+
+**Dependency:**
+  
+  
+Refer to:
+p17540, p17541, r17542, r17543, r17545
+
+### r17545 CO: Demultiplexer output channel number
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 2205 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Display and connector output for the channel number of the demultiplexer.
+
+**Dependency:**
+  
+  
+Refer to:
+p17540, p17541, r17542, r17543, r17544
+
+### r17548 Demultiplexer cycle time
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 2205 |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| -340.28235E36 [µs] | 340.28235E36 [µs] | [ ] - [µs] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.7
+
+**Description:**
+  
+Displays the cycle time of the demultiplexer.  
+The basis sampling time of the demultiplexer is 500 µs.  
+The cycle time indicates the time in which all of the data are updated once.
+
+### p17983[0...9] Sign-of-life monitoring mode
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 1 | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.8
+
+**Description:**
+  
+Sets the mode to monitor the sign of life.
+
+**Value:**
+  
+0:
+Sign-of-life master without inversion  
+1:
+Sign-of-life slave with inversion
+
+### p17984[0...9] Sign-of-life monitoring tolerance counter
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.8
+
+**Description:**
+  
+Sets the tolerance counter to monitor the sign of life.
+
+**Note:**
+  
+The sign of life monitoring is deactivated for p17984=65535.
+
+### p17985[0...9] Sign-of-life monitoring cycle
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 1 | 65535 | [ 0 ] 1 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.8
+
+**Description:**
+  
+Sets the tolerance counter to monitor the sign of life.
+
+**Note:**
+  
+The sign of life monitoring is deactivated for p17984=65535.
+
+### p17986[0...9] BI: Sign-of-life monitoring input
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 17987.0   [ 1 ] 17987.1   [ 2 ] 17987.2   [ 3 ] 17987.3   [ 4 ] 17987.4   [ 5 ] 17987.5   [ 6 ] 17987.6   [ 7 ] 17987.7   [ 8 ] 17987.8   [ 9 ] 17987.9 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.8
+
+**Description:**
+  
+Sets the signal source for the input of the sign of life monitoring.
+
+### r17987.0...9 CO/BO: Sign-of-life monitoring output
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**CU_MV_PN, CU_MV_DP | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.8
+
+**Description:**
+  
+Displays (binector outputs) of the control signals for sign of life monitoring.
+
+**Bit field:**
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Bit | Signal name | 0 signal | 1 signal | Function diagram |
+| 00 | Block number 0 | Inactive | Active | - |
+| 01 | Block number 1 | Inactive | Active | - |
+| 02 | Block number 2 | Inactive | Active | - |
+| 03 | Block number 3 | Inactive | Active | - |
+| 04 | Block number 4 | Inactive | Active | - |
+| 05 | Block number 5 | Inactive | Active | - |
+| 06 | Block number 6 | Inactive | Active | - |
+| 07 | Block number 7 | Inactive | Active | - |
+| 08 | Block number 8 | Inactive | Active | - |
+| 09 | Block number 9 | Inactive | Active | - |
+
+### p20000[0...9] Runtime group property
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9003 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Allocates properties to runtime groups 0 to 9.  
+This property comprises the sampling time and for p20000[x] = 9003, the instant of
+the call within the sampling time.  
+Index x of p20000 corresponds to the number of the runtime group.  
+p20000[0] is used to set the property of runtime group 0.  
+...  
+p20000[9] is used to set the property of runtime group 9.  
+  
+p20000[x] = 0 runtime group is not calculated.  
+p20000[x] = 1 free runtime group T_sample = 1 * r20002  
+p20000[x] = 2 free runtime group T_sample = 2 * r20002  
+p20000[x] = 3 free runtime group T_sample = 3 * r20002  
+p20000[x] = 4 free runtime group T_sample = 4 * r20002  
+...  
+p20000[x] = 255 free runtime group T_sample = 255 * r20002  
+p20000[x] = 256 free runtime group T_sample = 256 * r20002  
+p20000[x] = 1001 free runtime group T_sample = 1 * r20003  
+p20000[x] = 1002 free runtime group T_sample = 2 * r20003  
+p20000[x] = 1003 free runtime group T_sample = 3 * r20003  
+p20000[x] = 1004 free runtime group T_sample = 4 * r20003  
+p20000[x] = 1005 free runtime group T_sample = 5 * r20003  
+p20000[x] = 1006 free runtime group T_sample = 6 * r20003  
+p20000[x] = 1008 free runtime group T_sample = 8 * r20003  
+p20000[x] = 1010 free runtime group T_sample = 10 * r20003  
+p20000[x] = 1012 free runtime group T_sample = 12 * r20003  
+p20000[x] = 1016 free runtime group T_sample = 16 * r20003  
+p20000[x] = 1020 free runtime group T_sample = 20 * r20003  
+p20000[x] = 1024 free runtime group T_sample = 24 * r20003  
+p20000[x] = 1032 free runtime group T_sample = 32 * r20003  
+p20000[x] = 1040 free runtime group T_sample = 40 * r20003  
+p20000[x] = 1048 free runtime group T_sample = 48 * r20003  
+p20000[x] = 1064 free runtime group T_sample = 64 * r20003  
+p20000[x] = 1096 free runtime group T_sample = 96 * r20003  
+p20000[x] = 9003 fixed runtime group "calculate before setpoint channel" (only VECTOR,
+SERVO)
+
+**Value:**
+  
+0:
+Do not calculate  
+1:
+T = 1 * r20002  
+2:
+T = 2 * r20002  
+3:
+T = 3 * r20002  
+4:
+T = 4 * r20002  
+5:
+T = 5 * r20002  
+6:
+T = 6 * r20002  
+7:
+T = 7 * r20002  
+8:
+T = 8 * r20002  
+9:
+T = 9 * r20002  
+10:
+T = 10 * r20002  
+11:
+T = 11 * r20002  
+12:
+T = 12 * r20002  
+13:
+T = 13 * r20002  
+14:
+T = 14 * r20002  
+15:
+T = 15 * r20002  
+16:
+T = 16 * r20002  
+17:
+T = 17 * r20002  
+18:
+T = 18 * r20002  
+19:
+T = 19 * r20002  
+20:
+T = 20 * r20002  
+21:
+T = 21 * r20002  
+22:
+T = 22 * r20002  
+23:
+T = 23 * r20002  
+24:
+T = 24 * r20002  
+25:
+T = 25 * r20002  
+26:
+T = 26 * r20002  
+27:
+T = 27 * r20002  
+28:
+T = 28 * r20002  
+29:
+T = 29 * r20002  
+30:
+T = 30 * r20002  
+31:
+T = 31 * r20002  
+32:
+T = 32 * r20002  
+33:
+T = 33 * r20002  
+34:
+T = 34 * r20002  
+35:
+T = 35 * r20002  
+36:
+T = 36 * r20002  
+37:
+T = 37 * r20002  
+38:
+T = 38 * r20002  
+39:
+T = 39 * r20002  
+40:
+T = 40 * r20002  
+41:
+T = 41 * r20002  
+42:
+T = 42 * r20002  
+43:
+T = 43 * r20002  
+44:
+T = 44 * r20002  
+45:
+T = 45 * r20002  
+46:
+T = 46 * r20002  
+47:
+T = 47 * r20002  
+48:
+T = 48 * r20002  
+49:
+T = 49 * r20002  
+50:
+T = 50 * r20002  
+51:
+T = 51 * r20002  
+52:
+T = 52 * r20002  
+53:
+T = 53 * r20002  
+54:
+T = 54 * r20002  
+55:
+T = 55 * r20002  
+56:
+T = 56 * r20002  
+57:
+T = 57 * r20002  
+58:
+T = 58 * r20002  
+59:
+T = 59 * r20002  
+60:
+T = 60 * r20002  
+61:
+T = 61 * r20002  
+62:
+T = 62 * r20002  
+63:
+T = 63 * r20002  
+64:
+T = 64 * r20002  
+65:
+T = 65 * r20002  
+66:
+T = 66 * r20002  
+67:
+T = 67 * r20002  
+68:
+T = 68 * r20002  
+69:
+T = 69 * r20002  
+70:
+T = 70 * r20002  
+71:
+T = 71 * r20002  
+72:
+T = 72 * r20002  
+73:
+T = 73 * r20002  
+74:
+T = 74 * r20002  
+75:
+T = 75 * r20002  
+76:
+T = 76 * r20002  
+77:
+T = 77 * r20002  
+78:
+T = 78 * r20002  
+79:
+T = 79 * r20002  
+80:
+T = 80 * r20002  
+81:
+T = 81 * r20002  
+82:
+T = 82 * r20002  
+83:
+T = 83 * r20002  
+84:
+T = 84 * r20002  
+85:
+T = 85 * r20002  
+86:
+T = 86 * r20002  
+87:
+T = 87 * r20002  
+88:
+T = 88 * r20002  
+89:
+T = 89 * r20002  
+90:
+T = 90 * r20002  
+91:
+T = 91 * r20002  
+92:
+T = 92 * r20002  
+93:
+T = 93 * r20002  
+94:
+T = 94 * r20002  
+95:
+T = 95 * r20002  
+96:
+T = 96 * r20002  
+97:
+T = 97 * r20002  
+98:
+T = 98 * r20002  
+99:
+T = 99 * r20002  
+100:
+T = 100 * r20002  
+101:
+T = 101 * r20002  
+102:
+T = 102 * r20002  
+103:
+T = 103 * r20002  
+104:
+T = 104 * r20002  
+105:
+T = 105 * r20002  
+106:
+T = 106 * r20002  
+107:
+T = 107 * r20002  
+108:
+T = 108 * r20002  
+109:
+T = 109 * r20002  
+110:
+T = 110 * r20002  
+111:
+T = 111 * r20002  
+112:
+T = 112 * r20002  
+113:
+T = 113 * r20002  
+114:
+T = 114 * r20002  
+115:
+T = 115 * r20002  
+116:
+T = 116 * r20002  
+117:
+T = 117 * r20002  
+118:
+T = 118 * r20002  
+119:
+T = 119 * r20002  
+120:
+T = 120 * r20002  
+121:
+T = 121 * r20002  
+122:
+T = 122 * r20002  
+123:
+T = 123 * r20002  
+124:
+T = 124 * r20002  
+125:
+T = 125 * r20002  
+126:
+T = 126 * r20002  
+127:
+T = 127 * r20002  
+128:
+T = 128 * r20002  
+129:
+T = 129 * r20002  
+130:
+T = 130 * r20002  
+131:
+T = 131 * r20002  
+132:
+T = 132 * r20002  
+133:
+T = 133 * r20002  
+134:
+T = 134 * r20002  
+135:
+T = 135 * r20002  
+136:
+T = 136 * r20002  
+137:
+T = 137 * r20002  
+138:
+T = 138 * r20002  
+139:
+T = 139 * r20002  
+140:
+T = 140 * r20002  
+141:
+T = 141 * r20002  
+142:
+T = 142 * r20002  
+143:
+T = 143 * r20002  
+144:
+T = 144 * r20002  
+145:
+T = 145 * r20002  
+146:
+T = 146 * r20002  
+147:
+T = 147 * r20002  
+148:
+T = 148 * r20002  
+149:
+T = 149 * r20002  
+150:
+T = 150 * r20002  
+151:
+T = 151 * r20002  
+152:
+T = 152 * r20002  
+153:
+T = 153 * r20002  
+154:
+T = 154 * r20002  
+155:
+T = 155 * r20002  
+156:
+T = 156 * r20002  
+157:
+T = 157 * r20002  
+158:
+T = 158 * r20002  
+159:
+T = 159 * r20002  
+160:
+T = 160 * r20002  
+161:
+T = 161 * r20002  
+162:
+T = 162 * r20002  
+163:
+T = 163 * r20002  
+164:
+T = 164 * r20002  
+165:
+T = 165 * r20002  
+166:
+T = 166 * r20002  
+167:
+T = 167 * r20002  
+168:
+T = 168 * r20002  
+169:
+T = 169 * r20002  
+170:
+T = 170 * r20002  
+171:
+T = 171 * r20002  
+172:
+T = 172 * r20002  
+173:
+T = 173 * r20002  
+174:
+T = 174 * r20002  
+175:
+T = 175 * r20002  
+176:
+T = 176 * r20002  
+177:
+T = 177 * r20002  
+178:
+T = 178 * r20002  
+179:
+T = 179 * r20002  
+180:
+T = 180 * r20002  
+181:
+T = 181 * r20002  
+182:
+T = 182 * r20002  
+183:
+T = 183 * r20002  
+184:
+T = 184 * r20002  
+185:
+T = 185 * r20002  
+186:
+T = 186 * r20002  
+187:
+T = 187 * r20002  
+188:
+T = 188 * r20002  
+189:
+T = 189 * r20002  
+190:
+T = 190 * r20002  
+191:
+T = 191 * r20002  
+192:
+T = 192 * r20002  
+193:
+T = 193 * r20002  
+194:
+T = 194 * r20002  
+195:
+T = 195 * r20002  
+196:
+T = 196 * r20002  
+197:
+T = 197 * r20002  
+198:
+T = 198 * r20002  
+199:
+T = 199 * r20002  
+200:
+T = 200 * r20002  
+201:
+T = 201 * r20002  
+202:
+T = 202 * r20002  
+203:
+T = 203 * r20002  
+204:
+T = 204 * r20002  
+205:
+T = 205 * r20002  
+206:
+T = 206 * r20002  
+207:
+T = 207 * r20002  
+208:
+T = 208 * r20002  
+209:
+T = 209 * r20002  
+210:
+T = 210 * r20002  
+211:
+T = 211 * r20002  
+212:
+T = 212 * r20002  
+213:
+T = 213 * r20002  
+214:
+T = 214 * r20002  
+215:
+T = 215 * r20002  
+216:
+T = 216 * r20002  
+217:
+T = 217 * r20002  
+218:
+T = 218 * r20002  
+219:
+T = 219 * r20002  
+220:
+T = 220 * r20002  
+221:
+T = 221 * r20002  
+222:
+T = 222 * r20002  
+223:
+T = 223 * r20002  
+224:
+T = 224 * r20002  
+225:
+T = 225 * r20002  
+226:
+T = 226 * r20002  
+227:
+T = 227 * r20002  
+228:
+T = 228 * r20002  
+229:
+T = 229 * r20002  
+230:
+T = 230 * r20002  
+231:
+T = 231 * r20002  
+232:
+T = 232 * r20002  
+233:
+T = 233 * r20002  
+234:
+T = 234 * r20002  
+235:
+T = 235 * r20002  
+236:
+T = 236 * r20002  
+237:
+T = 237 * r20002  
+238:
+T = 238 * r20002  
+239:
+T = 239 * r20002  
+240:
+T = 240 * r20002  
+241:
+T = 241 * r20002  
+242:
+T = 242 * r20002  
+243:
+T = 243 * r20002  
+244:
+T = 244 * r20002  
+245:
+T = 245 * r20002  
+246:
+T = 246 * r20002  
+247:
+T = 247 * r20002  
+248:
+T = 248 * r20002  
+249:
+T = 249 * r20002  
+250:
+T = 250 * r20002  
+251:
+T = 251 * r20002  
+252:
+T = 252 * r20002  
+253:
+T = 253 * r20002  
+254:
+T = 254 * r20002  
+255:
+T = 255 * r20002  
+256:
+T = 256 * r20002  
+1001:
+T = 1 * r20003  
+1002:
+T = 2 * r20003  
+1003:
+T = 3 * r20003  
+1004:
+T = 4 * r20003  
+1005:
+T = 5 * r20003  
+1006:
+T = 6 * r20003  
+1008:
+T = 8 * r20003  
+1010:
+T = 10 * r20003  
+1012:
+T = 12 * r20003  
+1016:
+T = 16 * r20003  
+1020:
+T = 20 * r20003  
+1024:
+T = 24 * r20003  
+1032:
+T = 32 * r20003  
+1040:
+T = 40 * r20003  
+1048:
+T = 48 * r20003  
+1064:
+T = 64 * r20003  
+1080:
+T = 80 * r20003  
+1096:
+T = 96 * r20003  
+9003:
+Before setpoint channel
+
+**Index:**
+  
+[
+0]:
+Runtime group 0  
+[
+1]:
+Runtime group 1  
+[
+2]:
+Runtime group 2  
+[
+3]:
+Runtime group 3  
+[
+4]:
+Runtime group 4  
+[
+5]:
+Runtime group 5  
+[
+6]:
+Runtime group 6  
+[
+7]:
+Runtime group 7  
+[
+8]:
+Runtime group 8  
+[
+9]:
+Runtime group 9
+
+**Dependency:**
+  
+  
+Refer to:
+r20008
+
+**Caution:**
+  
+The assignment of the properties of the runtime groups should not be changed on drives
+in operation as this could result in discontinuous signal transitions depending on
+the blocks used. At the 1st arithmetic cycle after the change, the respective internal
+initialization value is present at the block connections and in each subsequent cycle
+the calculated value is then present.
+
+**Note:**
+  
+For value = 1 ... 256:  
+This value can only be set if, for sampling time T_sample of this runtime group, the
+following applies: 1 ms <= T_sample <= r20003. At download, a value that violates
+this condition is not rejected, but a permissible equivalent value is set automatically
+and fault F50518 is output.  
+If value = 9003:  
+The fixed runtime groups p20000[x] = 9003 log on with the sampling time of the setpoint
+channel, although the sampling time must be at least 1 ms. If, as a result of this
+limit, the actual sampling time deviates from the sampling time of the setpoint channel
+p0115[3], alarm A20103 is output. Another runtime group with a sampling time >= 1
+ms should be selected. "Calculate before setpoint channel" means before function diagrams
+3010, 3020, 3030, 3040, etc. are calculated, if the setpoint channel is activated
+(p0108.8 = 1). If, e.g. for SERVO, a setpoint channel has not been configured (p0108.8
+= 0), then the calculation is made before function diagram 3095.
+
+### r20001[0...9] Runtime group sampling time
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [ms] | - [ms] | [ ] - [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Displays the current sampling time of the runtime group 0 to 9.
+
+**Index:**
+  
+[
+0]:
+Runtime group 0  
+[
+1]:
+Runtime group 1  
+[
+2]:
+Runtime group 2  
+[
+3]:
+Runtime group 3  
+[
+4]:
+Runtime group 4  
+[
+5]:
+Runtime group 5  
+[
+6]:
+Runtime group 6  
+[
+7]:
+Runtime group 7  
+[
+8]:
+Runtime group 8  
+[
+9]:
+Runtime group 9
+
+### r20002 Basis sampling time, hardware
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [ms] | - [ms] | [ ] - [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Displays the lowest sampling time effective at this drive object for values 1 to 256
+of p20000.  
+T_sample = p20000 * r20002
+
+### r20003 Basis sampling time, software
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [ms] | - [ms] | [ ] - [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Displays the sampling time as factor effective on this drive object for values 1001
+to 1096 of p20000.  
+T_sample = (p20000 - 1000) * r20003
+
+### r20005[0...9] Average computing time load of the runtime groups
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [%] | - [%] | [ ] - [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Share of the average computing time load which the FBLOCKS runtime group contributes
+to the overall computing time load for the drive unit (r9976).
+
+**Index:**
+  
+[
+0]:
+Runtime group 0  
+[
+1]:
+Runtime group 1  
+[
+2]:
+Runtime group 2  
+[
+3]:
+Runtime group 3  
+[
+4]:
+Runtime group 4  
+[
+5]:
+Runtime group 5  
+[
+6]:
+Runtime group 6  
+[
+7]:
+Runtime group 7  
+[
+8]:
+Runtime group 8  
+[
+9]:
+Runtime group 9
+
+**Note:**
+  
+The runtime group to be measured has to be logged on (p20000[x] > 0).  
+The value for the computation time load is calculated in the drive unit using the
+project loaded. As such, the r20005[x] values are not available in the expert list
+in SCOUT/STARTER offline mode.
+
+### r20008[0...12] Hardware sampling times available
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [ms] | - [ms] | [ ] - [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Displays the assignment of the available hardware sampling times of the drive unit.  
+The term "hardware sampling times" refers to those r20002 sampling times that are
+formed as a multiple of the basic sampling time and always < r20003.
+
+**Dependency:**
+  
+  
+Refer to:
+p20000
+
+**Notice:**
+  
+For internal purposes, the drive unit always requires at least two (or several, depending
+on the parameterization of p0115 of the drive objects) free hardware sampling times.
+Therefore, the current number of hardware sampling times that are still free can be
+read out in r7903.  
+If r7903=0, no additional sampling time that differs from r20008[0...12] can be provided
+from the Control Unit. If, when selecting in this state, a runtime group with a sampling
+time < r20003 (p20000 <= 255) is to be set in p20000, only runtime groups whose sampling
+time is already provided in r20008[0...12] can be selected.
+
+**Note:**
+  
+The 13 different sampling times available are displayed in r20008[0...12].  
+If the value of r20008[0...12] is not equal to 0, then it specifies the sampling time
+in ms.  
+A sampling time that is provided can be simultaneously used by system functions, several
+FBLOCKS runtime groups, and several DCC runtime groups.  
+If the value of r20008[0...12] = 0, then this sampling time can still be freely assigned.
+It should be noted that the basic system, depending on the selected basic sampling
+times p0115[0], requires at least two (sometimes several) freely assignable hardware
+sampling times for internal functions. The number of hardware sampling times that
+can still be freely assigned can be read out in r7903.  
+r20008[11] = 99999.00000 --> Hardware sampling time is not supported.  
+r20008[12] = 99999.00000 --> Hardware sampling time is not supported.  
+The sampling time of runtime groups that have been assigned to the PROFIBUS runtime
+groups (p20000 = 4000 ... 4004) is not displayed in r20008. For this sampling time,
+one of the internally and permanently assigned hardware sampling times is used.
+
+### p20020 Computing time measurement runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 10 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Only for internal Siemens service purposes.
+
+### p20022 Computing time measurement, duration
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 60 [s] | 10000 [s] | [ 0 ] 60 [s] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Only for internal Siemens service purposes.
+
+### r20024[0...9] Computing time, minimum value
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [µs] | - [µs] | [ ] - [µs] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Only for internal Siemens service purposes.
+
+**Index:**
+  
+[
+0]:
+Runtime group 0  
+[
+1]:
+Runtime group 1  
+[
+2]:
+Runtime group 2  
+[
+3]:
+Runtime group 3  
+[
+4]:
+Runtime group 4  
+[
+5]:
+Runtime group 5  
+[
+6]:
+Runtime group 6  
+[
+7]:
+Runtime group 7  
+[
+8]:
+Runtime group 8  
+[
+9]:
+Runtime group 9
+
+### r20025[0...9] Computing time, average value
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [µs] | - [µs] | [ ] - [µs] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Only for internal Siemens service purposes.
+
+**Index:**
+  
+[
+0]:
+Runtime group 0  
+[
+1]:
+Runtime group 1  
+[
+2]:
+Runtime group 2  
+[
+3]:
+Runtime group 3  
+[
+4]:
+Runtime group 4  
+[
+5]:
+Runtime group 5  
+[
+6]:
+Runtime group 6  
+[
+7]:
+Runtime group 7  
+[
+8]:
+Runtime group 8  
+[
+9]:
+Runtime group 9
+
+### r20026[0...9] Computing time, maximum value
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [µs] | - [µs] | [ ] - [µs] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Only for internal Siemens service purposes.
+
+**Index:**
+  
+[
+0]:
+Runtime group 0  
+[
+1]:
+Runtime group 1  
+[
+2]:
+Runtime group 2  
+[
+3]:
+Runtime group 3  
+[
+4]:
+Runtime group 4  
+[
+5]:
+Runtime group 5  
+[
+6]:
+Runtime group 6  
+[
+7]:
+Runtime group 7  
+[
+8]:
+Runtime group 8  
+[
+9]:
+Runtime group 9
+
+### p20030[0...3] BI: AND 0 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7210 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantities I0, I1, I2, I3 of instance AND 0 of the
+AND function block.
+
+**Index:**
+  
+[
+0]:
+Input I0  
+[
+1]:
+Input I1  
+[
+2]:
+Input I2  
+[
+3]:
+Input I3
+
+### r20031 BO: AND 0 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7210 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for binary quantity Q = I0 & I1 & I2 & I3 of instance AND 0 of the
+AND function block.
+
+### p20032 AND 0 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7210 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance AND 0 of the AND function
+block is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20033 AND 0 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7210 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 10 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance AND 0 within the runtime group
+set in p20032.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20034[0...3] BI: AND 1 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7210 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantities I0, I1, I2, I3 of instance AND 1 of the
+AND function block.
+
+**Index:**
+  
+[
+0]:
+Input I0  
+[
+1]:
+Input I1  
+[
+2]:
+Input I2  
+[
+3]:
+Input I3
+
+### r20035 BO: AND 1 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7210 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for binary quantity Q = I0 & I1 & I2 & I3 of instance AND 1 of the
+AND function block.
+
+### p20036 AND 1 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7210 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance AND 1 of the AND function
+block is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20037 AND 1 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7210 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 20 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance AND 1 within the runtime group
+set in p20036.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20038[0...3] BI: AND 2 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7210 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantities I0, I1, I2, I3 of instance AND 2 of the
+AND function block.
+
+**Index:**
+  
+[
+0]:
+Input I0  
+[
+1]:
+Input I1  
+[
+2]:
+Input I2  
+[
+3]:
+Input I3
+
+### r20039 BO: AND 2 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7210 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for binary quantity Q = I0 & I1 & I2 & I3 of instance AND 2 of the
+AND function block.
+
+### p20040 AND 2 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7210 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance AND 2 of the AND function
+block is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20041 AND 2 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7210 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 30 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance AND 2 within the runtime group
+set in p20040.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20042[0...3] BI: AND 3 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7210 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantities I0, I1, I2, I3 of instance AND 3 of the
+AND function block.
+
+**Index:**
+  
+[
+0]:
+Input I0  
+[
+1]:
+Input I1  
+[
+2]:
+Input I2  
+[
+3]:
+Input I3
+
+### r20043 BO: AND 3 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7210 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for binary quantity Q = I0 & I1 & I2 & I3 of instance AND 3 of the
+AND function block.
+
+### p20044 AND 3 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7210 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance AND 3 of the AND function
+block is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20045 AND 3 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7210 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 40 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance AND 3 within the runtime group
+set in p20044.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20046[0...3] BI: OR 0 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7212 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantities I0, I1, I2, I3 of instance OR 0 of the
+OR function block.
+
+**Index:**
+  
+[
+0]:
+Input I0  
+[
+1]:
+Input I1  
+[
+2]:
+Input I2  
+[
+3]:
+Input I3
+
+### r20047 BO: OR 0 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7212 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for binary quantity Q = I0 | I1 | I2 | I3 of instance OR 0 of the
+OR function block.
+
+### p20048 OR 0 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7212 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance OR 0 of the OR function
+block is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20049 OR 0 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7212 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 60 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance OR 0 within the runtime group set
+in p20048.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20050[0...3] BI: OR 1 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7212 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantities I0, I1, I2, I3 of instance OR 1 of the
+OR function block.
+
+**Index:**
+  
+[
+0]:
+Input I0  
+[
+1]:
+Input I1  
+[
+2]:
+Input I2  
+[
+3]:
+Input I3
+
+### r20051 BO: OR 1 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7212 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for binary quantity Q = I0 | I1 | I2 | I3 of instance OR 1 of the
+OR function block.
+
+### p20052 OR 1 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7212 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance OR 1 of the OR function
+block is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20053 OR 1 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7212 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 70 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance OR 1 within the runtime group set
+in p20052.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20054[0...3] BI: OR 2 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7212 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantities I0, I1, I2, I3 of instance OR 2 of the
+OR function block.
+
+**Index:**
+  
+[
+0]:
+Input I0  
+[
+1]:
+Input I1  
+[
+2]:
+Input I2  
+[
+3]:
+Input I3
+
+### r20055 BO: OR 2 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7212 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for binary quantity Q = I0 | I1 | I2 | I3 of instance OR 2 of the
+OR function block.
+
+### p20056 OR 2 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7212 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance OR 2 of the OR function
+block is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20057 OR 2 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7212 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 80 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance OR 2 within the runtime group set
+in p20056.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20058[0...3] BI: OR 3 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7212 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantities I0, I1, I2, I3 of instance OR 3 of the
+OR function block.
+
+**Index:**
+  
+[
+0]:
+Input I0  
+[
+1]:
+Input I1  
+[
+2]:
+Input I2  
+[
+3]:
+Input I3
+
+### r20059 BO: OR 3 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7212 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for binary quantity Q = I0 | I1 | I2 | I3 of instance OR 3 of the
+OR function block.
+
+### p20060 OR 3 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7212 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance OR 3 of the OR function
+block is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20061 OR 3 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7212 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 90 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance OR 3 within the runtime group set
+in p20060.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20062[0...3] BI: XOR 0 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7214 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantities I0, I1, I2, I3 of instance XOR 0 of the
+XOR function block.
+
+**Index:**
+  
+[
+0]:
+Input I0  
+[
+1]:
+Input I1  
+[
+2]:
+Input I2  
+[
+3]:
+Input I3
+
+### r20063 BO: XOR 0 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7214 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for binary quantity Q of instance XOR 0 of the XOR function block.
+
+### p20064 XOR 0 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7214 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance XOR 0 of the XOR function
+block is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20065 XOR 0 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7214 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 110 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance XOR 0 within the runtime group
+set in p20064.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20066[0...3] BI: XOR 1 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7214 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantities I0, I1, I2, I3 of instance XOR 1 of the
+XOR function block.
+
+**Index:**
+  
+[
+0]:
+Input I0  
+[
+1]:
+Input I1  
+[
+2]:
+Input I2  
+[
+3]:
+Input I3
+
+### r20067 BO: XOR 1 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7214 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for binary quantity Q of instance XOR 1 of the XOR function block.
+
+### p20068 XOR 1 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7214 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance XOR 1 of the XOR function
+block is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20069 XOR 1 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7214 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 120 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance XOR 1 within the runtime group
+set in p20068.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20070[0...3] BI: XOR 2 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7214 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantities I0, I1, I2, I3 of instance XOR 2 of the
+XOR function block.
+
+**Index:**
+  
+[
+0]:
+Input I0  
+[
+1]:
+Input I1  
+[
+2]:
+Input I2  
+[
+3]:
+Input I3
+
+### r20071 BO: XOR 2 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7214 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for binary quantity Q of instance XOR 2 of the XOR function block.
+
+### p20072 XOR 2 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7214 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance XOR 2 of the XOR function
+block is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20073 XOR 2 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7214 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 130 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance XOR 2 within the runtime group
+set in p20072.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20074[0...3] BI: XOR 3 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7214 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantities I0, I1, I2, I3 of instance XOR 3 of the
+XOR function block.
+
+**Index:**
+  
+[
+0]:
+Input I0  
+[
+1]:
+Input I1  
+[
+2]:
+Input I2  
+[
+3]:
+Input I3
+
+### r20075 BO: XOR 3 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7214 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for binary quantity Q of instance XOR 3 of the XOR function block.
+
+### p20076 XOR 3 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7214 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance XOR 3 of the XOR function
+block is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20077 XOR 3 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7214 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 140 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance XOR 3 within the runtime group
+set in p20076.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20078 BI: NOT 0 input I
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7216 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantity I of instance NOT 0 of the inverter.
+
+### r20079 BO: NOT 0 inverted output
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7216 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for the inverted output of instance NOT 0 of the inverter.
+
+## SINAMICS Parameter SINAMICS MV 20080 - 20180
+
+SINAMICS Parameter SINAMICS MV 20080 - 20180
+
+### p20080 NOT 0 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7216 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance NOT 0 of the inverter
+is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20081 NOT 0 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7216 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 160 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance NOT 0 within the runtime group
+set in p20080.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20082 BI: NOT 1 input I
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7216 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantity I of instance NOT 1 of the inverter.
+
+### r20083 BO: NOT 1 inverted output
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7216 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for the inverted output of instance NOT 1 of the inverter.
+
+### p20084 NOT 1 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7216 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance NOT 1 of the inverter
+is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20085 NOT 1 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7216 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 170 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance NOT 1 within the runtime group
+set in p20084.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20086 BI: NOT 2 input I
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7216 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantity I of instance NOT 2 of the inverter.
+
+### r20087 BO: NOT 2 inverted output
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7216 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for the inverted output of instance NOT 2 of the inverter.
+
+### p20088 NOT 2 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7216 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance NOT 2 of the inverter
+is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20089 NOT 2 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7216 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 180 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance NOT 2 within the runtime group
+set in p20088.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20090 BI: NOT 3 input I
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7216 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantity I of instance NOT 3 of the inverter.
+
+### r20091 BO: NOT 3 inverted output
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7216 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for the inverted output of instance NOT 3 of the inverter.
+
+### p20092 NOT 3 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7216 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance NOT 3 of the inverter
+is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20093 NOT 3 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7216 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 190 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance NOT 3 within the runtime group
+set in p20092.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20094[0...3] CI: ADD 0 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7220 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantities X0, X1, X2, X3 of instance ADD 0 of the
+adder.
+
+**Index:**
+  
+[
+0]:
+Input X0  
+[
+1]:
+Input X1  
+[
+2]:
+Input X2  
+[
+3]:
+Input X3
+
+### r20095 CO: ADD 0 output Y
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7220 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for the output quantity Y = X0 + X1 + X2 + X3 of instance ADD 0
+of the adder.
+
+### p20096 ADD 0 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7220 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance ADD 0 of the adder is
+to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20097 ADD 0 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7220 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 210 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance ADD 0 within the runtime group
+set in p20096.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20098[0...3] CI: ADD 1 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7220 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantities X0, X1, X2, X3 of instance ADD 1 of the
+adder.
+
+**Index:**
+  
+[
+0]:
+Input X0  
+[
+1]:
+Input X1  
+[
+2]:
+Input X2  
+[
+3]:
+Input X3
+
+### r20099 CO: ADD 1 output Y
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7220 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for the output quantity Y = X0 + X1 + X2 + X3 of instance ADD 1
+of the adder.
+
+### p20100 ADD 1 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7220 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance ADD 1 of the adder is
+to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20101 ADD 1 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7220 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 220 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance ADD 1 within the runtime group
+set in p20100.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20102[0...1] CI: SUB 0 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7220 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of minuend X1 and subtrahend X2 of instance SUB 0 of the subtractor.
+
+**Index:**
+  
+[
+0]:
+Minuend X1  
+[
+1]:
+Subtrahend X2
+
+### r20103 CO: SUB 0 difference Y
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7220 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for the difference Y = X1 - X2 of instance SUB 0 of the subtractor.
+
+### p20104 SUB 0 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7220 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which instance SUB 0 of the subtractor
+is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20105 SUB 0 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7220 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 240 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance SUB 0 within the runtime group
+set in p20104.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20106[0...1] CI: SUB 1 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7220 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of minuend X1 and subtrahend X2 of instance SUB 1 of the subtractor.
+
+**Index:**
+  
+[
+0]:
+Minuend X1  
+[
+1]:
+Subtrahend X2
+
+### r20107 CO: SUB 1 difference Y
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7220 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for the difference Y = X1 - X2 of instance SUB 1 of the subtractor.
+
+### p20108 SUB 1 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7220 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which instance SUB 1 of the subtractor
+is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20109 SUB 1 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7220 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 250 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance SUB 1 within the runtime group
+set in p20108.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20110[0...3] CI: MUL 0 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7222 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of the factors X0, X1, X2, X3 of instance MUL 0 of the multiplier.
+
+**Index:**
+  
+[
+0]:
+Factor X0  
+[
+1]:
+Factor X1  
+[
+2]:
+Factor X2  
+[
+3]:
+Factor X3
+
+### r20111 CO: MUL 0 product Y
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7222 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for the product Y = X0 * X1 * X2 * X3 of instance MUL 0 of the multiplier.
+
+### p20112 MUL 0 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7222 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which instance MUL 0 of the multiplier
+is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20113 MUL 0 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7222 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 270 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance MUL 0 within the runtime group
+set in p20112.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20114[0...3] CI: MUL 1 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7222 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of the factors X0, X1, X2, X3 of instance MUL 1 of the multiplier.
+
+**Index:**
+  
+[
+0]:
+Factor X0  
+[
+1]:
+Factor X1  
+[
+2]:
+Factor X2  
+[
+3]:
+Factor X3
+
+### r20115 CO: MUL 1 product Y
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7222 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for the product Y = X0 * X1 * X2 * X3 of instance MUL 1 of the multiplier.
+
+### p20116 MUL 1 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7222 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which instance MUL 1 of the multiplier
+is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20117 MUL 1 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7222 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 280 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance MUL 1 within the runtime group
+set in p20116.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20118[0...1] CI: DIV 0 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7222 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of dividend X0 and divisor X1 of instance DIV 0 of the divider.
+
+**Index:**
+  
+[
+0]:
+Dividend X0  
+[
+1]:
+Divisor X1
+
+### r20119[0...2] CO: DIV 0 quotient
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7222 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for quotients Y = X0 / X1, integer number quotients YIN, and division
+remainder MOD = (Y - YIN) x X1 of instance DIV 0 of the divider.
+
+**Index:**
+  
+[
+0]:
+Quotient Y  
+[
+1]:
+Integer number quotient YIN  
+[
+2]:
+Div remainder MOD
+
+### r20120 BO: DIV 0 divisor is zero QF
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7222 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for the signal QF that the divisor X1 of instance DIV 0 of the divider
+is zero.  
+X1 = 0.0 => QF = 1
+
+### p20121 DIV 0 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7222 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which instance DIV 0 of the divider is
+to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20122 DIV 0 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7222 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 300 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance DIV 0 within the runtime group
+set in p20121.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20123[0...1] CI: DIV 1 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7222 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of dividend X0 and divisor X1 of instance DIV 1 of the divider.
+
+**Index:**
+  
+[
+0]:
+Dividend X0  
+[
+1]:
+Divisor X1
+
+### r20124[0...2] CO: DIV 1 quotient
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7222 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for quotients Y = X0 / X1, the integer number quotients YIN, and
+division remainder MOD = (Y - YIN) x X1 of instance DIV 1 of the divider.
+
+**Index:**
+  
+[
+0]:
+Quotient Y  
+[
+1]:
+Integer number quotient YIN  
+[
+2]:
+Div remainder MOD
+
+### r20125 BO: DIV 1 divisor is zero QF
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7222 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for the signal QF that the divisor X1 of instance DIV 1 of the divider
+is zero.  
+X1 = 0.0 => QF = 1
+
+### p20126 DIV 1 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7222 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which instance DIV 1 of the divider is
+to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20127 DIV 1 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7222 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 310 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance DIV 1 within the runtime group
+set in p20126.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20128 CI: AVA 0 input X
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7224 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of the input quantity X of instance AVA 0 of the absolute value
+generator with sign evaluation.
+
+### r20129 CO: AVA 0 output Y
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7224 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for output quantity Y of instance AVA 0 of the absolute value generator
+with sign evaluation.
+
+### r20130 BO: AVA 0 input negative SN
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7224 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for signal SN that the input quantity X of instance AVA 0 of the
+absolute value generator with sign evaluation is negative.  
+X < 0.0 => SN = 1
+
+### p20131 AVA 0 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7224 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which instance AVA 0 of the absolute value
+generator with sign evaluation is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20132 AVA 0 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7224 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 340 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance AVA 0 within the runtime group
+set in p20131.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20133 CI: AVA 1 input X
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7224 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of the input quantity X of instance AVA 1 of the absolute value
+generator with sign evaluation.
+
+### r20134 CO: AVA 1 output Y
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7224 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for output quantity Y of instance AVA 1 of the absolute value generator
+with sign evaluation.
+
+### r20135 BO: AVA 1 input negative SN
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7224 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for signal SN that the input quantity X of instance AVA 1 of the
+absolute value generator with sign evaluation is negative.  
+X < 0.0 => SN = 1
+
+### p20136 AVA 1 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7224 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which instance AVA 1 of the absolute value
+generator with sign evaluation is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20137 AVA 1 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7224 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 350 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance AVA 1 within the runtime group
+set in p20136.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20138 BI: MFP 0 input pulse I
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7230 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source for the input pulse I of instance MFP 0 of the pulse generator.
+
+### p20139 MFP 0 pulse duration in ms
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7230 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0.00 | 5400000.00 | [ 0 ] 0.00 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for pulse duration T in milliseconds of instance MFP 0 of the pulse
+generator.
+
+### r20140 BO: MFP 0 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7230 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for output pulse Q of instance MFP 0 of the pulse generator.
+
+### p20141 MFP 0 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7230 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance MFP 0 of the pulse generator
+is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20142 MFP 0 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7230 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 370 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance MFP 0 within the runtime group
+set in p20141.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20143 BI: MFP 1 input pulse I
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7230 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source for the input pulse I of instance MFP 1 of the pulse generator.
+
+### p20144 MFP 1 pulse duration in ms
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7230 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0.00 | 5400000.00 | [ 0 ] 0.00 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for pulse duration T in milliseconds of instance MFP 1 of the pulse
+generator.
+
+### r20145 BO: MFP 1 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7230 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for output pulse Q of instance MFP 1 of the pulse generator.
+
+### p20146 MFP 1 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7230 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance MFP 1 of the pulse generator
+is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20147 MFP 1 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7230 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 380 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance MFP 1 within the runtime group
+set in p20146.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20148 BI: PCL 0 input pulse I
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7230 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source for the input pulse I of instance PCL 0 of the pulse shortener.
+
+### p20149 PCL 0 pulse duration in ms
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7230 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0.00 | 5400000.00 | [ 0 ] 0.00 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for pulse duration T in milliseconds of instance PCL 0 of the pulse
+shortener.
+
+### r20150 BO: PCL 0 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7230 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for output pulse Q of instance PCL 0 of the pulse shortener.
+
+### p20151 PCL 0 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7230 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance PCL 0 of the pulse shortener
+is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20152 PCL 0 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7230 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 400 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance PCL 0 within the runtime group
+set in p20151.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20153 BI: PCL 1 input pulse I
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7230 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source for the input pulse I of instance PCL 1 of the pulse shortener.
+
+### p20154 PCL 1 pulse duration in ms
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7230 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0.00 | 5400000.00 | [ 0 ] 0.00 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for pulse duration T in milliseconds of instance PCL 1 of the pulse
+shortener.
+
+### r20155 BO: PCL 1 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7230 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for output pulse Q of instance PCL 1 of the pulse shortener.
+
+### p20156 PCL 1 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7230 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance PCL 1 of the pulse shortener
+is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20157 PCL 1 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7230 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 410 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance PCL 1 within the runtime group
+set in p20156.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20158 BI: PDE 0 input pulse I
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7232 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source for the input pulse I of instance PDE 0 of the closing delay
+device.
+
+### p20159 PDE 0 pulse delay time in ms
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7232 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0.00 | 5400000.00 | [ 0 ] 0.00 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for pulse delay time T in milliseconds of instance PDE 0 of the
+closing delay device.
+
+### r20160 BO: PDE 0 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7232 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for output pulse Q of instance PDE 0 of the closing delay device.
+
+### p20161 PDE 0 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7232 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which instance PDE 0 of the closing delay
+device is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20162 PDE 0 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7232 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 430 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance PDE 0 within the runtime group
+set in p20161.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20163 BI: PDE 1 input pulse I
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7232 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source for the input pulse I of instance PDE 1 of the closing delay
+device.
+
+### p20164 PDE 1 pulse delay time in ms
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7232 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0.00 | 5400000.00 | [ 0 ] 0.00 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for pulse delay time T in milliseconds of instance PDE 1 of the
+closing delay device.
+
+### r20165 BO: PDE 1 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7232 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for output pulse Q of instance PDE 1 of the closing delay device.
+
+### p20166 PDE 1 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7232 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which instance PDE 1 of the closing delay
+device is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20167 PDE 1 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7232 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 440 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance PDE 1 within the runtime group
+set in p20166.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20168 BI: PDF 0 input pulse I
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7232 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source for the input pulse I of instance PDF 0 of the breaking delay
+device.
+
+### p20169 PDF 0 pulse extension time in ms
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7232 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0.00 | 5400000.00 | [ 0 ] 0.00 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for pulse extension time T in milliseconds of instance PDF 0 of
+the breaking delay device.
+
+### r20170 BO: PDF 0 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7232 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for output pulse Q of instance PDF 0 of the breaking delay device.
+
+### p20171 PDF 0 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7232 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance PDF 0 of the breaking
+delay device is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20172 PDF 0 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7232 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 460 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance PDF 0 within the runtime group
+set in p20171.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20173 BI: PDF 1 input pulse I
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7232 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source for the input pulse I of instance PDF 1 of the breaking delay
+device.
+
+### p20174 PDF 1 pulse extension time in ms
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7232 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0.00 | 5400000.00 | [ 0 ] 0.00 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for pulse extension time T in milliseconds of instance PDF 1 of
+the breaking delay device.
+
+### r20175 BO: PDF 1 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7232 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for output pulse Q of instance PDF 1 of the breaking delay device.
+
+### p20176 PDF 1 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7232 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance PDF 1 of the breaking
+delay device is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20177 PDF 1 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7232 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 470 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance PDF 1 within the runtime group
+set in p20176.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20178[0...1] BI: PST 0 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7234 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source for input pulse I and the reset input R of instance PST 0 of
+the pulse extension element.
+
+**Index:**
+  
+[
+0]:
+Input pulse I  
+[
+1]:
+Reset input R
+
+### p20179 PST 0 pulse duration in ms
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7234 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0.00 | 5400000.00 | [ 0 ] 0.00 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for pulse duration T in milliseconds of instance PST 0 of the pulse
+extension element.
+
+### r20180 BO: PST 0 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7234 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for output pulse Q of instance PST 0 of the pulse extension element.
+
+## SINAMICS Parameter SINAMICS MV 20181 - 20281
+
+SINAMICS Parameter SINAMICS MV 20181 - 20281
+
+### p20181 PST 0 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7234 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance PST 0 of the pulse extension
+element is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20182 PST 0 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7234 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 7999 | [ 0 ] 490 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance PST 0 within the runtime group
+set in p20181.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20183[0...1] BI: PST 1 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7234 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source for input pulse I and the reset input R of instance PST 1 of
+the pulse extension element.
+
+**Index:**
+  
+[
+0]:
+Input pulse I  
+[
+1]:
+Reset input R
+
+### p20184 PST 1 pulse duration in ms
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7234 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0.00 | 5400000.00 | [ 0 ] 0.00 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for pulse duration T in milliseconds of instance PST 1 of the pulse
+extension element.
+
+### r20185 BO: PST 1 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7234 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for output pulse Q of instance PST 1 of the pulse extension element.
+
+### p20186 PST 1 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7234 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance PST 1 of the pulse extension
+element is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20187 PST 1 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7234 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 7999 | [ 0 ] 500 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance PST 1 within the runtime group
+set in p20186.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20188[0...1] BI: RSR 0 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7240 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source for set input S and reset input R of instance RSR 0 of the
+RS flipflop.
+
+**Index:**
+  
+[
+0]:
+Set S  
+[
+1]:
+Reset R
+
+### r20189 BO: RSR 0 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7240 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for output Q of instance RSR 0 of the RS flipflop
+
+### r20190 BO: RSR 0 inverted output QN
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7240 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for inverted output QN of instance RSR 0 of the RS flipflop.
+
+### p20191 RSR 0 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7240 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which instance RSR 0 of the RS flipflop
+is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20192 RSR 0 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7240 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 7999 | [ 0 ] 520 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance RSR 0 within the runtime group
+set in p20191.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20193[0...1] BI: RSR 1 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7240 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source for set input S and reset input R of instance RSR 1 of the
+RS flipflop.
+
+**Index:**
+  
+[
+0]:
+Set S  
+[
+1]:
+Reset R
+
+### r20194 BO: RSR 1 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7240 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for output Q of instance RSR 1 of the RS flipflop
+
+### r20195 BO: RSR 1 inverted output QN
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7240 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for inverted output QN of instance RSR 1 of the RS flipflop.
+
+### p20196 RSR 1 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7240 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which instance RSR 1 of the RS flipflop
+is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20197 RSR 1 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7240 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 7999 | [ 0 ] 530 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance RSR 1 within the runtime group
+set in p20196.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20198[0...3] BI: DFR 0 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7240 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source for trigger input I, D input D, set input S, and reset input
+R of instance DFR 0 of the D flipflop.
+
+**Index:**
+  
+[
+0]:
+Trigger input I  
+[
+1]:
+D input D  
+[
+2]:
+Set S  
+[
+3]:
+Reset R
+
+### r20199 BO: DFR 0 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7240 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for output Q of instance DFR 0 of the D flipflop.
+
+### r20200 BO: DFR 0 inverted output QN
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7240 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for the inverted output QN of instance DFR 0 of the D flipflop.
+
+### p20201 DFR 0 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7240 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which instance DFR 0 of the D flipflop
+is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20202 DFR 0 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7240 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 550 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance DFR 0 within the runtime group
+set in p20201.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20203[0...3] BI: DFR 1 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7240 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source for trigger input I, D input D, set input S, and reset input
+R of instance DFR 1 of the D flipflop.
+
+**Index:**
+  
+[
+0]:
+Trigger input I  
+[
+1]:
+D input D  
+[
+2]:
+Set S  
+[
+3]:
+Reset R
+
+### r20204 BO: DFR 1 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7240 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for output Q of instance DFR 1 of the D flipflop.
+
+### r20205 BO: DFR 1 inverted output QN
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7240 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for the inverted output QN of instance DFR 1 of the D flipflop.
+
+### p20206 DFR 1 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7240 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which instance DFR 1 of the D flipflop
+is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20207 DFR 1 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7240 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 560 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group of instance DFR 1 within the runtime group
+set in p20206.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20208[0...1] BI: BSW 0 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7250 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantities I0 and I1 of instance BSW 0 of the binary
+changeover switch.
+
+**Index:**
+  
+[
+0]:
+Input I0  
+[
+1]:
+Input I1
+
+### p20209 BI: BSW 0 switch setting I
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7250 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of the switch setting I of instance BSW 0 of the binary changeover
+switch.
+
+### r20210 BO: BSW 0 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7250 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for output quantity Q of instance BSW 0 of the binary changeover
+switch.
+
+### p20211 BSW 0 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7250 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance BSW 0 of the binary
+changeover switch is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20212 BSW 0 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7250 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 7999 | [ 0 ] 580 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance BSW 0 within the runtime group
+set in p20211.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20213[0...1] BI: BSW 1 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7250 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantities I0 and I1 of instance BSW 1 of the binary
+changeover switch.
+
+**Index:**
+  
+[
+0]:
+Input I0  
+[
+1]:
+Input I1
+
+### p20214 BI: BSW 1 switch setting I
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7250 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of the switch setting I of instance BSW 1 of the binary changeover
+switch.
+
+### r20215 BO: BSW 1 output Q
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7250 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for output quantity Q of instance BSW 1 of the binary changeover
+switch.
+
+### p20216 BSW 1 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7250 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance BSW 1 of the binary
+changeover switch is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20217 BSW 1 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7250 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 7999 | [ 0 ] 590 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance BSW 1 within the runtime group
+set in p20216.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20218[0...1] CI: NSW 0 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7250 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantities X0 and X1 of instance NSW 0 of the numeric
+changeover switch.
+
+**Index:**
+  
+[
+0]:
+Input X0  
+[
+1]:
+Input X1
+
+### p20219 BI: NSW 0 switch setting I
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7250 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of the switch setting I of instance NSW 0 of the numeric changeover
+switch.
+
+### r20220 CO: NSW 0 output Y
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7250 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for output quantity Y of instance NSW 0 of the numeric changeover
+switch.
+
+### p20221 NSW 0 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7250 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance NSW 0 of the numeric
+changeover switch is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20222 NSW 0 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7250 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 610 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance NSW 0 within the runtime group
+set in p20221.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20223[0...1] CI: NSW 1 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7250 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantities X0 and X1 of instance NSW 1 of the numeric
+changeover switch.
+
+**Index:**
+  
+[
+0]:
+Input X0  
+[
+1]:
+Input X1
+
+### p20224 BI: NSW 1 switch setting I
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7250 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of the switch setting I of instance NSW 1 of the numeric changeover
+switch.
+
+### r20225 CO: NSW 1 output Y
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7250 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for output quantity Y of instance NSW 1 of the numeric changeover
+switch.
+
+### p20226 NSW 1 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7250 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which the instance NSW 1 of the numeric
+changeover switch is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20227 NSW 1 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7250 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 620 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance NSW 1 within the runtime group
+set in p20226.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20228 CI: LIM 0 input X
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7260 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantity X of instance LIM 0 of the limiter.
+
+### p20229 LIM 0 upper limit value LU
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7260 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| -340.28235E36 | 340.28235E36 | [ 0 ] 0.0000 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the upper limit value LU of instance LIM 0 of the limiter.
+
+### p20230 LIM 0 lower limit value LL
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7260 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| -340.28235E36 | 340.28235E36 | [ 0 ] 0.0000 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the lower limit value LL of instance LIM 0 of the limiter.
+
+### r20231 CO: LIM 0 output Y
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7260 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for the limited output quantity Y of instance LIM 0 of the limiter.
+
+### r20232 BO: LIM 0 input quantity at the upper limit QU
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7260 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter of instance LIM 0 of limiter QU (upper limit reached), i.e. QU =
+1 for X >= LU.
+
+### r20233 BO: LIM 0 input quantity at the lower limit QL
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7260 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter of instance LIM 0 of limiter QL (lower limit reached), i.e. QL =
+1 for X <= LL.
+
+### p20234 LIM 0 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7260 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which instance LIM 0 of the limiter is
+to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20235 LIM 0 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7260 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 640 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance LIM 0 within the runtime group
+set in p20234.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20236 CI: LIM 1 input X
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7260 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantity X of instance LIM 1 of the limiter.
+
+### p20237 LIM 1 upper limit value LU
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7260 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| -340.28235E36 | 340.28235E36 | [ 0 ] 0.0000 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the upper limit value LU of instance LIM 1 of the limiter.
+
+### p20238 LIM 1 lower limit value LL
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7260 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| -340.28235E36 | 340.28235E36 | [ 0 ] 0.0000 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the lower limit value LL of instance LIM 1 of the limiter.
+
+### r20239 CO: LIM 1 output Y
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7260 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for the limited output quantity Y of instance LIM 1 of the limiter.
+
+### r20240 BO: LIM 1 input quantity at the upper limit QU
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7260 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter of instance LIM 1 of limiter QU (upper limit reached), i.e. QU =
+1 for X >= LU.
+
+### r20241 BO: LIM 1 input quantity at the lower limit QL
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7260 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter of instance LIM 1 of limiter QL (lower limit reached), i.e. QL =
+1 for X <= LL.
+
+### p20242 LIM 1 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7260 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which instance LIM 1 of the limiter is
+to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20243 LIM 1 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7260 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 650 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance LIM 1 within the runtime group
+set in p20242.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20244[0...1] CI: PT1 0 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7262 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantity X and of setting value SV of instance PT1
+0 of the smoothing element.
+
+**Index:**
+  
+[
+0]:
+Input X  
+[
+1]:
+Setting value SV
+
+### p20245 BI: PT1 0 accept setting value S
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7262 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source for the "accept setting value" signal of instant PT1 0 of the
+smoothing element.
+
+### p20246 PT1 0 smoothing time constant in ms
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7262 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0.00 | 340.28235E36 | [ 0 ] 0.00 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the smoothing time constant T in milliseconds of instance PT1 0 of the smoothing
+element.
+
+### r20247 CO: PT1 0 output Y
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7262 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for the smoothed output quantity Y of instance PT1 0 of the smoothing
+element.
+
+### p20248 PT1 0 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7262 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which instance PT1 0 of the smoothing element
+is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20249 PT1 0 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7262 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 670 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance PT1 0 within the runtime group
+set in p20248.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20250[0...1] CI: PT1 1 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7262 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantity X and of setting value SV of instance PT1
+1 of the smoothing element.
+
+**Index:**
+  
+[
+0]:
+Input X  
+[
+1]:
+Setting value SV
+
+### p20251 BI: PT1 1 accept setting value S
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7262 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source for the "accept setting value" signal of instant PT1 1 of the
+smoothing element.
+
+### p20252 PT1 1 smoothing time constant in ms
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7262 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0.00 | 340.28235E36 | [ 0 ] 0.00 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the smoothing time constant T in milliseconds of instance PT1 1 of the smoothing
+element.
+
+### r20253 CO: PT1 1 output Y
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7262 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for the smoothed output quantity Y of instance PT1 1 of the smoothing
+element.
+
+### p20254 PT1 1 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7262 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which instance PT1 1 of the smoothing element
+is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20255 PT1 1 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7262 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 680 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance PT1 1 within the runtime group
+set in p20254.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20256[0...1] CI: INT 0 inputs
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7264 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantity X and of setting value SV of instance INT
+0 of the integrator.
+
+**Index:**
+  
+[
+0]:
+Input X  
+[
+1]:
+Setting value SV
+
+### p20257 INT 0 upper limit value LU
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7264 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| -340.28235E36 | 340.28235E36 | [ 0 ] 0.0000 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the upper limit value LU of instance INT 0 of the integrator.
+
+### p20258 INT 0 lower limit value LL
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7264 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| -340.28235E36 | 340.28235E36 | [ 0 ] 0.0000 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the lower limit value LL of instance INT 0 of the integrator.
+
+### p20259 INT 0 integrating time constant in ms
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7264 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0.00 | 340.28235E36 | [ 0 ] 0.00 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the integrating time constant Ti in milliseconds of instance INT 0 of the integrator.
+
+### p20260 BI: INT 0 accept setting value S
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / Binary | **Dynamic index:**- | **Func. diagram:** 7264 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source for the "accept setting value" signal of instant INT 0 of the
+integrator.
+
+### r20261 CO: INT 0 output Y
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7264 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for output quantity Y of instance INT 0 of the integrator.  
+If LL>= LU, then the output quantity Y = LU.
+
+### r20262 BO: INT 0 integrator at the upper limit QU
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7264 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for the signal QU that output quantity Y of instance INT 0 of the
+integrator has reached the upper limit value LU.
+
+### r20263 BO: INT 0 integrator at the lower limit QL
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7264 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for the signal QL that output quantity Y of instance INT 0 of the
+integrator has reached the lower limit value LL.
+
+### p20264 INT 0 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7264 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which instance INT 0 of the integrator
+is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20265 INT 0 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7264 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 700 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance INT 0 within the runtime group
+set in p20264.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20266 CI: LVM 0 input X
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7270 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantity X of instance LVM 0 of the double-sided limiter.
+
+### p20267 LVM 0 interval average value M
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7270 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| -340.28235E36 | 340.28235E36 | [ 0 ] 0.0000 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the interval average M of instance LVM 0 of the double-sided
+limiter.
+
+### p20268 LVM 0 interval limit L
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7270 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| -340.28235E36 | 340.28235E36 | [ 0 ] 0.0000 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the interval limit L of instance LVM 0 of the double-sided limiter.
+
+### p20269 LVM 0 hyst HY
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7270 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| -340.28235E36 | 340.28235E36 | [ 0 ] 0.0000 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for hysteresis HY of instance LVM 0 of the double-sided limiter.
+
+### r20270 BO: LVM 0 input quantity above interval QU
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7270 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter of instance LVM 0 of the double-sided limiter that input quantity
+X was at least once X > M + L and X is >= M + L - HY.
+
+### r20271 BO: LVM 0 input quantity within interval QM
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7270 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter of instance LVM 0 of the double-sided limiter that the input quantity
+X lies within the interval.
+
+### r20272 BO: LVM 0 input quantity below interval QL
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7270 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter of instance LVM 0 of the double-sided limiter that input quantity
+X was at least once X < M - L and X is <= M - L + HY.
+
+### p20273 LVM 0 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7270 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which instance LVM 0 of the double-sided
+limiter is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20274 LVM 0 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7270 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 7999 | [ 0 ] 720 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance LVM 0 within the runtime group
+set in p20273.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20275 CI: LVM 1 input X
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7270 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantity X of instance LVM 1 of the double-sided limiter.
+
+### p20276 LVM 1 interval average value M
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7270 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| -340.28235E36 | 340.28235E36 | [ 0 ] 0.0000 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the interval average M of instance LVM 1 of the double-sided
+limiter.
+
+### p20277 LVM 1 interval limit L
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7270 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| -340.28235E36 | 340.28235E36 | [ 0 ] 0.0000 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the interval limit L of instance LVM 1 of the double-sided limiter.
+
+### p20278 LVM 1 hyst HY
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7270 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| -340.28235E36 | 340.28235E36 | [ 0 ] 0.0000 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for hysteresis HY of instance LVM 1 of the double-sided limiter.
+
+### r20279 BO: LVM 1 input quantity above interval QU
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7270 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter of instance LVM 1 of the double-sided limiter that input quantity
+X was at least once X > M + L and X is >= M + L - HY.
+
+### r20280 BO: LVM 1 input quantity within interval QM
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7270 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter of instance LVM 1 of the double-sided limiter that the input quantity
+X lies within the interval.
+
+### r20281 BO: LVM 1 input quantity below interval QL
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** 7270 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter of instance LVM 1 of the double-sided limiter that input quantity
+X was at least once X < M - L and X is <= M - L + HY.
+
+## SINAMICS Parameter SINAMICS MV 20282 - 61001
+
+SINAMICS Parameter SINAMICS MV 20282 - 61001
+
+### p20282 LVM 1 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7270 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which instance LVM 1 of the double-sided
+limiter is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20283 LVM 1 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7270 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 7999 | [ 0 ] 730 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance LVM 1 within the runtime group
+set in p20282.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p20284 CI: DIF 0 input X
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned32 / FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7264 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the signal source of input quantity X of instance DIF 0 of the differentiating
+element.
+
+### p20285 DIF 0 differentiating time constant in ms
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7264 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0.00 | 340.28235E36 | [ 0 ] 0.00 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Sets the differentiating time constant Td in milliseconds of instance DIF 0 of the
+differentiating element.
+
+### r20286 CO: DIF 0 output Y
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** 7264 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**PERCENT | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Display parameter for output quantity Y of instance DIF 0 of the differentiating element.
+
+### p20287 DIF 0 runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** 7264 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 9999 | [ 0 ] 9999 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the runtime group in which instance DIF 0 of the differentiating
+element is to be called.
+
+**Value:**
+  
+0:
+Runtime group 0  
+1:
+Runtime group 1  
+2:
+Runtime group 2  
+3:
+Runtime group 3  
+4:
+Runtime group 4  
+5:
+Runtime group 5  
+6:
+Runtime group 6  
+7:
+Runtime group 7  
+8:
+Runtime group 8  
+9:
+Runtime group 9  
+9999:
+Do not calculate
+
+### p20288 DIF 0 run sequence
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** 7264 |
+| **Object:**All objects (FBLOCKS) | **P-Group:**Free function blocks | **Version:**5206900 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 32000 | [ 0 ] 750 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+2.6
+
+**Description:**
+  
+Setting parameter for the run sequence of instance DIF 0 within the runtime group
+set in p20287.
+
+**Note:**
+  
+The function blocks with a lower run sequence value are calculated before function
+blocks with a higher run sequence value.
+
+### p21000[0...9] Runtime group properties
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**T | **Calculated:**- | **Access level:**1 |
+| **Data type:**Integer16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**DCC | **P-Group:**- | **Version:**5201400 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 4005 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Allocates properties to runtime groups 1 to 10.  
+This property comprises the sampling time and, for p21000[x] >= 2000, the instant
+of the call within the sampling time.  
+The index x + 1 of p21000 corresponds to the number of the runtime group:  
+- p21000[0] is used to set the property of the runtime group 1  
+...  
+- p21000[9] is used to set the property of the runtime group 10
+
+**Recommend.:**
+  
+On the drive objects of CU, TB30, TM15DI_DO, TM31, TM41, TM120, the sampling time
+for supplementary functions is preset to p0115[0] = 4 ms. If you wish to configure
+a DCC runtime group with a shorter sampling time on these drive objects, then you
+should first set the sampling time for supplementary functions p0115[0] on this drive
+object to the value of the shortest sampling time required.
+
+**Value:**
+  
+0:
+Do not calculate runtime group  
+1:
+T = 1 * r21002  
+2:
+T = 2 * r21002  
+3:
+T = 3 * r21002  
+4:
+T = 4 * r21002  
+5:
+T = 5 * r21002  
+6:
+T = 6 * r21002  
+7:
+T = 7 * r21002  
+8:
+T = 8 * r21002  
+9:
+T = 9 * r21002  
+10:
+T = 10 * r21002  
+11:
+T = 11 * r21002  
+12:
+T = 12 * r21002  
+13:
+T = 13 * r21002  
+14:
+T = 14 * r21002  
+15:
+T = 15 * r21002  
+16:
+T = 16 * r21002  
+17:
+T = 17 * r21002  
+18:
+T = 18 * r21002  
+19:
+T = 19 * r21002  
+20:
+T = 20 * r21002  
+21:
+T = 21 * r21002  
+22:
+T = 22 * r21002  
+23:
+T = 23 * r21002  
+24:
+T = 24 * r21002  
+25:
+T = 25 * r21002  
+26:
+T = 26 * r21002  
+27:
+T = 27 * r21002  
+28:
+T = 28 * r21002  
+29:
+T = 29 * r21002  
+30:
+T = 30 * r21002  
+31:
+T = 31 * r21002  
+32:
+T = 32 * r21002  
+33:
+T = 33 * r21002  
+34:
+T = 34 * r21002  
+35:
+T = 35 * r21002  
+36:
+T = 36 * r21002  
+37:
+T = 37 * r21002  
+38:
+T = 38 * r21002  
+39:
+T = 39 * r21002  
+40:
+T = 40 * r21002  
+41:
+T = 41 * r21002  
+42:
+T = 42 * r21002  
+43:
+T = 43 * r21002  
+44:
+T = 44 * r21002  
+45:
+T = 45 * r21002  
+46:
+T = 46 * r21002  
+47:
+T = 47 * r21002  
+48:
+T = 48 * r21002  
+49:
+T = 49 * r21002  
+50:
+T = 50 * r21002  
+51:
+T = 51 * r21002  
+52:
+T = 52 * r21002  
+53:
+T = 53 * r21002  
+54:
+T = 54 * r21002  
+55:
+T = 55 * r21002  
+56:
+T = 56 * r21002  
+57:
+T = 57 * r21002  
+58:
+T = 58 * r21002  
+59:
+T = 59 * r21002  
+60:
+T = 60 * r21002  
+61:
+T = 61 * r21002  
+62:
+T = 62 * r21002  
+63:
+T = 63 * r21002  
+64:
+T = 64 * r21002  
+65:
+T = 65 * r21002  
+66:
+T = 66 * r21002  
+67:
+T = 67 * r21002  
+68:
+T = 68 * r21002  
+69:
+T = 69 * r21002  
+70:
+T = 70 * r21002  
+71:
+T = 71 * r21002  
+72:
+T = 72 * r21002  
+73:
+T = 73 * r21002  
+74:
+T = 74 * r21002  
+75:
+T = 75 * r21002  
+76:
+T = 76 * r21002  
+77:
+T = 77 * r21002  
+78:
+T = 78 * r21002  
+79:
+T = 79 * r21002  
+80:
+T = 80 * r21002  
+81:
+T = 81 * r21002  
+82:
+T = 82 * r21002  
+83:
+T = 83 * r21002  
+84:
+T = 84 * r21002  
+85:
+T = 85 * r21002  
+86:
+T = 86 * r21002  
+87:
+T = 87 * r21002  
+88:
+T = 88 * r21002  
+89:
+T = 89 * r21002  
+90:
+T = 90 * r21002  
+91:
+T = 91 * r21002  
+92:
+T = 92 * r21002  
+93:
+T = 93 * r21002  
+94:
+T = 94 * r21002  
+95:
+T = 95 * r21002  
+96:
+T = 96 * r21002  
+97:
+T = 97 * r21002  
+98:
+T = 98 * r21002  
+99:
+T = 99 * r21002  
+100:
+T = 100 * r21002  
+101:
+T = 101 * r21002  
+102:
+T = 102 * r21002  
+103:
+T = 103 * r21002  
+104:
+T = 104 * r21002  
+105:
+T = 105 * r21002  
+106:
+T = 106 * r21002  
+107:
+T = 107 * r21002  
+108:
+T = 108 * r21002  
+109:
+T = 109 * r21002  
+110:
+T = 110 * r21002  
+111:
+T = 111 * r21002  
+112:
+T = 112 * r21002  
+113:
+T = 113 * r21002  
+114:
+T = 114 * r21002  
+115:
+T = 115 * r21002  
+116:
+T = 116 * r21002  
+117:
+T = 117 * r21002  
+118:
+T = 118 * r21002  
+119:
+T = 119 * r21002  
+120:
+T = 120 * r21002  
+121:
+T = 121 * r21002  
+122:
+T = 122 * r21002  
+123:
+T = 123 * r21002  
+124:
+T = 124 * r21002  
+125:
+T = 125 * r21002  
+126:
+T = 126 * r21002  
+127:
+T = 127 * r21002  
+128:
+T = 128 * r21002  
+129:
+T = 129 * r21002  
+130:
+T = 130 * r21002  
+131:
+T = 131 * r21002  
+132:
+T = 132 * r21002  
+133:
+T = 133 * r21002  
+134:
+T = 134 * r21002  
+135:
+T = 135 * r21002  
+136:
+T = 136 * r21002  
+137:
+T = 137 * r21002  
+138:
+T = 138 * r21002  
+139:
+T = 139 * r21002  
+140:
+T = 140 * r21002  
+141:
+T = 141 * r21002  
+142:
+T = 142 * r21002  
+143:
+T = 143 * r21002  
+144:
+T = 144 * r21002  
+145:
+T = 145 * r21002  
+146:
+T = 146 * r21002  
+147:
+T = 147 * r21002  
+148:
+T = 148 * r21002  
+149:
+T = 149 * r21002  
+150:
+T = 150 * r21002  
+151:
+T = 151 * r21002  
+152:
+T = 152 * r21002  
+153:
+T = 153 * r21002  
+154:
+T = 154 * r21002  
+155:
+T = 155 * r21002  
+156:
+T = 156 * r21002  
+157:
+T = 157 * r21002  
+158:
+T = 158 * r21002  
+159:
+T = 159 * r21002  
+160:
+T = 160 * r21002  
+161:
+T = 161 * r21002  
+162:
+T = 162 * r21002  
+163:
+T = 163 * r21002  
+164:
+T = 164 * r21002  
+165:
+T = 165 * r21002  
+166:
+T = 166 * r21002  
+167:
+T = 167 * r21002  
+168:
+T = 168 * r21002  
+169:
+T = 169 * r21002  
+170:
+T = 170 * r21002  
+171:
+T = 171 * r21002  
+172:
+T = 172 * r21002  
+173:
+T = 173 * r21002  
+174:
+T = 174 * r21002  
+175:
+T = 175 * r21002  
+176:
+T = 176 * r21002  
+177:
+T = 177 * r21002  
+178:
+T = 178 * r21002  
+179:
+T = 179 * r21002  
+180:
+T = 180 * r21002  
+181:
+T = 181 * r21002  
+182:
+T = 182 * r21002  
+183:
+T = 183 * r21002  
+184:
+T = 184 * r21002  
+185:
+T = 185 * r21002  
+186:
+T = 186 * r21002  
+187:
+T = 187 * r21002  
+188:
+T = 188 * r21002  
+189:
+T = 189 * r21002  
+190:
+T = 190 * r21002  
+191:
+T = 191 * r21002  
+192:
+T = 192 * r21002  
+193:
+T = 193 * r21002  
+194:
+T = 194 * r21002  
+195:
+T = 195 * r21002  
+196:
+T = 196 * r21002  
+197:
+T = 197 * r21002  
+198:
+T = 198 * r21002  
+199:
+T = 199 * r21002  
+200:
+T = 200 * r21002  
+201:
+T = 201 * r21002  
+202:
+T = 202 * r21002  
+203:
+T = 203 * r21002  
+204:
+T = 204 * r21002  
+205:
+T = 205 * r21002  
+206:
+T = 206 * r21002  
+207:
+T = 207 * r21002  
+208:
+T = 208 * r21002  
+209:
+T = 209 * r21002  
+210:
+T = 210 * r21002  
+211:
+T = 211 * r21002  
+212:
+T = 212 * r21002  
+213:
+T = 213 * r21002  
+214:
+T = 214 * r21002  
+215:
+T = 215 * r21002  
+216:
+T = 216 * r21002  
+217:
+T = 217 * r21002  
+218:
+T = 218 * r21002  
+219:
+T = 219 * r21002  
+220:
+T = 220 * r21002  
+221:
+T = 221 * r21002  
+222:
+T = 222 * r21002  
+223:
+T = 223 * r21002  
+224:
+T = 224 * r21002  
+225:
+T = 225 * r21002  
+226:
+T = 226 * r21002  
+227:
+T = 227 * r21002  
+228:
+T = 228 * r21002  
+229:
+T = 229 * r21002  
+230:
+T = 230 * r21002  
+231:
+T = 231 * r21002  
+232:
+T = 232 * r21002  
+233:
+T = 233 * r21002  
+234:
+T = 234 * r21002  
+235:
+T = 235 * r21002  
+236:
+T = 236 * r21002  
+237:
+T = 237 * r21002  
+238:
+T = 238 * r21002  
+239:
+T = 239 * r21002  
+240:
+T = 240 * r21002  
+241:
+T = 241 * r21002  
+242:
+T = 242 * r21002  
+243:
+T = 243 * r21002  
+244:
+T = 244 * r21002  
+245:
+T = 245 * r21002  
+246:
+T = 246 * r21002  
+247:
+T = 247 * r21002  
+248:
+T = 248 * r21002  
+249:
+T = 249 * r21002  
+250:
+T = 250 * r21002  
+251:
+T = 251 * r21002  
+252:
+T = 252 * r21002  
+253:
+T = 253 * r21002  
+254:
+T = 254 * r21002  
+255:
+T = 255 * r21002  
+256:
+T = 256 * r21002  
+1001:
+T = 1 * r21003  
+1002:
+T = 2 * r21003  
+1003:
+T = 3 * r21003  
+1004:
+T = 4 * r21003  
+1005:
+T = 5 * r21003  
+1006:
+T = 6 * r21003  
+1008:
+T = 8 * r21003  
+1010:
+T = 10 * r21003  
+1012:
+T = 12 * r21003  
+1016:
+T = 16 * r21003  
+1020:
+T = 20 * r21003  
+1024:
+T = 24 * r21003  
+1032:
+T = 32 * r21003  
+1040:
+T = 40 * r21003  
+1048:
+T = 48 * r21003  
+1064:
+T = 64 * r21003  
+1080:
+T = 80 * r21003  
+1096:
+T = 96 * r21003  
+2000:
+Read-in AFTER digital inputs  
+2001:
+Output BEFORE digital outputs  
+4000:
+Receive AFTER IF1 PROFIdrive PZD  
+4001:
+Send BEFORE IF1 PROFIdrive PZD  
+4002:
+Receive AFTER IF2 PZD  
+4003:
+Send BEFORE IF2 PZD  
+4004:
+Receive AFTER IF1 PROFIdrive flexible PZD  
+4005:
+Receive AFTER IF2 flexible PZD
+
+**Index:**
+  
+[
+0]:
+Runtime group 1  
+[
+1]:
+Runtime group 2  
+[
+2]:
+Runtime group 3  
+[
+3]:
+Runtime group 4  
+[
+4]:
+Runtime group 5  
+[
+5]:
+Runtime group 6  
+[
+6]:
+Runtime group 7  
+[
+7]:
+Runtime group 8  
+[
+8]:
+Runtime group 9  
+[
+9]:
+Runtime group 10
+
+**Dependency:**
+  
+See also: r7903, r21008
+
+**Caution:**
+  
+The properties of the runtime groups must not be changed during operation as this
+could result in discontinuous signal transitions.
+
+**Note:**
+  
+For value = 1 ... 256 (free runtime group):  
+This selection value can only be selected online if the following applies for sampling
+time T_sample of this runtime group:  
+1 ms <= T_sample < r21003.  
+At download, a value that violates this condition is not rejected, but a permissible
+equivalent value is set automatically and fault F51004 is output.  
+For value > 2000 (fixed runtime group):  
+The fixed runtime groups p21000[x] >= 2000 log on with the sampling time of the associated
+basic system function, subject to a minimum sampling time of 1 ms. If, as a result
+of this limit, the actual sampling time deviates from the sampling time of the basic
+system function, then fault F51005 (during F51006 download) is output. In this case,
+another runtime group with a sampling time >= 1 ms should be selected. When selecting
+the fixed runtime groups, a check is not made as to whether the associated system
+block exists.  
+Example:  
+"BEFORE speed setpoint channel" means before function charts 3010, 3020, 3030, 3040,
+etc. are calculated, if the setpoint channel is activated. If, e.g. for SERVO, a setpoint
+channel has not been configured (p0108.8 = 0), the calculation is made before function
+chart 3095.  
+  
+For value = 4002, 4003, 4005 (IF2 runtime group):  
+On devices where IF2 does not exist (D4xx, CU310), when selecting the runtime groups
+that involve IF2, the corresponding runtime group for IF1 is automatically logged
+on.
+
+### r21001[0...9] Runtime group sampling time
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5201400 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [ms] | - [ms] | [ ] - [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Displays the current sampling time of the runtime groups.
+
+**Index:**
+  
+[
+0]:
+Runtime group 1  
+[
+1]:
+Runtime group 2  
+[
+2]:
+Runtime group 3  
+[
+3]:
+Runtime group 4  
+[
+4]:
+Runtime group 5  
+[
+5]:
+Runtime group 6  
+[
+6]:
+Runtime group 7  
+[
+7]:
+Runtime group 8  
+[
+8]:
+Runtime group 9  
+[
+9]:
+Runtime group 10
+
+### r21002 Basis sampling time, hardware
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5201400 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [ms] | - [ms] | [ ] - [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Displays the basis sampling time effective at this drive object for values 1 to 256
+of p21000.  
+Sampling time T = p21000 * r21002
+
+### r21003 Basis sampling time, software
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**1 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5201400 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [ms] | - [ms] | [ ] - [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Displays the basis sampling time effective at this drive object for p21000 = 1002
+to 1096 as factor.  
+Sampling time T = (p21000 - 1000) * r21003
+
+**Dependency:**
+  
+Ensure that the basis sampling time on the SIMOTION D410 for the software time slices
+is always the same as the configured PROFIBUS/PROFINET clock cycle.
+
+### r21005[0...9] Computing time load of the runtime group
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5201400 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [%] | - [%] | [ ] - [%] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Share of the computing time load with which the DCC runtime group contributes to the
+utilization of the sampling time during which it is called.
+
+**Index:**
+  
+[
+0]:
+Runtime group 1  
+[
+1]:
+Runtime group 2  
+[
+2]:
+Runtime group 3  
+[
+3]:
+Runtime group 4  
+[
+4]:
+Runtime group 5  
+[
+5]:
+Runtime group 6  
+[
+6]:
+Runtime group 7  
+[
+7]:
+Runtime group 8  
+[
+8]:
+Runtime group 9  
+[
+9]:
+Runtime group 10
+
+**Note:**
+  
+The computing time load can only be displayed for the runtime groups which are logged
+on (p21000[x] > 0). The value for the computing time load is calculated in the drive
+unit based on the project loaded plus DCC chart. Therefore, the values r21005[x] are
+not available in the offline mode of the SCOUT/STARTER.  
+  
+In r21005 the computing time load is displayed, with which the DCC runtime group utilizes
+the sampling time in which it is called. The runtime groups "Receive AFTER IF1 PROFIdrive
+PZD" (p21000 = 4000), "Send BEFORE IF1 PROFIdrive PZD" (p21000 = 4001), "Receive BEFORE
+IF2 PZD" (p21000 = 4002) and "Send BEFORE IF2 PZD" (p21000 = 4003) are called in the
+isochronous mode and in the non-isochronous mode, in different sampling times.  
+In the non-isochronous mode, these are IF1 / IF2 PZD sampling time (p2048 for p21000
+= 4000 or 4001, p8848 for p21000 = 4002 or 4003). In the isochronous mode, this is
+the current controller sampling time (p115[0]) which is periodically called with the
+isochronous bus cycle time. The computing time load displayed in r21005 is always
+calculated for the (more unfavorable) case of isochronous operation. This is why this
+value does not (always) act to the full amount on the computing time load of the complete
+system.
+
+### r21008[0...31] Hardware sampling times available
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5201400 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [ms] | - [ms] | [ ] - [ms] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+5.1
+
+**Description:**
+  
+Displays the assignment of the available hardware sampling times of the drive unit.  
+The designated sampling times are those created as a multiple of the hardware basis
+sampling time (r21002) and which are always < r21003.
+
+**Index:**
+  
+[
+0]:
+Hardware 1  
+[
+1]:
+Hardware 2  
+[
+2]:
+Hardware 3  
+[
+3]:
+Hardware 4  
+[
+4]:
+Hardware 5  
+[
+5]:
+Hardware 6  
+[
+6]:
+Hardware 7  
+[
+7]:
+Hardware 8  
+[
+8]:
+Hardware 9  
+[
+9]:
+Hardware 10  
+[
+10]:
+Hardware 11  
+[
+11]:
+Hardware 12  
+[
+12]:
+Hardware 13  
+[
+13]:
+Hardware 14  
+[
+14]:
+Hardware 15  
+[
+15]:
+Hardware 16  
+[
+16]:
+Hardware 17  
+[
+17]:
+Hardware 18  
+[
+18]:
+Hardware 19  
+[
+19]:
+Hardware 20  
+[
+20]:
+Hardware 21  
+[
+21]:
+Hardware 22  
+[
+22]:
+Hardware 23  
+[
+23]:
+Hardware 24  
+[
+24]:
+Hardware 25  
+[
+25]:
+Hardware 26  
+[
+26]:
+Hardware 27  
+[
+27]:
+Hardware 28  
+[
+28]:
+Hardware 29  
+[
+29]:
+Hardware 30  
+[
+30]:
+Hardware 31  
+[
+31]:
+Hardware 32
+
+**Dependency:**
+  
+See also: r7903, p21000  
+  
+Refer to:
+F51001
+
+**Notice:**
+  
+For internal purposes, the drive unit always requires several free hardware sampling
+times. Therefore the current number of free hardware sampling times can be read out
+in r7903.  
+If r7903=0, no additional sampling time different from r21008[0...31] may be provided
+from the Control Unit. When selecting in this state, if a runtime group with a sampling
+time < r21003 (p21000 <= 255) is selected in p21000, only runtime groups whose sampling
+time is already provided in r21008[0...31] may be selected.
+
+**Note:**
+  
+A sampling time that is provided can be simultaneously used by system functions, several
+FBLOCK runtime groups and several DCC runtime groups.  
+The sampling time of runtime groups that have been assigned to the PROFIBUS runtime
+groups (p21000 = 4000 ... 4004) is not displayed in r21008. For this sampling time,
+one of the internally and permanently assigned hardware sampling times is used.  
+If the value of r21008[x] != 0 (not equal to 0), then the sampling time is specified
+in ms.  
+If the value of r21008[x] = 0, this sampling time can still be freely assigned. It
+should be noted that the basic system requires several freely assignable hardware
+sampling times for internal functions. The number of hardware sampling times that
+can still be freely assigned can be read out in r7903.  
+If the value r21008[x] = 99999.00000, this hardware sampling time is not supported.
+
+### p21030 Runtime group, computing time measurement
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5201400 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 65535 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Only for internal Siemens service purposes.
+
+**Dependency:**
+  
+  
+Refer to:
+p21032, r21035, r21036, r21037
+
+### p21031 Computing time measurement, blocks
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5201400 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 0 | 4294967295 | [ 0 ] 0 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.6
+
+**Description:**
+  
+Only for internal Siemens service purposes.
+
+### p21032 Computing time measurement, duration
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5201400 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 60 [s] | 10000 [s] | [ 0 ] 60 [s] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Only for internal Siemens service purposes.
+
+**Dependency:**
+  
+  
+Refer to:
+p21030, r21035, r21036, r21037
+
+### p21033 Computing time measurement, number of individual measurements
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**UT | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5201400 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| 1 | 4294967295 | [ 0 ] 10000 |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.6
+
+**Description:**
+  
+Setting for the number of calls during the measurement of the individual blocks.
+
+**Dependency:**
+  
+  
+Refer to:
+p21031
+
+### r21035[0...9] Computing time, minimum value
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5201400 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [µs] | - [µs] | [ ] - [µs] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Only for internal Siemens service purposes.
+
+**Index:**
+  
+[
+0]:
+Runtime group 1  
+[
+1]:
+Runtime group 2  
+[
+2]:
+Runtime group 3  
+[
+3]:
+Runtime group 4  
+[
+4]:
+Runtime group 5  
+[
+5]:
+Runtime group 6  
+[
+6]:
+Runtime group 7  
+[
+7]:
+Runtime group 8  
+[
+8]:
+Runtime group 9  
+[
+9]:
+Runtime group 10
+
+**Dependency:**
+  
+  
+Refer to:
+p21030, p21032, r21036, r21037
+
+### r21036[0...9] Computing time, mean value
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5201400 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [µs] | - [µs] | [ ] - [µs] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Only for internal Siemens service purposes.
+
+**Index:**
+  
+[
+0]:
+Runtime group 1  
+[
+1]:
+Runtime group 2  
+[
+2]:
+Runtime group 3  
+[
+3]:
+Runtime group 4  
+[
+4]:
+Runtime group 5  
+[
+5]:
+Runtime group 6  
+[
+6]:
+Runtime group 7  
+[
+7]:
+Runtime group 8  
+[
+8]:
+Runtime group 9  
+[
+9]:
+Runtime group 10
+
+### r21037[0...9] Computing time, maximum value
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5201400 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [µs] | - [µs] | [ ] - [µs] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.5
+
+**Description:**
+  
+Only for internal Siemens service purposes.
+
+**Index:**
+  
+[
+0]:
+Runtime group 1  
+[
+1]:
+Runtime group 2  
+[
+2]:
+Runtime group 3  
+[
+3]:
+Runtime group 4  
+[
+4]:
+Runtime group 5  
+[
+5]:
+Runtime group 6  
+[
+6]:
+Runtime group 7  
+[
+7]:
+Runtime group 8  
+[
+8]:
+Runtime group 9  
+[
+9]:
+Runtime group 10
+
+**Dependency:**
+  
+  
+Refer to:
+p21030, p21032, r21035, r21036
+
+### r21041[0...49] Block ID of the measured block
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5201400 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.6
+
+**Description:**
+  
+Block ID of the measured block (block runtime measurement via parameter p21031. The
+blocks are measured in the same sequence as they have been programmed in the execution
+sequence.  
+The parameter is designed for the measurement of 50 block instances
+
+**Index:**
+  
+[
+0]:
+Block 1  
+[
+1]:
+Block 2  
+[
+2]:
+Block 3  
+[
+3]:
+Block 4  
+[
+4]:
+Block 5  
+[
+5]:
+Block 6  
+[
+6]:
+Block 7  
+[
+7]:
+Block 8  
+[
+8]:
+Block 9  
+[
+9]:
+Block 10  
+[
+10]:
+Block 11  
+[
+11]:
+Block 12  
+[
+12]:
+Block 13  
+[
+13]:
+Block 14  
+[
+14]:
+Block 15  
+[
+15]:
+Block 16  
+[
+16]:
+Block 17  
+[
+17]:
+Block 18  
+[
+18]:
+Block 19  
+[
+19]:
+Block 20  
+[
+20]:
+Block 21  
+[
+21]:
+Block 22  
+[
+22]:
+Block 23  
+[
+23]:
+Block 24  
+[
+24]:
+Block 25  
+[
+25]:
+Block 26  
+[
+26]:
+Block 27  
+[
+27]:
+Block 28  
+[
+28]:
+Block 29  
+[
+29]:
+Block 30  
+[
+30]:
+Block 31  
+[
+31]:
+Block 32  
+[
+32]:
+Block 33  
+[
+33]:
+Block 34  
+[
+34]:
+Block 35  
+[
+35]:
+Block 36  
+[
+36]:
+Block 37  
+[
+37]:
+Block 38  
+[
+38]:
+Block 39  
+[
+39]:
+Block 40  
+[
+40]:
+Block 41  
+[
+41]:
+Block 42  
+[
+42]:
+Block 43  
+[
+43]:
+Block 44  
+[
+44]:
+Block 45  
+[
+45]:
+Block 46  
+[
+46]:
+Block 47  
+[
+47]:
+Block 48  
+[
+48]:
+Block 49  
+[
+49]:
+Block 50
+
+### r21042[0...49] First run / subsequent run identifiers
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned16 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5201400 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.6
+
+**Description:**
+  
+In the block runtime measurements, the block runtimes are measured. R21039 indicates
+whether the measurement is the first or a subsequent call.  
+If the block type occurs only once in the runtime group, only the measured value for
+the first run will be supplied.  
+The parameter is designed for the measurement of 50 block instances
+
+**Index:**
+  
+[
+0]:
+Block 1  
+[
+1]:
+Block 2  
+[
+2]:
+Block 3  
+[
+3]:
+Block 4  
+[
+4]:
+Block 5  
+[
+5]:
+Block 6  
+[
+6]:
+Block 7  
+[
+7]:
+Block 8  
+[
+8]:
+Block 9  
+[
+9]:
+Block 10  
+[
+10]:
+Block 11  
+[
+11]:
+Block 12  
+[
+12]:
+Block 13  
+[
+13]:
+Block 14  
+[
+14]:
+Block 15  
+[
+15]:
+Block 16  
+[
+16]:
+Block 17  
+[
+17]:
+Block 18  
+[
+18]:
+Block 19  
+[
+19]:
+Block 20  
+[
+20]:
+Block 21  
+[
+21]:
+Block 22  
+[
+22]:
+Block 23  
+[
+23]:
+Block 24  
+[
+24]:
+Block 25  
+[
+25]:
+Block 26  
+[
+26]:
+Block 27  
+[
+27]:
+Block 28  
+[
+28]:
+Block 29  
+[
+29]:
+Block 30  
+[
+30]:
+Block 31  
+[
+31]:
+Block 32  
+[
+32]:
+Block 33  
+[
+33]:
+Block 34  
+[
+34]:
+Block 35  
+[
+35]:
+Block 36  
+[
+36]:
+Block 37  
+[
+37]:
+Block 38  
+[
+38]:
+Block 39  
+[
+39]:
+Block 40  
+[
+40]:
+Block 41  
+[
+41]:
+Block 42  
+[
+42]:
+Block 43  
+[
+43]:
+Block 44  
+[
+44]:
+Block 45  
+[
+45]:
+Block 46  
+[
+46]:
+Block 47  
+[
+47]:
+Block 48  
+[
+48]:
+Block 49  
+[
+49]:
+Block 50
+
+### r21043[0...49] Minimum measured block runtime in us
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5201400 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [µs] | - [µs] | [ ] - [µs] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.6
+
+**Description:**
+  
+Minimum measured runtime of the measured block (block runtime measurement via parameter
+p21031. The blocks are measured in the same sequence as they have been programmed
+in the execution sequence.  
+The parameter is designed for the measurement of 50 block instances
+
+**Index:**
+  
+[
+0]:
+Block 1  
+[
+1]:
+Block 2  
+[
+2]:
+Block 3  
+[
+3]:
+Block 4  
+[
+4]:
+Block 5  
+[
+5]:
+Block 6  
+[
+6]:
+Block 7  
+[
+7]:
+Block 8  
+[
+8]:
+Block 9  
+[
+9]:
+Block 10  
+[
+10]:
+Block 11  
+[
+11]:
+Block 12  
+[
+12]:
+Block 13  
+[
+13]:
+Block 14  
+[
+14]:
+Block 15  
+[
+15]:
+Block 16  
+[
+16]:
+Block 17  
+[
+17]:
+Block 18  
+[
+18]:
+Block 19  
+[
+19]:
+Block 20  
+[
+20]:
+Block 21  
+[
+21]:
+Block 22  
+[
+22]:
+Block 23  
+[
+23]:
+Block 24  
+[
+24]:
+Block 25  
+[
+25]:
+Block 26  
+[
+26]:
+Block 27  
+[
+27]:
+Block 28  
+[
+28]:
+Block 29  
+[
+29]:
+Block 30  
+[
+30]:
+Block 31  
+[
+31]:
+Block 32  
+[
+32]:
+Block 33  
+[
+33]:
+Block 34  
+[
+34]:
+Block 35  
+[
+35]:
+Block 36  
+[
+36]:
+Block 37  
+[
+37]:
+Block 38  
+[
+38]:
+Block 39  
+[
+39]:
+Block 40  
+[
+40]:
+Block 41  
+[
+41]:
+Block 42  
+[
+42]:
+Block 43  
+[
+43]:
+Block 44  
+[
+44]:
+Block 45  
+[
+45]:
+Block 46  
+[
+46]:
+Block 47  
+[
+47]:
+Block 48  
+[
+48]:
+Block 49  
+[
+49]:
+Block 50
+
+### r21044[0...49] Average measured block runtime in us
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5201400 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [µs] | - [µs] | [ ] - [µs] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.6
+
+**Description:**
+  
+Average measured runtime of the measured block (block runtime measurement via parameter
+p21031. The blocks are measured in the same sequence as they have been programmed
+in the execution sequence.  
+The parameter is designed for the measurement of 50 block instances
+
+**Index:**
+  
+[
+0]:
+Block 1  
+[
+1]:
+Block 2  
+[
+2]:
+Block 3  
+[
+3]:
+Block 4  
+[
+4]:
+Block 5  
+[
+5]:
+Block 6  
+[
+6]:
+Block 7  
+[
+7]:
+Block 8  
+[
+8]:
+Block 9  
+[
+9]:
+Block 10  
+[
+10]:
+Block 11  
+[
+11]:
+Block 12  
+[
+12]:
+Block 13  
+[
+13]:
+Block 14  
+[
+14]:
+Block 15  
+[
+15]:
+Block 16  
+[
+16]:
+Block 17  
+[
+17]:
+Block 18  
+[
+18]:
+Block 19  
+[
+19]:
+Block 20  
+[
+20]:
+Block 21  
+[
+21]:
+Block 22  
+[
+22]:
+Block 23  
+[
+23]:
+Block 24  
+[
+24]:
+Block 25  
+[
+25]:
+Block 26  
+[
+26]:
+Block 27  
+[
+27]:
+Block 28  
+[
+28]:
+Block 29  
+[
+29]:
+Block 30  
+[
+30]:
+Block 31  
+[
+31]:
+Block 32  
+[
+32]:
+Block 33  
+[
+33]:
+Block 34  
+[
+34]:
+Block 35  
+[
+35]:
+Block 36  
+[
+36]:
+Block 37  
+[
+37]:
+Block 38  
+[
+38]:
+Block 39  
+[
+39]:
+Block 40  
+[
+40]:
+Block 41  
+[
+41]:
+Block 42  
+[
+42]:
+Block 43  
+[
+43]:
+Block 44  
+[
+44]:
+Block 45  
+[
+45]:
+Block 46  
+[
+46]:
+Block 47  
+[
+47]:
+Block 48  
+[
+48]:
+Block 49  
+[
+49]:
+Block 50
+
+### r21045[0...49] Maximum measured block runtime in us
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**FloatingPoint32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5201400 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - [µs] | - [µs] | [ ] - [µs] |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.6
+
+**Description:**
+  
+Average measured runtime of the measured block (block runtime measurement via parameter
+p21031. The blocks are measured in the same sequence as they have been programmed
+in the execution sequence.  
+The parameter is designed for the measurement of 50 block instances
+
+**Index:**
+  
+[
+0]:
+Block 1  
+[
+1]:
+Block 2  
+[
+2]:
+Block 3  
+[
+3]:
+Block 4  
+[
+4]:
+Block 5  
+[
+5]:
+Block 6  
+[
+6]:
+Block 7  
+[
+7]:
+Block 8  
+[
+8]:
+Block 9  
+[
+9]:
+Block 10  
+[
+10]:
+Block 11  
+[
+11]:
+Block 12  
+[
+12]:
+Block 13  
+[
+13]:
+Block 14  
+[
+14]:
+Block 15  
+[
+15]:
+Block 16  
+[
+16]:
+Block 17  
+[
+17]:
+Block 18  
+[
+18]:
+Block 19  
+[
+19]:
+Block 20  
+[
+20]:
+Block 21  
+[
+21]:
+Block 22  
+[
+22]:
+Block 23  
+[
+23]:
+Block 24  
+[
+24]:
+Block 25  
+[
+25]:
+Block 26  
+[
+26]:
+Block 27  
+[
+27]:
+Block 28  
+[
+28]:
+Block 29  
+[
+29]:
+Block 30  
+[
+30]:
+Block 31  
+[
+31]:
+Block 32  
+[
+32]:
+Block 33  
+[
+33]:
+Block 34  
+[
+34]:
+Block 35  
+[
+35]:
+Block 36  
+[
+36]:
+Block 37  
+[
+37]:
+Block 38  
+[
+38]:
+Block 39  
+[
+39]:
+Block 40  
+[
+40]:
+Block 41  
+[
+41]:
+Block 42  
+[
+42]:
+Block 43  
+[
+43]:
+Block 44  
+[
+44]:
+Block 45  
+[
+45]:
+Block 46  
+[
+46]:
+Block 47  
+[
+47]:
+Block 48  
+[
+48]:
+Block 49  
+[
+49]:
+Block 50
+
+### r21046[0...49] Library IDs of the measured blocks
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**4 |
+| **Data type:**Unsigned32 | **Dynamic index:**- | **Func. diagram:** - |
+| **Object:**All objects | **P-Group:**- | **Version:**5201400 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.6
+
+**Description:**
+  
+Library ID of the measured block (block runtime measurement via parameter p21031).  
+Measurements with blocks from different libraries can thereby be carried out in one
+runtime group.  
+The blocks are measured in the same sequence as they have been programmed in the execution
+sequence.  
+The parameter is designed for the measurement of 50 block instances  
+Indices 0..49
+
+**Index:**
+  
+[
+0]:
+Block 1  
+[
+1]:
+Block 2  
+[
+2]:
+Block 3  
+[
+3]:
+Block 4  
+[
+4]:
+Block 5  
+[
+5]:
+Block 6  
+[
+6]:
+Block 7  
+[
+7]:
+Block 8  
+[
+8]:
+Block 9  
+[
+9]:
+Block 10  
+[
+10]:
+Block 11  
+[
+11]:
+Block 12  
+[
+12]:
+Block 13  
+[
+13]:
+Block 14  
+[
+14]:
+Block 15  
+[
+15]:
+Block 16  
+[
+16]:
+Block 17  
+[
+17]:
+Block 18  
+[
+18]:
+Block 19  
+[
+19]:
+Block 20  
+[
+20]:
+Block 21  
+[
+21]:
+Block 22  
+[
+22]:
+Block 23  
+[
+23]:
+Block 24  
+[
+24]:
+Block 25  
+[
+25]:
+Block 26  
+[
+26]:
+Block 27  
+[
+27]:
+Block 28  
+[
+28]:
+Block 29  
+[
+29]:
+Block 30  
+[
+30]:
+Block 31  
+[
+31]:
+Block 32  
+[
+32]:
+Block 33  
+[
+33]:
+Block 34  
+[
+34]:
+Block 35  
+[
+35]:
+Block 36  
+[
+36]:
+Block 37  
+[
+37]:
+Block 38  
+[
+38]:
+Block 39  
+[
+39]:
+Block 40  
+[
+40]:
+Block 41  
+[
+41]:
+Block 42  
+[
+42]:
+Block 43  
+[
+43]:
+Block 44  
+[
+44]:
+Block 45  
+[
+45]:
+Block 46  
+[
+46]:
+Block 47  
+[
+47]:
+Block 48  
+[
+48]:
+Block 49  
+[
+49]:
+Block 50
+
+### r61000[0...239] PROFINET Name of Station
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** 2410 |
+| **Object:**CU_MV_PN, CU_MV_DP (PN CBE20) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays PROFINET Name of Station.
+
+**Note:**
+  
+An ASCII table (excerpt) can be found, for example, in the appendix to the List Manual.
+
+### r61001[0...3] PROFINET IP of Station
+
+|  |  |  |
+| --- | --- | --- |
+| **Can be changed:**- | **Calculated:**- | **Access level:**3 |
+| **Data type:**Unsigned8 | **Dynamic index:**- | **Func. diagram:** 2410 |
+| **Object:**CU_MV_PN, CU_MV_DP (PN CBE20) | **P-Group:**- | **Version:**5230300 |
+| **Units group:**- | **Unit selection:**- |  |
+| **Not for motor type:**- | **Scaling:**- | **Expert list:**1 |
+| **Min** | **Max** | **Factory setting** |
+| - | - | [ ] - |
+| [Alarms](SINAMICS%20Alarms%20SINAMICS%20MV.md#sinamics-alarms-sinamics-mv) |  |  |
+
+**Valid as of version:**
+  
+4.4
+
+**Description:**
+  
+Displays PROFINET IP of Station.
