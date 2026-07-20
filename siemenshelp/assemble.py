@@ -47,6 +47,11 @@ def _safe_filename(name: str) -> str:
     return cleaned[:150]
 
 
+def _display_title(node: TocNode) -> str:
+    """A never-empty heading/anchor label (a few topics have a blank TOC title)."""
+    return node.title or "(untitled)"
+
+
 def _parse_devices(scope_path: Optional[str]) -> List[str]:
     if not scope_path or not os.path.exists(scope_path):
         return []
@@ -88,7 +93,7 @@ def scan_pack(pack_dir: str) -> PackScan:
     id_to_anchor: Dict[str, str] = {}
     anchors: List[str] = []
     for node, _depth in order:
-        anchor = slug(node.title)
+        anchor = slug(_display_title(node))
         anchors.append(anchor)
         file_to_anchor.setdefault(node.topic_file, anchor)
         id_to_anchor[node.itemid] = anchor
@@ -134,7 +139,7 @@ def render_section(
     missing = 0
     for (node, depth), _anchor in zip(scan.order, scan.anchors):
         level = min(depth + 1, 6)
-        heading = f"{'#' * level} {node.title}".rstrip()
+        heading = f"{'#' * level} {_display_title(node)}".rstrip()
         topic_path = os.path.join(scan.pack_dir, *node.rel_path.split("/"))
         body = ""
         if os.path.exists(topic_path):

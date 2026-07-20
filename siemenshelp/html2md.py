@@ -42,6 +42,22 @@ class _SiemensConverter(MarkdownConverter):
     def convert_sup(self, el, text, parent_tags):
         return f"<sup>{text}</sup>" if text else ""
 
+    def escape(self, text, parent_tags=None):
+        """Escape HTML-significant characters in body text.
+
+        The help is full of literal angle brackets — placeholders like
+        ``<Project ID>`` and comparison operators like ``< 0.1`` — which a
+        Markdown renderer would otherwise swallow as HTML tags. We entity-escape
+        ``&``, ``<`` and ``>`` (but not inside code, which markdownify handles
+        separately) while leaving other punctuation alone, so ordinary technical
+        prose stays clean (no backslash noise)."""
+        if not text:
+            return text
+        text = super().escape(text, parent_tags)
+        if parent_tags and ("code" in parent_tags or "pre" in parent_tags):
+            return text
+        return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
 
 def _img_basename(src: str) -> str:
     return _QUERY_RE.sub("", src or "").rsplit("/", 1)[-1]

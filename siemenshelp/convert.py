@@ -43,6 +43,11 @@ def main(argv=None) -> int:
         action="store_true",
         help="don't copy diagrams (Markdown still links to images/; alt text is kept)",
     )
+    ap.add_argument(
+        "--resume",
+        action="store_true",
+        help="corpus mode: skip packs already converted (resume an interrupted run)",
+    )
     args = ap.parse_args(argv)
     keep_images = not args.no_images
 
@@ -51,8 +56,16 @@ def main(argv=None) -> int:
         def _progress(i, total, name):
             print(f"[{i}/{total}] {name}")
 
-        res = convert_corpus(args.source, args.out, progress=_progress, keep_images=keep_images)
-        print(f"[ok] {res['packs']} packs -> {args.out}  (index: {res['index']})")
+        res = convert_corpus(
+            args.source, args.out, progress=_progress, keep_images=keep_images, resume=args.resume
+        )
+        note = f", {len(res['failures'])} failed" if res["failures"] else ""
+        print(
+            f"[ok] {res['converted']}/{res['packs']} packs converted{note} "
+            f"-> {args.out}  (index: {res['index']})"
+        )
+        for fail in res["failures"][:10]:
+            print(f"  [fail] {fail['name']} ({fail['pack']}): {fail['error']}")
         return 0
 
     res = convert_pack(args.source, args.out, section_name=args.name, keep_images=keep_images)

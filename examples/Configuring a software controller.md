@@ -25,7 +25,7 @@ This section contains information on the following topics:
 
 ## Overview of software controller
 
-For the configuration of a software controller, you need an instruction with the control algorithm and a technology object. The technology object for a software controller corresponds with the instance DB of the instruction. The configuration of the controller is saved in the technology object. In contrast to the instance DBs of other instructions, technology objects are not stored for the program resources, but rather under CPU > Technology objects.
+For the configuration of a software controller, you need an instruction with the control algorithm and a technology object. The technology object for a software controller corresponds with the instance DB of the instruction. The configuration of the controller is saved in the technology object. In contrast to the instance DBs of other instructions, technology objects are not stored for the program resources, but rather under CPU &gt; Technology objects.
 
 ### Technology objects and instructions
 
@@ -240,7 +240,7 @@ Proceed as follows to download the retentive data:
 
 The complete PLC program is downloaded to the device. Blocks that only exist online in the device are deleted. By downloading all affected blocks and by deleting any blocks in the device that are not required, you avoid inconsistencies between the blocks in the user program.
 
-The messages under "Info > General" in the Inspector window indicate whether the download was successful.
+The messages under "Info &gt; General" in the Inspector window indicate whether the download was successful.
 
 ## Commissioning software controller
 
@@ -812,7 +812,7 @@ The “../“ prefix in the “Name in DB” column is ignored when sorting.
 After selecting an entire parameter row of the parameter table, you can use the following:
 
 - Drag-and-drop
-- <Ctrl+C>/<Ctrl+V>
+- &lt;Ctrl+C&gt;/&lt;Ctrl+V&gt;
 - Copy/Paste via shortcut menu
 
 Transfer parameters to the following editors of the TIA Portal:
@@ -996,7 +996,7 @@ To change the display format of the value, proceed as follows:
 
 > **Note**
 >
-> To change the display format of a certain data type in multiple table rows, sort the Parameter view by this data type. Then select the first and last table row with this data type while keeping the <Shift> key pressed and change the display format for the selected table rows.
+> To change the display format of a certain data type in multiple table rows, sort the Parameter view by this data type. Then select the first and last table row with this data type while keeping the &lt;Shift&gt; key pressed and change the display format for the selected table rows.
 
 #### Create snapshot of monitor values
 

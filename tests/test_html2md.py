@@ -72,6 +72,20 @@ def test_image_rewritten_and_collected():
     assert "pic.png" in used
 
 
+def test_angle_bracket_placeholders_escaped():
+    # Literal <…> in the source (placeholders, comparison operators) must be
+    # entity-escaped so a Markdown renderer shows them instead of eating them.
+    md = _md("<p>Enter &lt;Project ID&gt; when ratio &lt; 0.1</p>")
+    assert "&lt;Project ID&gt;" in md
+    assert "&lt; 0.1" in md
+    assert "<Project ID>" not in md
+
+
+def test_angle_brackets_inside_code_kept_literal():
+    md = _md("<p>The <code>&lt;InternalElement&gt;</code> tag</p>")
+    assert "`<InternalElement>`" in md
+
+
 def test_subscript_preserved_and_crosspack_link_flattened():
     md = _md('<p>T<sub>u</sub> see <a class="ContentNode" href="../../Other/1/2.htm">there</a>.</p>')
     assert "T<sub>u</sub>" in md

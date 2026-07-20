@@ -62,3 +62,38 @@ def test_convert_corpus_cross_pack_links_and_index(tmp_path):
     # Beta nests under Alpha (its TOC parent), so it is the more-indented entry
     assert "- [Alpha](Alpha.md)" in index
     assert "  - [Beta](Beta.md)" in index
+
+
+def test_case_insensitive_filename_dedup(tmp_path):
+    root = tmp_path / "packs"
+    out = tmp_path / "out"
+    root.mkdir()
+    # Two packs whose titles differ only in case must not collide to one file.
+    _make_pack(str(root), "PA", "1", "1.htm", "Widget", "<p>a</p>")
+    _make_pack(str(root), "PB", "2", "2.htm", "widget", "<p>b</p>")
+    convert_corpus(str(root), str(out))
+    mds = [f.name for f in out.glob("*.md") if f.name != "INDEX.md"]
+    assert len(mds) == 2
+    assert len({m.lower() for m in mds}) == 2  # distinct even case-insensitively
+
+
+def test_resume_skips_completed(tmp_path):
+    root = tmp_path / "packs"
+    out = tmp_path / "out"
+    root.mkdir()
+    _make_pack(str(root), "PA", "1", "1.htm", "Alpha", "<p>a</p>")
+    first = convert_corpus(str(root), str(out), resume=True)
+    assert first["converted"] == 1
+    second = convert_corpus(str(root), str(out), resume=True)
+    assert second["converted"] == 0  # reused from the checkpoint
+
+
+def test_empty_title_becomes_untitled(tmp_path):
+    root = tmp_path / "packs"
+    out = tmp_path / "out"
+    root.mkdir()
+    _make_pack(str(root), "PA", "1", "1.htm", "", "<p>body</p>")
+    convert_corpus(str(root), str(out))
+    txt = (out / "PA.md").read_text()
+    assert "(untitled)" in txt
+    assert not any(line.rstrip() in ("#", "##", "###") for line in txt.splitlines())
